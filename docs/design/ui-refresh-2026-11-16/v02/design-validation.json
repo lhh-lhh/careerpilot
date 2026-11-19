@@ -1,0 +1,152 @@
+{
+  "generatedAt": "2026-11-17T04:16:18.575Z",
+  "revision": "0.2",
+  "kind": "static design artifact verification, NOT application test results",
+  "artifacts": [
+    {
+      "name": "07-portal-refined-light",
+      "width": 1440,
+      "height": 1660,
+      "note": "v0.2 static design: approved portal layout retained; prominent top brand, link styling and background layer."
+    },
+    {
+      "name": "08-portal-refined-dark",
+      "width": 1440,
+      "height": 1660,
+      "note": "v0.2 static design: approved portal layout retained; prominent top brand, link styling and background layer."
+    },
+    {
+      "name": "09-portal-mobile-study",
+      "width": 390,
+      "height": 1560,
+      "note": "Annotated mobile study; complete lower-page sections explicitly retained, not a complete prototype."
+    },
+    {
+      "name": "10-background-navigation-spec",
+      "width": 1440,
+      "height": 1050,
+      "note": "Background layering, per-page intensity, navigation states and non-regression design contract."
+    }
+  ],
+  "contrast": [
+    {
+      "theme": "light",
+      "foreground": "--text-1",
+      "background": "--surface",
+      "ratio": 15.723,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--text-2",
+      "background": "--surface",
+      "ratio": 5.68,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--text-3",
+      "background": "--surface",
+      "ratio": 5.219,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--on-brand",
+      "background": "--brand",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--brand-text",
+      "background": "--surface",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--warn-text",
+      "background": "--warn-soft",
+      "ratio": 6.114,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--danger-text",
+      "background": "--danger-soft",
+      "ratio": 5.617,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--ai-text",
+      "background": "--ai-soft",
+      "ratio": 4.766,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-1",
+      "background": "--surface",
+      "ratio": 14.799,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-2",
+      "background": "--surface",
+      "ratio": 7.881,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-3",
+      "background": "--surface",
+      "ratio": 7,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--on-brand",
+      "background": "--brand",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--brand-text",
+      "background": "--surface",
+      "ratio": 7.315,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--warn-text",
+      "background": "--warn-soft",
+      "ratio": 8.695,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--danger-text",
+      "background": "--danger-soft",
+      "ratio": 8.222,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--ai-text",
+      "background": "--ai-soft",
+      "ratio": 6.965,
+      "passesNormalText": true
+    }
+  ],
+  "limitations": [
+    "No rendered application was modified or tested",
+    "Mobile is an annotated viewport study, not a complete field-by-field prototype",
+    "Figma Make inspected separately in Edge; native Design-file library discovery is not applicable to this Make file",
+    "Synthetic chart data; final chart bbox and runtime contrast require browser verification",
+    "No AI, DB, service sync, credential access or network calls in renderer"
+  ]
+}

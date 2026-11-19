@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-15T05:55:16.737Z",
+  "syntheticOnly": true,
+  "automaticRetries": 0,
+  "results": [
+    {
+      "stage": "resume-synthetic-validated",
+      "ok": true,
+      "detail": "Validated 1 patches; 1 can be reviewed for acceptance",
+      "ms": 1938
+    },
+    {
+      "stage": "search-public-synthetic-query",
+      "ok": true,
+      "detail": "Received 3 public search results; not verified job offers",
+      "ms": 376
+    }
+  ]
+}

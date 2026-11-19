@@ -1,0 +1,61 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>04 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>02 · 概要设计</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>四角色，共同形成服务闭环</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 18, flexDirection: 'column', gap: 10 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F0F6FF', borderRadius: 8, height: 46, padding: '0 20px' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#216FEE', width: 96 }}>学生</Text>
+        <Text style={{ fontSize: 15, color: '#33415C' }}>简历准备 → 岗位匹配 → 投递跟踪 → 面试练习 → 协议与去向</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F0F6FF', borderRadius: 8, height: 46, padding: '0 20px' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#0E9F92', width: 96 }}>企业</Text>
+        <Text style={{ fontSize: 15, color: '#33415C' }}>岗位管理 → 候选人推进 → 面试日程 → 录用与协议</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F0F6FF', borderRadius: 8, height: 46, padding: '0 20px' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#216FEE', width: 96 }}>辅导员</Text>
+        <Text style={{ fontSize: 15, color: '#33415C' }}>辖区名册 → 去向审核 → 就业驾驶舱 → 帮扶跟进</Text>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'center', background: '#F0F6FF', borderRadius: 8, height: 46, padding: '0 20px' }}>
+        <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#0E9F92', width: 96 }}>管理员</Text>
+        <Text style={{ fontSize: 15, color: '#33415C' }}>账号与准入 → 公开机会源 → 运行与审计治理</Text>
+      </Box>
+    </Box>
+    <Text style={{ fontSize: 14, color: '#7A8BA8', marginTop: 14 }}>角色决定数据归属与可见范围，四角色权限并不相同；协议、去向、面试是不同实体，不混为一条状态链。</Text>
+    <Box style={{ marginTop: 16, flexDirection: 'row', gap: 32, alignItems: 'flex-start' }}>
+      <Box style={{ flexDirection: 'column' }}>
+        <Image src="assets/U02.png" style={{ width: 442, height: 298, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 8 }}>学生 · 生涯概览｜当前实现运行截图 · 隔离测试数据</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column' }}>
+        <Image src="assets/U09.png" style={{ width: 402, height: 298, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 8 }}>辅导员 · 就业质量驾驶舱｜当前实现运行截图</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

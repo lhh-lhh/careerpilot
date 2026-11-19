@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "seedVersion": "1.0",
+  "counselors": [
+    { "id": "user-counselor-001", "students": 10, "applications": 30, "approved": 10, "pass": 10, "fail": 0, "pending": 0, "signed": 10 },
+    { "id": "user-counselor-002", "students": 10, "applications": 30, "approved": 10, "pass": 10, "fail": 0, "pending": 0, "signed": 2 },
+    { "id": "user-counselor-003", "students": 10, "applications": 30, "approved": 0, "pass": 0, "fail": 10, "pending": 0, "signed": 0 },
+    { "id": "user-counselor-004", "students": 10, "applications": 30, "approved": 0, "pass": 0, "fail": 0, "pending": 10, "signed": 0 }
+  ],
+  "majors": [
+    { "id": "major-1", "students": 10, "applications": 30, "approved": 5, "pass": 5, "fail": 3, "pending": 2, "signed": 3 },
+    { "id": "major-2", "students": 10, "applications": 30, "approved": 5, "pass": 5, "fail": 3, "pending": 2, "signed": 3 },
+    { "id": "major-3", "students": 10, "applications": 30, "approved": 5, "pass": 5, "fail": 2, "pending": 3, "signed": 3 },
+    { "id": "major-4", "students": 10, "applications": 30, "approved": 5, "pass": 5, "fail": 2, "pending": 3, "signed": 3 }
+  ]
+}

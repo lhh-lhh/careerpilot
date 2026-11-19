@@ -1,0 +1,240 @@
+{
+  "version": "0.1",
+  "status": "Design proposal only; not imported by application",
+  "source": "src/styles/tokens.css",
+  "foundationPolicy": "Retain existing named colors. Extend scale and component sizing only after design approval.",
+  "themes": {
+    "light": {
+      "--bg-base": "#f6f8fc",
+      "--surface": "#ffffff",
+      "--surface-2": "#eef2f9",
+      "--text-1": "#16233a",
+      "--text-2": "#5a6782",
+      "--text-3": "#606d85",
+      "--border": "#e3e9f2",
+      "--border-control": "#65718a",
+      "--brand": "#2f55c8",
+      "--brand-700": "#23409b",
+      "--on-brand": "#ffffff",
+      "--brand-text": "#2f55c8",
+      "--focus-ring": "#2f55c8",
+      "--ai": "#6e56cf",
+      "--ai-text": "#6e56cf",
+      "--teal": "#0e9f92",
+      "--amber": "#e9a23b",
+      "--success": "#1f9d6b",
+      "--warn": "#d9962a",
+      "--danger": "#d94848",
+      "--info": "#2e6be6",
+      "--success-text": "#146b49",
+      "--warn-text": "#80520c",
+      "--danger-text": "#b52c36",
+      "--info-text": "#2457b8",
+      "--ai-grad": "linear-gradient(120deg, #6e56cf, #3b82f6)",
+      "--disabled-fg": "#606d85",
+      "--disabled-bg": "#eef2f9",
+      "--sh-1": "0 1px 2px rgba(22, 35, 58, 0.06)",
+      "--sh-2": "0 6px 20px rgba(22, 35, 58, 0.08)",
+      "--sh-3": "0 16px 40px rgba(22, 35, 58, 0.12)",
+      "--navy": "#0e1421",
+      "--navy-2": "#161f31",
+      "--on-navy": "#eef3fc",
+      "--on-navy-muted": "#a7b4cc",
+      "--brand-soft": "#edf2ff",
+      "--ai-soft": "#f2efff",
+      "--success-soft": "#e7f5ed",
+      "--warn-soft": "#fff3df",
+      "--danger-soft": "#fff0f0",
+      "--font-sans": "\"PingFang SC\", \"Microsoft YaHei\", \"Noto Sans SC\", system-ui, sans-serif",
+      "--font-mono": "ui-monospace, Consolas, monospace",
+      "--r-sm": "6px",
+      "--r-control": "10px",
+      "--r-card": "14px",
+      "--r-panel": "20px",
+      "--ease": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "--t-fast": "120ms",
+      "--t-state": "200ms",
+      "--t-panel": "320ms"
+    },
+    "dark": {
+      "--bg-base": "#0e1421",
+      "--surface": "#161f31",
+      "--surface-2": "#1e2a40",
+      "--text-1": "#eef3fc",
+      "--text-2": "#a7b4cc",
+      "--text-3": "#9aaac4",
+      "--border": "#2a3650",
+      "--border-control": "#8799b8",
+      "--brand": "#2f55c8",
+      "--brand-700": "#23409b",
+      "--on-brand": "#ffffff",
+      "--brand-text": "#91a9ff",
+      "--focus-ring": "#91a9ff",
+      "--ai": "#9b87f5",
+      "--ai-text": "#b7a4ff",
+      "--teal": "#46c7ba",
+      "--amber": "#f4c66a",
+      "--success": "#79d4aa",
+      "--warn": "#f4c66a",
+      "--danger": "#ffadb3",
+      "--info": "#9cbcff",
+      "--success-text": "#79d4aa",
+      "--warn-text": "#f4c66a",
+      "--danger-text": "#ffadb3",
+      "--info-text": "#9cbcff",
+      "--ai-grad": "linear-gradient(120deg, #9b87f5, #91a9ff)",
+      "--disabled-fg": "#9aaac4",
+      "--disabled-bg": "#1e2a40",
+      "--sh-1": "0 1px 2px rgba(0, 0, 0, 0.18)",
+      "--sh-2": "0 6px 20px rgba(0, 0, 0, 0.22)",
+      "--sh-3": "0 16px 40px rgba(0, 0, 0, 0.28)",
+      "--navy": "#0e1421",
+      "--navy-2": "#161f31",
+      "--on-navy": "#eef3fc",
+      "--on-navy-muted": "#a7b4cc",
+      "--brand-soft": "#1e2a40",
+      "--ai-soft": "#28233f",
+      "--success-soft": "#142f2b",
+      "--warn-soft": "#342b1e",
+      "--danger-soft": "#38232c",
+      "--font-sans": "\"PingFang SC\", \"Microsoft YaHei\", \"Noto Sans SC\", system-ui, sans-serif",
+      "--font-mono": "ui-monospace, Consolas, monospace",
+      "--r-sm": "6px",
+      "--r-control": "10px",
+      "--r-card": "14px",
+      "--r-panel": "20px",
+      "--ease": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "--t-fast": "120ms",
+      "--t-state": "200ms",
+      "--t-panel": "320ms"
+    }
+  },
+  "extensions": {
+    "spacing": {
+      "--space-1": 4,
+      "--space-2": 8,
+      "--space-3": 12,
+      "--space-4": 16,
+      "--space-5": 20,
+      "--space-6": 24,
+      "--space-8": 32,
+      "--space-10": 40,
+      "--space-12": 48,
+      "--space-16": 64
+    },
+    "typography": {
+      "heroDesktop": {
+        "fontSize": 56,
+        "lineHeight": 68,
+        "fontWeight": 600
+      },
+      "heroMobile": {
+        "fontSize": 34,
+        "lineHeight": 44,
+        "fontWeight": 600
+      },
+      "h1": {
+        "fontSize": 28,
+        "lineHeight": 38,
+        "fontWeight": 600
+      },
+      "h1Mobile": {
+        "fontSize": 24,
+        "lineHeight": 34,
+        "fontWeight": 600
+      },
+      "h2": {
+        "fontSize": 20,
+        "lineHeight": 28,
+        "fontWeight": 600
+      },
+      "h3": {
+        "fontSize": 16,
+        "lineHeight": 24,
+        "fontWeight": 600
+      },
+      "body": {
+        "fontSize": 14,
+        "lineHeight": 22,
+        "fontWeight": 400
+      },
+      "input": {
+        "fontSize": 16,
+        "lineHeight": 24,
+        "fontWeight": 400
+      },
+      "caption": {
+        "fontSize": 13,
+        "lineHeight": 20,
+        "fontWeight": 400
+      },
+      "chartLabel": {
+        "fontSize": 12,
+        "lineHeight": 18,
+        "fontWeight": 400
+      },
+      "metric": {
+        "fontSize": 32,
+        "lineHeight": 40,
+        "fontWeight": 600
+      }
+    },
+    "layout": {
+      "sidebar": 224,
+      "header": 64,
+      "gutterDesktop": 32,
+      "gutterTablet": 24,
+      "gutterMobile": 16,
+      "contentMax": 1440,
+      "portalMax": 1296,
+      "chartPanelMin": 400,
+      "editorMin": 480
+    },
+    "controls": {
+      "heightDefault": 44,
+      "heightCompact": 36,
+      "heightLarge": 52,
+      "touchTargetGoal": 44,
+      "radius": 10,
+      "focusWidth": 2,
+      "focusOffset": 3
+    },
+    "overlays": {
+      "confirm": 480,
+      "form": 640,
+      "comparison": 960,
+      "drawer": 480,
+      "viewportGapDesktop": 24,
+      "viewportGapMobile": 16
+    },
+    "motion": {
+      "instantMs": 120,
+      "stateMs": 200,
+      "panelMs": 260,
+      "revealMs": 240,
+      "revealDistancePx": 8,
+      "staggerMs": 40,
+      "sequenceMaxMs": 400,
+      "reducedMotion": "remove decorative movement and looping; retain all information",
+      "businessEffects": "none"
+    },
+    "layering": {
+      "content": 0,
+      "sticky": 10,
+      "navigation": 30,
+      "popover": 50,
+      "assistant": 60,
+      "modalBackdrop": 80,
+      "modalPanel": 81,
+      "criticalFeedback": 90,
+      "note": "Design semantic scale. Audit existing 1102+ pet levels before implementation; do not apply blindly."
+    }
+  },
+  "figmaMapping": {
+    "status": "No target file; discovery/search not performed",
+    "colors": "Existing CSS custom property → Color semantic variable, preserve var(--name) code syntax; Light/Dark modes",
+    "spacing": "Proposed --space-* → Spacing FLOAT values",
+    "typography": "Named composite text styles with verified Chinese font",
+    "shadows": "Existing --sh-* → Effect styles, not color variables"
+  }
+}

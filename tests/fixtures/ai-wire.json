@@ -1,0 +1,1014 @@
+[
+  {
+    "id": "a1-structure",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a1-structure",
+      "module": "A1",
+      "operation": "rewrite",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "resumeVersionId": "version-current",
+        "fields": [
+          {
+            "fieldPath": "experience.item-1.description",
+            "text": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。"
+          },
+          {
+            "fieldPath": "projects.item-1.description",
+            "text": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。"
+          }
+        ],
+        "targetJob": {
+          "jobId": "job-current",
+          "title": "前端开发工程师",
+          "jdText": "参与前端开发工程师相关项目，重视真实实践经历、沟通协作与持续学习。本岗位及企业均为教学示例。",
+          "skillIds": [
+            "skill-1"
+          ]
+        },
+        "strategy": "structure",
+        "keepMyTone": false
+      },
+      "domainRevision": "efcca10d6b1657266781b5cda2b33fc0976cd50af4dc9523ffd671d1a6a84d0b",
+      "inputHash": "db292b90286a40ccd9fef86ead05d2452eb7897134f0420bcb1dedd69f3f3953"
+    },
+    "payload": {
+      "module": "A1",
+      "operation": "rewrite",
+      "summary": "依据已记录的经历整理表达；内容仍需本人核实，可逐条驳回。",
+      "suggestions": [
+        {
+          "id": "suggestion-1",
+          "resumeVersionId": "version-current",
+          "fieldPath": "experience.item-1.description",
+          "before": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。",
+          "after": "在校园服务项目期间；负责需求梳理；组织同学访谈并完成页面开发；交付了3个可演示模块。",
+          "reason": "仅整理原文表达，未增加事实。",
+          "evidence": [
+            {
+              "fieldPath": "experience.item-1.description",
+              "quote": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。",
+              "start": 0,
+              "end": 42
+            }
+          ],
+          "requiresUserInput": false,
+          "disposition": "pending"
+        },
+        {
+          "id": "suggestion-2",
+          "resumeVersionId": "version-current",
+          "fieldPath": "projects.item-1.description",
+          "before": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。",
+          "after": "在课程项目期间；负责前端页面设计与开发；实现信息筛选与状态管理；完成4个核心页面的交付。",
+          "reason": "仅整理原文表达，未增加事实。",
+          "evidence": [
+            {
+              "fieldPath": "projects.item-1.description",
+              "quote": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "requiresUserInput": false,
+          "disposition": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a1-keep-tone",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a1-keep-tone",
+      "module": "A1",
+      "operation": "rewrite",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "resumeVersionId": "version-current",
+        "fields": [
+          {
+            "fieldPath": "experience.item-1.description",
+            "text": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。"
+          },
+          {
+            "fieldPath": "projects.item-1.description",
+            "text": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。"
+          }
+        ],
+        "targetJob": {
+          "jobId": "job-current",
+          "title": "前端开发工程师",
+          "jdText": "参与前端开发工程师相关项目，重视真实实践经历、沟通协作与持续学习。本岗位及企业均为教学示例。",
+          "skillIds": [
+            "skill-1"
+          ]
+        },
+        "strategy": "structure",
+        "keepMyTone": true
+      },
+      "domainRevision": "a8a7ac717fd0aad51dc7b94a92d29a4e7be2256caeaaa8825470ffa589655453",
+      "inputHash": "3e2a814c45c12b200029a8e7e12857763b611acda0e42fa049e8484ffef28f3b"
+    },
+    "payload": {
+      "module": "A1",
+      "operation": "rewrite",
+      "summary": "保留你的原有语气；没有必须改写的内容，可结合体检提示自行完善。",
+      "suggestions": []
+    }
+  },
+  {
+    "id": "a1-evidence-prompt",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a1-evidence-prompt",
+      "module": "A1",
+      "operation": "rewrite",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "resumeVersionId": "version-current",
+        "fields": [
+          {
+            "fieldPath": "experience.item-1.description",
+            "text": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。"
+          },
+          {
+            "fieldPath": "projects.item-1.description",
+            "text": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。"
+          }
+        ],
+        "targetJob": null,
+        "strategy": "evidencePrompt",
+        "keepMyTone": false
+      },
+      "domainRevision": "0ba92164b15c88c90a66184b4b5a8a72a9b9e30dc7de3b2c99c9f69f5089e23b",
+      "inputHash": "7694b44d1be1be898e0109f385f1233796017934c86002dc5f30fb2e1d0ae35f"
+    },
+    "payload": {
+      "module": "A1",
+      "operation": "rewrite",
+      "summary": "依据已记录的经历整理表达；内容仍需本人核实，可逐条驳回。",
+      "suggestions": [
+        {
+          "id": "suggestion-1",
+          "resumeVersionId": "version-current",
+          "fieldPath": "experience.item-1.description",
+          "before": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。",
+          "after": "【待核实：请依据真实经历补充表达】",
+          "reason": "请补充真实依据，未补充前不可采纳。",
+          "evidence": [
+            {
+              "fieldPath": "experience.item-1.description",
+              "quote": "在校园服务项目期间，负责需求梳理，组织同学访谈并完成页面开发，交付了3个可演示模块。",
+              "start": 0,
+              "end": 42
+            }
+          ],
+          "requiresUserInput": true,
+          "disposition": "pending"
+        },
+        {
+          "id": "suggestion-2",
+          "resumeVersionId": "version-current",
+          "fieldPath": "projects.item-1.description",
+          "before": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。",
+          "after": "【待核实：请依据真实经历补充表达】",
+          "reason": "请补充真实依据，未补充前不可采纳。",
+          "evidence": [
+            {
+              "fieldPath": "projects.item-1.description",
+              "quote": "在课程项目期间，负责前端页面设计与开发，实现信息筛选与状态管理，完成4个核心页面的交付。",
+              "start": 0,
+              "end": 44
+            }
+          ],
+          "requiresUserInput": true,
+          "disposition": "pending"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a2-1-question",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-1-question",
+      "module": "A2",
+      "operation": "question",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "behavior",
+          "text": "请介绍一次你参与项目并解决困难的经历。（题1）",
+          "skillIds": [
+            "skill-1"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "57e471c19c388e488f2a70ef91294c414d0fbe9ca527b917d8deddc3cbc7bdb4",
+      "inputHash": "4c94c9f0adf981adc42f17a2b9ff6a884dffe0b89487c99176cacb876307ad03"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "question",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "请介绍一次你参与项目并解决困难的经历。（题1）",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-1-feedback",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-1-feedback",
+      "module": "A2",
+      "operation": "feedback",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "behavior",
+          "text": "请介绍一次你参与项目并解决困难的经历。（题1）",
+          "skillIds": [
+            "skill-1"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "项目期间负责开发任务，完成3个页面并交付2次迭代。"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "db1dda0db5887a69803d77963c195317587d48725f6b2de0f52a45a212c2fd6f",
+      "inputHash": "c154f676a33819596463f4ea39d583136b3fddc5305ff3d3a321239dc18b19db"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "feedback",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "已记录你的回答。请结合本地评分依据，核对任务、行动和结果是否清楚；没有证据的成果不必补写。",
+      "evidence": [
+        {
+          "fieldPath": "answers.answer-1.text",
+          "quote": "项目期间负责开发任务，完成3个页面并交付2次迭代。",
+          "start": 0,
+          "end": 25
+        }
+      ]
+    }
+  },
+  {
+    "id": "a2-1-follow-1",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-1-follow-1",
+      "module": "A2",
+      "operation": "followUp",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "behavior",
+          "text": "请介绍一次你参与项目并解决困难的经历。（题1）",
+          "skillIds": [
+            "skill-1"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "项目期间负责开发任务，完成3个页面并交付2次迭代。"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "db1dda0db5887a69803d77963c195317587d48725f6b2de0f52a45a212c2fd6f",
+      "inputHash": "4a231b6f98f6f654555b18e0207d60031712fdd0b62d76ed792bb9a4e4a40f92"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "followUp",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "最终产生了怎样的结果？请只补充可以核实的事实。",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-1-follow-2",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-1-follow-2",
+      "module": "A2",
+      "operation": "followUp",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "behavior",
+          "text": "请介绍一次你参与项目并解决困难的经历。（题1）",
+          "skillIds": [
+            "skill-1"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 1,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "项目期间负责开发任务，完成3个页面并交付2次迭代。"
+          },
+          {
+            "id": "answer-2",
+            "kind": "followUp",
+            "text": "我负责页面开发与协作任务。"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "f348d1f77eda3cc4b70b012e03975f66b31159fc9697784af71d6b3c0b854315",
+      "inputHash": "e31627ec11375a9edd796d73e4e9f608feec0276922a697da47017d26872e0a4"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "followUp",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "最终产生了怎样的结果？请只补充可以核实的事实。",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-2-question",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-2-question",
+      "module": "A2",
+      "operation": "question",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "technical",
+          "text": "请结合项目说明你如何使用Vue完成任务。（题2）",
+          "skillIds": [
+            "skill-2"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "382e9a79449276ee238e66da0b6a951e21b06a7f892e0400991d9df411d20a83",
+      "inputHash": "162fa92a1522d4d46fb5825d4ef8c0bb0d74c5b5f0d4822e3355beabb033a4ef"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "question",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "请结合项目说明你如何使用Vue完成任务。（题2）",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-2-feedback",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-2-feedback",
+      "module": "A2",
+      "operation": "feedback",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "technical",
+          "text": "请结合项目说明你如何使用Vue完成任务。（题2）",
+          "skillIds": [
+            "skill-2"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "我参与开发"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "d4a5137e0e45f96e9af35fd6127d4820d427298c74684e4b2dc9cc8eda991923",
+      "inputHash": "36ee44d11f09797b4ac0d07c931aa8fa6c99d21ee4f31398a4c8b09acd66c7f1"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "feedback",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "已记录你的回答。请结合本地评分依据，核对任务、行动和结果是否清楚；没有证据的成果不必补写。",
+      "evidence": [
+        {
+          "fieldPath": "answers.answer-1.text",
+          "quote": "我参与开发",
+          "start": 0,
+          "end": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "a2-2-follow-1",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-2-follow-1",
+      "module": "A2",
+      "operation": "followUp",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "technical",
+          "text": "请结合项目说明你如何使用Vue完成任务。（题2）",
+          "skillIds": [
+            "skill-2"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "我参与开发"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "d4a5137e0e45f96e9af35fd6127d4820d427298c74684e4b2dc9cc8eda991923",
+      "inputHash": "aade8157400f1059c5342c251be4db46f8416c9cc6a6fcbb4b7f504d767f5568"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "followUp",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "请补充当时的项目背景或具体场景。",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-2-follow-2",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-2-follow-2",
+      "module": "A2",
+      "operation": "followUp",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "technical",
+          "text": "请结合项目说明你如何使用Vue完成任务。（题2）",
+          "skillIds": [
+            "skill-2"
+          ],
+          "keywords": [
+            "项目",
+            "任务"
+          ]
+        },
+        "followUpCount": 1,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "answer",
+            "text": "我参与开发"
+          },
+          {
+            "id": "answer-2",
+            "kind": "followUp",
+            "text": "我负责页面开发与协作任务。"
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "5d6f90d6fb66f800b6ae89084edd416cef2ea388124163901026635607f725f8",
+      "inputHash": "1937e4ed7478500ad90c395ab0c819feb19226ff304af9e7e9bd09d8a03b2f02"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "followUp",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "请补充当时的项目背景或具体场景。",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-3-question",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-3-question",
+      "module": "A2",
+      "operation": "question",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "hr",
+          "text": "你如何规划学习与团队协作？请举例说明。（题3）",
+          "skillIds": [
+            "skill-3"
+          ],
+          "keywords": [
+            "学习",
+            "协作"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "b4e4dae7e5f45cc171107f083c11c7d2280218e549b37fb2b20060ee10b5abac",
+      "inputHash": "a735eed7b0671c8ccfcc6356bcd3034a8251bfc6824b5b5393938629e23d2657"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "question",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "你如何规划学习与团队协作？请举例说明。（题3）",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a2-3-feedback",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a2-3-feedback",
+      "module": "A2",
+      "operation": "feedback",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "sessionId": "session-current",
+        "question": {
+          "questionId": "question-current",
+          "type": "hr",
+          "text": "你如何规划学习与团队协作？请举例说明。（题3）",
+          "skillIds": [
+            "skill-3"
+          ],
+          "keywords": [
+            "学习",
+            "协作"
+          ]
+        },
+        "followUpCount": 0,
+        "answers": [
+          {
+            "id": "answer-1",
+            "kind": "skip",
+            "text": ""
+          }
+        ],
+        "jobContext": {
+          "title": "前端开发工程师",
+          "skillIds": [
+            "skill-1"
+          ]
+        }
+      },
+      "domainRevision": "58aeba25f0dbbc589ab43cfe0a8c85c5941bb0e963bd6f8370090821d6caf4ad",
+      "inputHash": "18d922833323f91af2268f801c7a500031c77c7cb40525d1992ad9073af7b834"
+    },
+    "payload": {
+      "module": "A2",
+      "operation": "feedback",
+      "sessionId": "session-current",
+      "questionId": "question-current",
+      "text": "本题已跳过，未生成虚构评价。可在下次练习中先说明背景与本人任务。",
+      "evidence": []
+    }
+  },
+  {
+    "id": "a3-high",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a3-high",
+      "module": "A3",
+      "operation": "explain",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "job": {
+          "jobId": "job-current",
+          "title": "前端开发工程师"
+        },
+        "match": {
+          "jobId": "job-current",
+          "rawTotal": 100,
+          "total": 100,
+          "dimensions": [
+            {
+              "key": "skill",
+              "score": 1,
+              "weight": 0.35,
+              "contribution": 35,
+              "hits": [
+                "skill-1"
+              ],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "major",
+              "score": 1,
+              "weight": 0.2,
+              "contribution": 20,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "degree",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "city",
+              "score": 1,
+              "weight": 0.15,
+              "contribution": 15,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "salary",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "experience",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            }
+          ],
+          "missingSkills": [],
+          "algorithmVersion": "1.0",
+          "inputRevision": "current-snapshot"
+        },
+        "hypotheticalSkillIds": []
+      },
+      "domainRevision": "9f35286349728e4ac29edf9a3b88f1c6acf4c8af51098238b46be5068e175114",
+      "inputHash": "1ce1698f99e7128be7dcddc2c318199949437eff1e01c57c26e5f94ffd2f3b6d"
+    },
+    "payload": {
+      "module": "A3",
+      "operation": "explain",
+      "jobId": "job-current",
+      "text": "当前匹配为{{match:total}}。技能贡献{{dimension:skill}}，城市贡献{{dimension:city}}。建议展开各维度核对命中与缺口，再决定是否投递。",
+      "dimensionKeys": [
+        "skill",
+        "city"
+      ],
+      "skillIds": []
+    }
+  },
+  {
+    "id": "a3-gap",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a3-gap",
+      "module": "A3",
+      "operation": "explain",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "job": {
+          "jobId": "job-current",
+          "title": "产品运营专员"
+        },
+        "match": {
+          "jobId": "job-current",
+          "rawTotal": 50,
+          "total": 50,
+          "dimensions": [
+            {
+              "key": "skill",
+              "score": 0,
+              "weight": 0.35,
+              "contribution": 0,
+              "hits": [],
+              "misses": [
+                "skill-3"
+              ],
+              "missingData": false
+            },
+            {
+              "key": "major",
+              "score": 1,
+              "weight": 0.2,
+              "contribution": 20,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "degree",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "city",
+              "score": 0,
+              "weight": 0.15,
+              "contribution": 0,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "salary",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            },
+            {
+              "key": "experience",
+              "score": 1,
+              "weight": 0.1,
+              "contribution": 10,
+              "hits": [],
+              "misses": [],
+              "missingData": false
+            }
+          ],
+          "missingSkills": [
+            {
+              "skillId": "skill-3",
+              "gain": 35,
+              "costDays": 9
+            }
+          ],
+          "algorithmVersion": "1.0",
+          "inputRevision": "current-snapshot"
+        },
+        "hypotheticalSkillIds": []
+      },
+      "domainRevision": "6f8833e77f9b3e7de61699f6787dafe25f29dad7dbb311f2682656fa52d8c0ee",
+      "inputHash": "7e7fc9f04b55e6af9a1c8ce8eaf415758d1fcf19b80484e41832d7449c90bf4e"
+    },
+    "payload": {
+      "module": "A3",
+      "operation": "explain",
+      "jobId": "job-current",
+      "text": "当前匹配为{{match:total}}。技能贡献{{dimension:skill}}，城市贡献{{dimension:city}}。建议展开各维度核对命中与缺口，再决定是否投递。",
+      "dimensionKeys": [
+        "skill",
+        "city"
+      ],
+      "skillIds": [
+        "skill-3"
+      ]
+    }
+  },
+  {
+    "id": "a7-rate",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a7-rate",
+      "module": "A7",
+      "operation": "query",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "queryText": "当前落实率是多少",
+        "intent": "destinationRate",
+        "scopeLabel": "当前辅导员辖区",
+        "asOf": "2026-11-12T02:00:00.000Z",
+        "metricContext": [
+          {
+            "metricId": "destinationRate",
+            "token": "{{metric:destinationRate}}",
+            "label": "去向落实率",
+            "value": 1
+          }
+        ],
+        "targetStudents": []
+      },
+      "domainRevision": "81998541fd3219e0981bc58f6c77c7d4e286d746c3b60e48da0e1443aff2de81",
+      "inputHash": "e8464beacb7e62affaf9b5f2ff0d87088ce5fa6fa0f02cb780d1dd7e212ffdf4"
+    },
+    "payload": {
+      "module": "A7",
+      "operation": "query",
+      "intent": "destinationRate",
+      "text": "去向落实率：{{metric:destinationRate}}。以上口径仅限当前可见范围与固定统计时点。",
+      "metricRefs": [
+        "destinationRate"
+      ],
+      "studentIds": [],
+      "ruleIds": []
+    }
+  },
+  {
+    "id": "a7-advice",
+    "wire": {
+      "gatewayVersion": "1.0",
+      "traceId": "fixture-a7-advice",
+      "module": "A7",
+      "operation": "advice",
+      "promptVersion": "1.0",
+      "schemaVersion": "1.0",
+      "algorithmVersion": "1.0",
+      "variables": {
+        "queryText": "如何开展帮扶",
+        "intent": "alerts",
+        "scopeLabel": "当前辅导员辖区",
+        "asOf": "2026-11-12T02:00:00.000Z",
+        "metricContext": [
+          {
+            "metricId": "alerts",
+            "token": "{{metric:alerts}}",
+            "label": "风险人数",
+            "value": 1
+          }
+        ],
+        "targetStudents": [
+          {
+            "studentId": "student-target",
+            "riskLevel": "high",
+            "ruleIds": [
+              "inactive7d",
+              "resumeIncomplete",
+              "deadlineApproaching"
+            ]
+          }
+        ]
+      },
+      "domainRevision": "842f12e073d82a930b148c92510af708d1b32a7dfcbf98988f7b0acc7d9c45da",
+      "inputHash": "8084352b30c0d49a6d9b2dac3a45248d9ef13bd0a42fc8272141e0548fb18c2e"
+    },
+    "payload": {
+      "module": "A7",
+      "operation": "advice",
+      "intent": "alerts",
+      "text": "建议先与学生核实当前进展，并共同确定具体行动和复查时间。依据{{rule:inactive7d}}。依据{{rule:resumeIncomplete}}。依据{{rule:deadlineApproaching}}。帮扶记录不会自动清除风险条件。",
+      "metricRefs": [
+        "alerts"
+      ],
+      "studentIds": [
+        "student-target"
+      ],
+      "ruleIds": [
+        "inactive7d",
+        "resumeIncomplete",
+        "deadlineApproaching"
+      ]
+    }
+  }
+]

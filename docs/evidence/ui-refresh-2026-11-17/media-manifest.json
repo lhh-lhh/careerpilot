@@ -1,0 +1,248 @@
+{
+  "recordedAt": "2026-11-17T18:12:34.444Z",
+  "provider": "Nebula",
+  "model": "gpt-image-2.6",
+  "requests": {
+    "concepts": 3,
+    "productionAtlases": 2
+  },
+  "credentialIncluded": false,
+  "realBusinessDataIncluded": false,
+  "usage": "Original generic editorial art, not employer logos, certifications or documentary photos.",
+  "records": [
+    {
+      "file": "/media/editorial/campus.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 30242,
+      "sha256": "96bda71f85ace999696d0206a22c888a5d56088b5dcbb86acac498efd10ae87e"
+    },
+    {
+      "file": "/media/editorial/journey.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 24034,
+      "sha256": "40d4158cedaaa234969dba895bb0e89febed98d40d1858ed38eb8d5ca02c2b99"
+    },
+    {
+      "file": "/media/editorial/paper.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 18294,
+      "sha256": "d58a5dcd240ff5aeb6da6c6b60f1776abbe4f928161ea25880107135db89b552"
+    },
+    {
+      "file": "/media/editorial/studio.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 341,
+        "width": 512,
+        "height": 342
+      },
+      "width": 512,
+      "height": 342,
+      "bytes": 21822,
+      "sha256": "1cb61c68a5458682a50755b199dab01578b352e46f1cdeac36ca66c62398f130"
+    },
+    {
+      "file": "/media/editorial/pipeline.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 512,
+        "top": 341,
+        "width": 512,
+        "height": 342
+      },
+      "width": 512,
+      "height": 342,
+      "bytes": 22372,
+      "sha256": "fd9547233b7c5dae197607fe4b89fcfcd899d5df1313f088b1ec1c6175aba940"
+    },
+    {
+      "file": "/media/editorial/analytics.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 1024,
+        "top": 341,
+        "width": 512,
+        "height": 342
+      },
+      "width": 512,
+      "height": 342,
+      "bytes": 17560,
+      "sha256": "28699cbe1f82b50039d9d408d5e2626dfdee510c71dc9b901fa4a7c46d962969"
+    },
+    {
+      "file": "/media/editorial/governance.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 683,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 20018,
+      "sha256": "03f483076a9120b8f117acac6a2e202eedea1be81ce0e8e656b2251fc0d61b2b"
+    },
+    {
+      "file": "/media/editorial/service.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 512,
+        "top": 683,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 17778,
+      "sha256": "d2bd130c469f5301fa362bcf1d08047f3cccb4a078b196662ab77194258971e3"
+    },
+    {
+      "file": "/media/editorial/status.webp",
+      "source": "outputs/ui-media-20261118/editorial-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 1024,
+        "top": 683,
+        "width": 512,
+        "height": 341
+      },
+      "width": 512,
+      "height": 341,
+      "bytes": 15186,
+      "sha256": "19e491e9d2a7cbc4d8481fb52b1b61fc88c3fcee746cde2fd4559d3a395a54c5"
+    },
+    {
+      "file": "/media/editorial/practice-frontend.webp",
+      "source": "outputs/ui-media-20261118/practice-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 720,
+      "height": 480,
+      "bytes": 22556,
+      "sha256": "83849400cd9651dc4a0b27bfddbe1ebd385211026c30f5f56165e3ace329cbfb"
+    },
+    {
+      "file": "/media/editorial/practice-backend.webp",
+      "source": "outputs/ui-media-20261118/practice-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 720,
+      "height": 480,
+      "bytes": 25648,
+      "sha256": "46c4b41f72134a62ef73da72c6b8a20a057526c8253a88657ccafbdf2b96a519"
+    },
+    {
+      "file": "/media/editorial/practice-analyst.webp",
+      "source": "outputs/ui-media-20261118/practice-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 720,
+      "height": 480,
+      "bytes": 17662,
+      "sha256": "2275d3bfea618c9fb6f628934b2bd8df68e22f98292299868f1ea1f9f77d4b37"
+    },
+    {
+      "file": "/media/editorial/practice-operations.webp",
+      "source": "outputs/ui-media-20261118/practice-atlas.png",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 720,
+      "height": 480,
+      "bytes": 20098,
+      "sha256": "5f9c3047c72e3437365a2c0ae27c07fe8f2dbaf2bcbc6876de260e2eaf17e6e8"
+    }
+  ]
+}

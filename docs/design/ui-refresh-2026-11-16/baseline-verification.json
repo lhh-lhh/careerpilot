@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-17T11:12:47.176Z",
+  "comparedWith": "2026-11-16T13:31:37.642Z",
+  "algorithm": "sha256",
+  "kind": "source identity verification, NOT a functional test or backup",
+  "scope": [
+    "src/**",
+    "server/**",
+    "gateway/app/** (excluding __pycache__)",
+    "package.json",
+    "package-lock.json"
+  ],
+  "fileCount": 185,
+  "vueScriptCount": 71,
+  "changed": [],
+  "missing": [],
+  "added": [],
+  "scriptChanged": [],
+  "scriptMissing": [],
+  "unchanged": true,
+  "limitations": [
+    "Compared only with the baseline captured during this design turn",
+    "No application unit/E2E/build/performance or paid AI checks were run",
+    "Database and credentials deliberately excluded and never read by this script",
+    "File identity is not proof of correctness, recoverability or future non-regression"
+  ]
+}

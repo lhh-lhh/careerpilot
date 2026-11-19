@@ -1,0 +1,9 @@
+40	  if(!Array.isArray(raw.dimensions)||raw.dimensions.length<1||raw.dimensions.length>6)throw Error('SCHEMA_INVALID');
+41	  const seen=new Set<string>();
+42	  const dimensions=raw.dimensions.map((d:Record<string,unknown>)=>{
+43	    const key=checkedString(d.key,40),score=Number(d.score),evidence=typeof d.evidence==='string'?d.evidence:'';
+44	    if(seen.has(key)||!Number.isFinite(score)||score<0||score>100||(evidence&&!answer.includes(evidence)))throw Error('SEMANTIC_INVALID');seen.add(key);
+45	    return {key,label:checkedString(d.label,80),score,evidence,reason:checkedString(d.reason,1000)};
+46	  });
+47	  const strings=(v:unknown)=>Array.isArray(v)?v.slice(0,6).map(s=>checkedString(s,1000)):[];
+48	  return {dimensions,total:Math.round(dimensions.reduce((a,d)=>a+d.score,0)/dimensions.length),strengths:strings(raw.strengths),improvements:strings(raw.improvements),rubricVersion:'ai-practice-1.0'};

@@ -1,0 +1,40 @@
+{
+  "campus": {
+    "file": "public/media/campus-ai.jpg",
+    "originalFile": "outputs/portal-campus-retry.png",
+    "promptFile": "work/portal-campus-asset-prompt.txt",
+    "provider": "Nebula",
+    "model": "gpt-image-2.6",
+    "originalDimensions": [1536, 1024],
+    "actualDimensions": [1200, 800],
+    "processing": "resize, JPEG quality 86, metadata removed",
+    "usage": "Illustrative fictional campus scene; no real institution endorsement",
+    "note": "First asset attempt returned provider unavailable. One deferred retry authorized by user succeeded; no provider or model switch. Falls back to campusFallback, then a layout-preserving placeholder."
+  },
+  "campusFallback": {
+    "file": "public/media/campus.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Campus_Goes_Down_to_Sea_Level_(2882458904).jpg",
+    "author": "cogdogblog",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "originalDimensions": [1800, 1350],
+    "actualDimensions": [1200, 800],
+    "processing": "center crop, resize, JPEG quality 86, metadata removed",
+    "note": "Illustrative campus photograph, not a partner institution endorsement. Retained as local fallback for preferred AI image."
+  },
+  "stageFiveConcept": {
+    "file": "outputs/stage-five-concept.png",
+    "promptFile": "work/stage-five-concept.txt",
+    "provider": "Nebula",
+    "model": "gpt-image-2.6",
+    "actualDimensions": [1536, 1024],
+    "usage": "Coordinated design guidance only; not shipped as UI or treated as an approved pixel-perfect mockup",
+    "note": "One successful generation; retains existing brand mark and campus media. No fictitious company, salary or contact text copied from the concept."
+  },
+  "concept": {
+    "file": "outputs/stage-two-portal-concept.png",
+    "provider": "Nebula",
+    "model": "gpt-image-2.6",
+    "usage": "Design reference only; not shipped as UI"
+  }
+}

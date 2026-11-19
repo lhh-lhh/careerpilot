@@ -1,0 +1,79 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>05 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>02 · 概要设计</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>总体架构：表现、业务、数据与 AI 分层</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 20, flexDirection: 'row', gap: 32 }}>
+      <svg width={500} height={492} viewBox="0 0 500 492">
+        <rect x={30} y={12} width={440} height={82} rx={8} fill="#F0F6FF" stroke="#216FEE" strokeWidth={1.5} />
+        <rect x={30} y={12} width={6} height={82} rx={3} fill="#216FEE" />
+        <text x={56} y={46} fontSize={17} fontWeight="bold" fill="#10366B">浏览器 · 展示层</text>
+        <text x={56} y={74} fontSize={13} fill="#33415C">Vue 3 · TypeScript · Router · Pinia · ECharts</text>
+        <path d="M250 98 L250 124 M244 112 L250 124 L256 112 M244 98 L250 92 L256 98" stroke="#216FEE" strokeWidth={2} fill="none" />
+        <rect x={30} y={128} width={440} height={82} rx={8} fill="#F0F6FF" stroke="#216FEE" strokeWidth={1.5} />
+        <rect x={30} y={128} width={6} height={82} rx={3} fill="#216FEE" />
+        <text x={56} y={162} fontSize={17} fontWeight="bold" fill="#10366B">服务与领域层</text>
+        <text x={56} y={190} fontSize={13} fill="#33415C">app-services · Repository 边界 · 纯 TS 匹配（Web Worker）</text>
+        <path d="M250 214 L250 240 M244 228 L250 240 L256 228 M244 214 L250 208 L256 214" stroke="#216FEE" strokeWidth={2} fill="none" />
+        <rect x={30} y={244} width={440} height={82} rx={8} fill="#E4EEFD" stroke="#10366B" strokeWidth={1.5} />
+        <rect x={30} y={244} width={6} height={82} rx={3} fill="#10366B" />
+        <text x={56} y={278} fontSize={17} fontWeight="bold" fill="#10366B">在线基础设施</text>
+        <text x={56} y={306} fontSize={13} fill="#33415C">Node/TypeScript · 同源 HTTP/SSE · SQLite 事务</text>
+        <path d="M250 330 L250 356 M244 344 L250 356 L256 344 M244 330 L250 324 L256 330" stroke="#6E56CF" strokeWidth={2} fill="none" />
+        <rect x={30} y={360} width={440} height={82} rx={8} fill="#F3F0FD" stroke="#6E56CF" strokeWidth={1.5} />
+        <rect x={30} y={360} width={6} height={82} rx={3} fill="#6E56CF" />
+        <text x={56} y={394} fontSize={17} fontWeight="bold" fill="#6E56CF">AI 代理（服务端）</text>
+        <text x={56} y={422} fontSize={13} fill="#33415C">上下文重建 · 脱敏 · JSON 校验 → DeepSeek API</text>
+        <rect x={30} y={452} width={440} height={34} rx={8} fill="none" stroke="#0E9F92" strokeWidth={1.2} strokeDasharray="5 4" />
+        <text x={250} y={474} fontSize={13} fill="#0E9F92" textAnchor="middle">独立教学路径：IndexedDB / Dexie，与在线库分离</text>
+      </svg>
+      <Box style={{ width: 400, flexDirection: 'column', gap: 12 }}>
+        <Box>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#10366B' }}>为什么选 Vue 3 + TS</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>组织复杂页面与组件状态，类型约束贯穿前后端。</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#10366B' }}>纯 TS 领域层</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>匹配、统计、状态迁移不依赖框架，可独立测试。</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#10366B' }}>同源 Node + SQLite</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>会话、权限、事务与上游密钥统一由服务端管理。</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#6E56CF' }}>AI 只走服务端代理</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>模型是可失败的外部依赖，提示词不是唯一防线。</Text>
+        </Box>
+        <Box style={{ marginTop: 4 }}>
+          <Image src="assets/C01.png" style={{ width: 400, height: 141, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+          <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>在线 / 离线在统一仓储边界选择（src/services/app-services.ts L18–28）</Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

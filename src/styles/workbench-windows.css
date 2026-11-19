@@ -1,0 +1,25 @@
+/* Accepted shared window grid: three independent regions, body-only scrolling. */
+.overlay-panel.ui-window{--window-art:url('/media/workbench/governance-04.webp');--surface:#fff;--surface-2:#f4f8ff;--text-1:#10366b;--text-2:#486384;--border:#dbe6f4;font:14px/1.8 'Microsoft YaHei','Segoe UI',sans-serif;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.overlay-panel.ui-window[data-scene='journey']{--window-art:url('/media/workbench/student-a-01.webp')}
+.overlay-panel.ui-window[data-scene='paper']{--window-art:url('/media/workbench/student-a-02.webp')}
+.overlay-panel.ui-window[data-scene='studio']{--window-art:url('/media/workbench/student-a-10.webp')}
+.overlay-panel.ui-window[data-scene='service']{--window-art:url('/media/workbench/student-b-07.webp')}
+.overlay-panel.ui-window[role='dialog']>header:first-child{display:grid;grid-template-columns:minmax(0,1fr) 90px 44px;gap:14px;min-height:116px;padding:20px 24px;background:linear-gradient(110deg,#e6f2ff,#f8fbff);border-bottom:1px solid var(--border);flex:none;align-items:center}
+.overlay-panel.ui-window>header::before{display:none}
+.overlay-panel.ui-window[role='dialog']>header:first-child>h2{font-size:21px;line-height:1.5;overflow-wrap:anywhere;min-width:0;color:var(--text-1)}
+.overlay-panel.ui-window .window-art{height:78px;width:100%;background:var(--window-art) center/contain no-repeat #edf5ff;border-radius:9px;pointer-events:none}
+.overlay-panel.ui-window>.overlay-body{padding:24px;min-height:0;overflow:auto;background:var(--surface);overscroll-behavior:contain}
+.overlay-panel.ui-window>footer{flex:none;padding:18px 24px;border-top:1px solid var(--border);background:var(--surface-2);gap:10px;flex-wrap:wrap}
+.overlay-panel.ui-window .overlay-close{width:44px;height:44px;min-width:44px;background:var(--surface);border:1px solid #bdd2ee;color:var(--text-1)}
+.account-page:not(.feature-registration){max-width:1180px;margin:auto;padding:28px 30px 60px;min-height:100dvh}
+.account-page:not(.feature-registration) .account-header{max-width:none;margin:0 0 28px}
+.account-page:not(.feature-registration)>.workbench-header{margin:0 0 24px}
+.account-page .workbench-hero{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:28px;align-items:center;border:1px solid #d2e5fa;border-radius:20px;overflow:hidden;background:linear-gradient(110deg,#e5f2ff,#f9fcff);min-height:220px}
+.account-page .workbench-hero-copy{padding:28px}.account-page .workbench-hero-copy h1{font-size:34px;line-height:1.4;color:var(--text-1)}.account-page .workbench-hero-copy p{font-size:14px;line-height:1.9;margin-top:12px;color:var(--text-2)}.account-page .kicker{font-size:11px;letter-spacing:2px;color:var(--brand-text);margin-bottom:12px}
+.account-page .workbench-hero-art{background:#edf5ff;align-self:stretch;display:grid;place-items:center}.account-page .workbench-hero-art img{width:100%;height:220px;object-fit:contain;display:block}
+.account-page:not(.feature-registration) .account-panel{max-width:none;width:100%;padding:28px;background:var(--surface);border:1px solid var(--border);border-radius:16px}.account-page:not(.feature-registration) .account-panel::before{display:none}.account-page .account-panel h2{font-size:23px;margin-bottom:16px}
+.status-page.ui-scene::after{display:none}.status-page .status-art{display:block;width:min(380px,100%);height:250px;object-fit:contain;background:#edf5ff;border-radius:20px;order:-1}
+[data-theme='dark'] .overlay-panel.ui-window{--surface:#192b45;--surface-2:#20344f;--text-1:#e4efff;--text-2:#c0d6f0;--border:#35506f}
+[data-theme='dark'] .overlay-panel.ui-window[role='dialog']>header:first-child,[data-theme='dark'] .account-page .workbench-hero{background:linear-gradient(110deg,#1b385e,#203d61);border-color:#3b5a7e}
+@media(max-width:767px){.overlay-panel.ui-window[role='dialog']>header:first-child{padding:16px;gap:9px;grid-template-columns:minmax(0,1fr) 52px 44px;min-height:93px}.overlay-panel.ui-window[role='dialog']>header:first-child>h2{font-size:18px}.overlay-panel.ui-window .window-art{height:53px}.overlay-panel.ui-window>.overlay-body{padding:18px}.overlay-panel.ui-window>footer{padding:14px 18px}.account-page:not(.feature-registration){padding:20px 14px 40px}.account-page .workbench-hero{grid-template-columns:minmax(0,1fr);gap:0}.account-page .workbench-hero-copy{padding:24px 20px}.account-page .workbench-hero-copy h1{font-size:28px}.account-page .workbench-hero-art img{height:155px}.account-page:not(.feature-registration) .account-panel{padding:22px}.status-page .status-art{height:200px}}
+@media print,(forced-colors:active){.overlay-panel.ui-window .window-art{display:none}.overlay-panel.ui-window[role='dialog']>header:first-child{grid-template-columns:minmax(0,1fr) 44px;background:none}}

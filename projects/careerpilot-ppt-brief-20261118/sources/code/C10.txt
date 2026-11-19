@@ -1,0 +1,18 @@
+73	        const next=await reader.read();if(next.done)break;const chunk=next.value;size+=chunk.byteLength;if(size>1024*1024)throw Error('UPSTREAM_ERROR');
+74	        buffer+=decoder.decode(chunk,{stream:true});
+75	        const lines=buffer.split('\n');buffer=lines.pop()??'';
+76	        for(const line of lines){
+77	          if(!line.startsWith('data:'))continue;
+78	          const payload=line.slice(5).trim();if(!payload)continue;
+79	          if(payload==='[DONE]'){done=true;continue;}
+80	          const value=JSON.parse(payload);
+81	          provenance.metadata(value);
+82	          if(value.error)throw Error('UPSTREAM_ERROR');
+83	          const choice=value.choices?.[0];if(!choice)continue;
+84	          if(choice.finish_reason==='content_filter')throw Error('INPUT_BLOCKED');
+85	          if(choice.finish_reason==='length')throw Error('UPSTREAM_ERROR');
+86	          if(choice.finish_reason==='stop')complete=true;
+87	          if(typeof choice.delta?.content==='string'){output+=choice.delta.content;if(output.length>18000)throw Error('UPSTREAM_ERROR');onText(choice.delta.content);}
+…	中间源码省略；行号保持原文件位置
+90	      if(!complete||!done||!output.trim())throw Error('UPSTREAM_ERROR');
+91	      return output;

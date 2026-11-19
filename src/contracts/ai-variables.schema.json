@@ -1,0 +1,530 @@
+{
+  "A1": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "resumeVersionId",
+      "fields",
+      "targetJob",
+      "strategy",
+      "keepMyTone"
+    ],
+    "properties": {
+      "resumeVersionId": {
+        "type": "string",
+        "maxLength": 160,
+        "minLength": 1
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "fieldPath",
+            "text"
+          ],
+          "properties": {
+            "fieldPath": {
+              "type": "string",
+              "pattern": "^(experience|projects)\\.[A-Za-z0-9_-]+\\.description$"
+            },
+            "text": {
+              "type": "string",
+              "maxLength": 4000,
+              "minLength": 0
+            }
+          }
+        },
+        "maxItems": 20,
+        "uniqueItems": false
+      },
+      "targetJob": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "jobId",
+              "title",
+              "jdText",
+              "skillIds"
+            ],
+            "properties": {
+              "jobId": {
+                "type": "string",
+                "maxLength": 160,
+                "minLength": 1
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 1
+              },
+              "jdText": {
+                "type": "string",
+                "maxLength": 4000,
+                "minLength": 0
+              },
+              "skillIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 160,
+                  "minLength": 1
+                },
+                "maxItems": 100,
+                "uniqueItems": true
+              }
+            }
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "strategy": {
+        "enum": [
+          "structure",
+          "evidencePrompt",
+          "concise"
+        ]
+      },
+      "keepMyTone": {
+        "type": "boolean"
+      }
+    }
+  },
+  "A2": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "sessionId",
+      "question",
+      "followUpCount",
+      "answers",
+      "jobContext"
+    ],
+    "properties": {
+      "sessionId": {
+        "type": "string",
+        "maxLength": 160,
+        "minLength": 1
+      },
+      "question": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "questionId",
+          "type",
+          "text",
+          "skillIds",
+          "keywords"
+        ],
+        "properties": {
+          "questionId": {
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "behavior",
+              "technical",
+              "hr"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1
+          },
+          "skillIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 160,
+              "minLength": 1
+            },
+            "maxItems": 100,
+            "uniqueItems": true
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 100,
+              "minLength": 1
+            },
+            "maxItems": 100,
+            "uniqueItems": false
+          }
+        }
+      },
+      "followUpCount": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2
+      },
+      "answers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "kind",
+            "text"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "maxLength": 160,
+              "minLength": 1
+            },
+            "kind": {
+              "enum": [
+                "answer",
+                "followUp",
+                "skip"
+              ]
+            },
+            "text": {
+              "type": "string",
+              "maxLength": 4000,
+              "minLength": 0
+            }
+          }
+        },
+        "maxItems": 3,
+        "uniqueItems": false
+      },
+      "jobContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "skillIds"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "skillIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 160,
+              "minLength": 1
+            },
+            "maxItems": 100,
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  },
+  "A3": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "job",
+      "match",
+      "hypotheticalSkillIds"
+    ],
+    "properties": {
+      "job": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "jobId",
+          "title"
+        ],
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          }
+        }
+      },
+      "match": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "jobId",
+          "rawTotal",
+          "total",
+          "dimensions",
+          "missingSkills",
+          "algorithmVersion",
+          "inputRevision"
+        ],
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "maxLength": 160,
+            "minLength": 1
+          },
+          "rawTotal": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "total": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "key",
+                "score",
+                "weight",
+                "contribution",
+                "hits",
+                "misses",
+                "missingData"
+              ],
+              "properties": {
+                "key": {
+                  "enum": [
+                    "skill",
+                    "major",
+                    "degree",
+                    "city",
+                    "salary",
+                    "experience"
+                  ]
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "weight": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "contribution": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "hits": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 160,
+                    "minLength": 1
+                  },
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "misses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 160,
+                    "minLength": 1
+                  },
+                  "maxItems": 100,
+                  "uniqueItems": true
+                },
+                "missingData": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "maxItems": 6,
+            "uniqueItems": false,
+            "minItems": 6
+          },
+          "missingSkills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "skillId",
+                "gain",
+                "costDays"
+              ],
+              "properties": {
+                "skillId": {
+                  "type": "string",
+                  "maxLength": 160,
+                  "minLength": 1
+                },
+                "gain": {
+                  "type": "number"
+                },
+                "costDays": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "maxItems": 100,
+            "uniqueItems": false
+          },
+          "algorithmVersion": {
+            "const": "1.0"
+          },
+          "inputRevision": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1
+          }
+        }
+      },
+      "hypotheticalSkillIds": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "maxLength": 160,
+          "minLength": 1
+        },
+        "maxItems": 100,
+        "uniqueItems": true
+      }
+    }
+  },
+  "A7": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "queryText",
+      "intent",
+      "scopeLabel",
+      "asOf",
+      "metricContext",
+      "targetStudents"
+    ],
+    "properties": {
+      "queryText": {
+        "type": "string",
+        "maxLength": 500,
+        "minLength": 0
+      },
+      "intent": {
+        "enum": [
+          "destinationRate",
+          "byMajor",
+          "funnel",
+          "alerts",
+          "avgApplications",
+          "interviewPassRate",
+          "clarify"
+        ]
+      },
+      "scopeLabel": {
+        "type": "string",
+        "maxLength": 200,
+        "minLength": 1
+      },
+      "asOf": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "metricContext": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "metricId",
+            "token",
+            "label",
+            "value"
+          ],
+          "properties": {
+            "metricId": {
+              "enum": [
+                "destinationRate",
+                "byMajor",
+                "funnel",
+                "alerts",
+                "avgApplications",
+                "interviewPassRate"
+              ]
+            },
+            "token": {
+              "type": "string",
+              "pattern": "^\\{\\{metric:(destinationRate|byMajor|funnel|alerts|avgApplications|interviewPassRate)(:[A-Za-z0-9_-]{1,64})?\\}\\}$"
+            },
+            "label": {
+              "type": "string",
+              "maxLength": 200,
+              "minLength": 1
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "maxItems": 100,
+        "uniqueItems": false
+      },
+      "targetStudents": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "studentId",
+            "riskLevel",
+            "ruleIds"
+          ],
+          "properties": {
+            "studentId": {
+              "type": "string",
+              "maxLength": 160,
+              "minLength": 1
+            },
+            "riskLevel": {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "ruleIds": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "inactive7d",
+                  "applicationsWithoutInterview",
+                  "resumeIncomplete",
+                  "deadlineApproaching"
+                ]
+              },
+              "maxItems": 4,
+              "uniqueItems": true
+            }
+          }
+        },
+        "maxItems": 1,
+        "uniqueItems": false
+      }
+    }
+  }
+}

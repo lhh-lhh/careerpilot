@@ -1,0 +1,11 @@
+18	const db = isOnline ? null : createDatabase();
+19	export const appRepository = db ? createRepository(db, {
+20	  committed: () => {
+21	    notify();
+22	    channel?.postMessage({ type: "revision-changed" });
+23	  },
+24	  invalidate: () => {
+25	    appAiRuntime.cancelAll();
+26	    window.dispatchEvent(new Event("careerpilot-invalidate"));
+27	  },
+28	}) : createHttpRepository(notify);

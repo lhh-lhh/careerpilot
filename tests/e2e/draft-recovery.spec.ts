@@ -1,0 +1,62 @@
+import { test, expect } from "@playwright/test";
+import { mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+import { createOnlineApp } from "../../server/app";
+
+test("unsaved resume and destination recover after refresh without replacing server state", async ({ browser }) => {
+  test.setTimeout(60000);
+  const dir = await mkdtemp(join(tmpdir(), "careerpilot-recovery-"));
+  const app = await createOnlineApp({ databasePath: join(dir, "test.sqlite"), seed: true, staticRoot: resolve("dist") });
+  const context = await browser.newContext();
+  try {
+    await app.provision("student040", "Browser-test-Password-01!"); await app.listen(0);
+    const address = app.server.address(); if (!address || typeof address === "string") throw Error("no port");
+    const base = `http://127.0.0.1:${address.port}`, page = await context.newPage();
+    await page.goto(`${base}/#/login`);
+    await page.getByRole("textbox", { name: "账号", exact: true }).fill("student040");
+    await page.getByLabel("密码", { exact: true }).fill("Browser-test-Password-01!");
+    await page.getByRole("button", { name: "登录", exact: true }).click();
+    await expect(page.getByRole("button", { name: "退出登录" })).toBeVisible();
+    await page.goto(`${base}/#/student/resume`);
+    const description = page.getByRole("textbox", { name: "项目描述 1", exact: true });
+    await description.fill("刷新后仍应恢复、但尚未上传的简历输入。");
+    await page.reload();
+    await expect(page.getByRole("button", { name: "恢复草稿", exact: true })).toBeVisible({ timeout: 5000 });
+    await page.getByRole("button", { name: "恢复草稿", exact: true }).click();
+    await expect(description).toHaveValue("刷新后仍应恢复、但尚未上传的简历输入。");
+    const saved = await app.repository.readResume({ userId: "user-student-040", role: "student" }, "student-040");
+    expect(saved.sections.projects[0]?.description).not.toBe("刷新后仍应恢复、但尚未上传的简历输入。");
+    await page.getByRole("button", { name: "保存新版本", exact: true }).click();
+    await expect(page.getByRole("status")).toContainText("已保存");
+    await page.reload();
+    await expect(description).toHaveValue("刷新后仍应恢复、但尚未上传的简历输入。");
+    await expect(page.getByRole("button", { name: "恢复草稿", exact: true })).toHaveCount(0);
+    // Saving fresh input while an older recovery choice is still pending must retire that cache.
+    await description.fill('旧的待恢复简历输入。');
+    await page.reload();
+    await expect(page.getByRole('button', { name: '恢复草稿', exact: true })).toBeVisible();
+    await description.fill('本次重新输入并成功保存的简历描述。');
+    await page.getByRole('button', { name: '保存新版本', exact: true }).click();
+    await expect(page.getByRole('status')).toContainText('已保存');
+    await page.reload();
+    await expect(description).toHaveValue('本次重新输入并成功保存的简历描述。');
+    await expect(page.getByRole('button', { name: '恢复草稿', exact: true })).toHaveCount(0);
+    await page.goto(`${base}/#/student/destination`);
+    await page.getByLabel('毕业去向类型').selectOption('unemployed');
+    await page.getByRole('button', { name: '保存草稿', exact: true }).click();
+    await expect(page.getByRole('status')).toContainText('草稿已保存');
+    await page.getByLabel("毕业去向类型").selectOption("furtherStudy");
+    await page.getByRole("textbox", { name: "升学单位", exact: true }).fill("未上传的升学草稿单位");
+    await page.reload();
+    await page.getByRole("button", { name: "恢复草稿", exact: true }).click();
+    await expect(page.getByRole("textbox", { name: "升学单位", exact: true })).toHaveValue("未上传的升学草稿单位");
+    await page.getByRole("button", { name: "退出登录", exact: true }).click();
+    await page.getByRole("textbox", { name: "账号", exact: true }).fill("student040");
+    await page.getByLabel("密码", { exact: true }).fill("Browser-test-Password-01!");
+    await page.getByRole("button", { name: "登录", exact: true }).click();
+    await expect(page.getByRole("button", { name: "退出登录" })).toBeVisible();
+    await page.goto(`${base}/#/student/destination`);
+    await expect(page.getByRole("button", { name: "恢复草稿", exact: true })).toHaveCount(0);
+  } finally { await context.close(); await app.close(); await rm(dir, { recursive: true, force: true }); }
+});

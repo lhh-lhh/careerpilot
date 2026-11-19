@@ -1,0 +1,15 @@
+import { createApp } from "vue";
+import "./styles/business.css";
+import { createPinia } from "pinia";
+import App from "./App.vue";
+import { router } from "./router";
+import "./styles/tokens.css";
+import "./styles/reset.css";
+import "./styles/print.css";
+import "./styles/public.css";
+import "./styles/ui-scenes.css";
+import "./styles/editorial-media.css";
+import "./styles/reference-fidelity.css";
+import "./styles/workbench-design.css";
+import "./styles/workbench-windows.css";
+createApp(App).use(createPinia()).use(router).mount("#app");

@@ -1,0 +1,479 @@
+{
+  "checkedAt": "2026-11-18T06:02:21.736Z",
+  "origin": "http://127.0.0.1:4174",
+  "online": true,
+  "title": "从校园出发，连接未来 · 路鸣职引 CareerPilot",
+  "hero": {
+    "x": 0,
+    "y": 80,
+    "width": 1536,
+    "height": 277
+  },
+  "noOverflowAt390": true,
+  "searchResultUrl": "http://127.0.0.1:4174/#/opportunities?q=%E5%89%8D%E7%AB%AF",
+  "query": "前端",
+  "consoleErrors": [],
+  "screenshotDirectory": "D:\\Temp\\careerpilot-reference-final\\live",
+  "assetCount": 76,
+  "totalBytes": 1607080,
+  "staticReferences": 53,
+  "validated": [
+    {
+      "file": "/media/editorial/campus.webp",
+      "status": 200,
+      "bytes": 30242,
+      "sha256": "96bda71f85ace999696d0206a22c888a5d56088b5dcbb86acac498efd10ae87e"
+    },
+    {
+      "file": "/media/editorial/journey.webp",
+      "status": 200,
+      "bytes": 24034,
+      "sha256": "40d4158cedaaa234969dba895bb0e89febed98d40d1858ed38eb8d5ca02c2b99"
+    },
+    {
+      "file": "/media/editorial/paper.webp",
+      "status": 200,
+      "bytes": 18294,
+      "sha256": "d58a5dcd240ff5aeb6da6c6b60f1776abbe4f928161ea25880107135db89b552"
+    },
+    {
+      "file": "/media/editorial/studio.webp",
+      "status": 200,
+      "bytes": 21822,
+      "sha256": "1cb61c68a5458682a50755b199dab01578b352e46f1cdeac36ca66c62398f130"
+    },
+    {
+      "file": "/media/editorial/pipeline.webp",
+      "status": 200,
+      "bytes": 22372,
+      "sha256": "fd9547233b7c5dae197607fe4b89fcfcd899d5df1313f088b1ec1c6175aba940"
+    },
+    {
+      "file": "/media/editorial/analytics.webp",
+      "status": 200,
+      "bytes": 17560,
+      "sha256": "28699cbe1f82b50039d9d408d5e2626dfdee510c71dc9b901fa4a7c46d962969"
+    },
+    {
+      "file": "/media/editorial/governance.webp",
+      "status": 200,
+      "bytes": 20018,
+      "sha256": "03f483076a9120b8f117acac6a2e202eedea1be81ce0e8e656b2251fc0d61b2b"
+    },
+    {
+      "file": "/media/editorial/service.webp",
+      "status": 200,
+      "bytes": 17778,
+      "sha256": "d2bd130c469f5301fa362bcf1d08047f3cccb4a078b196662ab77194258971e3"
+    },
+    {
+      "file": "/media/editorial/status.webp",
+      "status": 200,
+      "bytes": 15186,
+      "sha256": "19e491e9d2a7cbc4d8481fb52b1b61fc88c3fcee746cde2fd4559d3a395a54c5"
+    },
+    {
+      "file": "/media/editorial/practice-frontend.webp",
+      "status": 200,
+      "bytes": 22556,
+      "sha256": "83849400cd9651dc4a0b27bfddbe1ebd385211026c30f5f56165e3ace329cbfb"
+    },
+    {
+      "file": "/media/editorial/practice-backend.webp",
+      "status": 200,
+      "bytes": 25648,
+      "sha256": "46c4b41f72134a62ef73da72c6b8a20a057526c8253a88657ccafbdf2b96a519"
+    },
+    {
+      "file": "/media/editorial/practice-analyst.webp",
+      "status": 200,
+      "bytes": 17662,
+      "sha256": "2275d3bfea618c9fb6f628934b2bd8df68e22f98292299868f1ea1f9f77d4b37"
+    },
+    {
+      "file": "/media/editorial/practice-operations.webp",
+      "status": 200,
+      "bytes": 20098,
+      "sha256": "5f9c3047c72e3437365a2c0ae27c07fe8f2dbaf2bcbc6876de260e2eaf17e6e8"
+    },
+    {
+      "file": "/media/career/portal-banner.webp",
+      "status": 200,
+      "bytes": 152336,
+      "sha256": "422a949962664c69b4971852ec3ca79905f5be5f6eef67001412c20c91922798"
+    },
+    {
+      "file": "/media/career/jobs-banner.webp",
+      "status": 200,
+      "bytes": 84042,
+      "sha256": "756113d6bbe7a909bb5ba34a6d025179a3e0116f7b6a111e5ead25a9f8b67129"
+    },
+    {
+      "file": "/media/career/practice-banner.webp",
+      "status": 200,
+      "bytes": 63322,
+      "sha256": "c4d2a9d5c428ee28bb8cc68073fa17ae0573e880b3644a48dda3c4046de3f116"
+    },
+    {
+      "file": "/media/career/jobs/frontend-1.webp",
+      "status": 200,
+      "bytes": 20018,
+      "sha256": "a5ba2cad7847c323013d909c243774b4872016d748231d0bf6a411f9f9ed1025"
+    },
+    {
+      "file": "/media/career/jobs/backend-1.webp",
+      "status": 200,
+      "bytes": 19872,
+      "sha256": "1fcdc9bb59f3478395fe62c41620e89536d1b0cfa225498ec8bedcd3884b7d28"
+    },
+    {
+      "file": "/media/career/jobs/analytics-1.webp",
+      "status": 200,
+      "bytes": 17358,
+      "sha256": "8385c8b9d8c53975a91ad011ae1501200fc7d755f09a1882f52cffd9a3edfee2"
+    },
+    {
+      "file": "/media/career/jobs/operations-1.webp",
+      "status": 200,
+      "bytes": 19152,
+      "sha256": "8e2f70575e71ffaad4b29613545c4fcbaf32387558ae17e71a9e96d0a0bf1cfb"
+    },
+    {
+      "file": "/media/career/jobs/algorithm-1.webp",
+      "status": 200,
+      "bytes": 25318,
+      "sha256": "941e4ae83aad7ccdbc6760bf835df166d2935fae444a52e8e041aa25292a5c9d"
+    },
+    {
+      "file": "/media/career/jobs/testing-1.webp",
+      "status": 200,
+      "bytes": 19302,
+      "sha256": "f13bb0a099e7cdc8be7f50a84f6cc44c078a456f12dfb2601753ab69aef6e2b7"
+    },
+    {
+      "file": "/media/career/jobs/engineering-1.webp",
+      "status": 200,
+      "bytes": 18814,
+      "sha256": "26b6bd81b9219a5d3ddca9d176b4a04b0076734c535a34daf26bfd56638e7551"
+    },
+    {
+      "file": "/media/career/jobs/design-1.webp",
+      "status": 200,
+      "bytes": 18014,
+      "sha256": "8541ab78c37b1e707dfdba8ce978ec72c91ce40bd41aab9a2fd1dd8926a2f440"
+    },
+    {
+      "file": "/media/career/jobs/finance-1.webp",
+      "status": 200,
+      "bytes": 20140,
+      "sha256": "4a17c8cabe292080fdc22da53f1234342760539711ef02c7ed22b0dd76f92ca7"
+    },
+    {
+      "file": "/media/career/jobs/education-1.webp",
+      "status": 200,
+      "bytes": 18994,
+      "sha256": "3cd20875126e208ef3f54242b904af7c72e35c88c8fb4b4fa08833250c907880"
+    },
+    {
+      "file": "/media/career/jobs/health-1.webp",
+      "status": 200,
+      "bytes": 17388,
+      "sha256": "53da370b4a330589abfb75197af02aa73dccf5610ec477b31ca390ad8e9a2666"
+    },
+    {
+      "file": "/media/career/jobs/logistics-1.webp",
+      "status": 200,
+      "bytes": 16594,
+      "sha256": "83fec4066fa7fdacd18764cfd2c801fa83053d089fd5ac86d6072cca2b8426f6"
+    },
+    {
+      "file": "/media/career/features/overview.webp",
+      "status": 200,
+      "bytes": 16164,
+      "sha256": "adde15256b3250a0414c3632e96d8d459461a550d7e49be6ece401ba05e8d210"
+    },
+    {
+      "file": "/media/career/features/resume.webp",
+      "status": 200,
+      "bytes": 15594,
+      "sha256": "e9861e2ce777579d1c4b166d26478d2ada940ec720600da36f58155d1fc7ecd9"
+    },
+    {
+      "file": "/media/career/features/suggestions.webp",
+      "status": 200,
+      "bytes": 14442,
+      "sha256": "ddb6ceb7703ad36c712c84e2c3e82b9ca4c88771b78caa86d538bfa4e3b25ec5"
+    },
+    {
+      "file": "/media/career/features/optimize.webp",
+      "status": 200,
+      "bytes": 13338,
+      "sha256": "90cea2a9c9a846b0e9f9a67030a316c78dd8b6f604b6c3c34bc12783985bc90c"
+    },
+    {
+      "file": "/media/career/features/ocr.webp",
+      "status": 200,
+      "bytes": 17348,
+      "sha256": "6adfa51f15f372092a9bd402f5a0f31f8c68e00f90d727d8840738f9af43eb8f"
+    },
+    {
+      "file": "/media/career/features/preview.webp",
+      "status": 200,
+      "bytes": 14964,
+      "sha256": "f9869359eeb9595a7de73425afe58e294274cee9c75cc91422abac07b5fd516f"
+    },
+    {
+      "file": "/media/career/features/applications.webp",
+      "status": 200,
+      "bytes": 12592,
+      "sha256": "5e4baab23d66540df471df7429392a2ee338d25eccf01f3ea5d6caf53bcf5a6d"
+    },
+    {
+      "file": "/media/career/features/destination.webp",
+      "status": 200,
+      "bytes": 17728,
+      "sha256": "83182963b222d2953c7da381cca47a61e3371cc228b753d82e3feccafb5275cd"
+    },
+    {
+      "file": "/media/career/features/text.webp",
+      "status": 200,
+      "bytes": 16518,
+      "sha256": "ef9a626c5183cf8d51ef92a5aaefaa01425c8abd7a71ae8a506d36d22b5a7c49"
+    },
+    {
+      "file": "/media/career/features/voice.webp",
+      "status": 200,
+      "bytes": 20384,
+      "sha256": "6fa3a0978265d32d7dddf92f8d29c91d7c23aa0f4601eb84b2039019b65f1ecf"
+    },
+    {
+      "file": "/media/career/features/feedback.webp",
+      "status": 200,
+      "bytes": 13522,
+      "sha256": "bf52ca70ba6f5be060b0e28803bed724021463c1cdc6e34f9862de0c01e615f2"
+    },
+    {
+      "file": "/media/career/features/records.webp",
+      "status": 200,
+      "bytes": 12548,
+      "sha256": "41695379746406efbf9c861603979e290b851b0c9bf47ec8a15eced0c9eedf56"
+    },
+    {
+      "file": "/media/career/features/company.webp",
+      "status": 200,
+      "bytes": 23858,
+      "sha256": "c4927273ca8fe4bfd38036e4e23b43de10006b6061270ca78e7fdf6e1460e204"
+    },
+    {
+      "file": "/media/career/features/publishing.webp",
+      "status": 200,
+      "bytes": 17556,
+      "sha256": "5a577fc7c11d80dd75ec39f04d37b76a43e9e18b830ba529d1d505fa32b1a07a"
+    },
+    {
+      "file": "/media/career/features/candidates.webp",
+      "status": 200,
+      "bytes": 14726,
+      "sha256": "8efad583660575ffc9605a3a23fb313687c99e9aa4d69255094e84ca145dd01d"
+    },
+    {
+      "file": "/media/career/features/agreements.webp",
+      "status": 200,
+      "bytes": 16736,
+      "sha256": "c421dfe3a5ac4dc7c357a5103e53603e96e53789146f9824f255df12081e4107"
+    },
+    {
+      "file": "/media/career/features/schedule.webp",
+      "status": 200,
+      "bytes": 21050,
+      "sha256": "57b255fc11cb06d89eb94c557f2cc7be40f34f00bd2c8f18e7f9a50d37d4a428"
+    },
+    {
+      "file": "/media/career/features/students.webp",
+      "status": 200,
+      "bytes": 15130,
+      "sha256": "adef404afa80c7db0e5d457375c446b582f57a2caf574c3cfddb06084c238e1c"
+    },
+    {
+      "file": "/media/career/features/review.webp",
+      "status": 200,
+      "bytes": 18544,
+      "sha256": "233599935a8ce134755b7b1d7111cc4a5f00c235fde5a66c1ee75074db18c15f"
+    },
+    {
+      "file": "/media/career/features/dashboard.webp",
+      "status": 200,
+      "bytes": 17566,
+      "sha256": "bec38e89b5ecf8c0e49d37db197f31a8e859528c6394439ec04661060084d009"
+    },
+    {
+      "file": "/media/career/features/support.webp",
+      "status": 200,
+      "bytes": 19626,
+      "sha256": "978e6d2db84183f0d62065db9d0db620dd739f4606442683292f97a44baf3389"
+    },
+    {
+      "file": "/media/career/features/admin.webp",
+      "status": 200,
+      "bytes": 17256,
+      "sha256": "44131c94bbd0b068fa85dd833e0d85852eebab26917cc99dd565fbb6542a6d9c"
+    },
+    {
+      "file": "/media/career/features/accounts.webp",
+      "status": 200,
+      "bytes": 14902,
+      "sha256": "6569a74557fe31e2c2ccdeb98cbe3662e21881498496fb45d677b219deca87c2"
+    },
+    {
+      "file": "/media/career/features/governance.webp",
+      "status": 200,
+      "bytes": 17980,
+      "sha256": "2a2f08f338dae022fec7b7e7f8d7cec36ba3276802a9836affd9556d318de76c"
+    },
+    {
+      "file": "/media/career/jobs/frontend-3.webp",
+      "status": 200,
+      "bytes": 15908,
+      "sha256": "9d3813091f4da2193a9b8d8527e0433383550e43fcbbf4d706b6a209ae8d9bc0"
+    },
+    {
+      "file": "/media/career/jobs/backend-3.webp",
+      "status": 200,
+      "bytes": 18478,
+      "sha256": "75e654d7c1d0a704c8629127fd2773be347d2389d54fdc6aea0ff185d7e9ce5e"
+    },
+    {
+      "file": "/media/career/jobs/analytics-3.webp",
+      "status": 200,
+      "bytes": 16478,
+      "sha256": "2dae4d1d11177d5eabb34b7ffff3153ae414476b06bbf49b2f4f6af22d719417"
+    },
+    {
+      "file": "/media/career/jobs/operations-3.webp",
+      "status": 200,
+      "bytes": 13680,
+      "sha256": "c0ba9208c1a24718f04ee19ef7327cae78c77bffd4f3c8425695c2e160c523d1"
+    },
+    {
+      "file": "/media/career/jobs/algorithm-3.webp",
+      "status": 200,
+      "bytes": 22220,
+      "sha256": "8ed118b0baab61d0345ffdb08c7ed16a7fd86d8952015e0f9116a8539c19e145"
+    },
+    {
+      "file": "/media/career/jobs/testing-3.webp",
+      "status": 200,
+      "bytes": 15164,
+      "sha256": "1e2594e155c84e4ad428efd64c3176b91c0ee2ce2636311689ef848fe50322b1"
+    },
+    {
+      "file": "/media/career/jobs/engineering-3.webp",
+      "status": 200,
+      "bytes": 17576,
+      "sha256": "0bb5e0311371f2c89f8cfece6e57efffb9c924c47d1757540519afaec7fb7757"
+    },
+    {
+      "file": "/media/career/jobs/design-3.webp",
+      "status": 200,
+      "bytes": 13072,
+      "sha256": "d04d1f0d2f24d4fb8dfb5fbaecc5553deb944618638aa86eab7707b09aeaaaa7"
+    },
+    {
+      "file": "/media/career/jobs/finance-3.webp",
+      "status": 200,
+      "bytes": 16072,
+      "sha256": "3a5041b89bf7db3f10946838bdf292b8bd8df71654097cb4b0dfeddd3e971587"
+    },
+    {
+      "file": "/media/career/jobs/education-3.webp",
+      "status": 200,
+      "bytes": 17164,
+      "sha256": "bbb313bd804aa2b41b68adfb953963dba1eb7535e948c4867d97b204051600df"
+    },
+    {
+      "file": "/media/career/jobs/health-3.webp",
+      "status": 200,
+      "bytes": 15650,
+      "sha256": "a6b31a71bb7ddaabf783d789888bf5543186d5e2aef66a26868146e27d17d576"
+    },
+    {
+      "file": "/media/career/jobs/logistics-3.webp",
+      "status": 200,
+      "bytes": 16668,
+      "sha256": "1015c5b71ba0b1e53e7a1523002a62bbcf6b66bbd9fb0f4922650df759868337"
+    },
+    {
+      "file": "/media/career/services/recruitment.webp",
+      "status": 200,
+      "bytes": 22954,
+      "sha256": "68b71ec0ab3b9c2f731e545ed633ca91b2c115f8258fcab84ecfb1c4a6af6f15"
+    },
+    {
+      "file": "/media/career/services/internship.webp",
+      "status": 200,
+      "bytes": 17882,
+      "sha256": "fe7f56f313030c878ad4c475138516a0fa7925d1125bba25dcd1c50944a34ec8"
+    },
+    {
+      "file": "/media/career/services/guidance.webp",
+      "status": 200,
+      "bytes": 17188,
+      "sha256": "8f6b3e571cd85fc769efbe7aa61eb1490c4fef60cbd81ae6503f9fe6af83bfb9"
+    },
+    {
+      "file": "/media/career/services/policy.webp",
+      "status": 200,
+      "bytes": 15124,
+      "sha256": "e004e803b0faadb1995dea649428c6458961d4abf08d5163bbff2507be269ece"
+    },
+    {
+      "file": "/media/career/services/safety.webp",
+      "status": 200,
+      "bytes": 16814,
+      "sha256": "5d649870faf86b03075464b3a71eb3867fee54db3d616123ea5238ef5164338f"
+    },
+    {
+      "file": "/media/career/services/resume.webp",
+      "status": 200,
+      "bytes": 16452,
+      "sha256": "930e1305629ba9fdf6199c3c2db8b05a4d4b14a99755cefe0d7d4e73d8a303d3"
+    },
+    {
+      "file": "/media/career/services/matching.webp",
+      "status": 200,
+      "bytes": 23760,
+      "sha256": "167ad9e219651b0d4833c85e3f02e10bce6802ec7a1d449c40207c6faff5bfc9"
+    },
+    {
+      "file": "/media/career/services/interview.webp",
+      "status": 200,
+      "bytes": 19464,
+      "sha256": "221ff9bfc63fd70fb3657ae5a4d3cea422711ab73a97b3646120ef2c29b0d36c"
+    },
+    {
+      "file": "/media/career/practice-analyst.webp",
+      "status": 200,
+      "bytes": 13668,
+      "sha256": "ec66d923107cf8b387168f151c30a723174c5badcda1a112c05951bb3c24d7fb"
+    },
+    {
+      "file": "/media/career/practice-backend.webp",
+      "status": 200,
+      "bytes": 17206,
+      "sha256": "bbfa012d0d85cbbb70ef5a26d3477bfbabc98663f479c8df1c266c101e3e9e85"
+    },
+    {
+      "file": "/media/career/practice-frontend.webp",
+      "status": 200,
+      "bytes": 14440,
+      "sha256": "f893741ed198607f307f537b64aa6bf4afcff4656368ef91a1a2af18bae522aa"
+    },
+    {
+      "file": "/media/career/brand.webp",
+      "status": 200,
+      "bytes": 9992,
+      "sha256": "4098925cf01240cddefa868e614761ff214e54ca434c764dceee08ec088c6bcf"
+    }
+  ],
+  "failures": []
+}

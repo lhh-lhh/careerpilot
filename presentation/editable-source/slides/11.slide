@@ -1,0 +1,63 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>11 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>05 · 界面与使用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>界面工程：统一语言，不等于复制页面</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 18, flexDirection: 'row', gap: 20, alignItems: 'flex-start', height: 404 }}>
+      <Box style={{ width: 516 }}>
+        <Image src="assets/U05.png" style={{ width: 516, height: 358, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>题库练习实际界面｜运行截图 · 隔离测试数据</Text>
+      </Box>
+      <Box style={{ width: 165 }}>
+        <Image src="assets/U11.png" style={{ width: 165, height: 358, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6, lineHeight: 1.4 }}>390px 视口重排（非物理手机）</Text>
+      </Box>
+      <Box style={{ width: 208, flexDirection: 'column', gap: 14 }}>
+        <Box>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>统一</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>品牌、字阶、按钮、导航、空 / 错 / 加载状态</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>差异</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>概览、题库、编辑器、驾驶舱各有页面结构</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>适配</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>明暗主题、窄屏重排、装饰图层与操作区分离</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#F2A13A' }}>开发辅助 AI</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>Codex 辅助实现与测试；gpt-image-2.6 制作插画资源</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ marginTop: 16, background: '#F0F6FF', borderRadius: 8, padding: '10px 16px' }}>
+      <Text style={{ fontSize: 13, color: '#10366B', lineHeight: 1.5 }}>业务 AI 为 DeepSeek 接口；开发辅助与素材生成是独立工具，三者分别说明——不虚构「本项目训练了大模型」。</Text>
+    </Box>
+  </Box>
+</Slide>

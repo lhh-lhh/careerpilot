@@ -1,0 +1,89 @@
+{
+  "students": [
+    {
+      "id": "small-1",
+      "revision": 1,
+      "createdAt": "2026-10-01T00:00:00.000Z",
+      "updatedAt": "2026-10-01T00:00:00.000Z",
+      "userId": "account-1",
+      "studentNo": "DEMO-1",
+      "collegeId": "college-a",
+      "majorId": "major-a",
+      "cohortYear": 2027,
+      "counselorId": "counselor-a",
+      "enrolledAt": "2026-10-01T00:00:00.000Z",
+      "active": true
+    },
+    {
+      "id": "small-2",
+      "revision": 1,
+      "createdAt": "2026-10-01T00:00:00.000Z",
+      "updatedAt": "2026-10-01T00:00:00.000Z",
+      "userId": "account-2",
+      "studentNo": "DEMO-2",
+      "collegeId": "college-a",
+      "majorId": "major-b",
+      "cohortYear": 2027,
+      "counselorId": "counselor-a",
+      "enrolledAt": "2026-10-01T00:00:00.000Z",
+      "active": true
+    },
+    {
+      "id": "small-3",
+      "revision": 1,
+      "createdAt": "2026-10-01T00:00:00.000Z",
+      "updatedAt": "2026-10-01T00:00:00.000Z",
+      "userId": "account-3",
+      "studentNo": "DEMO-3",
+      "collegeId": "college-b",
+      "majorId": "major-c",
+      "cohortYear": 2027,
+      "counselorId": "counselor-b",
+      "enrolledAt": "2026-10-01T00:00:00.000Z",
+      "active": true
+    },
+    {
+      "id": "small-4",
+      "revision": 1,
+      "createdAt": "2026-10-01T00:00:00.000Z",
+      "updatedAt": "2026-10-01T00:00:00.000Z",
+      "userId": "account-4",
+      "studentNo": "DEMO-4",
+      "collegeId": "college-b",
+      "majorId": "major-d",
+      "cohortYear": 2027,
+      "counselorId": "counselor-b",
+      "enrolledAt": "2026-10-01T00:00:00.000Z",
+      "active": true
+    }
+  ],
+  "destinations": [
+    {
+      "id": "small-d1",
+      "studentId": "small-1",
+      "type": "employment",
+      "status": "approved"
+    },
+    {
+      "id": "small-d2",
+      "studentId": "small-2",
+      "type": "furtherStudy",
+      "status": "approved"
+    },
+    {
+      "id": "small-d3",
+      "studentId": "small-3",
+      "type": "entrepreneurship",
+      "status": "submitted"
+    }
+  ],
+  "expected": {
+    "destinationRate": 0.5,
+    "employment": 1,
+    "furtherStudy": 1,
+    "entrepreneurship": 0,
+    "flexible": 0,
+    "pending": 1,
+    "unregistered": 1
+  }
+}

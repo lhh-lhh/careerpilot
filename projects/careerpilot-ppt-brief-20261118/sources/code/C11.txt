@@ -1,0 +1,9 @@
+11	  <section class="workbench-header" :data-design="design.id" :data-layout="design.type">
+12	    <header class="workbench-hero">
+13	      <div class="workbench-hero-copy"><slot name="heading" :design="design" /></div>
+14	      <div class="workbench-hero-art" aria-hidden="true">
+15	        <img :src="design.type === 'practice' ? '/media/career/practice-banner.webp' : `/media/workbench/${design.art}.webp`" alt="" width="384" height="341" fetchpriority="high" />
+16	      </div>
+17	    </header>
+18	    <div v-if="$slots.actions" class="workbench-action-rail"><span class="workbench-rail-label">本页操作 / 相关入口</span><slot name="actions" /></div>
+19	  </section>

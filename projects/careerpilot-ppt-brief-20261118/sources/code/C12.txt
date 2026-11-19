@@ -1,0 +1,10 @@
+21	  async function reserve(userId:string) {
+22	    if(!enabled)throw Error('PROVIDER_DISABLED');
+23	    if((active.get(userId)??0)>=2 || [...active.values()].reduce((a,b)=>a+b,0)>=4)throw Error('RATE_LIMITED');
+24	    await transaction(async()=>{
+25	      const day=new Date().toISOString().slice(0,10);
+26	      const legacy=await database.db.configs.where('key').equals(`onlineAiQuota:${day}`).first();
+27	      const old=legacy?.value as {total?:number;users?:Record<string,number>}|undefined;
+28	      const total=Number(sql.prepare('SELECT COALESCE(SUM(n),0) AS n FROM workbench_usage WHERE day=?').get(day)!.n)+(old?.total??0);
+29	      const own=Number(sql.prepare('SELECT n FROM workbench_usage WHERE day=? AND user_id=?').get(day,userId)?.n??0)+(old?.users?.[userId]??0);
+30	      if(total>=limits.dailyGlobalCalls || own>=limits.dailyUserCalls)throw Error('BUDGET_EXCEEDED');

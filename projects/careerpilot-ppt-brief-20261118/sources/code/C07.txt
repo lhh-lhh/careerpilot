@@ -1,0 +1,8 @@
+18	  if(!Array.isArray(raw.patches)||raw.patches.length>20)throw Error('SCHEMA_INVALID');
+19	  const ids=new Set<string>(),paths=new Set<string>();
+20	  const patches=raw.patches.map((p:Record<string,unknown>)=>{
+21	    const index=external.findIndex(r=>r.rowId===p.rowId&&r.section===p.section),original=source[index],masked=external[index],id=checkedString(p.id,100),path=`${p.section}:${p.rowId}`;
+22	    if(!original||p.before!==masked?.text||ids.has(id)||paths.has(path)||typeof p.requiresUserInput!=='boolean')throw Error('SEMANTIC_INVALID');
+23	    const after=checkedString(p.after,4000);ids.add(id);paths.add(path);
+24	    const addedNumbers=after.match(/\d+(?:\.\d+)?/g)??[];
+25	    if(addedNumbers.some(n=>!original.text.includes(n)))throw Error('SEMANTIC_INVALID');

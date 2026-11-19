@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1260" viewBox="0 0 1440 1260"><title>路鸣职引最终设计候选 v1.0 · 静态设计非产品截图</title><style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}.num{font-variant-numeric:tabular-nums}</style><defs><filter id="lift" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#16233a" flood-opacity=".10"/></filter></defs>
+<rect x="0" y="0" width="1440" height="1260" fill="#f6f8fc" rx="0"  />
+<defs><linearGradient id="bg-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d2e8f2"/><stop offset="1" stop-color="#e0e7fb"/></linearGradient><pattern id="bg-2-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-2-clip"><rect x="20" y="20" width="1400" height="1200" rx="20"/></clipPath></defs>
+<rect x="20" y="20" width="1400" height="1200" fill="url(#bg-2)" rx="20"  />
+<g clip-path="url(#bg-2-clip)" aria-hidden="true">
+<circle cx="300" cy="620" r="288" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="720" cy="620" r="372" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="1140" cy="620" r="456" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+</g>
+<text x="48" y="70" fill="#16233a" font-size="30" font-weight="600" >窗口不是遗漏项，而是同一套视觉系统。</text>
+<text x="48" y="103" fill="#42516c" font-size="14" font-weight="400" >确认 / 表单 / 详情 / AI / 导航 / 指引：按语义分层，不改关闭、焦点及业务条件。</text>
+<rect x="48" y="145" width="650" height="480" fill="#ffffff" rx="20" stroke="#e3e9f2" filter="url(#lift)"/>
+<defs><linearGradient id="bg-12" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2e6f5"/><stop offset="1" stop-color="#cfe8e6"/></linearGradient><pattern id="bg-12-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-12-clip"><rect x="48" y="145" width="650" height="106" rx="20"/></clipPath></defs>
+<rect x="48" y="145" width="650" height="106" fill="url(#bg-12)" rx="20"  />
+<g clip-path="url(#bg-12-clip)" aria-hidden="true">
+<path d="M28 187.4 Q340.5 123.8 718 187.4" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M28 196.94 Q340.5 132.28 718 196.94" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M28 206.48000000000002 Q340.5 140.76 718 206.48000000000002" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M28 216.02 Q340.5 149.24 718 216.02" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M28 225.56 Q340.5 157.72 718 225.56" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+</g>
+<text x="72" y="191" fill="#16233a" font-size="22" font-weight="600" >驳回本次材料</text>
+<text x="72" y="224" fill="#b52c36" font-size="14" font-weight="400" >危险操作保留原原因与确认门槛</text>
+<rect x="630" y="161" width="44" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="652" y="188" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">×</text>
+<text x="72" y="293" fill="#16233a" font-size="14" font-weight="600" >驳回原因</text>
+<rect x="72" y="305" width="602" height="154" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="86" y="333" fill="#42516c" font-size="15" font-weight="400" >请填写可供学生核对的具体原因</text>
+<text x="72" y="493" fill="#42516c" font-size="13" font-weight="400" >此处沿用至少 5 字、最多 300 字的原规则。</text>
+<path d="M72 539 L674 539" fill="none" stroke="#e3e9f2" stroke-width="1" />
+<rect x="376" y="557" width="116" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="434" y="584" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">取消</text>
+<rect x="508" y="557" width="166" height="44" fill="#fff0f0" rx="10" stroke="#b52c36" />
+<text x="591" y="584" fill="#b52c36" font-size="14" font-weight="600" text-anchor="middle">确认驳回</text>
+<rect x="738" y="145" width="654" height="480" fill="#ffffff" rx="20" stroke="#e3e9f2" filter="url(#lift)"/>
+<defs><linearGradient id="bg-35" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0e4fa"/><stop offset="1" stop-color="#ddd7ed"/></linearGradient><pattern id="bg-35-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-35-clip"><rect x="738" y="145" width="654" height="106" rx="20"/></clipPath></defs>
+<rect x="738" y="145" width="654" height="106" fill="url(#bg-35)" rx="20"  />
+<g clip-path="url(#bg-35-clip)" aria-hidden="true">
+<rect x="1051.92" y="167" width="281.21999999999997" height="89.03999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-7 1208.88 198)"/>
+<rect x="1069.92" y="179" width="281.21999999999997" height="89.03999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-4 1208.88 198)"/>
+<rect x="1087.92" y="191" width="281.21999999999997" height="89.03999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-1 1208.88 198)"/>
+</g>
+<text x="762" y="191" fill="#16233a" font-size="22" font-weight="600" >表单 / 文书与预览</text>
+<text x="762" y="224" fill="#42516c" font-size="14" font-weight="400" >标题色带 + 实底正文 + 稳定操作区</text>
+<text x="762" y="293" fill="#16233a" font-size="14" font-weight="600" >原字段与校验</text>
+<rect x="762" y="305" width="606" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="776" y="333" fill="#42516c" font-size="15" font-weight="400" >字段、限制、默认值保持不变</text>
+<rect x="762" y="377" width="606" height="146" fill="#eef2f9" rx="12"  />
+<text x="784" y="414" fill="#16233a" font-size="18" font-weight="600" >证据、文书、版本、分页与来源</text>
+<text x="784" y="450" fill="#42516c" font-size="14" font-weight="400" >长正文独立滚动，底部按钮不遮挡输入。</text>
+<rect x="1050" y="557" width="144" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="1122" y="584" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">取消</text>
+<rect x="1210" y="557" width="158" height="44" fill="#2f55c8" rx="10"  />
+<text x="1289" y="584" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">原保存动作</text>
+<rect x="48" y="655" width="420" height="530" fill="#ffffff" rx="20" stroke="#e3e9f2" />
+<defs><linearGradient id="bg-55" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5e3fb"/><stop offset="1" stop-color="#ccebe7"/></linearGradient><pattern id="bg-55-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-55-clip"><rect x="48" y="655" width="420" height="100" rx="20"/></clipPath></defs>
+<rect x="48" y="655" width="420" height="100" fill="url(#bg-55)" rx="20"  />
+<g clip-path="url(#bg-55-clip)" aria-hidden="true">
+<path d="M-2.3999999999999986 720 C157.2 665 291.6 805 526.8 685" fill="none" stroke="#729bc9" stroke-width="3" opacity=".26" />
+<path d="M-2.3999999999999986 729 C157.2 665 291.6 805 526.8 701" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<path d="M-2.3999999999999986 738 C157.2 665 291.6 805 526.8 717" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" stroke-dasharray="6 9"/>
+<path d="M-2.3999999999999986 747 C157.2 665 291.6 805 526.8 733" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<circle cx="140.4" cy="679" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="283.20000000000005" cy="704" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="388.20000000000005" cy="729" r="5" fill="#3e8f9b" opacity=".6"/>
+</g>
+<text x="72" y="697" fill="#16233a" font-size="22" font-weight="600" >移动导航与菜单</text>
+<text x="72" y="730" fill="#42516c" font-size="14" font-weight="400" >同源菜单，不新增路由权限</text>
+<rect x="72" y="784" width="372" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="258" y="811" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">生涯概览</text>
+<rect x="72" y="849" width="372" height="44" fill="#2f55c8" rx="10"  />
+<text x="258" y="876" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">简历工作台</text>
+<rect x="72" y="914" width="372" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="258" y="941" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">岗位匹配</text>
+<rect x="72" y="979" width="372" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="258" y="1006" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">模拟面试</text>
+<rect x="492" y="655" width="420" height="530" fill="#ffffff" rx="20" stroke="#e3e9f2" />
+<defs><linearGradient id="bg-77" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d2e8f2"/><stop offset="1" stop-color="#e0e7fb"/></linearGradient><pattern id="bg-77-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-77-clip"><rect x="492" y="655" width="420" height="100" rx="20"/></clipPath></defs>
+<rect x="492" y="655" width="420" height="100" fill="url(#bg-77)" rx="20"  />
+<g clip-path="url(#bg-77-clip)" aria-hidden="true">
+<circle cx="576" cy="705" r="24" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="702" cy="705" r="31" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="828" cy="705" r="38" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+</g>
+<text x="516" y="697" fill="#16233a" font-size="22" font-weight="600" >帮助 / 消息 / 指引</text>
+<text x="516" y="730" fill="#42516c" font-size="14" font-weight="400" >分区色面 + 章节航线</text>
+<rect x="516" y="784" width="372" height="90" fill="#ffffff" rx="14" stroke="#e3e9f2" />
+<rect x="530" y="798" width="36" height="36" fill="#edf2ff" rx="10"  />
+<svg x="538" y="806" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.5 8.5a2.5 2.5 0 1 1 4 2L12 12v2M12 17h.01"/></svg>
+<text x="580" y="820" fill="#16233a" font-size="16" font-weight="600" >功能与隐私说明</text>
+<text x="534" y="856" fill="#42516c" font-size="13" font-weight="400" >保留完整关键提示</text>
+<svg x="854" y="810" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+<rect x="516" y="894" width="372" height="90" fill="#ffffff" rx="14" stroke="#e3e9f2" />
+<rect x="530" y="908" width="36" height="36" fill="#edf2ff" rx="10"  />
+<svg x="538" y="916" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.5 8.5a2.5 2.5 0 1 1 4 2L12 12v2M12 17h.01"/></svg>
+<text x="580" y="930" fill="#16233a" font-size="16" font-weight="600" >消息来源与跳转</text>
+<text x="534" y="966" fill="#42516c" font-size="13" font-weight="400" >保留完整关键提示</text>
+<svg x="854" y="920" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+<rect x="516" y="1004" width="372" height="90" fill="#ffffff" rx="14" stroke="#e3e9f2" />
+<rect x="530" y="1018" width="36" height="36" fill="#edf2ff" rx="10"  />
+<svg x="538" y="1026" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.5 8.5a2.5 2.5 0 1 1 4 2L12 12v2M12 17h.01"/></svg>
+<text x="580" y="1040" fill="#16233a" font-size="16" font-weight="600" >操作帮助与异常恢复</text>
+<text x="534" y="1076" fill="#42516c" font-size="13" font-weight="400" >保留完整关键提示</text>
+<svg x="854" y="1030" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+<rect x="936" y="655" width="456" height="530" fill="#ffffff" rx="20" stroke="#e3e9f2" />
+<defs><linearGradient id="bg-105" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ddd8f7"/><stop offset="1" stop-color="#c9dcf6"/></linearGradient><pattern id="bg-105-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-105-clip"><rect x="936" y="655" width="456" height="100" rx="20"/></clipPath></defs>
+<rect x="936" y="655" width="456" height="100" fill="url(#bg-105)" rx="20"  />
+<g clip-path="url(#bg-105-clip)" aria-hidden="true">
+<ellipse cx="1246.08" cy="700" rx="63.84" ry="14.000000000000002" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1246.08" cy="700" rx="93.48" ry="22.000000000000004" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1246.08" cy="700" rx="123.12" ry="30.000000000000004" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1246.08" cy="700" rx="152.76000000000002" ry="38" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1246.08" cy="700" rx="182.4" ry="46" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1246.08" cy="700" rx="212.04000000000002" ry="54" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+</g>
+<text x="960" y="697" fill="#16233a" font-size="22" font-weight="600" >助手 / AI 连接与授权</text>
+<text x="960" y="730" fill="#42516c" font-size="14" font-weight="400" >声场仅作背景，不冒充真实状态</text>
+<rect x="960" y="784" width="408" height="166" fill="#eef2f9" rx="12"  />
+<text x="984" y="823" fill="#16233a" font-size="17" font-weight="600" >消息和来源保持实底可读</text>
+<text x="984" y="860" fill="#42516c" font-size="14" font-weight="400" >查看历史时不抢滚动。</text>
+<text x="984" y="900" fill="#42516c" font-size="14" font-weight="400" >不额外生成、不伪装已连接。</text>
+<text x="960" y="1008" fill="#16233a" font-size="14" font-weight="600" >原输入区</text>
+<rect x="960" y="1020" width="408" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="974" y="1048" fill="#42516c" font-size="15" font-weight="400" >保留停止、IME 与快捷键</text>
+<text x="32" y="1248" fill="#42516c" font-size="12" font-weight="400" >W01–W43 依覆盖清单映射；原生系统窗口及站外页面有明确边界 · 静态设计 / 合成排版内容 / 非运行截图 / 业务与 AI 不变</text>
+</svg>

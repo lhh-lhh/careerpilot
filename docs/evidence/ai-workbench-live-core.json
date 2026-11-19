@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-15T05:03:51.833Z",
+  "syntheticOnly": true,
+  "automaticRetries": 0,
+  "results": [
+    {
+      "stage": "tts-wav",
+      "ok": true,
+      "ms": 1429,
+      "detail": "Synthetic WAV received: 122924 bytes"
+    },
+    {
+      "stage": "asr",
+      "ok": true,
+      "ms": 844,
+      "detail": "Synthetic speech recognized; duration 2560 ms"
+    },
+    {
+      "stage": "question-validated-json",
+      "ok": true,
+      "ms": 617,
+      "detail": "Schema valid, 34 characters"
+    },
+    {
+      "stage": "evaluation-evidence",
+      "ok": true,
+      "ms": 1899,
+      "detail": "Evidence checked; 5 dimensions; practice total 59"
+    },
+    {
+      "stage": "chat-stream",
+      "ok": true,
+      "ms": 856,
+      "detail": "Completed safe stream, 38 deltas / 59 characters"
+    }
+  ]
+}

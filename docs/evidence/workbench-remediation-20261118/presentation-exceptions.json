@@ -1,0 +1,15 @@
+{
+  "base": "5295f53ea4d1d433d933738156422e8c43c23717",
+  "review": "Explicit manual diff review: original AI parent, services and business scripts are byte-identical. Pet exception only adds dock preference and coordinates; original animation, toggle, state, storage and drag helpers remain. No blanket business-script exemption.",
+  "scripts": [
+    {"name":"src/components/business/AssistantPetLauncher.vue","sha256":"726cedafa9c6a44db1905f051b44b8a09ae4128781c94881a945fe758c4afd2e","reason":"Safe in-flow dock, new separate boolean preference, undock before manual movement, roaming constrained only while docked; no AI calls."}
+  ],
+  "bindings": [
+    {"name":"src/components/base/AppOverlay.vue","sha256":"355fdaf284518ae7df6287fe99f9f2b4d3f5b4e9e9cc9f04ba190dffd78667e4","reason":"One aria-hidden decorative artwork div; focus and event script unchanged."},
+    {"name":"src/components/business/AssistantPetLauncher.vue","sha256":"9bd282da006c2d2a1125c24a2087e743c3f0772d3ee13ee18f9f1b22fcf656d6","reason":"New dock region, dock settings button and DOM ref/data marker; all original bindings retained."},
+    {"name":"src/views/StatusView.vue","sha256":"69225e965638dbf462c70d90d52d3f8e75afe06ac46b0b155bf01aaccebb33f1","reason":"Decorative status art, original safe return binding retained."},
+    {"name":"src/views/company/ScheduleView.vue","sha256":"48573d249c9d6b9d518d5a181f9386f78a0a4bb2f4f8fa69107ab57806ad6506","reason":"Accessible name for original list; calendar is read-only projection of original filtered rows."},
+    {"name":"src/views/company/WorkspaceView.vue","sha256":"7789240a7b72e7015fff8efa7b82fab4371c7b0a630aba5008d8f43a63545d26","reason":"Single decorative overview rail image."},
+    {"name":"src/views/student/HomeView.vue","sha256":"5847fb0e6de56202ea71f1fd1f31b1ed2534b6f6bab889b11e7989ab542b95eb","reason":"EntityMark replaced by semantic JobArtwork; step literal whitespace only; additional original-route shortcuts and decorative images. Original task, progress, radar, diagnosis and journey bindings preserved."}
+  ]
+}

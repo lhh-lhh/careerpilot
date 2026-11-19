@@ -1,0 +1,51 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>10 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#6E56CF', letterSpacing: 3, fontWeight: 'bold' }}>04 · AI 接入与应用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>AI 应用②：面试、语音与流式交互</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 16, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+      <Box style={{ flex: 1, background: '#10366B', borderRadius: 8, padding: '10px 14px', alignItems: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>① 先保存回答</Text>
+      </Box>
+      <FAIcon name="arrow-right" style={{ fill: '#6E56CF', width: 16, height: 16 }} />
+      <Box style={{ flex: 1, background: '#10366B', borderRadius: 8, padding: '10px 14px', alignItems: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>② 再等待模型生成</Text>
+      </Box>
+      <FAIcon name="arrow-right" style={{ fill: '#6E56CF', width: 16, height: 16 }} />
+      <Box style={{ flex: 1, background: '#10366B', borderRadius: 8, padding: '10px 14px', alignItems: 'center' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>③ 失败可恢复：不丢回答、不虚构分数</Text>
+      </Box>
+    </Box>
+    <Box style={{ marginTop: 14, alignItems: 'center' }}>
+      <Image src="assets/C08.png" style={{ width: 731, height: 372, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+    </Box>
+    <Box style={{ marginTop: 14, background: '#F3F0FD', borderRadius: 8, padding: '10px 16px' }}>
+      <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#6E56CF' }}>语音链：</span>TTS 播题 → 录音 → 整段 ASR（16kHz 单声道 WAV，≤120 秒）→ 核对转写 → 提交回答｜助手为 SSE 文本流，均非实时双工语音</Text>
+    </Box>
+  </Box>
+</Slide>

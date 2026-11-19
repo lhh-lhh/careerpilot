@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100"><title>路鸣职引最终设计候选 v1.0 · 静态设计非产品截图</title><style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}.num{font-variant-numeric:tabular-nums}</style><defs><filter id="lift" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#16233a" flood-opacity=".10"/></filter></defs>
+<rect x="0" y="0" width="1440" height="1100" fill="#f6f8fc" rx="0"  />
+<defs><linearGradient id="bg-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0e4fa"/><stop offset="1" stop-color="#ddd7ed"/></linearGradient><pattern id="bg-2-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-2-clip"><rect x="20" y="20" width="1400" height="1030" rx="20"/></clipPath></defs>
+<rect x="20" y="20" width="1400" height="1030" fill="url(#bg-2)" rx="20"  />
+<g clip-path="url(#bg-2-clip)" aria-hidden="true">
+<rect x="692" y="42" width="602" height="865.1999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-7 1028 535)"/>
+<rect x="710" y="54" width="602" height="865.1999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-4 1028 535)"/>
+<rect x="728" y="66" width="602" height="865.1999999999999" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-1 1028 535)"/>
+</g>
+<text x="48" y="75" fill="#16233a" font-size="30" font-weight="600" >详情、报告、协议与服务：内容完整，背景有层次。</text>
+<rect x="48" y="120" width="852" height="838" fill="#ffffff" rx="14" stroke="#e3e9f2" />
+<text x="72" y="155" fill="#16233a" font-size="19" font-weight="600" >详情 / 报告 / 历史文书</text>
+<text x="72" y="180" fill="#42516c" font-size="13" font-weight="400" >返回与来源 → 任务标题 → 证据 / 正文 → 历史版本 → 原操作</text>
+<rect x="72" y="242" width="804" height="150" fill="#eef2f9" rx="12"  />
+<text x="94" y="284" fill="#16233a" font-size="18" font-weight="600" >岗位详情：要求、资格、来源、时间及校外跳转</text>
+<text x="94" y="324" fill="#42516c" font-size="14" font-weight="400" >长内容自然增长；不隐藏信息换取卡片整齐。</text>
+<text x="94" y="357" fill="#42516c" font-size="14" font-weight="400" >文书预览保留白纸，装饰只在外部框架。</text>
+<rect x="72" y="420" width="804" height="150" fill="#eef2f9" rx="12"  />
+<text x="94" y="462" fill="#16233a" font-size="18" font-weight="600" >AI 报告：逐轮反馈、原始来源与历史生成标识</text>
+<text x="94" y="502" fill="#42516c" font-size="14" font-weight="400" >长内容自然增长；不隐藏信息换取卡片整齐。</text>
+<text x="94" y="535" fill="#42516c" font-size="14" font-weight="400" >文书预览保留白纸，装饰只在外部框架。</text>
+<rect x="72" y="598" width="804" height="150" fill="#eef2f9" rx="12"  />
+<text x="94" y="640" fill="#16233a" font-size="18" font-weight="600" >协议与去向：真实条款、附件、版本与办理历史</text>
+<text x="94" y="680" fill="#42516c" font-size="14" font-weight="400" >长内容自然增长；不隐藏信息换取卡片整齐。</text>
+<text x="94" y="713" fill="#42516c" font-size="14" font-weight="400" >文书预览保留白纸，装饰只在外部框架。</text>
+<rect x="72" y="858" width="180" height="44" fill="#2f55c8" rx="10"  />
+<text x="162" y="885" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">原主要操作</text>
+<rect x="268" y="858" width="180" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="358" y="885" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">原次要操作</text>
+<rect x="924" y="120" width="468" height="838" fill="#ffffff" rx="14" stroke="#e3e9f2" />
+<text x="948" y="155" fill="#16233a" font-size="19" font-weight="600" >工单 / 空态 / 错误 / 权限</text>
+<text x="948" y="180" fill="#42516c" font-size="13" font-weight="400" >每个状态保留安全可恢复的下一步</text>
+<defs><linearGradient id="bg-32" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d2e8f2"/><stop offset="1" stop-color="#e0e7fb"/></linearGradient><pattern id="bg-32-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-32-clip"><rect x="948" y="223" width="420" height="184" rx="20"/></clipPath></defs>
+<rect x="948" y="223" width="420" height="184" fill="url(#bg-32)" rx="20"  />
+<g clip-path="url(#bg-32-clip)" aria-hidden="true">
+<circle cx="1032" cy="315" r="44.16" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="1158" cy="315" r="57.04" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="1284" cy="315" r="69.92" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+</g>
+<text x="972" y="274" fill="#16233a" font-size="18" font-weight="600" >搜索 / 状态 / 分页 / 原角色动作</text>
+<text x="972" y="318" fill="#42516c" font-size="14" font-weight="400" >回复、结案、重开与历史不改变。</text>
+<defs><linearGradient id="bg-41" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2e6f5"/><stop offset="1" stop-color="#cfe8e6"/></linearGradient><pattern id="bg-41-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-41-clip"><rect x="948" y="433" width="420" height="184" rx="20"/></clipPath></defs>
+<rect x="948" y="433" width="420" height="184" fill="url(#bg-41)" rx="20"  />
+<g clip-path="url(#bg-41-clip)" aria-hidden="true">
+<path d="M928 506.6 Q1137 396.2 1388 506.6" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M928 523.16 Q1137 410.92 1388 523.16" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M928 539.72 Q1137 425.64 1388 539.72" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M928 556.28 Q1137 440.36 1388 556.28" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M928 572.84 Q1137 455.08 1388 572.84" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+</g>
+<text x="972" y="484" fill="#16233a" font-size="18" font-weight="600" >空数据 ≠ 搜索无结果 ≠ 失败</text>
+<text x="972" y="528" fill="#42516c" font-size="14" font-weight="400" >状态文字与图标明确，不杜撰业务数据。</text>
+<rect x="948" y="643" width="420" height="267" fill="#eef2f9" rx="12"  />
+<text x="972" y="688" fill="#16233a" font-size="18" font-weight="600" >404 / 无权限 / 审核状态</text>
+<text x="972" y="731" fill="#42516c" font-size="14" font-weight="400" >原因、原返回入口、刷新及退出保留。</text>
+<text x="972" y="774" fill="#42516c" font-size="14" font-weight="400" >不因设计展示越权内容。</text>
+<rect x="972" y="824" width="372" height="44" fill="#ffffff" rx="10" stroke="#65718a" />
+<text x="1158" y="851" fill="#16233a" font-size="14" font-weight="600" text-anchor="middle">原安全返回入口</text>
+<text x="32" y="1088" fill="#42516c" font-size="12" font-weight="400" >最终设计候选 v1.0 · 静态设计 / 合成排版内容 / 非运行截图 / 业务与 AI 不变</text>
+</svg>

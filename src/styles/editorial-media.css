@@ -1,0 +1,197 @@
+/* Local original editorial media. No runtime generation, route keys or business logic. */
+.ui-scene { --editorial-art: url('/media/editorial/campus.webp'); }
+.ui-scene--journey { --editorial-art: url('/media/editorial/journey.webp'); }
+.ui-scene--paper { --editorial-art: url('/media/editorial/paper.webp'); }
+.ui-scene--studio { --editorial-art: url('/media/editorial/studio.webp'); }
+.ui-scene--pipeline { --editorial-art: url('/media/editorial/pipeline.webp'); }
+.ui-scene--analytics { --editorial-art: url('/media/editorial/analytics.webp'); }
+.ui-scene--governance { --editorial-art: url('/media/editorial/governance.webp'); }
+.ui-scene--service { --editorial-art: url('/media/editorial/service.webp'); }
+.ui-scene--status { --editorial-art: url('/media/editorial/status.webp'); }
+
+.app-shell .business-page.ui-scene > header:first-of-type,
+.data-page.ui-scene > .data-heading {
+  display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 20px 28px;
+  min-height: 150px; padding-bottom: 24px;
+}
+.app-shell .business-page.ui-scene > header:first-of-type > div:first-child,
+.data-page.ui-scene > .data-heading > div:first-child { flex: 1 1 340px; min-width: 0; }
+.app-shell .business-page.ui-scene > header:first-of-type::after,
+.data-page.ui-scene > .data-heading::after {
+  content: ''; order: 2; display: block; flex: 0 0 220px; width: auto; height: 146px;
+  position: static; inset: auto; transform: none;
+  background: var(--editorial-art) center / cover no-repeat #eef4ff;
+  border-radius: 20px 44px 20px 20px; border: 1px solid #ffffff80;
+  pointer-events: none;
+}
+.app-shell .business-page.ui-scene > header:first-of-type > :not(:first-child),
+.data-page.ui-scene > .data-heading > :not(:first-child) { order: 3; }
+.app-shell .company-page > .company-hero > .hero-metrics { flex: 1 1 100%; order: 4; }
+/* Keep the ordinary invitation submit out of the launcher's default bottom-right
+   footprint. The pet's own draggable/persisted coordinates remain untouched. */
+.app-shell .accounts-view .invite-form > .app-button { grid-column: 1 / -1; justify-self: start; }
+.app-shell .business-page.ui-scene > header:first-of-type h1 { text-wrap: balance; }
+.jobs-page.ui-scene, .match-page.ui-scene { --editorial-art: url('/media/editorial/pipeline.webp'); }
+.destination-page.ui-scene { --editorial-art: url('/media/editorial/status.webp'); }
+
+/* Existing generic entity marks remain generic; supplied images keep their original fallback. */
+.entity-mark:not(:has(img)) { position: relative; background: #eef4ff; }
+.entity-mark:not(:has(img))::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: url('/media/editorial/pipeline.webp') center / cover no-repeat;
+}
+.entity-mark:not(:has(img)) svg { position: relative; width: 34%; height: 34%; margin: 58% 0 0 58%;
+  background: var(--surface); padding: 1px; border-radius: 3px; }
+.opportunity-identity {
+  display: block; width: 72px; height: 64px; border-radius: 12px; pointer-events: none;
+  background: url('/media/editorial/pipeline.webp') center / cover no-repeat #eef4ff;
+  border: 1px solid var(--border);
+}
+.public-page .opportunity-row { grid-template-columns: 72px minmax(0,1.6fr) minmax(100px,.8fr) 120px 90px 18px; gap: 18px; }
+.public-page .opportunity-pay { font-size: 18px; }
+.public-page .public-section:has(>h1)::before,
+.public-detail > article::before {
+  content: ''; display: block; float: right; width: 200px; height: 132px; margin: 0 0 20px 24px;
+  border-radius: 18px; background: url('/media/editorial/pipeline.webp') center / cover no-repeat #eef4ff;
+  pointer-events: none;
+}
+.public-detail > article::after { content: ''; display: table; clear: both; }
+.public-filters, .public-facts { clear: both; }
+
+/* Original link counts, destinations and native accessible names are unchanged. */
+.ui-portal.public-page .portal-services { display: block; }
+.ui-portal.public-page .portal-services > div { margin-bottom: 22px; }
+.ui-portal.public-page .portal-services nav { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.ui-portal.public-page .portal-services a { min-width: 0; gap: 14px; padding: 12px; color: var(--text-1); font-weight: 650; }
+.ui-portal .portal-services a::before {
+  content: ''; display: block; width: 100px; height: 76px; flex: none; border-radius: 10px;
+  background: url('/media/editorial/pipeline.webp') center / cover no-repeat #eef4ff; pointer-events: none;
+}
+.ui-portal .portal-services a:nth-child(2)::before { background-image: url('/media/editorial/journey.webp'); }
+.ui-portal .portal-services a:nth-child(3)::before { background-image: url('/media/editorial/service.webp'); }
+.ui-portal .portal-services a:nth-child(4)::before { background-image: url('/media/editorial/paper.webp'); }
+.ui-portal .portal-services a:nth-child(5)::before { background-image: url('/media/editorial/governance.webp'); }
+.ui-portal .portal-services a > svg { margin-left: auto; flex: none; }
+.ui-portal.public-page .preparation-links > a[href],
+.portal.ui-portal .service-route > a[href] { display: grid; grid-template-columns: 32px minmax(0,1fr) 20px; gap: 14px 12px; padding: 16px 16px 24px; align-items: center; min-width: 0; }
+.ui-portal .service-route > a { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+.ui-portal .service-route > a::after { display: none; }
+.editorial-thumb {
+  display: block; width: 100%; height: auto; aspect-ratio: 1.8; object-fit: cover;
+  border-radius: 12px; grid-column: 1 / -1; background: #eef4ff; pointer-events: none;
+}
+.ui-portal .preparation-links > a > div { min-width: 0; }
+.ui-portal .preparation-links > a .preparation-number,
+.ui-portal .service-route > a > span { font-size: 23px; opacity: .8; }
+.ui-portal .service-route > a > strong { white-space: normal; }
+.ui-portal .service-route > a > svg { display: block; }
+.ui-portal :is(.portal-role-band, .role-band) > div:first-child::before {
+  content: ''; display: block; float: left; width: 110px; height: 82px; margin-right: 24px;
+  background: url('/media/editorial/journey.webp') center / cover; border-radius: 12px; pointer-events: none;
+}
+
+/* Full-size topic covers; the template id supplies presentation only, not a new task. */
+.practice-card--frontend { --practice-art: url('/media/editorial/practice-frontend.webp'); }
+.practice-card--backend { --practice-art: url('/media/editorial/practice-backend.webp'); }
+.practice-card--analyst { --practice-art: url('/media/editorial/practice-analyst.webp'); }
+.practice-card--operations { --practice-art: url('/media/editorial/practice-operations.webp'); }
+.app-shell .practice-card { padding: 20px; overflow: hidden; }
+.practice-cover { height: 160px; margin: -20px -20px 22px; flex: none;
+  background: var(--practice-art) center / cover no-repeat #eef4ff; pointer-events: none; }
+.app-shell .practice-card h2 { margin-top: 12px; }
+.app-shell .practice-card .practice-actions { padding-top: 8px; }
+.app-shell .practice-card:hover { border-color: var(--brand-text); box-shadow: var(--sh-2); }
+.app-shell .timeline li { min-height: 92px; gap: 20px; }
+.app-shell .timeline li:not(:last-child)::before { left: 8px; background: linear-gradient(var(--brand-text),var(--border)); }
+.app-shell .timeline-point { width: 17px; height: 17px; box-shadow: 0 0 0 4px var(--surface); }
+.app-shell .timeline li:last-child .timeline-point { background: var(--teal); }
+.app-shell .timeline time { margin-top: 8px; margin-bottom: 20px; }
+
+/* Window illustrations remain small enough for short-screen close/footer access. */
+.ui-window { --window-art: url('/media/editorial/governance.webp'); }
+.ui-window[data-scene='journey'] { --window-art: url('/media/editorial/journey.webp'); }
+.ui-window[data-scene='paper'] { --window-art: url('/media/editorial/paper.webp'); }
+.ui-window[data-scene='studio'] { --window-art: url('/media/editorial/studio.webp'); }
+.ui-window[data-scene='service'] { --window-art: url('/media/editorial/service.webp'); }
+.overlay-panel.ui-window > header::before {
+  content: ''; width: 60px; height: 44px; border-radius: 9px; flex: none;
+  background: var(--window-art) center / cover no-repeat #eef4ff; pointer-events: none;
+}
+.overlay-panel.ui-window > header { gap: 12px; }
+.overlay-panel.ui-window > header > h2 { flex: 1; min-width: 0; }
+.status-page::after { content: ''; width: min(320px,100%); height: 170px; order: -1;
+  background: var(--editorial-art) center / cover #eef4ff; border-radius: 24px; pointer-events: none; }
+.account-panel::before { content: ''; display: block; height: 140px; margin: -8px -8px 24px;
+  background: var(--editorial-art) center / contain no-repeat #eef4ff; border-radius: 14px; pointer-events: none; }
+.login-story .route-art { background: url('/media/editorial/journey.webp') center / contain no-repeat; border-radius: 36px; }
+.login-story .route-art > svg { opacity: 0; }
+.login-story .route-label { background: var(--surface); border-radius: 8px; padding: 6px 12px; }
+.business-empty::before { content: ''; display: block; width: min(220px,100%); height: 130px; margin: 0 auto 16px;
+  background: var(--editorial-art,url('/media/editorial/status.webp')) center / contain no-repeat; pointer-events: none; }
+.brand-mark > svg { box-shadow: inset 0 0 0 2px color-mix(in srgb,var(--surface) 70%,transparent),0 4px 12px #2f55c814; }
+.brand-mark .brand-star { fill: #eea83e; stroke: var(--brand-text); stroke-width: .5px; }
+.app-shell .sidebar nav a > svg, .mobile-nav a > svg {
+  box-sizing: content-box; padding: 5px; border-radius: 8px; background: var(--brand-soft);
+}
+[data-theme='dark'] .editorial-thumb,
+[data-theme='dark'] .practice-cover { outline: 1px solid #ffffff18; }
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .ui-portal :is(.preparation-links,.service-route) > a { transition: transform 180ms ease,box-shadow 180ms ease; }
+  .ui-portal :is(.preparation-links,.service-route) > a:hover { transform: translateY(-3px); box-shadow: var(--sh-2); }
+  .practice-cover { transition: filter 180ms ease; }
+  .practice-card:hover .practice-cover { filter: saturate(1.08); }
+}
+@media (max-width:1100px) {
+  .public-page .opportunity-row { grid-template-columns: 64px minmax(0,1fr) 110px 90px 18px; }
+  .public-page .opportunity-row .opportunity-meta { grid-column: 2; grid-row: 2; }
+  .public-page .opportunity-row .opportunity-identity { grid-column: 1; grid-row: 1 / 3; width: 64px; }
+  .public-page .opportunity-row .opportunity-name { grid-column: 2; grid-row: 1; }
+  .public-page .opportunity-row .opportunity-pay { grid-column: 3; grid-row: 1 / 3; }
+  .public-page .opportunity-row .opportunity-source { grid-column: 4; grid-row: 1 / 3; }
+  .public-page .opportunity-row > svg { grid-column: 5; grid-row: 1 / 3; }
+  .ui-portal.public-page .portal-services nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .app-shell .business-page.ui-scene > header:first-of-type::after { flex-basis: 180px; height: 120px; }
+}
+@media (max-width:767px) {
+  .app-shell .business-page.ui-scene > header:first-of-type { align-items: flex-start; gap: 16px; }
+  .app-shell .business-page.ui-scene > header:first-of-type > div:first-child { flex-basis: 100%; }
+  .app-shell .business-page.ui-scene > header:first-of-type::after,
+  .data-page.ui-scene > .data-heading::after { flex: 1 1 100%; height: 132px; background-size: contain; border-radius: 14px; }
+  .ui-portal .service-route { flex-direction: column; gap: 16px; }
+  .ui-portal .service-route > a { width: 100%; }
+  .ui-portal .editorial-thumb { aspect-ratio: 2.2; object-fit: contain; }
+  .public-page .opportunity-row { grid-template-columns: 54px minmax(0,1fr) 18px; gap: 10px 12px; }
+  .public-page .opportunity-row .opportunity-identity { width: 54px; height: 52px; grid-row: 1 / 3; }
+  .public-page .opportunity-row .opportunity-name { grid-column: 2; grid-row: 1; }
+  .public-page .opportunity-row .opportunity-meta { grid-column: 2; grid-row: 2; }
+  .public-page .opportunity-row .opportunity-pay { grid-column: 2; grid-row: 3; }
+  .public-page .opportunity-row .opportunity-source { grid-column: 2; grid-row: 4; justify-self: start; }
+  .public-page .opportunity-row > svg { grid-column: 3; grid-row: 1 / 5; }
+  .ui-portal.public-page .portal-services nav { grid-template-columns: minmax(0,1fr); }
+  .ui-portal .portal-services a::before { width: 76px; height: 64px; }
+  .ui-portal :is(.portal-role-band,.role-band) > div:first-child::before { float: none; margin: 0 0 16px; }
+  .public-page .public-section:has(>h1)::before, .public-detail > article::before { float: none; width: 100%; height: 150px; margin: 0 0 24px; background-size: contain; }
+  .app-shell .practice-card { padding: 20px; }
+  .practice-cover { height: 170px; }
+  .overlay-panel.ui-window > header::before { width: 40px; height: 36px; }
+  .overlay-panel.ui-window > header { gap: 8px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .editorial-thumb,.practice-cover,.practice-card,.ui-portal :is(.preparation-links,.service-route)>a { transition: none !important; transform: none !important; }
+}
+@media print, (forced-colors:active) {
+  .app-shell .business-page.ui-scene > header:first-of-type::after,
+  .data-page.ui-scene > .data-heading::after,
+  .overlay-panel.ui-window > header::before,
+  .ui-portal .portal-services a::before,
+  .ui-portal :is(.portal-role-band,.role-band) > div:first-child::before,
+  .public-page .public-section:has(>h1)::before,
+  .public-detail > article::before,
+  .business-empty::before,.account-panel::before,.status-page::after,
+  .opportunity-identity,.practice-cover,.editorial-thumb,.entity-mark::before { display: none !important; }
+  .entity-mark svg { margin: 0 !important; width: 78% !important; height: 78% !important; }
+  .public-page .opportunity-row { display: flex; flex-wrap: wrap; }
+  .login-story .route-art { background: none; }
+  .login-story .route-art > svg { opacity: 1; }
+}

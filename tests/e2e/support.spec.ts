@@ -1,0 +1,28 @@
+import { test, expect } from "@playwright/test";
+test("counselor has a persistent support workspace outside the alert dashboard", async ({ page }) => {
+  await page.goto('/#/login');
+  await page.getByRole('radio', { name: '辅导员', exact: true }).check();
+  await page.getByRole('button', { name: '以辅导员身份进入', exact: true }).click();
+  await page.getByRole('link', { name: '帮扶跟进', exact: true }).click({ timeout: 5000 });
+  await expect(page.getByRole('heading', { name: '从一次核实，到持续行动。', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '新建帮扶', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: '新建帮扶', exact: true });
+  await dialog.getByRole('combobox', { name: '学生', exact: true }).selectOption('student-010');
+  await dialog.getByLabel('行动计划', { exact: true }).fill('人工沟通后制定求职计划，下次复查简历与投递进展。');
+  await dialog.getByRole('button', { name: '保存记录', exact: true }).click();
+  await expect(page.getByRole('status')).toContainText('已保存');
+  const record = page.getByRole('article').filter({ hasText: '人工沟通后制定求职计划' });
+  await record.getByRole('button', { name: '记录复查', exact: true }).click();
+  await page.getByRole('dialog').getByLabel('复查记录', { exact: true }).fill('已完成阶段任务，与学生确认可以结案。');
+  await page.getByRole('dialog').getByRole('button', { name: '保存记录', exact: true }).click();
+  await record.getByRole('button', { name: '结案', exact: true }).click();
+  await page.getByRole('dialog').getByLabel('已核实并确认结案', { exact: true }).check();
+  await page.getByRole('dialog').getByRole('button', { name: '保存记录', exact: true }).click();
+  await expect(record.getByText('已结案', { exact: true })).toBeVisible();
+  await page.reload();
+  await expect(record.getByText('已结案', { exact: true })).toBeVisible();
+  await record.getByRole('button', { name: '重开', exact: true }).click();
+  await page.getByRole('dialog').getByLabel('重开原因', { exact: true }).fill('新的求职阶段需要持续支持。');
+  await page.getByRole('dialog').getByRole('button', { name: '保存记录', exact: true }).click();
+  await expect(record.getByText('跟进中', { exact: true })).toBeVisible();
+});

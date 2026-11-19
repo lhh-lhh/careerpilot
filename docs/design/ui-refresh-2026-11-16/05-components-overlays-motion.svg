@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1130" viewBox="0 0 1440 1130">
+<title>路鸣职引 UI 设计首稿 · 静态设计，非运行截图</title>
+<defs><filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#16233a" flood-opacity=".1"/></filter></defs>
+<style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif} .num{font-family:'Consolas','Microsoft YaHei',monospace;font-variant-numeric:tabular-nums}</style>
+<rect x="0" y="0" width="1440" height="1130" rx="0" fill="#f6f8fc" />
+<text x="40" y="54" font-size="28" font-weight="600" fill="#16233a" >D04 · 窗口、组件状态与动态反馈</text>
+<text x="40" y="86" font-size="14" font-weight="400" fill="#5a6782" >保留原事件和业务条件，只升级可见层；以下为静态状态样例。</text>
+<rect x="40" y="116" width="604" height="540" rx="20" fill="#e8edf5" />
+<text x="64" y="150" font-size="13" font-weight="400" fill="#5a6782" >确认窗 · 480px / 原原因校验保持不变</text>
+<rect x="102" y="178" width="480" height="430" rx="20" fill="#ffffff" stroke="#e3e9f2" filter="url(#shadow)"/>
+<svg x="126" y="204" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b52c36" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 10 18H2L12 3ZM12 9v5M12 17h.01"/></svg>
+<text x="164" y="225" font-size="20" font-weight="600" fill="#16233a" >驳回本次材料</text>
+<svg x="534" y="205" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a6782" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 6 12 12M6 18 18 6"/></svg>
+<line x1="102" y1="250" x2="582" y2="250" stroke="#e3e9f2" stroke-width="1" />
+<text x="126" y="292" font-size="14" font-weight="600" fill="#16233a" >驳回原因</text>
+<rect x="126" y="304" width="432" height="130" rx="10" fill="#ffffff" stroke="#65718a" />
+<text x="140" y="332" font-size="14" font-weight="400" fill="#16233a" >请补充签约证明。</text>
+<text x="126" y="465" font-size="13" font-weight="400" fill="#5a6782" >至少5个字，帮助学生理解下一步。</text>
+<text x="558" y="465" font-size="13" font-weight="400" fill="#5a6782" text-anchor="end">8 / 300</text>
+<line x1="102" y1="500" x2="582" y2="500" stroke="#e3e9f2" stroke-width="1" />
+<rect x="290" y="530" width="100" height="44" rx="10" fill="#ffffff" stroke="#65718a" />
+<text x="340" y="557" font-size="14" font-weight="600" fill="#16233a" text-anchor="middle">取消</text>
+<rect x="402" y="530" width="156" height="44" rx="10" fill="#fff0f0" stroke="#b52c36" />
+<text x="480" y="557" font-size="14" font-weight="600" fill="#b52c36" text-anchor="middle">确认驳回</text>
+<text x="64" y="634" font-size="13" font-weight="400" fill="#5a6782" >保留：焦点管理、Esc/关闭条件、滚动锁与提交保护。</text>
+<rect x="668" y="116" width="732" height="254" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="692" y="151" font-size="18" font-weight="600" fill="#16233a" >AI状态：三种含义分开表达</text>
+<text x="692" y="175" font-size="13" font-weight="400" fill="#5a6782" >授权 ≠ 服务连接 ≠ 当前任务，不新增每次强制确认</text>
+<rect x="692" y="186" width="126" height="28" rx="7" fill="#f2efff" />
+<text x="704" y="205" font-size="12" font-weight="400" fill="#6e56cf" >授权已允许</text>
+<rect x="832" y="186" width="132" height="28" rx="7" fill="#fff3df" />
+<text x="844" y="205" font-size="12" font-weight="400" fill="#80520c" >服务不可用</text>
+<text x="982" y="206" font-size="13" font-weight="400" fill="#16233a" >暂无生成任务</text>
+<rect x="692" y="234" width="126" height="28" rx="7" fill="#f2efff" />
+<text x="704" y="253" font-size="12" font-weight="400" fill="#6e56cf" >授权已允许</text>
+<rect x="832" y="234" width="132" height="28" rx="7" fill="#edf2ff" />
+<text x="844" y="253" font-size="12" font-weight="400" fill="#2f55c8" >服务可用</text>
+<text x="982" y="254" font-size="13" font-weight="400" fill="#16233a" >正在等待真实返回</text>
+<rect x="692" y="282" width="126" height="28" rx="7" fill="#f2efff" />
+<text x="704" y="301" font-size="12" font-weight="400" fill="#6e56cf" >授权已关闭</text>
+<rect x="832" y="282" width="132" height="28" rx="7" fill="#edf2ff" />
+<text x="844" y="301" font-size="12" font-weight="400" fill="#2f55c8" >连接状态独立</text>
+<text x="982" y="302" font-size="13" font-weight="400" fill="#16233a" >未完成请求按原逻辑停止</text>
+<rect x="668" y="390" width="732" height="266" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="692" y="425" font-size="18" font-weight="600" fill="#16233a" >按钮与字段：完整状态</text>
+<text x="692" y="449" font-size="13" font-weight="400" fill="#5a6782" >尺寸、语义、焦点、处理中和禁用必须统一</text>
+<rect x="692" y="468" width="126" height="44" rx="10" fill="#2f55c8" />
+<text x="755" y="495" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">主要操作</text>
+<rect x="832" y="468" width="126" height="44" rx="10" fill="#ffffff" stroke="#65718a" />
+<text x="895" y="495" font-size="14" font-weight="600" fill="#16233a" text-anchor="middle">次要操作</text>
+<rect x="972" y="468" width="126" height="44" rx="10" fill="#fff0f0" stroke="#b52c36" />
+<text x="1035" y="495" font-size="14" font-weight="600" fill="#b52c36" text-anchor="middle">危险操作</text>
+<rect x="1112" y="468" width="126" height="44" rx="10" fill="#eef2f9" stroke="#e3e9f2" />
+<text x="1175" y="495" font-size="14" font-weight="600" fill="#606d85" text-anchor="middle">不可操作</text>
+<rect x="692" y="530" width="126" height="44" rx="10" fill="#eef2f9" stroke="#e3e9f2" />
+<text x="755" y="557" font-size="14" font-weight="600" fill="#606d85" text-anchor="middle">处理中…</text>
+<rect x="832" y="530" width="126" height="44" rx="10" fill="#ffffff" stroke="#65718a" />
+<text x="895" y="557" font-size="14" font-weight="600" fill="#16233a" text-anchor="middle">键盘焦点</text>
+<rect x="828" y="526" width="134" height="52" rx="13" fill="none" stroke="#2f55c8" stroke-width="2"/>
+<rect x="978" y="529" width="380" height="44" rx="10" fill="#ffffff" stroke="#b52c36" />
+<text x="992" y="556" font-size="14" font-weight="400" fill="#b52c36" >字段错误：保留输入并明确修正方式</text>
+<text x="692" y="626" font-size="13" font-weight="400" fill="#5a6782" >触摸目标 44px · 字段名不靠 placeholder 代替 · 禁用原因可读</text>
+<rect x="40" y="682" width="604" height="350" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="64" y="717" font-size="18" font-weight="600" fill="#16233a" >视觉基础</text>
+<text x="64" y="741" font-size="13" font-weight="400" fill="#5a6782" >保留品牌配色，重点重构层级、密度和组件细节</text>
+<rect x="64" y="778" width="88" height="52" rx="10" fill="#2f55c8" />
+<text x="64" y="854" font-size="13" font-weight="400" fill="#5a6782" >品牌蓝</text>
+<rect x="176" y="778" width="88" height="52" rx="10" fill="#6e56cf" />
+<text x="176" y="854" font-size="13" font-weight="400" fill="#5a6782" >AI 紫</text>
+<rect x="288" y="778" width="88" height="52" rx="10" fill="#146b49" />
+<text x="288" y="854" font-size="13" font-weight="400" fill="#5a6782" >成功</text>
+<rect x="400" y="778" width="88" height="52" rx="10" fill="#80520c" />
+<text x="400" y="854" font-size="13" font-weight="400" fill="#5a6782" >警告</text>
+<rect x="512" y="778" width="88" height="52" rx="10" fill="#b52c36" />
+<text x="512" y="854" font-size="13" font-weight="400" fill="#5a6782" >危险</text>
+<text x="64" y="907" font-size="28" font-weight="600" fill="#16233a" >标题 28 / 38</text>
+<text x="64" y="947" font-size="14" font-weight="400" fill="#5a6782" >正文 14 / 22 · 字段 16 / 24 · 辅助 13 / 20</text>
+<text x="64" y="981" font-size="14" font-weight="400" fill="#5a6782" >圆角 10 / 14 / 20 · 间距以 4px 为基准</text>
+<rect x="668" y="682" width="732" height="350" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="692" y="717" font-size="18" font-weight="600" fill="#16233a" >动效：传达变化，不推动业务</text>
+<text x="692" y="741" font-size="13" font-weight="400" fill="#5a6782" >关闭动效后所有内容、操作、状态仍完整</text>
+<text x="692" y="790" font-size="14" font-weight="600" fill="#16233a" >即时反馈</text>
+<text x="809" y="790" font-size="14" font-weight="600" fill="#2f55c8" >120ms</text>
+<text x="903" y="790" font-size="13" font-weight="400" fill="#5a6782" >按钮/焦点，不等待动画再响应</text>
+<text x="692" y="843" font-size="14" font-weight="600" fill="#16233a" >状态切换</text>
+<text x="809" y="843" font-size="14" font-weight="600" fill="#2f55c8" >200ms</text>
+<text x="903" y="843" font-size="13" font-weight="400" fill="#5a6782" >标签/提示，保留原始任务状态</text>
+<text x="692" y="896" font-size="14" font-weight="600" fill="#16233a" >面板过渡</text>
+<text x="809" y="896" font-size="14" font-weight="600" fill="#2f55c8" >260ms</text>
+<text x="903" y="896" font-size="13" font-weight="400" fill="#5a6782" >位移不超过8px，不重复挂载页面</text>
+<text x="692" y="949" font-size="14" font-weight="600" fill="#16233a" >滚动呈现</text>
+<text x="809" y="949" font-size="14" font-weight="600" fill="#2f55c8" >240ms</text>
+<text x="903" y="949" font-size="13" font-weight="400" fill="#5a6782" >内容默认可见，不劫持滚轮</text>
+<text x="40" y="1085" font-size="13" font-weight="400" fill="#5a6782" >设计目标，不是当前应用已达到的测量结果。新动效不得触发AI、重复请求、改写数据或改变确认门槛。</text>
+</svg>

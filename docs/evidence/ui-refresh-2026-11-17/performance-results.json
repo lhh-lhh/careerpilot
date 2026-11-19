@@ -1,0 +1,129 @@
+{
+  "recordedAt": "2026-11-17T12:24:02.546Z",
+  "command": "npm run test:perf",
+  "workers": 1,
+  "stats": {
+    "startTime": "2026-11-17T12:24:02.546Z",
+    "duration": 28648.693,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "test": "PERF01 100-job matching actual worker round-trip p95 <300ms, cancel and no persistent mutation",
+      "project": "chromium",
+      "status": "passed",
+      "attachment": "matching-performance.json",
+      "result": {
+        "p95Ms": 3.3,
+        "browser": "chromium",
+        "samples": 30,
+        "warmup": 5,
+        "boundary": "main-thread dispatch through structured clone and worker response",
+        "details": " 30次 / p95 3.30 ms · 初次本体预处理 0.70 ms · 真实简历未修改"
+      }
+    },
+    {
+      "test": "PERF01 100-job matching actual worker round-trip p95 <300ms, cancel and no persistent mutation",
+      "project": "msedge",
+      "status": "passed",
+      "attachment": "matching-performance.json",
+      "result": {
+        "p95Ms": 5.1,
+        "browser": "msedge",
+        "samples": 30,
+        "warmup": 5,
+        "boundary": "main-thread dispatch through structured clone and worker response",
+        "details": " 30次 / p95 5.10 ms · 初次本体预处理 0.50 ms · 真实简历未修改"
+      }
+    },
+    {
+      "test": "PERF02 production filtering and route changes run 30 times with p95 <200ms",
+      "project": "chromium",
+      "status": "passed",
+      "attachment": "filter-route-performance.json",
+      "result": {
+        "samples": 30,
+        "boundary": {
+          "filter": "Playwright fill through Vue computed filtering and first rendered result",
+          "route": "hash navigation request through target page heading visible"
+        },
+        "filterP95Ms": 49.13200000000006,
+        "routeP95Ms": 23.234899999999925,
+        "environment": {
+          "platform": "win32 10.0.26200 x64",
+          "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+          "logicalCpus": 16,
+          "memoryGiB": 15.7
+        },
+        "browser": "chromium"
+      }
+    },
+    {
+      "test": "PERF02 production filtering and route changes run 30 times with p95 <200ms",
+      "project": "msedge",
+      "status": "passed",
+      "attachment": "filter-route-performance.json",
+      "result": {
+        "samples": 30,
+        "boundary": {
+          "filter": "Playwright fill through Vue computed filtering and first rendered result",
+          "route": "hash navigation request through target page heading visible"
+        },
+        "filterP95Ms": 89.69969999999967,
+        "routeP95Ms": 50.19660000000022,
+        "environment": {
+          "platform": "win32 10.0.26200 x64",
+          "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+          "logicalCpus": 16,
+          "memoryGiB": 15.7
+        },
+        "browser": "msedge"
+      }
+    },
+    {
+      "test": "PERF03 production cold login opens 30 times with p95 <1.5s",
+      "project": "chromium",
+      "status": "passed",
+      "attachment": "cold-open-performance.json",
+      "result": {
+        "samples": 30,
+        "p95Ms": 113.27559999999994,
+        "boundary": "fresh browser context navigation start through login heading visible",
+        "cache": "fresh context per sample",
+        "network": "local production static server; application has no external requests",
+        "environment": {
+          "platform": "win32 10.0.26200 x64",
+          "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+          "logicalCpus": 16,
+          "memoryGiB": 15.7
+        },
+        "browser": "chromium"
+      }
+    },
+    {
+      "test": "PERF03 production cold login opens 30 times with p95 <1.5s",
+      "project": "msedge",
+      "status": "passed",
+      "attachment": "cold-open-performance.json",
+      "result": {
+        "samples": 30,
+        "p95Ms": 134.98909999999978,
+        "boundary": "fresh browser context navigation start through login heading visible",
+        "cache": "fresh context per sample",
+        "network": "local production static server; application has no external requests",
+        "environment": {
+          "platform": "win32 10.0.26200 x64",
+          "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+          "logicalCpus": 16,
+          "memoryGiB": 15.7
+        },
+        "browser": "msedge"
+      }
+    }
+  ],
+  "beforeAfterDeltaAvailable": false,
+  "limitation": "Local production service and synthetic data; passed existing thresholds, not proof of zero baseline performance regression or mobile/WAN performance."
+}

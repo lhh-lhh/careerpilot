@@ -1,0 +1,37 @@
+[
+  {
+    "id": "empty",
+    "input": {},
+    "canonical": "{}",
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  {
+    "id": "unicode-normalization-and-order",
+    "input": {
+      "z": null,
+      "text": "é\r\n😀",
+      "numbers": [-0, 1.0, 1e30, 0.000001],
+      "skillIds": ["b", "a", "a"],
+      "answers": ["b", "a"]
+    },
+    "canonical": "{\"answers\":[\"b\",\"a\"],\"numbers\":[0,1,1e+30,0.000001],\"skillIds\":[\"a\",\"b\"],\"text\":\"é\\n😀\",\"z\":null}"
+  },
+  {
+    "id": "utf16-key-order",
+    "input": { "": 1, "😀": 2, "a": 3 },
+    "canonical": "{\"a\":3,\"😀\":2,\"\":1}"
+  },
+  {
+    "id": "numeric-notation-boundaries",
+    "input": [1e-7, 1e-6, 1e20, 1e21, 333333333.3333333, 0.002],
+    "canonical": "[1e-7,0.000001,100000000000000000000,1e+21,333333333.3333333,0.002]"
+  },
+  {
+    "id": "utf16-evidence",
+    "input": {
+      "field": "项目😀开发",
+      "evidence": { "start": 2, "end": 4, "quote": "😀" }
+    },
+    "canonical": "{\"evidence\":{\"end\":4,\"quote\":\"😀\",\"start\":2},\"field\":\"项目😀开发\"}"
+  }
+]

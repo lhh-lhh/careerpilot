@@ -1,0 +1,59 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>08 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#6E56CF', letterSpacing: 3, fontWeight: 'bold' }}>04 · AI 接入与应用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>AI 接入：服务端代理，不把模型当业务核心</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 18, flexDirection: 'row', alignItems: 'stretch', gap: 12 }}>
+      <Box style={{ flex: 1, background: '#F3F0FD', border: '1px solid #D8CDF2', borderRadius: 8, padding: '12px 14px' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#6E56CF' }}>① 显式触发</Text>
+        <Text style={{ fontSize: 12, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>页面点击 → 服务端校验会话、授权与数据归属</Text>
+      </Box>
+      <Box style={{ justifyContent: 'center' }}>
+        <FAIcon name="arrow-right" style={{ fill: '#6E56CF', width: 16, height: 16 }} />
+      </Box>
+      <Box style={{ flex: 1, background: '#F3F0FD', border: '1px solid #D8CDF2', borderRadius: 8, padding: '12px 14px' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#6E56CF' }}>② 服务端调用</Text>
+        <Text style={{ fontSize: 12, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>重建必要上下文 → 脱敏 / 最小化 → 调用 DeepSeek</Text>
+      </Box>
+      <Box style={{ justifyContent: 'center' }}>
+        <FAIcon name="arrow-right" style={{ fill: '#6E56CF', width: 16, height: 16 }} />
+      </Box>
+      <Box style={{ flex: 1, background: '#F3F0FD', border: '1px solid #D8CDF2', borderRadius: 8, padding: '12px 14px' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#6E56CF' }}>③ 校验与留痕</Text>
+        <Text style={{ fontSize: 12, color: '#33415C', lineHeight: 1.5, marginTop: 4 }}>解析 + 结构 / 语义校验 → 记录来源凭据 → 展示建议</Text>
+      </Box>
+    </Box>
+    <Box style={{ marginTop: 18 }}>
+      <Image src="assets/C05.png" style={{ width: 920, height: 256, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+      <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>server/ai.ts L134–137｜固定 HTTPS 上游、Bearer 变量、JSON 输出与状态码映射；截图不含真实密钥</Text>
+    </Box>
+    <Box style={{ marginTop: 14, background: '#10366B', borderRadius: 8, padding: '14px 24px' }}>
+      <Text style={{ fontSize: 16, color: '#FFFFFF', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#F2A13A' }}>边界：</span>密钥不进入浏览器 · AI 不直接投递、签约或审批 · 失败不伪造成功</Text>
+    </Box>
+  </Box>
+</Slide>

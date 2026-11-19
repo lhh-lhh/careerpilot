@@ -1,0 +1,77 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>12 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>05 · 界面与使用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>使用方法：沿一条真实任务链操作</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 18, flexDirection: 'row', gap: 28, alignItems: 'flex-start' }}>
+      <Box style={{ width: 420, flexDirection: 'column', gap: 10 }}>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#216FEE', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>1</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>登录已审核账号（新注册需审核）</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#216FEE', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>2</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>学生：完善并保存简历事实</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#216FEE', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>3</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>岗位：筛选 / 规则依据 / AI 建议（显式点击）</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#216FEE', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>4</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>求职：确认投递 / 查看时间轴</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#216FEE', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>5</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>面试：文字或语音，核对后提交并查看反馈</Text>
+        </Box>
+        <Box style={{ flexDirection: 'row', alignItems: 'center', gap: 12, background: '#F0F6FF', borderRadius: 8, height: 60, padding: '0 14px' }}>
+          <Box style={{ width: 28, height: 28, borderRadius: 14, background: '#0E9F92', justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 14, fontWeight: 'bold', color: '#FFFFFF' }}>6</Text>
+          </Box>
+          <Text style={{ fontSize: 14, color: '#33415C', flex: 1, lineHeight: 1.4 }}>企业与学校：候选推进 / 日程 / 去向审核 / 驾驶舱</Text>
+        </Box>
+      </Box>
+      <Box style={{ width: 512, flexDirection: 'column' }}>
+        <Image src="assets/U03.png" style={{ width: 512, height: 356, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>岗位匹配列表｜当前实现运行截图 · 隔离测试数据</Text>
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 8, lineHeight: 1.5 }}>演示以静态截图 / 排练录屏为主，不现场等待付费 API；AI 不可用时明确说明，不伪造结果。</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,3 @@
+# Preserve publication snapshot bytes and SHA256 inventory across platforms.
+# This disables automatic line-ending conversion, not textual diff display.
+* -text

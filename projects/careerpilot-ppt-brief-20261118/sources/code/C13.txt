@@ -1,0 +1,15 @@
+2	const email = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
+3	const phone = /(?<!\d)(?:\+?86[- ]?)?1[3-9]\d{9}(?!\d)/g;
+4	const identity = /(?<!\d)\d{17}[\dXx](?!\d)/g;
+5	export function maskText(text: string, names: string[]): string {
+6	  let masked = text.replace(/\r\n?/g, "\n").normalize("NFC");
+7	  for (const name of [...names]
+8	    .filter(Boolean)
+9	    .sort((a, b) => b.length - a.length))
+10	    masked = masked.split(name.normalize("NFC")).join("[姓名]");
+11	  return masked
+12	    .replace(email, "[邮箱]")
+13	    .replace(identity, "[证件号]")
+14	    .replace(phone, "[手机号]");
+15	}
+16	export function assertMasked(text: string): void {

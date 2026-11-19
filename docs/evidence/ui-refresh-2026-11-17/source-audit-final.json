@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-18T06:02:18.344Z",
+  "base": "f67b5404c4417ed1e82fcd444e6dc04b863352e9",
+  "scripts": 71,
+  "templateAttributeContracts": 3208,
+  "scriptChanges": [],
+  "templateChanges": [],
+  "protectedChanges": [],
+  "addedProtected": [],
+  "missing": [],
+  "interviewKeyUnchanged": true,
+  "presentationExceptions": [
+    "class/style",
+    "BrandMark size",
+    "static data-scene",
+    "AppOverlay $attrs forwarding",
+    "AppToast Teleport wrapper with original controls/events",
+    "exact local decorative nodes/brand image/JobArtwork bindings",
+    "two exact paired presentation imports and v-for index aliases in named files",
+    "three exact public navigation links",
+    "static practice journey subtree; no directives/events"
+  ],
+  "limitation": "Source invariant audit, not exhaustive runtime proof, actual-device acceptance or an absolute risk guarantee."
+}

@@ -1,0 +1,72 @@
+import js from "@eslint/js";
+import tseslint from "typescript-eslint";
+import vue from "eslint-plugin-vue";
+
+export default tseslint.config(
+  {
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "artifacts/**",
+      "coverage/**",
+      "docs/**",
+      "outputs/**",
+      "gateway/**",
+      "projects/**",
+      "presentation/**",
+      "src/contracts/generated/**",
+    ],
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...vue.configs["flat/recommended"],
+  {
+    files: ["**/*.vue"],
+    languageOptions: { parserOptions: { parser: tseslint.parser } },
+  },
+  {
+    files: ["**/*.{js,mjs,ts,vue}"],
+    languageOptions: {
+      globals: {
+        console: "readonly",
+        process: "readonly",
+        Buffer: "readonly",
+        URL: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        fetch: "readonly",
+        window: "readonly",
+        document: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLButtonElement: "readonly",
+        KeyboardEvent: "readonly",
+        Event: "readonly",
+        File: "readonly",
+        Blob: "readonly",
+        HTMLCanvasElement: "readonly",
+        CustomEvent: "readonly",
+        AbortController: "readonly",
+        TextEncoder: "readonly",
+        crypto: "readonly",
+        navigator: "readonly",
+        requestAnimationFrame: "readonly",
+        getComputedStyle: "readonly",
+        structuredClone: "readonly",
+      },
+    },
+    rules: {
+      "vue/multi-word-component-names": "off",
+      "vue/html-self-closing": "off",
+      "vue/max-attributes-per-line": "off",
+      "vue/html-closing-bracket-newline": "off",
+      "vue/html-indent": "off",
+      "vue/singleline-html-element-content-newline": "off",
+      "vue/multiline-html-element-content-newline": "off",
+      "vue/attributes-order": "off",
+      "vue/first-attribute-linebreak": "off",
+    },
+  },
+);

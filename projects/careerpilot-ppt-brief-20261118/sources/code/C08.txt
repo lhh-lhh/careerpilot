@@ -1,0 +1,13 @@
+141	            else if(p.action==='answer'){
+142	              const turn=session.turns.at(-1)!;if(turn.answer!==null)throw Error('INVALID_TRANSITION');
+143	              turn.answer=await masked(checkedString(p.text,12000));
+144	              // Persist the user's submitted answer before any paid/slow model work.
+145	              turn.evaluationError='本轮评分尚未完成；回答已保留。';
+146	              session.error='本轮回答已保存；下一题尚未完成，可重新读取后继续。';
+147	              session.revision++;session.updatedAt=new Date().toISOString();await valid();records.put(actor.userId,'voice',session);
+…	中间源码省略；行号保持原文件位置
+150	              if(session.turns.length<6){try{next=await promptQuestion();}catch{next=undefined;}}
+151	              try{const evaluation=await provider.capture(actor.userId,'interview-evaluation',async()=>{const value=await evaluate(provider,actor.userId,session.target,turn.question,turn.answer!,signal);await valid();return value;});turn.evaluation={...evaluation.value,provenance:evaluation.provenance};delete turn.evaluationError;}catch{turn.evaluationError='本轮AI评分未完成，回答已保留；不生成虚构分数。';}
+152	              if(next){session.turns.push({id:crypto.randomUUID(),question:next.value,questionProvenance:next.provenance,answer:null,evaluation:null});delete session.error;}
+153	              else if(session.turns.length>=6){session.state='completed';delete session.error;}
+154	              else session.error='下一题生成失败，已保存本轮回答。可重试下一题或结束查看反馈。';

@@ -1,0 +1,80 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>03 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>01 · 背景与需求</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>背景：把分散的就业环节接起来</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Text style={{ fontSize: 14, color: '#7A8BA8', marginTop: 16 }}>以下为本项目的需求归纳，非行业统计结论；目标不是让系统替人做职业决策。</Text>
+    <Box style={{ marginTop: 20, flexDirection: 'column', gap: 18 }}>
+      <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+        <Box style={{ width: 118, background: '#10366B', borderRadius: '8px 0 0 8px', justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>学生</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#F0F6FF', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#33415C', lineHeight: 1.5 }}>资料、岗位、面试准备分散，难以知道下一步</Text>
+        </Box>
+        <Box style={{ width: 44, background: '#F0F6FF', justifyContent: 'center', alignItems: 'center' }}>
+          <FAIcon name="arrow-right" style={{ fill: '#216FEE', width: 18, height: 18 }} />
+        </Box>
+        <Box style={{ width: 400, background: '#E4EEFD', borderRadius: '0 8px 8px 0', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#10366B', lineHeight: 1.5 }}>一条任务链：概览 → 简历 → 岗位 → 投递 → 面试 → 去向</Text>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+        <Box style={{ width: 118, background: '#10366B', borderRadius: '8px 0 0 8px', justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>企业</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#F0F6FF', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#33415C', lineHeight: 1.5 }}>岗位发布与候选推进需要连续记录</Text>
+        </Box>
+        <Box style={{ width: 44, background: '#F0F6FF', justifyContent: 'center', alignItems: 'center' }}>
+          <FAIcon name="arrow-right" style={{ fill: '#216FEE', width: 18, height: 18 }} />
+        </Box>
+        <Box style={{ width: 400, background: '#E4EEFD', borderRadius: '0 8px 8px 0', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#10366B', lineHeight: 1.5 }}>岗位管理 → 候选人推进 → 面试日程 → 录用与协议</Text>
+        </Box>
+      </Box>
+      <Box style={{ flexDirection: 'row', alignItems: 'stretch' }}>
+        <Box style={{ width: 118, background: '#10366B', borderRadius: '8px 0 0 8px', justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ fontSize: 19, fontWeight: 'bold', color: '#FFFFFF' }}>学校</Text>
+        </Box>
+        <Box style={{ flex: 1, background: '#F0F6FF', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#33415C', lineHeight: 1.5 }}>去向审核、统计和帮扶需要同口径数据</Text>
+        </Box>
+        <Box style={{ width: 44, background: '#F0F6FF', justifyContent: 'center', alignItems: 'center' }}>
+          <FAIcon name="arrow-right" style={{ fill: '#216FEE', width: 18, height: 18 }} />
+        </Box>
+        <Box style={{ width: 400, background: '#E4EEFD', borderRadius: '0 8px 8px 0', padding: '14px 20px', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 15, color: '#10366B', lineHeight: 1.5 }}>辖区名册 → 去向审核 → 驾驶舱 → 帮扶跟进</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ marginTop: 26, background: '#216FEE', borderRadius: 8, padding: '16px 24px' }}>
+      <Text style={{ fontSize: 17, color: '#FFFFFF', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold' }}>结论：</span>从「展示信息」走向「完成任务」——AI 负责辅助，人保留决定权。</Text>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,70 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>13 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>05 · 界面与使用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>验证与总结：有证据，也有明确边界</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 24, flexDirection: 'row', gap: 32, alignItems: 'flex-start' }}>
+      <Box style={{ width: 420, flexDirection: 'column', gap: 22 }}>
+        <Box>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#216FEE' }}>已实现</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.6, marginTop: 6 }}>四角色业务闭环、确定性匹配与统计、AI 工作台、图文协同的完整界面。</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#216FEE' }}>验证方式</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.6, marginTop: 6 }}>Chromium / Edge 主要页面与关键流程补验（2026-11）；历史真实 AI 探测使用合成材料，成功与失败记录均保留。</Text>
+        </Box>
+        <Box>
+          <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#F2A13A' }}>明确边界</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.6, marginTop: 6 }}>当前为本机候选版：不宣称公网部署、真人语音、生产负载已全部验收。</Text>
+        </Box>
+      </Box>
+      <Box style={{ width: 512, flexDirection: 'row', flexWrap: 'wrap', gap: 16 }}>
+        <Box style={{ width: 248, height: 150, background: '#F0F6FF', borderRadius: 10, padding: '20px 22px', flexDirection: 'column', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#216FEE', lineHeight: 1.1 }}>26 / 26</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', marginTop: 10, lineHeight: 1.4 }}>窗口与状态复验全部通过</Text>
+        </Box>
+        <Box style={{ width: 248, height: 150, background: '#F0F6FF', borderRadius: 10, padding: '20px 22px', flexDirection: 'column', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#216FEE', lineHeight: 1.1 }}>6 / 6</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', marginTop: 10, lineHeight: 1.4 }}>性能专项通过（本机环境）</Text>
+        </Box>
+        <Box style={{ width: 248, height: 150, background: '#F0F6FF', borderRadius: 10, padding: '20px 22px', flexDirection: 'column', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#10366B', lineHeight: 1.1 }}>112/114</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', marginTop: 10, lineHeight: 1.4 }}>主要 UI 首轮通过；修正后相关 26 项复验通过</Text>
+        </Box>
+        <Box style={{ width: 248, height: 150, background: '#F3F0FD', borderRadius: 10, padding: '20px 22px', flexDirection: 'column', justifyContent: 'center' }}>
+          <Text style={{ fontSize: 44, fontWeight: 'bold', color: '#6E56CF', lineHeight: 1.1 }}>11 环节</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', marginTop: 10, lineHeight: 1.4 }}>历史真实 AI 探测全部成功（合成材料烟测）</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Box style={{ background: '#10366B', borderRadius: 8, padding: '16px 24px' }}>
+      <Text style={{ fontSize: 18, color: '#FFFFFF', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold' }}>让业务可追踪，让建议可核查，让下一步可行动。</span></Text>
+    </Box>
+  </Box>
+</Slide>

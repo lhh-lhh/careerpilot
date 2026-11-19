@@ -1,0 +1,50 @@
+@media print {
+  body.printing-offer > *:not(.offer-print-sheet) { display: none !important; }
+  .offer-print-sheet { display: block !important; margin: 0 !important; padding: 18mm !important; border: 0 !important; }
+  :root,
+  [data-theme="dark"] {
+    color-scheme: light;
+    --bg-base: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #eef2f9;
+    --text-1: #16233a;
+    --text-2: #5a6782;
+    --text-3: #606d85;
+    --brand-text: #2f55c8;
+    --border: #65718a;
+  }
+  .no-print,
+  .sidebar,
+  .topbar,
+  .app-button,
+  .theme-toggle,
+  .overlay-backdrop {
+    display: none !important;
+  }
+  .app-shell {
+    display: block !important;
+  }
+  .app-main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    font-size: 12pt;
+    background: white;
+  }
+  * {
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .ds-section {
+    break-inside: avoid;
+  }
+  .ds-page {
+    max-width: none !important;
+    padding: 20px !important;
+  }
+  a {
+    color: inherit;
+  }
+}

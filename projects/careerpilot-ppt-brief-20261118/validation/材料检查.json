@@ -1,0 +1,274 @@
+{
+  "status": "passed",
+  "preparedDate": "2026-11-18",
+  "codeImages": 14,
+  "uiImages": 13,
+  "imagesVerified": 27,
+  "readerImages": 40,
+  "brokenImages": [],
+  "browserErrors": [],
+  "readerHorizontalOverflow": false,
+  "readerMobileHorizontalOverflow": false,
+  "codeProvenanceVerified": true,
+  "sourceFilesUnmodifiedByMaterialScripts": true,
+  "mainSlideCount": 12,
+  "budgetSeconds": 460,
+  "bufferSeconds": 20,
+  "narration": {
+    "totalNonspaceCharacters": 1696,
+    "totalHanCharacters": 1419,
+    "estimatedBasis": "页内预算包含指示/停顿；正文含中英缩写，文本计量不是本人彩排；建议220–260汉字/分钟自然讲述并计时。",
+    "pages": [
+      {
+        "page": "P01",
+        "budgetSeconds": 15,
+        "nonspaceCharacters": 54,
+        "hanCharacters": 44,
+        "latinWordEstimate": 2
+      },
+      {
+        "page": "P02",
+        "budgetSeconds": 30,
+        "nonspaceCharacters": 94,
+        "hanCharacters": 82,
+        "latinWordEstimate": 1
+      },
+      {
+        "page": "P03",
+        "budgetSeconds": 30,
+        "nonspaceCharacters": 121,
+        "hanCharacters": 107,
+        "latinWordEstimate": 0
+      },
+      {
+        "page": "P04",
+        "budgetSeconds": 45,
+        "nonspaceCharacters": 215,
+        "hanCharacters": 136,
+        "latinWordEstimate": 10
+      },
+      {
+        "page": "P05",
+        "budgetSeconds": 40,
+        "nonspaceCharacters": 148,
+        "hanCharacters": 134,
+        "latinWordEstimate": 0
+      },
+      {
+        "page": "P06",
+        "budgetSeconds": 45,
+        "nonspaceCharacters": 166,
+        "hanCharacters": 138,
+        "latinWordEstimate": 3
+      },
+      {
+        "page": "P07",
+        "budgetSeconds": 60,
+        "nonspaceCharacters": 219,
+        "hanCharacters": 180,
+        "latinWordEstimate": 4
+      },
+      {
+        "page": "P08",
+        "budgetSeconds": 45,
+        "nonspaceCharacters": 156,
+        "hanCharacters": 141,
+        "latinWordEstimate": 0
+      },
+      {
+        "page": "P09",
+        "budgetSeconds": 50,
+        "nonspaceCharacters": 172,
+        "hanCharacters": 155,
+        "latinWordEstimate": 0
+      },
+      {
+        "page": "P10",
+        "budgetSeconds": 30,
+        "nonspaceCharacters": 110,
+        "hanCharacters": 90,
+        "latinWordEstimate": 2
+      },
+      {
+        "page": "P11",
+        "budgetSeconds": 45,
+        "nonspaceCharacters": 161,
+        "hanCharacters": 142,
+        "latinWordEstimate": 1
+      },
+      {
+        "page": "P12",
+        "budgetSeconds": 25,
+        "nonspaceCharacters": 80,
+        "hanCharacters": 70,
+        "latinWordEstimate": 1
+      }
+    ]
+  },
+  "officialReferences": 7,
+  "images": [
+    {
+      "id": "C01",
+      "width": 1800,
+      "height": 632,
+      "sha256": "7115495caa8dc423927ebbeeda8585385f9b0eb443c0819fc20dd9c269db2615"
+    },
+    {
+      "id": "C02",
+      "width": 1800,
+      "height": 1171,
+      "sha256": "e00f95c7f1b0a569f00c4220193d0bd7a8d88813fb57bbcc85a5c56d77114953"
+    },
+    {
+      "id": "C03",
+      "width": 1800,
+      "height": 863,
+      "sha256": "e9d672e2a800c5382ceb0dcc2b2746273512acd08e90a185b206141200c125e8"
+    },
+    {
+      "id": "C04",
+      "width": 1800,
+      "height": 902,
+      "sha256": "c4509beb5681704ebe946c484bd722b42f80fbc485d2fcf4115eb5e6f2f8e239"
+    },
+    {
+      "id": "C05",
+      "width": 1800,
+      "height": 501,
+      "sha256": "5c5fc2a77f83b326c97bf983e441a3ba6e050f32fbccf1919555247dd715cedb"
+    },
+    {
+      "id": "C06",
+      "width": 1800,
+      "height": 616,
+      "sha256": "e2b78af85b9ec4e7b35169bc55045c543b4e8f1cf3a890043fb6419dd784ffbc"
+    },
+    {
+      "id": "C07",
+      "width": 1800,
+      "height": 620,
+      "sha256": "3d4e70983e18a621b62cb22e45649900ade38ffc37696da78b658f0466438a3f"
+    },
+    {
+      "id": "C08",
+      "width": 1800,
+      "height": 916,
+      "sha256": "1f91730f66a434e8c9edff185235c55a48f5ff076a28466e3d2c5d7960cf15cb"
+    },
+    {
+      "id": "C09",
+      "width": 1800,
+      "height": 659,
+      "sha256": "72f309516f6f04eb8ad3f945b841ae44d20b2f816d64ab8ef036b1765dfe2984"
+    },
+    {
+      "id": "C10",
+      "width": 1800,
+      "height": 971,
+      "sha256": "5395150ac4c6e49835493ea5e2aad2bd9229f527f60f180fb36fc63b7daa8f5d"
+    },
+    {
+      "id": "C11",
+      "width": 1800,
+      "height": 624,
+      "sha256": "0da526120429437458294e2e138b7c48a66ab450f040e174513d1b4e3e080df8"
+    },
+    {
+      "id": "C12",
+      "width": 1800,
+      "height": 663,
+      "sha256": "91f60edd9926579becdc80d6a0436372d85d09e1eb22b60e2714d269fcb1cab3"
+    },
+    {
+      "id": "C13",
+      "width": 1800,
+      "height": 786,
+      "sha256": "461a59d2a0cdbc49f9a06eb057726fb50873512314cffe6f65259e7160414ee0"
+    },
+    {
+      "id": "C14",
+      "width": 1800,
+      "height": 782,
+      "sha256": "ad93615545be51adc1b766597a48c944a40d4243cdb03075945656c9304485a6"
+    },
+    {
+      "id": "U01",
+      "width": 1440,
+      "height": 900,
+      "sha256": "8e9e940f2884c8ce49f1890b766880e7b216fb7125dee031fa42520d80b0352c"
+    },
+    {
+      "id": "U02",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "5da5eee8b2c082118dd7213610e8df96854c2e9b83bd373b5ad6c201960ade08"
+    },
+    {
+      "id": "U03",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "7a0bcf64197874d4318de88a321a138e5a5ca4a3ea11706b1c3b135afe2bd9bf"
+    },
+    {
+      "id": "U04",
+      "width": 1222,
+      "height": 970,
+      "sha256": "7757b7d309edac241d8d362b5f78957b4cd1bc7728950721e85329e994b1e1b9"
+    },
+    {
+      "id": "U05",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "deadc4fc8ffad25395cb35410b53551bcd44aa527e7bb3ccf7086072a6b3de92"
+    },
+    {
+      "id": "U06",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "a1cdd8d95fa89d83cfec6d32c205ef240b831f1675d8a54da2af43e9b0c3be26"
+    },
+    {
+      "id": "U07",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "dc7e58cb6433e5942e9227033d0314b0485712ac8269a240499ac3dc15e125b0"
+    },
+    {
+      "id": "U08",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "1114acfd7f2ec8946338ad2c9195d0ef3607f1a13c32122e94f2206f9ab4d4ea"
+    },
+    {
+      "id": "U09",
+      "width": 1440,
+      "height": 1100,
+      "sha256": "84e6edf7e098078ddae18330478b99b5e1dabb1a02304adfa9b6465aa2dbdae6"
+    },
+    {
+      "id": "U10",
+      "width": 1440,
+      "height": 1050,
+      "sha256": "02070371696c3b0a8c62183215e502362c437753b3b3efa1a46ebb66313c3b51"
+    },
+    {
+      "id": "U11",
+      "width": 390,
+      "height": 844,
+      "sha256": "3a771d77269d13ba998a8dfc1b2857df690821fb6f9e1540cf7c3366b419ef76"
+    },
+    {
+      "id": "U12",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "1a16eaa2bee3de08d0ffe5205d306eacc6028a8ed70a3b63fe41917f7b28c0d9"
+    },
+    {
+      "id": "U13",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "61c7ea21897c8e4abba2e55beb4888893da5bb74e508cb9cc1823bf5d6282e1a"
+    }
+  ],
+  "errors": []
+}

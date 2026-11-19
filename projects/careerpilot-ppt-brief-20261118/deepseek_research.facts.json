@@ -1,0 +1,13 @@
+{
+  "schema": "ppt-master.fact-provenance.v1",
+  "topic": "CareerPilot展示材料中的DeepSeek API协议核验",
+  "facts": [
+    {"fact_id":"F001","claim":"官方首次调用API文档列出https://api.deepseek.com、Bearer鉴权聊天示例和deepseek-flash模型名。","source_title":"首次调用 API | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F002","claim":"Chat Completions使用POST /chat/completions；stream=true以SSE返回增量并以data: [DONE]结束，文档列出thinking.type与safety_check.level参数。","source_title":"Chat Completions API | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/api/create-chat-completion","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F003","claim":"JSON Output设置response_format为json_object，提示应包含JSON指示与样例；需防止max_tokens截断，返回内容可能仅含空格。","source_title":"JSON Output | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/guides/json_mode","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F004","claim":"网页搜索接口为POST /v1/tools/search，以query搜索并返回结构化results。","source_title":"网页搜索 | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/api/search","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F005","claim":"语音合成接口为POST /v1/tools/tts；pcm格式为24kHz、16bit、有符号单声道原始PCM，官方另外提供WebSocket方式。","source_title":"语音合成 | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/api/tts","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F006","claim":"语音识别接口为POST /v1/tools/asr，整段音频一次上传，返回完整text、request_id和duration_ms。","source_title":"语音识别 | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/api/asr","classification":"external","retrieved_at":"2026-11-18"},
+    {"fact_id":"F007","claim":"OCR接口为POST /v1/tools/ocr，以multipart传文件和purpose，返回逐页text及finish_reason，其中length表示该页输出不完整。","source_title":"OCR | DeepSeek API Docs","source_url":"https://api-docs.deepseek.com/zh-cn/api/ocr","classification":"external","retrieved_at":"2026-11-18"}
+  ]
+}

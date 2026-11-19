@@ -1,0 +1,946 @@
+{
+  "generatedAt": "2026-11-17T11:12:46.955Z",
+  "revision": "1.0-final-candidate",
+  "kind": "static artifact verification, NOT application tests",
+  "artifacts": [
+    {
+      "name": "01-portal-light",
+      "width": 1440,
+      "height": 1740,
+      "note": "门户基本分区顺序保留，显著品牌与全幅多段背景。"
+    },
+    {
+      "name": "02-portal-dark",
+      "width": 1440,
+      "height": 1740,
+      "note": "门户基本分区顺序保留，显著品牌与全幅多段背景。"
+    },
+    {
+      "name": "03-portal-mobile",
+      "width": 390,
+      "height": 2460,
+      "note": "390px完整分区排版；三条岗位仅为静态样例，不改变实际数据数量。"
+    },
+    {
+      "name": "04-student-home",
+      "width": 1440,
+      "height": 1100,
+      "note": "页面族关键结构定稿候选，样例不代表实际业务数据或所有字段。"
+    },
+    {
+      "name": "05-resume-editor",
+      "width": 1440,
+      "height": 1280,
+      "note": "沿用已确认完整布局与全部样例图表/字段；加入全区背景与强化品牌。"
+    },
+    {
+      "name": "06-interview-studio",
+      "width": 1440,
+      "height": 1100,
+      "note": "页面族关键结构定稿候选，样例不代表实际业务数据或所有字段。"
+    },
+    {
+      "name": "07-company-candidates",
+      "width": 1440,
+      "height": 1100,
+      "note": "页面族关键结构定稿候选，样例不代表实际业务数据或所有字段。"
+    },
+    {
+      "name": "08-dashboard-light",
+      "width": 1440,
+      "height": 1540,
+      "note": "沿用已确认完整布局与全部样例图表/字段；加入全区背景与强化品牌。"
+    },
+    {
+      "name": "09-dashboard-dark",
+      "width": 1440,
+      "height": 1540,
+      "note": "沿用已确认完整布局与全部样例图表/字段；加入全区背景与强化品牌。"
+    },
+    {
+      "name": "10-governance",
+      "width": 1440,
+      "height": 1100,
+      "note": "页面族关键结构定稿候选，样例不代表实际业务数据或所有字段。"
+    },
+    {
+      "name": "11-opportunity-discovery",
+      "width": 1440,
+      "height": 1100,
+      "note": "公共岗位列表沿用公共头，不引入登录工作台菜单；学生列表使用同一内容模式。"
+    },
+    {
+      "name": "12-overlays-navigation-help",
+      "width": 1440,
+      "height": 1260,
+      "note": "六类窗口背景结构，非可操作原型；原生 confirm 不批量异步替换。"
+    },
+    {
+      "name": "13-background-atlas",
+      "width": 1440,
+      "height": 1230,
+      "note": "九种协调背景家族及不可控制宿主边界。"
+    },
+    {
+      "name": "14-components-motion-states",
+      "width": 1440,
+      "height": 1030,
+      "note": "完整组件状态与动态边界规格；不是运行态无障碍认证。"
+    },
+    {
+      "name": "15-identity-entry",
+      "width": 1440,
+      "height": 1100,
+      "note": "身份页面族：独立门户头、校园背景和实底表单，非后台外壳。"
+    },
+    {
+      "name": "16-details-reports-service-status",
+      "width": 1440,
+      "height": 1100,
+      "note": "补充详情、报告、文书、工单及异常场景结构，不是完整字段枚举。"
+    }
+  ],
+  "coverage": {
+    "pages": 54,
+    "windowGroups": 43,
+    "unmapped": 0
+  },
+  "contrast": [
+    {
+      "mode": "light",
+      "fg": "--text-1",
+      "bg": "--surface",
+      "ratio": 15.723
+    },
+    {
+      "mode": "light",
+      "fg": "--text-2",
+      "bg": "--surface",
+      "ratio": 8
+    },
+    {
+      "mode": "light",
+      "fg": "--brand-text",
+      "bg": "--surface",
+      "ratio": 6.453
+    },
+    {
+      "mode": "light",
+      "fg": "--on-brand",
+      "bg": "--brand",
+      "ratio": 6.453
+    },
+    {
+      "mode": "light",
+      "fg": "--danger-text",
+      "bg": "--danger-soft",
+      "ratio": 5.617
+    },
+    {
+      "mode": "light",
+      "fg": "--ai-text",
+      "bg": "--ai-soft",
+      "ratio": 4.766
+    },
+    {
+      "mode": "dark",
+      "fg": "--text-1",
+      "bg": "--surface",
+      "ratio": 14.799
+    },
+    {
+      "mode": "dark",
+      "fg": "--text-2",
+      "bg": "--surface",
+      "ratio": 7.881
+    },
+    {
+      "mode": "dark",
+      "fg": "--brand-text",
+      "bg": "--surface",
+      "ratio": 7.315
+    },
+    {
+      "mode": "dark",
+      "fg": "--on-brand",
+      "bg": "--brand",
+      "ratio": 6.453
+    },
+    {
+      "mode": "dark",
+      "fg": "--danger-text",
+      "bg": "--danger-soft",
+      "ratio": 8.222
+    },
+    {
+      "mode": "dark",
+      "fg": "--ai-text",
+      "bg": "--ai-soft",
+      "ratio": 6.965
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--text-1",
+      "bg": "#d6e3ff",
+      "ratio": 12.197
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--text-2",
+      "bg": "#d6e3ff",
+      "ratio": 6.206
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--brand-text",
+      "bg": "#d6e3ff",
+      "ratio": 5.006
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--text-1",
+      "bg": "#c1e9e5",
+      "ratio": 12.02
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--text-2",
+      "bg": "#c1e9e5",
+      "ratio": 6.116
+    },
+    {
+      "mode": "light",
+      "family": "campus",
+      "fg": "--brand-text",
+      "bg": "#c1e9e5",
+      "ratio": 4.933
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--text-1",
+      "bg": "#d5e3fb",
+      "ratio": 12.137
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--text-2",
+      "bg": "#d5e3fb",
+      "ratio": 6.175
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--brand-text",
+      "bg": "#d5e3fb",
+      "ratio": 4.981
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--text-1",
+      "bg": "#ccebe7",
+      "ratio": 12.432
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--text-2",
+      "bg": "#ccebe7",
+      "ratio": 6.325
+    },
+    {
+      "mode": "light",
+      "family": "journey",
+      "fg": "--brand-text",
+      "bg": "#ccebe7",
+      "ratio": 5.102
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--text-1",
+      "bg": "#e0e4fa",
+      "ratio": 12.464
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--text-2",
+      "bg": "#e0e4fa",
+      "ratio": 6.341
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--brand-text",
+      "bg": "#e0e4fa",
+      "ratio": 5.115
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--text-1",
+      "bg": "#ddd7ed",
+      "ratio": 11.244
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--text-2",
+      "bg": "#ddd7ed",
+      "ratio": 5.721
+    },
+    {
+      "mode": "light",
+      "family": "paper",
+      "fg": "--brand-text",
+      "bg": "#ddd7ed",
+      "ratio": 4.615
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--text-1",
+      "bg": "#ddd8f7",
+      "ratio": 11.41
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--text-2",
+      "bg": "#ddd8f7",
+      "ratio": 5.805
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--brand-text",
+      "bg": "#ddd8f7",
+      "ratio": 4.683
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--text-1",
+      "bg": "#c9dcf6",
+      "ratio": 11.269
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--text-2",
+      "bg": "#c9dcf6",
+      "ratio": 5.734
+    },
+    {
+      "mode": "light",
+      "family": "studio",
+      "fg": "--brand-text",
+      "bg": "#c9dcf6",
+      "ratio": 4.625
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--text-1",
+      "bg": "#cae5f0",
+      "ratio": 11.962
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--text-2",
+      "bg": "#cae5f0",
+      "ratio": 6.086
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--brand-text",
+      "bg": "#cae5f0",
+      "ratio": 4.91
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--text-1",
+      "bg": "#c7e8e3",
+      "ratio": 12.04
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--text-2",
+      "bg": "#c7e8e3",
+      "ratio": 6.125
+    },
+    {
+      "mode": "light",
+      "family": "pipeline",
+      "fg": "--brand-text",
+      "bg": "#c7e8e3",
+      "ratio": 4.941
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--text-1",
+      "bg": "#d5e1fb",
+      "ratio": 11.974
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--text-2",
+      "bg": "#d5e1fb",
+      "ratio": 6.092
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--brand-text",
+      "bg": "#d5e1fb",
+      "ratio": 4.914
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--text-1",
+      "bg": "#d3e8ef",
+      "ratio": 12.398
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--text-2",
+      "bg": "#d3e8ef",
+      "ratio": 6.308
+    },
+    {
+      "mode": "light",
+      "family": "analytics",
+      "fg": "--brand-text",
+      "bg": "#d3e8ef",
+      "ratio": 5.088
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--text-1",
+      "bg": "#d9e1ed",
+      "ratio": 11.937
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--text-2",
+      "bg": "#d9e1ed",
+      "ratio": 6.073
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--brand-text",
+      "bg": "#d9e1ed",
+      "ratio": 4.899
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--text-1",
+      "bg": "#d5e7e5",
+      "ratio": 12.272
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--text-2",
+      "bg": "#d5e7e5",
+      "ratio": 6.244
+    },
+    {
+      "mode": "light",
+      "family": "governance",
+      "fg": "--brand-text",
+      "bg": "#d5e7e5",
+      "ratio": 5.037
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--text-1",
+      "bg": "#d2e8f2",
+      "ratio": 12.403
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--text-2",
+      "bg": "#d2e8f2",
+      "ratio": 6.31
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--brand-text",
+      "bg": "#d2e8f2",
+      "ratio": 5.09
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--text-1",
+      "bg": "#e0e7fb",
+      "ratio": 12.723
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--text-2",
+      "bg": "#e0e7fb",
+      "ratio": 6.473
+    },
+    {
+      "mode": "light",
+      "family": "service",
+      "fg": "--brand-text",
+      "bg": "#e0e7fb",
+      "ratio": 5.222
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--text-1",
+      "bg": "#e2e6f5",
+      "ratio": 12.632
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--text-2",
+      "bg": "#e2e6f5",
+      "ratio": 6.427
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--brand-text",
+      "bg": "#e2e6f5",
+      "ratio": 5.184
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--text-1",
+      "bg": "#cfe8e6",
+      "ratio": 12.233
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--text-2",
+      "bg": "#cfe8e6",
+      "ratio": 6.224
+    },
+    {
+      "mode": "light",
+      "family": "status",
+      "fg": "--brand-text",
+      "bg": "#cfe8e6",
+      "ratio": 5.021
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "campus",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "journey",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "paper",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "studio",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "pipeline",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "analytics",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "governance",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "service",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--text-1",
+      "bg": "#24395c",
+      "ratio": 10.393
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--text-2",
+      "bg": "#24395c",
+      "ratio": 5.534
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--brand-text",
+      "bg": "#24395c",
+      "ratio": 5.137
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--text-1",
+      "bg": "#194449",
+      "ratio": 9.602
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--text-2",
+      "bg": "#194449",
+      "ratio": 5.113
+    },
+    {
+      "mode": "dark",
+      "family": "status",
+      "fg": "--brand-text",
+      "bg": "#194449",
+      "ratio": 4.746
+    }
+  ],
+  "contrastWarnings": [],
+  "limits": [
+    "16 representative composed screens, not pixel-perfect drawings of every runtime state",
+    "coverage is specification mapping, not implementation/functional completeness",
+    "Text-on-gradient runtime contrast, focus, browser layout and real devices require execution verification",
+    "Figma Make outcome unverified; native Design library not created",
+    "No model calls, database, credential, external asset downloads or app source writes"
+  ]
+}

@@ -1,0 +1,25 @@
+285	    const result = await db.transaction("rw", allTables(), async () => {
+286	      const user = await getUser(actor);
+287	      const receipt = await db.commandReceipts.get(command.commandId);
+288	      if (receipt) {
+289	        requireCondition(
+290	          receipt.actorUserId === actor.userId &&
+291	            receipt.payloadHash === payloadHash,
+292	          "COMMAND_COLLISION",
+293	        );
+294	        return receipt.result;
+295	      }
+296	      const now = clock.now();
+297	      let result: Json;
+298	      if (command.type === "SAVE_RESUME") {
+299	        const resume = await db.resumes.get(command.entityId);
+300	        requireCondition(
+301	          resume &&
+302	            user.role === "student" &&
+303	            user.studentId === resume.studentId,
+304	          "FORBIDDEN",
+305	        );
+306	        requireCondition(
+307	          resume.revision === command.expectedRevision,
+308	          "REVISION_CONFLICT",
+309	        );

@@ -1,0 +1,51 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>09 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#6E56CF', letterSpacing: 3, fontWeight: 'bold' }}>04 · AI 接入与应用</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>AI 应用①：优化表达，但保留事实和选择权</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Box style={{ marginTop: 18, flexDirection: 'row', gap: 28, alignItems: 'flex-start' }}>
+      <Box style={{ width: 596, flexDirection: 'column' }}>
+        <Image src="assets/C07.png" style={{ width: 600, height: 207, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>server/workbench/business.ts L18–25｜简历补丁的语义校验</Text>
+        <Box style={{ marginTop: 12, flexDirection: 'column', gap: 8 }}>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#6E56CF' }}>输入</span>　已保存的项目 / 实习描述，必要字段最小化并脱敏</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#6E56CF' }}>输出</span>　before / after / reason / requiresUserInput 建议补丁</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#6E56CF' }}>校验</span>　原文一致 · 目标有效 · 无重复 · 新增数字拦截</Text>
+          <Text style={{ fontSize: 14, color: '#33415C', lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#6E56CF' }}>操作</span>　采纳到草稿 → 核对 / 撤销 → 明确保存新版本</Text>
+        </Box>
+        <Box style={{ marginTop: 14, background: '#F3F0FD', borderRadius: 8, padding: '12px 16px' }}>
+          <Text style={{ fontSize: 13, color: '#10366B', lineHeight: 1.55 }}>多层检查拦截一部分风险，<span style={{ fontWeight: 'bold' }}>最终仍需人工核对</span>——AI 输出是建议，不是正式简历；事实不能为了好看而被创造。</Text>
+        </Box>
+      </Box>
+      <Box style={{ width: 336, flexDirection: 'column' }}>
+        <Image src="assets/U04.png" style={{ width: 336, height: 267, borderRadius: 8, border: '1px solid #D9E3F2', objectFit: 'cover' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 8, lineHeight: 1.5 }}>简历优化页（未生成状态的真实页面）：「生成 AI 优化方案」「确认并保存」「撤销上一步」为不同按钮。隔离环境上游不可用，证明草稿 / 保存机制与布局，不代表真实生成结果。</Text>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

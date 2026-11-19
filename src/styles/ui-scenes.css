@@ -1,0 +1,373 @@
+/* Approved Lighthouse scenes. Presentation only: no script, requests or route keys. */
+:root {
+  --scene-a: #d6e3ff;
+  --scene-b: #c1e9e5;
+}
+.ui-scene {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  --scene-motif: none;
+  /* Captions directly on tinted scenes need stronger contrast than white-card captions. */
+  --text-3: #42516c;
+}
+.ui-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background-image: var(--scene-motif), linear-gradient(135deg, var(--scene-a), var(--scene-b));
+  background-size: var(--scene-pattern-size, 100% 540px), 100% 100%;
+  background-repeat: repeat;
+}
+.ui-scene--campus {
+  --scene-a: #d6e3ff; --scene-b: #c1e9e5;
+  --scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1400' height='540' viewBox='0 0 1400 540'%3E%3Cg fill='none' stroke='%236c99ca' stroke-opacity='.28'%3E%3Cpath stroke-width='3' d='M-60 330C300 90 800 640 1470 190'/%3E%3Cpath d='M-60 370C300 130 800 680 1470 230M-60 420C300 180 800 730 1470 280'/%3E%3Cpath stroke-dasharray='6 12' d='M-60 395C300 155 800 705 1470 255'/%3E%3C/g%3E%3C/svg%3E");
+}
+.ui-scene--journey,
+.ui-window[data-scene="journey"],
+.ui-window:has(.mobile-nav) {
+  --scene-a: #d5e3fb; --scene-b: #ccebe7;
+  --scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cpath d='M-20 450C200 500 300 110 520 220S950 540 1240 110' fill='none' stroke='%235c93ad' stroke-opacity='.28' stroke-width='3' stroke-dasharray='8 10'/%3E%3Cg fill='%23508eaa' fill-opacity='.25'%3E%3Ccircle cx='220' cy='355' r='12'/%3E%3Ccircle cx='520' cy='220' r='12'/%3E%3Ccircle cx='950' cy='355' r='12'/%3E%3C/g%3E%3C/svg%3E");
+  --scene-pattern-size: 100% 600px;
+}
+.ui-scene--paper,
+.ui-window[data-scene="paper"],
+.ui-window:has(.history-list, .preview-name) {
+  --scene-a: #e0e4fa; --scene-b: #ddd7ed;
+  --scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='560'%3E%3Cg fill='%23ffffff' fill-opacity='.16' stroke='%237c86c7' stroke-opacity='.28'%3E%3Crect x='590' y='-10' width='640' height='430' rx='22' transform='rotate(-9 900 200)'/%3E%3Crect x='560' y='35' width='640' height='430' rx='22' transform='rotate(-5 900 200)'/%3E%3Crect x='540' y='80' width='640' height='430' rx='22'/%3E%3C/g%3E%3C/svg%3E");
+  --scene-pattern-size: 100% 560px;
+}
+.ui-scene--studio,
+.ui-window[data-scene="studio"],
+.ui-window:has(.connection-intro, .consent-copy, .explain-content) {
+  --scene-a: #ddd8f7; --scene-b: #c9dcf6;
+  --scene-motif: repeating-radial-gradient(ellipse at 80% 28%, transparent 0 45px, #8674b62e 46px 47px, transparent 48px 90px);
+  --scene-pattern-size: 100% 820px;
+}
+.ui-scene--pipeline {
+  --scene-a: #cae5f0; --scene-b: #c7e8e3;
+  --scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='480'%3E%3Cg fill='none' stroke='%234b9baa' stroke-opacity='.24'%3E%3Cpath d='M0 100H400L600 180H1200M0 180H400L600 260H1200M0 260H400L600 340H1200' stroke-width='2'/%3E%3Cpath d='M0 0H1200M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M80 0V480M240 0V480M400 0V480M560 0V480M720 0V480M880 0V480M1040 0V480'/%3E%3C/g%3E%3Cg fill='%234b9baa' fill-opacity='.32'%3E%3Ccircle cx='400' cy='100' r='7'/%3E%3Ccircle cx='400' cy='180' r='7'/%3E%3Ccircle cx='400' cy='260' r='7'/%3E%3C/g%3E%3C/svg%3E");
+  --scene-pattern-size: 100% 480px;
+}
+.ui-scene--analytics {
+  --scene-a: #d5e1fb; --scene-b: #d3e8ef;
+  --scene-motif: repeating-linear-gradient(0deg, transparent 0 39px, #7096bb26 40px 41px), repeating-linear-gradient(90deg, transparent 0 39px, #7096bb26 40px 41px);
+  --scene-pattern-size: 100% 100%;
+}
+.ui-scene--governance,
+.ui-window:where(.panel-modal),
+.ui-window[data-scene="governance"] {
+  --scene-a: #d9e1ed; --scene-b: #d5e7e5;
+  --scene-motif: repeating-linear-gradient(90deg, transparent 0 119px, #6c8aab26 120px 121px), repeating-linear-gradient(0deg, transparent 0 59px, #6c8aab26 60px 61px);
+  --scene-pattern-size: 100% 100%;
+}
+.ui-scene--service,
+.ui-window:where(.panel-drawer),
+.ui-window:has(.drawer-sample, .ticket-history, .ticket-input),
+.ui-window[data-scene="service"] {
+  --scene-a: #d2e8f2; --scene-b: #e0e7fb;
+  --scene-motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='480'%3E%3Cg fill='none' stroke='%23789bc3' stroke-opacity='.32' stroke-width='2'%3E%3Ccircle cx='240' cy='240' r='75'/%3E%3Ccircle cx='640' cy='160' r='110'/%3E%3Ccircle cx='1040' cy='300' r='150'/%3E%3Cpath d='M240 165V315M165 240H315M1040 150V450M890 300H1190' stroke-dasharray='4 12'/%3E%3C/g%3E%3C/svg%3E");
+  --scene-pattern-size: 100% 480px;
+}
+.ui-scene--status {
+  --scene-a: #e2e6f5; --scene-b: #cfe8e6;
+  --scene-motif: repeating-radial-gradient(ellipse at 50% 100%, transparent 0 32px, #7198a82b 33px 34px, transparent 35px 64px);
+  --scene-pattern-size: 100% 760px;
+}
+[data-theme="dark"] :is(.ui-scene, .ui-window) {
+  --scene-a: #24395c; --scene-b: #194449;
+}
+[data-theme="dark"] .ui-scene { --text-3: #bdcbe0; }
+[data-theme="dark"] .ui-scene--paper,
+[data-theme="dark"] .ui-scene--studio,
+[data-theme="dark"] .ui-window:has(.history-list, .preview-name, .connection-intro, .consent-copy, .explain-content) {
+  --scene-a: #333054; --scene-b: #223b59;
+}
+[data-theme="dark"] .ui-window:is([data-scene="paper"], [data-scene="studio"]) {
+  --scene-a: #333054; --scene-b: #223b59;
+}
+[data-theme="dark"] .ui-scene--governance,
+[data-theme="dark"] .ui-scene--status {
+  --scene-a: #28384d; --scene-b: #24454b;
+}
+.business-page.ui-scene,
+.data-page.ui-scene,
+.workspace.ui-scene {
+  min-height: calc(100dvh - 80px);
+  width: 100%;
+  border-radius: 22px;
+}
+.business-page.ui-scene > :is(.page-heading, .business-header, .dashboard-heading, .admin-heading) {
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-text) 22%, transparent);
+  padding-bottom: 24px;
+}
+.business-page.ui-scene :is(.surface, .panel, .app-card, .dashboard-panel, .risk-rail) {
+  background-color: var(--surface);
+  border-radius: var(--r-card);
+  box-shadow: var(--sh-1);
+}
+.ui-scene :is(h1, h2, h3, p, a, label, td, th) { overflow-wrap: anywhere; }
+.ui-portal { background: var(--bg-base); }
+.ui-portal > main { padding-top: 16px; }
+.ui-portal .ui-scene {
+  border-radius: 22px;
+  margin-bottom: 24px;
+}
+.ui-portal :is(.portal-hero, .portal-hero-new).ui-scene {
+  padding: 40px;
+  gap: 48px;
+}
+.ui-portal :is(.opportunities, .portal-opportunities, #preparation).ui-scene { padding: 28px 32px; }
+.ui-portal .service-route.ui-scene { padding: 28px 32px; }
+.ui-portal :is(.role-band, .portal-role-band).ui-scene {
+  color: var(--text-1);
+  background: transparent;
+}
+.ui-portal :is(.role-band, .portal-role-band) p { color: var(--text-2); }
+.ui-portal :is(.public-job, .opportunity-row, .preparation-links > a, .portal-services a) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--sh-1);
+}
+.ui-portal .opportunity-row { margin-top: 12px; padding: 22px; }
+.ui-portal .preparation-links { gap: 24px; }
+.ui-portal .preparation-links > a { padding: 24px 20px; align-items: flex-start; }
+.ui-portal .portal-services { padding: 32px; background: transparent; }
+.ui-portal .portal-services a { padding: 12px 16px; min-width: 160px; }
+.ui-portal .portal-role-band a {
+  background: var(--surface);
+  color: var(--brand-text);
+  padding: 10px 20px;
+  border: 1px solid var(--border-control);
+  border-radius: var(--r-control);
+}
+.ui-portal .portal-role-band a:first-child { background: var(--brand); color: var(--on-brand); }
+.ui-portal :is(.portal-scene img, .campus-frame img) {
+  border: 7px solid var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--sh-2);
+}
+:is(.public-header, .portal-header) {
+  min-height: 112px;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  padding-block: 18px;
+}
+:is(.public-page, .ui-portal) :is(.public-header, .portal-header) .brand-wordmark strong { font-size: 36px; }
+:is(.public-page, .ui-portal) :is(.public-header, .portal-header) .brand-wordmark span { font-size: 14px; font-weight: 600; }
+.public-brand-slogan {
+  color: var(--brand-text);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 12px 0 12px 24px;
+  border-left: 1px solid var(--border-control);
+}
+:is(.public-header, .portal-header) nav { margin-left: auto; gap: 10px; }
+:is(.public-header, .portal-header) nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 18px;
+  border: 1px solid var(--border-control);
+  border-radius: 10px;
+  color: var(--text-1);
+  background: var(--surface);
+}
+:is(.public-header, .portal-header) :is(.public-tools, .portal-tools) { margin-left: 0; gap: 16px; }
+.app-shell .shell-brand .brand-wordmark strong { font-size: 24px; }
+.app-shell .shell-brand .brand-wordmark span { font-size: 13px; }
+.app-shell .shell-brand { margin-bottom: 30px; padding-inline: 0; }
+.app-shell .sidebar {
+  background: linear-gradient(170deg, var(--surface) 10%, var(--brand-soft) 100%);
+  border-right-color: color-mix(in srgb, var(--brand-text) 24%, var(--border));
+}
+.app-shell .sidebar nav > a { min-height: 46px; border-radius: 12px; }
+.app-shell .sidebar nav > a.active { box-shadow: inset 3px 0 var(--brand-text); }
+.app-shell .topbar { background: var(--surface); }
+.theme-toggle,
+.app-shell .profile-button { min-width: 44px; min-height: 44px; }
+.app-shell .ai-consent-switch { min-height: 44px; }
+.app-button.button-md { min-height: 44px; }
+.app-button.button-sm { min-height: 36px; }
+.app-button:not(:disabled):focus-visible,
+.public-button:focus-visible,
+.portal-button:focus-visible { outline-width: 3px; outline-offset: 3px; }
+/* Native business fields keep their original form semantics and bindings. */
+:is(.business-page, .overlay-body, .assistant-panel) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]), select, textarea):not(:disabled):hover {
+  border-color: var(--brand-text);
+}
+:is(.business-page, .overlay-body, .assistant-panel) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]), select, textarea):focus {
+  border-color: var(--brand);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+:is(.business-page, .overlay-body, .assistant-panel) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]), select, textarea):disabled {
+  color: var(--disabled-fg);
+  background-color: var(--disabled-bg);
+}
+.overlay-panel.ui-window {
+  border: 1px solid color-mix(in srgb, var(--brand-text) 28%, var(--border));
+  box-shadow: var(--sh-3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+.overlay-panel.ui-window > header {
+  background-image: var(--scene-motif), linear-gradient(120deg, var(--scene-a), var(--scene-b));
+  background-size: 100% 220px, 100% 100%;
+  padding: 24px;
+  min-height: 96px;
+  flex: none;
+}
+.overlay-panel.ui-window > .overlay-body {
+  background: var(--surface);
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.overlay-panel.ui-window > footer {
+  background: var(--surface-2); padding-top: 20px;
+  flex: none; flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+}
+.overlay-panel.ui-window .overlay-close { width: 44px; height: 44px; flex: none; }
+.global-ai .assistant-panel > header {
+  background-image: repeating-radial-gradient(ellipse at 85% 50%, transparent 0 24px, #8674b62e 25px 26px, transparent 27px 48px), linear-gradient(120deg, var(--ai-soft), var(--brand-soft));
+  border-bottom: 1px solid var(--border-control);
+  padding: 18px 20px; margin: -20px -20px 8px; border-radius: 20px 20px 0 0;
+}
+.global-ai .assistant-panel > header button,
+.pet-menu > header button { min-width: 44px; min-height: 44px; border-radius: 10px; }
+.pet-menu > header {
+  padding: 14px 18px; margin: -18px -18px 18px;
+  background-image: linear-gradient(120deg, var(--brand-soft), var(--surface-2));
+  border-bottom: 1px solid var(--border-control);
+}
+.pet-menu .pet-menu-actions button { min-height: 44px; }
+.pet-menu label select { min-height: 44px; }
+.pet-launcher .pet-settings { width: 44px; height: 44px; right: 0; bottom: 22px; }
+.pet-menu > header {
+  position: sticky; top: -18px; z-index: 2;
+  background-color: var(--surface);
+}
+.global-ai .assistant-panel > header {
+  position: sticky; top: -20px; z-index: 2;
+  background-color: var(--surface); min-height: 80px;
+}
+.global-ai .assistant-panel > :not(.messages) { flex-shrink: 0; }
+.global-ai .assistant-panel .messages { min-height: 100px; }
+@media (max-width: 650px) {
+  .global-ai .assistant-panel > header { top: -16px; }
+}
+.login-page.ui-scene .login-story {
+  background: linear-gradient(150deg, #142849, #214d61);
+}
+.login-page.ui-scene .login-panel { background: transparent; }
+.account-page.ui-scene .account-panel { box-shadow: var(--sh-2); }
+.app-shell .ui-scene .resume-editor { padding: 0; border: 0; background: transparent; }
+.app-shell .ui-scene .editor-section {
+  padding: 24px; border: 1px solid var(--border); border-radius: var(--r-card);
+  background: var(--surface); box-shadow: var(--sh-1);
+}
+.app-shell .ui-scene .editor-section + .editor-section { margin-top: 20px; }
+.app-shell .ui-scene .section-nav { padding: 12px; border-radius: 14px; background: var(--surface); }
+.status-page.ui-scene { min-height: 85dvh; }
+.app-shell .dashboard-page .dashboard-panel { padding: 24px; }
+.dashboard-page .kpi-strip { border-radius: 14px; overflow: hidden; }
+@media (max-width: 1250px) {
+  :is(.public-header, .portal-header) .public-brand-slogan { order: 4; width: 100%; border-left: 0; padding: 0; }
+}
+@media (max-width: 950px) {
+  .app-shell .ui-scene .resume-layout:not(.suggestions-open) .resume-editor { grid-row: 1; }
+  .app-shell .ui-scene .resume-layout:not(.suggestions-open) .diagnosis-rail { grid-row: 2; }
+  .app-shell .ui-scene .suggestions-open .diagnosis-rail { grid-row: 3; }
+  .app-shell .ui-scene .suggestions-open :is(.resume-editor, .diff-area) { grid-row: 1; }
+}
+@media (max-width: 767px) {
+  .business-page.ui-scene { border-radius: 0; }
+  .ui-portal :is(.portal-hero, .portal-hero-new).ui-scene { padding: 28px 22px; gap: 28px; }
+  .ui-portal :is(.opportunities, .portal-opportunities, #preparation, .service-route).ui-scene { padding: 24px 20px; }
+  .ui-portal .preparation-links { grid-template-columns: 1fr; gap: 14px; }
+  .ui-portal .portal-services nav { width: 100%; gap: 12px; }
+  .ui-portal .portal-services a { flex: 1 1 160px; }
+  .app-shell .dashboard-page .dashboard-panel { padding: 16px; }
+  .app-button.button-sm { min-height: 44px; }
+  .app-shell .ui-scene .editor-section { padding: 20px; }
+}
+@media (max-width: 650px) {
+  .global-ai .assistant-panel > header { margin: -16px -16px 8px; padding: 16px; }
+  .ui-portal.portal .portal-header,
+  .public-page .public-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px 8px;
+    padding-block: 20px;
+  }
+  .ui-portal.portal .portal-header .brand-wordmark strong,
+  .public-page .public-header .brand-wordmark strong { font-size: 30px; }
+  :is(.public-header, .portal-header) .brand-mark { gap: 10px; }
+  :is(.public-header, .portal-header) .brand-mark > svg { width: 56px; height: 56px; }
+  :is(.public-header, .portal-header) .public-brand-slogan {
+    grid-column: 1 / -1; grid-row: 2; order: initial; width: auto; font-size: 15px;
+  }
+  .ui-portal.portal .portal-header .portal-tools,
+  .public-page .public-header .public-tools { display: contents; }
+  :is(.ui-portal.portal, .public-page) :is(.public-header, .portal-header) :is(.public-tools, .portal-tools) .theme-toggle { display: inline-flex; grid-column: 2; grid-row: 1; }
+  :is(.ui-portal.portal, .public-page) :is(.public-header, .portal-header) nav { display: flex; grid-column: 1 / -1; grid-row: 3; width: auto; margin: 0; flex-wrap: wrap; gap: 10px; }
+  :is(.public-header, .portal-header) nav a { flex: 1; padding: 8px 12px; }
+  :is(.public-header, .portal-header) :is(.public-button, .portal-button) { grid-column: 1 / -1; grid-row: 4; }
+  .ui-portal .opportunity-row { padding: 18px 16px; }
+  .ui-portal .portal-role-band { padding: 26px 22px; }
+  .ui-portal .portal-role-band > div:last-child { width: 100%; gap: 12px; }
+  .ui-portal .portal-role-band a { flex: 1 1 auto; justify-content: center; }
+}
+.ui-portal.public-page .portal-role-band p,
+.ui-portal.portal .role-band p { color: var(--text-2); }
+.ui-portal.public-page .portal-role-band a { color: var(--brand-text); }
+.ui-portal.public-page .portal-role-band a:first-child { color: var(--on-brand); }
+.ui-portal.public-page .portal-services nav { flex: 0 1 620px; justify-content: flex-start; gap: 12px; }
+.ui-portal.public-page .portal-services a { flex: 1 1 180px; }
+.ui-portal.public-page .preparation-links { gap: 24px; }
+.ui-portal.public-page .preparation-links > a { padding: 24px 20px; align-items: flex-start; }
+.ui-portal.public-page .hero-preparation,
+.ui-portal.public-page .public-heading > a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 8px 20px; background: var(--surface);
+  border: 1px solid var(--border-control); border-radius: 10px; color: var(--text-1); font-weight: 600;
+}
+.app-shell .dashboard-page .chart-matrix { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.app-shell .dashboard-page .chart-matrix > article:nth-child(3) { grid-column: 1 / -1; }
+.app-shell .dashboard-page .dashboard-workspace { grid-template-columns: minmax(0, 1fr); }
+.app-shell .dashboard-page .risk-rail { position: static; }
+.app-shell .dashboard-page .chart-canvas { min-height: 280px; }
+/* Reserve drawing space for existing outside funnel labels, without changing options/data. */
+.app-shell .dashboard-page .chart-matrix > article:nth-child(2) .chart-canvas {
+  box-sizing: content-box; width: calc(100% - 80px); padding-right: 80px;
+}
+.app-shell .dashboard-page .chart-matrix > article:nth-child(2) .chart-canvas :is(div, svg) { overflow: visible !important; }
+@media (max-width: 767px) {
+  .app-shell .dashboard-page .chart-matrix { grid-template-columns: 1fr; }
+  .app-shell .dashboard-page .chart-matrix > article:nth-child(3) { grid-column: auto; }
+  .ui-portal.public-page .portal-services nav { flex-basis: auto; }
+  .ui-portal.public-page .preparation-links { grid-template-columns: 1fr; }
+}
+@media (forced-colors: active) {
+  .ui-scene::before { display: none; }
+  .overlay-panel.ui-window > header { background: Canvas; background-image: none; }
+  .ui-scene, .overlay-panel.ui-window { border: 1px solid CanvasText; }
+}
+@media print {
+  .ui-scene::before { display: none !important; }
+  .ui-scene { background: white !important; border-radius: 0 !important; }
+  .ui-scene, [data-theme="dark"] .ui-scene { --text-3: #606d85; }
+  .ui-portal .ui-scene { box-shadow: none; }
+  .business-page.ui-scene { min-height: auto; }
+  .app-shell .ui-scene .editor-section { border: 0; padding: 0; background: white; box-shadow: none; }
+}

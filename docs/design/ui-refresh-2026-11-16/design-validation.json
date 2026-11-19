@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-11-16T13:57:11.728Z",
+  "kind": "static design artifact verification, NOT application test results",
+  "artifacts": [
+    {
+      "name": "01-dashboard-dark",
+      "width": 1440,
+      "height": 1540,
+      "note": "Desktop chart layout and theme review. Synthetic values, not rendered product."
+    },
+    {
+      "name": "02-dashboard-light",
+      "width": 1440,
+      "height": 1540,
+      "note": "Desktop chart layout and theme review. Synthetic values, not rendered product."
+    },
+    {
+      "name": "03-resume-desktop",
+      "width": 1440,
+      "height": 1280,
+      "note": "Initial desktop viewport; remaining sections explicitly retained in specification."
+    },
+    {
+      "name": "04-resume-mobile",
+      "width": 430,
+      "height": 1470,
+      "note": "390px annotated layout study; not a complete field-by-field prototype."
+    },
+    {
+      "name": "05-components-overlays-motion",
+      "width": 1440,
+      "height": 1130,
+      "note": "Modal, AI state semantics, component states, motion specifications."
+    },
+    {
+      "name": "06-portal-desktop",
+      "width": 1440,
+      "height": 1660,
+      "note": "Public portal hierarchy, five existing national-service links, three preparation and three role entrances, footer. Existing production campus image reused."
+    }
+  ],
+  "contrast": [
+    {
+      "theme": "light",
+      "foreground": "--text-1",
+      "background": "--surface",
+      "ratio": 15.723,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--text-2",
+      "background": "--surface",
+      "ratio": 5.68,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--text-3",
+      "background": "--surface",
+      "ratio": 5.219,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--on-brand",
+      "background": "--brand",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--brand-text",
+      "background": "--surface",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--warn-text",
+      "background": "--warn-soft",
+      "ratio": 6.114,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--danger-text",
+      "background": "--danger-soft",
+      "ratio": 5.617,
+      "passesNormalText": true
+    },
+    {
+      "theme": "light",
+      "foreground": "--ai-text",
+      "background": "--ai-soft",
+      "ratio": 4.766,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-1",
+      "background": "--surface",
+      "ratio": 14.799,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-2",
+      "background": "--surface",
+      "ratio": 7.881,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--text-3",
+      "background": "--surface",
+      "ratio": 7,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--on-brand",
+      "background": "--brand",
+      "ratio": 6.453,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--brand-text",
+      "background": "--surface",
+      "ratio": 7.315,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--warn-text",
+      "background": "--warn-soft",
+      "ratio": 8.695,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--danger-text",
+      "background": "--danger-soft",
+      "ratio": 8.222,
+      "passesNormalText": true
+    },
+    {
+      "theme": "dark",
+      "foreground": "--ai-text",
+      "background": "--ai-soft",
+      "ratio": 6.965,
+      "passesNormalText": true
+    }
+  ],
+  "limitations": [
+    "No rendered application was modified or tested",
+    "Mobile is an annotated viewport study, not a complete field-by-field prototype",
+    "Figma target-file discovery has not occurred",
+    "Synthetic chart data; final chart bbox and runtime contrast require browser verification",
+    "No AI, DB, service sync, credential access or network calls in renderer"
+  ]
+}

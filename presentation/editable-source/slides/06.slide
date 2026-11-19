@@ -1,0 +1,53 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>06 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>03 · 关键技术</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>关键代码①：一次操作，不重复、不越权</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Text style={{ fontSize: 15, color: '#33415C', marginTop: 14, lineHeight: 1.5 }}><span style={{ fontWeight: 'bold', color: '#10366B' }}>同一请求重放返回原结果；旧版本提交被拒绝；越权写库在事务内被拦截。</span>「点两次」与「两人改同一版本」是两个不同问题。</Text>
+    <Box style={{ marginTop: 16, flexDirection: 'row', gap: 28, alignItems: 'flex-start' }}>
+      <Box>
+        <Image src="assets/C02.png" style={{ width: 636, height: 414, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+        <Text style={{ fontSize: 12, color: '#7A8BA8', marginTop: 6 }}>src/services/repository.ts L285–309｜在线事务经 SQLite 适配执行</Text>
+      </Box>
+      <Box style={{ width: 300, flexDirection: 'column', gap: 14 }}>
+        <Box style={{ background: '#F0F6FF', borderRadius: 8, padding: '14px 16px' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>① commandId + 内容指纹</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.55, marginTop: 6 }}>同一请求重放返回原结果；不同内容复用同一 ID 直接拒绝（L287–294）。</Text>
+        </Box>
+        <Box style={{ background: '#F0F6FF', borderRadius: 8, padding: '14px 16px' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>② expectedRevision</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.55, marginTop: 6 }}>旧页面不能静默覆盖他人已保存的新版本（L306–308）。</Text>
+        </Box>
+        <Box style={{ background: '#F0F6FF', borderRadius: 8, padding: '14px 16px' }}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#216FEE' }}>③ 角色 / 归属校验 + 事务</Text>
+          <Text style={{ fontSize: 13, color: '#33415C', lineHeight: 1.55, marginTop: 6 }}>只办理合法业务动作；配套 HttpOnly 会话与 CSRF 检查（L300–305）。</Text>
+        </Box>
+      </Box>
+    </Box>
+  </Box>
+</Slide>

@@ -1,0 +1,17 @@
+250	  const scores = [
+251	    skillScore,
+252	    majorScore,
+253	    degreeScore,
+254	    cityScore,
+255	    salaryScore,
+256	    job.minExperienceMonths === 0
+257	      ? 1
+258	      : Math.min(1, months / job.minExperienceMonths),
+259	  ];
+260	  const rawTotal = 100 * scores.reduce((n, v, i) => n + v * normalized[i]!, 0),
+261	    total = round1(rawTotal);
+262	  const dimensions = MATCH_KEYS.map((key, i) => ({
+263	    key,
+264	    score: scores[i]!,
+265	    weight: normalized[i]!,
+266	    contribution: round1(100 * scores[i]! * normalized[i]!),

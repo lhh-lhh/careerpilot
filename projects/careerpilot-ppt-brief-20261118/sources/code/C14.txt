@@ -1,0 +1,14 @@
+75	  const studentAction = ["WITHDRAW", "ACCEPT_OFFER", "DECLINE_OFFER", "CONFIRM_INTERVIEW", "DECLINE_INTERVIEW", "REQUEST_RESCHEDULE"].includes(event),
+76	    either = event === "CONFIRM_AGREEMENT";
+77	  const company =
+78	      actor.role === "company" && actor.userId === context.companyUserId,
+79	    student =
+80	      actor.role === "student" && actor.userId === context.studentUserId;
+81	  requireCondition(
+82	    either ? student || company : studentAction ? student : company,
+83	    "FORBIDDEN",
+84	  );
+85	  requireCondition(
+86	    legal[event]?.includes(application.status),
+87	    "INVALID_TRANSITION",
+88	  );

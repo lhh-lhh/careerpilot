@@ -1,0 +1,720 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:careerpilot:ai-contracts:1.0",
+  "title": "CareerPilot AI and Replay contracts",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/AiResponse"
+    },
+    {
+      "$ref": "#/$defs/ReplayRecord"
+    }
+  ],
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "Version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "Mode": {
+      "enum": [
+        "LIVE",
+        "REPLAY",
+        "RULE"
+      ]
+    },
+    "Origin": {
+      "enum": [
+        "MODEL",
+        "RULE",
+        "CURATED"
+      ]
+    },
+    "Evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fieldPath",
+        "quote",
+        "start",
+        "end"
+      ],
+      "properties": {
+        "fieldPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "Suggestion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "resumeVersionId",
+        "fieldPath",
+        "before",
+        "after",
+        "reason",
+        "evidence",
+        "requiresUserInput",
+        "disposition"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "resumeVersionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "fieldPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "before": {
+          "type": "string"
+        },
+        "after": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        },
+        "requiresUserInput": {
+          "type": "boolean"
+        },
+        "disposition": {
+          "const": "pending"
+        }
+      }
+    },
+    "A1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module",
+        "operation",
+        "suggestions",
+        "summary"
+      ],
+      "properties": {
+        "module": {
+          "const": "A1"
+        },
+        "operation": {
+          "const": "rewrite"
+        },
+        "suggestions": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 20,
+          "items": {
+            "$ref": "#/$defs/Suggestion"
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      }
+    },
+    "A2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module",
+        "operation",
+        "sessionId",
+        "questionId",
+        "text",
+        "evidence"
+      ],
+      "properties": {
+        "module": {
+          "const": "A2"
+        },
+        "operation": {
+          "enum": [
+            "question",
+            "followUp",
+            "feedback"
+          ]
+        },
+        "sessionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "questionId": {
+          "$ref": "#/$defs/Id"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          }
+        }
+      }
+    },
+    "A3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module",
+        "operation",
+        "jobId",
+        "text",
+        "dimensionKeys",
+        "skillIds"
+      ],
+      "properties": {
+        "module": {
+          "const": "A3"
+        },
+        "operation": {
+          "const": "explain"
+        },
+        "jobId": {
+          "$ref": "#/$defs/Id"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "dimensionKeys": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "skill",
+              "major",
+              "degree",
+              "city",
+              "salary",
+              "experience"
+            ]
+          }
+        },
+        "skillIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/Id"
+          }
+        }
+      }
+    },
+    "A7": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "module",
+        "operation",
+        "intent",
+        "text",
+        "metricRefs",
+        "studentIds",
+        "ruleIds"
+      ],
+      "properties": {
+        "module": {
+          "const": "A7"
+        },
+        "operation": {
+          "enum": [
+            "query",
+            "advice"
+          ]
+        },
+        "intent": {
+          "enum": [
+            "destinationRate",
+            "byMajor",
+            "funnel",
+            "alerts",
+            "avgApplications",
+            "interviewPassRate",
+            "clarify"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "metricRefs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "destinationRate",
+              "byMajor",
+              "funnel",
+              "alerts",
+              "avgApplications",
+              "interviewPassRate"
+            ]
+          }
+        },
+        "studentIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/Id"
+          }
+        },
+        "ruleIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "inactive7d",
+              "applicationsWithoutInterview",
+              "resumeIncomplete",
+              "deadlineApproaching"
+            ]
+          }
+        }
+      }
+    },
+    "Payload": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/A1"
+        },
+        {
+          "$ref": "#/$defs/A2"
+        },
+        {
+          "$ref": "#/$defs/A3"
+        },
+        {
+          "$ref": "#/$defs/A7"
+        }
+      ]
+    },
+    "Guard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "masked",
+        "flags"
+      ],
+      "properties": {
+        "passed": {
+          "const": true
+        },
+        "masked": {
+          "const": true
+        },
+        "flags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "AiResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "algorithmVersion",
+        "promptVersion",
+        "traceId",
+        "inputHash",
+        "domainRevision",
+        "requestedMode",
+        "effectiveMode",
+        "origin",
+        "fallbackReason",
+        "usage",
+        "guard",
+        "data"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": "1.0"
+        },
+        "algorithmVersion": {
+          "$ref": "#/$defs/Version"
+        },
+        "promptVersion": {
+          "$ref": "#/$defs/Version"
+        },
+        "traceId": {
+          "$ref": "#/$defs/Id"
+        },
+        "inputHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "domainRevision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "requestedMode": {
+          "$ref": "#/$defs/Mode"
+        },
+        "effectiveMode": {
+          "$ref": "#/$defs/Mode"
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        },
+        "fallbackReason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "usage": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "prompt",
+                "completion"
+              ],
+              "properties": {
+                "prompt": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "completion": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          ]
+        },
+        "guard": {
+          "$ref": "#/$defs/Guard"
+        },
+        "data": {
+          "$ref": "#/$defs/Payload"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "effectiveMode": {
+                "const": "RULE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "origin": {
+                "const": "RULE"
+              },
+              "usage": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "effectiveMode": {
+                "const": "LIVE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "origin": {
+                "const": "MODEL"
+              },
+              "requestedMode": {
+                "const": "LIVE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "effectiveMode": {
+                "const": "REPLAY"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "usage": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "requestedMode": {
+                "const": "RULE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effectiveMode": {
+                "const": "RULE"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "requestedMode": {
+                "const": "REPLAY"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "effectiveMode": {
+                "enum": [
+                  "REPLAY",
+                  "RULE"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Chunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "text"
+      ],
+      "properties": {
+        "t": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3000
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      }
+    },
+    "ReplayRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "module",
+        "operation",
+        "promptVersion",
+        "schemaVersion",
+        "algorithmVersion",
+        "inputHash",
+        "domainRevision",
+        "origin",
+        "reviewedBy",
+        "reviewedAt",
+        "chunks",
+        "payload"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/Id"
+        },
+        "module": {
+          "enum": [
+            "A1",
+            "A2",
+            "A3",
+            "A7"
+          ]
+        },
+        "operation": {
+          "enum": [
+            "rewrite",
+            "question",
+            "followUp",
+            "feedback",
+            "explain",
+            "query",
+            "advice"
+          ]
+        },
+        "promptVersion": {
+          "$ref": "#/$defs/Version"
+        },
+        "schemaVersion": {
+          "const": "1.0"
+        },
+        "algorithmVersion": {
+          "$ref": "#/$defs/Version"
+        },
+        "inputHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "domainRevision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "origin": {
+          "$ref": "#/$defs/Origin"
+        },
+        "reviewedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "chunks": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 200,
+          "items": {
+            "$ref": "#/$defs/Chunk"
+          }
+        },
+        "payload": {
+          "$ref": "#/$defs/Payload"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "module": {
+                "const": "A1"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/A1"
+              },
+              "operation": {
+                "const": "rewrite"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module": {
+                "const": "A2"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/A2"
+              },
+              "operation": {
+                "enum": [
+                  "question",
+                  "followUp",
+                  "feedback"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module": {
+                "const": "A3"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/A3"
+              },
+              "operation": {
+                "const": "explain"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "module": {
+                "const": "A7"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/A7"
+              },
+              "operation": {
+                "enum": [
+                  "query",
+                  "advice"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

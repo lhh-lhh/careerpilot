@@ -1,0 +1,4 @@
+134	    const response = await (options!.transport ?? fetch)('https://api.deepseek.com/chat/completions', { method: 'POST', redirect: 'error', signal,
+135	      headers: { Authorization: `Bearer ${options!.apiKey}`, 'Content-Type': 'application/json' },
+136	      body: JSON.stringify({ model, messages: [{ role: 'system', content: system }, { role: 'user', content: JSON.stringify(external) }], thinking: { type: 'disabled' }, max_tokens: 1200, stream: false, response_format: { type: 'json_object' } }) });
+137	    if (!response.ok) { await response.body?.cancel(); fail(({ 401: 'AUTH_FAILED', 403: 'AUTH_FAILED', 402: 'QUOTA_EXCEEDED', 429: 'RATE_LIMITED' } as Record<number,string>)[response.status] ?? 'UPSTREAM_ERROR'); }

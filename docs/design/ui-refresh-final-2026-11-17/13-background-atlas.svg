@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1230" viewBox="0 0 1440 1230"><title>路鸣职引最终设计候选 v1.0 · 静态设计非产品截图</title><style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}.num{font-variant-numeric:tabular-nums}</style><defs><filter id="lift" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#16233a" flood-opacity=".10"/></filter></defs>
+<rect x="0" y="0" width="1440" height="1230" fill="#f6f8fc" rx="0"  />
+<text x="48" y="65" fill="#16233a" font-size="32" font-weight="600" >同一品牌，九种场景语言。</text>
+<text x="48" y="98" fill="#42516c" font-size="14" font-weight="400" >背景遍及页面主体和纵向分区；不只装饰角落。可见变化来自面积、明度、层次与结构，而不是持续晃动。</text>
+<defs><linearGradient id="bg-4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d6e3ff"/><stop offset="1" stop-color="#c1e9e5"/></linearGradient><pattern id="bg-4-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-4-clip"><rect x="48" y="134" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="48" y="134" width="432" height="282" fill="url(#bg-4)" rx="20"  />
+<g clip-path="url(#bg-4-clip)" aria-hidden="true">
+<path d="M-3.8399999999999963 317.3 C160.32 162.2 298.55999999999995 557 540.48 218.6" fill="none" stroke="#729bc9" stroke-width="3" opacity=".26" />
+<path d="M-3.8399999999999963 342.68 C160.32 162.2 298.55999999999995 557 540.48 263.72" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<path d="M-3.8399999999999963 368.06000000000006 C160.32 162.2 298.55999999999995 557 540.48 308.84000000000003" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" stroke-dasharray="6 9"/>
+<path d="M-3.8399999999999963 393.44 C160.32 162.2 298.55999999999995 557 540.48 353.96000000000004" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<circle cx="143.04000000000002" cy="201.68" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="289.92" cy="272.18" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="397.92" cy="342.68" r="5" fill="#3e8f9b" opacity=".6"/>
+</g>
+<rect x="68" y="256" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="84" y="293" fill="#16233a" font-size="19" font-weight="600" >校园航线 / 门户、身份</text>
+<text x="84" y="328" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="84" y="365" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-19" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5e3fb"/><stop offset="1" stop-color="#ccebe7"/></linearGradient><pattern id="bg-19-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-19-clip"><rect x="504" y="134" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="504" y="134" width="432" height="282" fill="url(#bg-19)" rx="20"  />
+<g clip-path="url(#bg-19-clip)" aria-hidden="true">
+<path d="M452.16 317.3 C616.32 162.2 754.56 557 996.48 218.6" fill="none" stroke="#729bc9" stroke-width="3" opacity=".26" />
+<path d="M452.16 342.68 C616.32 162.2 754.56 557 996.48 263.72" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<path d="M452.16 368.06000000000006 C616.32 162.2 754.56 557 996.48 308.84000000000003" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" stroke-dasharray="6 9"/>
+<path d="M452.16 393.44 C616.32 162.2 754.56 557 996.48 353.96000000000004" fill="none" stroke="#729bc9" stroke-width="1.4" opacity=".26" />
+<circle cx="599.04" cy="201.68" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="745.9200000000001" cy="272.18" r="5" fill="#3e8f9b" opacity=".6"/>
+<circle cx="853.9200000000001" cy="342.68" r="5" fill="#3e8f9b" opacity=".6"/>
+</g>
+<rect x="524" y="256" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="540" y="293" fill="#16233a" font-size="19" font-weight="600" >生涯旅程 / 概览、流程</text>
+<text x="540" y="328" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="540" y="365" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-34" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0e4fa"/><stop offset="1" stop-color="#ddd7ed"/></linearGradient><pattern id="bg-34-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-34-clip"><rect x="960" y="134" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="960" y="134" width="432" height="282" fill="url(#bg-34)" rx="20"  />
+<g clip-path="url(#bg-34-clip)" aria-hidden="true">
+<rect x="1167.36" y="156" width="185.76" height="236.88" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-7 1271.04 275)"/>
+<rect x="1185.36" y="168" width="185.76" height="236.88" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-4 1271.04 275)"/>
+<rect x="1203.36" y="180" width="185.76" height="236.88" fill="#f0f1fc" rx="12" stroke="#b7bde0" transform="rotate(-1 1271.04 275)"/>
+</g>
+<rect x="980" y="256" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="996" y="293" fill="#16233a" font-size="19" font-weight="600" >纸张层次 / 编辑、文书</text>
+<text x="996" y="328" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="996" y="365" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-45" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ddd8f7"/><stop offset="1" stop-color="#c9dcf6"/></linearGradient><pattern id="bg-45-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-45-clip"><rect x="48" y="442" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="48" y="442" width="432" height="282" fill="url(#bg-45)" rx="20"  />
+<g clip-path="url(#bg-45-clip)" aria-hidden="true">
+<ellipse cx="341.76000000000005" cy="568.9" rx="60.480000000000004" ry="39.480000000000004" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="341.76000000000005" cy="568.9" rx="88.56" ry="62.040000000000006" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="341.76000000000005" cy="568.9" rx="116.64000000000001" ry="84.60000000000001" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="341.76000000000005" cy="568.9" rx="144.72" ry="107.16" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="341.76000000000005" cy="568.9" rx="172.8" ry="129.72" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="341.76000000000005" cy="568.9" rx="200.88000000000002" ry="152.28" fill="none" stroke="#8a85c7" stroke-width="1.5" opacity=".28"/>
+</g>
+<rect x="68" y="564" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="84" y="601" fill="#16233a" font-size="19" font-weight="600" >专注声场 / 面试、AI</text>
+<text x="84" y="636" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="84" y="673" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-59" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cae5f0"/><stop offset="1" stop-color="#c7e8e3"/></linearGradient><pattern id="bg-59-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-59-clip"><rect x="504" y="442" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="504" y="442" width="432" height="282" fill="url(#bg-59)" rx="20"  />
+<g clip-path="url(#bg-59-clip)" aria-hidden="true">
+<rect x="504" y="442" width="432" height="282" fill="url(#bg-59-grid)" rx="0"  />
+<path d="M484 492.76 H659.52 L689.76 516.76 H956" fill="none" stroke="#72a5b7" stroke-width="2" opacity=".30"/>
+<circle cx="659.52" cy="492.76" r="5" fill="#3e8f9b" opacity=".45"/>
+<path d="M484 554.8 H659.52 L689.76 578.8 H956" fill="none" stroke="#72a5b7" stroke-width="2" opacity=".30"/>
+<circle cx="659.52" cy="554.8" r="5" fill="#3e8f9b" opacity=".45"/>
+<path d="M484 616.84 H659.52 L689.76 640.84 H956" fill="none" stroke="#72a5b7" stroke-width="2" opacity=".30"/>
+<circle cx="659.52" cy="616.84" r="5" fill="#3e8f9b" opacity=".45"/>
+<path d="M484 678.88 H659.52 L689.76 702.88 H956" fill="none" stroke="#72a5b7" stroke-width="2" opacity=".30"/>
+<circle cx="659.52" cy="678.88" r="5" fill="#3e8f9b" opacity=".45"/>
+</g>
+<rect x="524" y="564" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="540" y="601" fill="#16233a" font-size="19" font-weight="600" >招聘管线 / 企业</text>
+<text x="540" y="636" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="540" y="673" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-76" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5e1fb"/><stop offset="1" stop-color="#d3e8ef"/></linearGradient><pattern id="bg-76-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-76-clip"><rect x="960" y="442" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="960" y="442" width="432" height="282" fill="url(#bg-76)" rx="20"  />
+<g clip-path="url(#bg-76-clip)" aria-hidden="true">
+<rect x="960" y="442" width="432" height="282" fill="url(#bg-76-grid)" rx="0"  />
+<path d="M920 540.7 L1080.96 512.5 L1184.64 554.8 L1435.2 470.2" fill="none" stroke="#749ac6" stroke-width="2" opacity=".24"/>
+<path d="M920 574.54 L1080.96 546.34 L1184.64 588.64 L1435.2 504.04" fill="none" stroke="#749ac6" stroke-width="2" opacity=".24"/>
+<path d="M920 608.38 L1080.96 580.1800000000001 L1184.64 622.48 L1435.2 537.88" fill="none" stroke="#749ac6" stroke-width="2" opacity=".24"/>
+<path d="M920 642.22 L1080.96 614.02 L1184.64 656.3199999999999 L1435.2 571.72" fill="none" stroke="#749ac6" stroke-width="2" opacity=".24"/>
+</g>
+<rect x="980" y="564" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="996" y="601" fill="#16233a" font-size="19" font-weight="600" >数据坐标 / 驾驶舱</text>
+<text x="996" y="636" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="996" y="673" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-89" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9e1ed"/><stop offset="1" stop-color="#d5e7e5"/></linearGradient><pattern id="bg-89-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-89-clip"><rect x="48" y="750" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="48" y="750" width="432" height="282" fill="url(#bg-89)" rx="20"  />
+<g clip-path="url(#bg-89-clip)" aria-hidden="true">
+<rect x="48" y="750" width="432" height="282" fill="url(#bg-89-grid)" rx="0"  />
+<rect x="82.56" y="783.84" width="77.75999999999999" height="214.32" fill="none" rx="18" stroke="#91a9bb" stroke-width="2" opacity=".32"/>
+<rect x="181.92" y="783.84" width="77.75999999999999" height="214.32" fill="none" rx="18" stroke="#91a9bb" stroke-width="2" opacity=".32"/>
+<rect x="281.28000000000003" y="783.84" width="77.75999999999999" height="214.32" fill="none" rx="18" stroke="#91a9bb" stroke-width="2" opacity=".32"/>
+<rect x="380.64" y="783.84" width="77.75999999999999" height="214.32" fill="none" rx="18" stroke="#91a9bb" stroke-width="2" opacity=".32"/>
+</g>
+<rect x="68" y="872" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="84" y="909" fill="#16233a" font-size="19" font-weight="600" >秩序网格 / 治理审核</text>
+<text x="84" y="944" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="84" y="981" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-102" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d2e8f2"/><stop offset="1" stop-color="#e0e7fb"/></linearGradient><pattern id="bg-102-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-102-clip"><rect x="504" y="750" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="504" y="750" width="432" height="282" fill="url(#bg-102)" rx="20"  />
+<g clip-path="url(#bg-102-clip)" aria-hidden="true">
+<circle cx="590.4" cy="891" r="67.67999999999999" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="720" cy="891" r="87.42" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+<circle cx="849.6" cy="891" r="107.16" fill="none" stroke="#739dc0" stroke-width="2" opacity=".32"/>
+</g>
+<rect x="524" y="872" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="540" y="909" fill="#16233a" font-size="19" font-weight="600" >服务航标 / 帮助、工单</text>
+<text x="540" y="944" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="540" y="981" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<defs><linearGradient id="bg-113" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2e6f5"/><stop offset="1" stop-color="#cfe8e6"/></linearGradient><pattern id="bg-113-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7594c4" stroke-opacity=".20"/></pattern><clipPath id="bg-113-clip"><rect x="960" y="750" width="432" height="282" rx="20"/></clipPath></defs>
+<rect x="960" y="750" width="432" height="282" fill="url(#bg-113)" rx="20"  />
+<g clip-path="url(#bg-113-clip)" aria-hidden="true">
+<path d="M940 862.8 Q1154.4 693.6 1412 862.8" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M940 888.1800000000001 Q1154.4 716.16 1412 888.1800000000001" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M940 913.5600000000001 Q1154.4 738.72 1412 913.5600000000001" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M940 938.94 Q1154.4 761.28 1412 938.94" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+<path d="M940 964.3199999999999 Q1154.4 783.84 1412 964.3199999999999" fill="none" stroke="#83a4bd" stroke-width="2" opacity=".32"/>
+</g>
+<rect x="980" y="872" width="392" height="140" fill="#ffffff" rx="12" stroke="#e3e9f2" />
+<text x="996" y="909" fill="#16233a" font-size="19" font-weight="600" >状态地形 / 异常、空态</text>
+<text x="996" y="944" fill="#42516c" font-size="14" font-weight="400" >背景是可见的，内容是清晰的。</text>
+<text x="996" y="981" fill="#42516c" font-size="13" font-weight="400" >色面 + 专属图形 + 实底内容层</text>
+<text x="48" y="1094" fill="#16233a" font-size="15" font-weight="600" >导航：连续色面与选中轨迹   ·   窗口：色带标题与正文纸面   ·   提示：语义色块与图标，不仅靠颜色</text>
+<text x="48" y="1138" fill="#42516c" font-size="14" font-weight="400" >打印/文书导出：白纸回退；浏览器原生确认、原生选择列表及站外系统由其宿主控制，不能靠站内 CSS 换肤。</text>
+<text x="32" y="1218" fill="#42516c" font-size="12" font-weight="400" >最终设计候选 v1.0 · 静态设计 / 合成排版内容 / 非运行截图 / 业务与 AI 不变</text>
+</svg>

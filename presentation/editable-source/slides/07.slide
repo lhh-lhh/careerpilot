@@ -1,0 +1,53 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 216, height: 720, background: '#10366B', flexDirection: 'column', padding: '40px 0 28px 0' }}>
+    <Box style={{ paddingLeft: 24 }}>
+      <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#FFFFFF' }}>路鸣职引</Text>
+      <Text style={{ fontSize: 11, color: '#8FB0E8', letterSpacing: 2, marginTop: 2 }}>CareerPilot</Text>
+    </Box>
+    <Box style={{ marginTop: 48, flexDirection: 'column' }}>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>01  背景与需求</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>02  概要设计</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24, background: '#216FEE' }}>
+        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>03  关键技术</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>04  AI 接入与应用</Text>
+      </Box>
+      <Box style={{ height: 46, justifyContent: 'center', paddingLeft: 24 }}>
+        <Text style={{ fontSize: 15, color: '#9DB4DC' }}>05  界面与使用</Text>
+      </Box>
+    </Box>
+    <Box style={{ flex: 1 }} />
+    <Text style={{ fontSize: 13, color: '#8FB0E8', paddingLeft: 24 }}>07 / 14</Text>
+  </Box>
+  <Box style={{ flex: 1, height: 720, padding: '44px 52px 40px 48px', flexDirection: 'column' }}>
+    <Text style={{ fontSize: 13, color: '#216FEE', letterSpacing: 3, fontWeight: 'bold' }}>03 · 关键技术</Text>
+    <Text style={{ fontSize: 28, fontWeight: 'bold', color: '#10366B', marginTop: 8 }}>关键代码②：岗位匹配，可解释且不卡界面</Text>
+    <Box style={{ height: 1, background: '#D9E3F2', marginTop: 14 }} />
+    <Text style={{ fontSize: 15, color: '#33415C', marginTop: 14, lineHeight: 1.5 }}>规则分 = <span style={{ fontWeight: 'bold', color: '#216FEE' }}>round1( 100 × Σ 维度得分 × 归一化权重 )</span>；Web Worker 批量计算并取消过期任务。规则分与 AI 推荐顺序分开呈现，<span style={{ fontWeight: 'bold', color: '#10366B' }}>都不等于录用概率</span>。</Text>
+    <Box style={{ marginTop: 14 }}>
+      <Image src="assets/C03.png" style={{ width: 730, height: 350, borderRadius: 8, border: '1px solid #D9E3F2' }} />
+    </Box>
+    <Box style={{ marginTop: 16 }}>
+      <svg width={940} height={80} viewBox="0 0 940 80">
+        <rect x={0} y={6} width={329} height={40} rx={6} fill="#216FEE" />
+        <text x={164} y={30} fontSize={13} fill="#FFFFFF" textAnchor="middle" fontWeight="bold">技能 0.35</text>
+        <rect x={335} y={6} width={188} height={40} rx={6} fill="#10366B" />
+        <text x={429} y={30} fontSize={13} fill="#FFFFFF" textAnchor="middle" fontWeight="bold">专业 0.20</text>
+        <rect x={529} y={6} width={94} height={40} rx={6} fill="#5B91F0" />
+        <text x={576} y={30} fontSize={12} fill="#FFFFFF" textAnchor="middle">学历 0.10</text>
+        <rect x={629} y={6} width={141} height={40} rx={6} fill="#0E9F92" />
+        <text x={699} y={30} fontSize={12} fill="#FFFFFF" textAnchor="middle">城市 0.15</text>
+        <rect x={776} y={6} width={79} height={40} rx={6} fill="#8FB0E8" />
+        <text x={815} y={30} fontSize={12} fill="#FFFFFF" textAnchor="middle">薪资</text>
+        <rect x={861} y={6} width={79} height={40} rx={6} fill="#6E56CF" />
+        <text x={900} y={30} fontSize={12} fill="#FFFFFF" textAnchor="middle">经验</text>
+        <text x={0} y={68} fontSize={12} fill="#7A8BA8">六个维度的默认权重（允许调整并归一化）｜未知条件按程序明确规则处理，不宣称预测就业结果</text>
+      </svg>
+    </Box>
+  </Box>
+</Slide>

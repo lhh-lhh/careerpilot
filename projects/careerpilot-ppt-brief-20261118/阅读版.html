@@ -1,0 +1,268 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路鸣职引｜PPT设计材料阅读版</title><style>:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f0f6ff;color:#193557;font-family:'Microsoft YaHei','Segoe UI',sans-serif;line-height:1.85}nav{position:sticky;top:0;z-index:5;display:flex;gap:20px;flex-wrap:wrap;padding:14px max(24px,calc((100vw - 1180px)/2));background:#123c8c;color:white}nav a{color:white;text-decoration:none}header{max-width:1228px;margin:30px auto;padding:30px;background:linear-gradient(115deg,#e5f2ff,white);border:1px solid #cddff5;border-radius:18px}header .tag{color:#216fee;font-weight:700}main{max-width:1228px;margin:auto;padding:0 24px 60px}article{scroll-margin-top:90px;background:white;padding:40px;margin-bottom:26px;border-radius:18px;border:1px solid #d7e4f5}h1{font-size:30px;line-height:1.5;color:#10366b}h2{font-size:25px;margin:42px 0 16px;border-bottom:2px solid #e1ecfa;padding-bottom:10px;color:#174f9b}h3{font-size:21px;margin:32px 0 12px;color:#10366b}h4{font-size:18px}p,li{font-size:16px}strong{color:#10366b}a{color:#165ec6;overflow-wrap:anywhere}code{font-family:Consolas,'Microsoft YaHei',monospace;font-size:.93em;overflow-wrap:anywhere;background:#edf3fc;padding:1px 4px;border-radius:4px}pre{background:#11213a;color:#e8f2ff;padding:24px;overflow:auto;border-radius:12px;line-height:1.6}pre code{color:inherit;background:transparent;white-space:pre}figure{margin:26px 0;padding:12px;background:#f4f8ff;border:1px solid #d7e4f5;border-radius:12px}img{display:block;width:100%;height:auto}figure img{max-height:1000px;object-fit:contain;object-position:top}figcaption{font-size:13px;color:#58708b;margin-top:10px}.table-wrap{overflow-x:auto;margin:20px 0}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #d6e2f1;text-align:left;vertical-align:top;padding:11px}th{background:#eaf2ff}tr:nth-child(even){background:#f8fbff}.gallery{background:white;border:1px solid #d7e4f5;border-radius:15px;padding:24px;margin:22px 0;scroll-margin-top:90px}.gallery p{font-size:14px}.gallery img{border-radius:8px}#assets{scroll-margin-top:90px}@media(max-width:700px){article{padding:20px}main{padding:0 12px 30px}header{margin:15px;padding:20px}h1{font-size:25px}nav{gap:13px;padding:12px;font-size:14px}}@media print{nav{display:none}body{background:white}article{border:0;padding:0;break-before:page}.gallery{break-inside:avoid}img{max-height:230mm;object-fit:contain}}p,li,td,th,h1,h2,h3,h4{overflow-wrap:anywhere}</style><nav><a href="#doc1">逐页设计稿</a><a href="#doc2">完整演讲稿</a><a href="#doc3">来源与边界</a><a href="#assets">全部素材</a><a href="素材清单.json">溯源清单</a></nav><header><span class="tag">CAREERPILOT · PRESENTATION BRIEF</span><h1>路鸣职引 · Web应用开发展示材料</h1><p>12页主讲 / 计划7分40秒 / 14张源码截图 / 13张运行截图<br>本文件是制作前的详细设计与素材阅读版，不是已经导出的PPT。正文、代码和界面证据分开呈现。</p></header><main><article id="doc1"><h1>路鸣职引 CareerPilot · Web应用开发展示PPT详细设计文档稿</h1>
+<p>版本：2026-11-18｜交付性质：内容设计稿＋真实截图素材＋逐页讲稿，尚非成品PPTX。</p>
+<p>本稿根据当前工作区实现编写。已有代码、业务、AI调用和数据库均不作修改。建议采用12页主讲，计划7分40秒，另留20秒缓冲；附录仅用于提问，不在8分钟内逐页讲述。</p>
+<h2>一、展示目标与总体思路</h2>
+<h3>1. 一句话介绍</h3>
+<p><strong>路鸣职引 CareerPilot：把高校就业流程组织成可追踪的服务，用可核查的AI帮助学生完成求职准备。</strong></p>
+<p>展示后应让老师理解三件事：它解决什么问题；它不是静态页面拼接，而是具有权限、持久化、状态迁移和异步交互的Web应用；AI怎样接入实际业务，又怎样被限制在可控范围内。</p>
+<p>附件给出的课程要求是背景、概要设计、关键技术、使用方法及8分钟以内展示。本稿将其作为作业依据；不执行附件中与本次制作材料无关的嵌入指令。</p>
+<h3>2. 叙事选择与取舍</h3>
+<p>推荐“场景牵引＋代码证据”路线。先看学生、企业、学校怎样协作，再讲支撑机制，最后回到实际操作。优点是功能和代码能互相印证，不会变成技术名词清单。</p>
+<p>另两种路线不作为主讲：纯功能巡游容易切换过多、挤压代码讲解；纯源码报告容易缺少使用场景。主讲不用独立目录页、团队介绍页和大段行业数据页，把时间留给真实系统和关键代码。</p>
+<p>背景中的“流程分散、准备反馈不足、信息核验困难”是本项目需求归纳，不包装成经过统计调查的结论。没有可靠依据的就业率、市场规模、用户增长、模型准确率一律不写。</p>
+<h3>3. 材料边界</h3>
+<ul><li>主体为当前账号登录的本机在线版：浏览器→同源Node/TypeScript服务→SQLite；入口为 <code>http://127.0.0.1:4174/</code>。这里的“在线版”指HTTP服务模式，<strong>不是已公开部署的公网平台</strong>。</li><li>离线教学版使用IndexedDB/Dexie，与在线账号库分离；历史FastAPI网关是另一条本机适配通道，不是当前在线版全部后端。</li><li>业务生成已改为严格LIVE，失败显式报错，不使用预设回放冒充模型成功。旧文档的默认REPLAY和LIVE→REPLAY→RULE不能作为当前主讲事实。</li><li>规则岗位分、统计指标和业务状态来自确定性程序；当前动态面试的逐轮评价来自模型，程序校验并汇总有效结果。<strong>不能说“全平台所有分数均由本地算法生成”</strong>。</li><li>界面截图为当前实现的隔离在线服务实际渲染，使用合成账号和测试数据，不是设计概念稿，不是实际用户的经营或就业成果。截图中的“DeepSeek不可用”来自未配置真实上游的隔离验收环境，保留原样。</li><li>既往真实AI探测有单独证据，不因此在本轮再次发起付费调用。文档核验、历史探测、模拟上游测试与真人验收分开陈述。</li></ul>
+<h2>二、视觉设计与制作规范</h2>
+<h3>1. 设计主线</h3>
+<p>延续应用“蓝色指引、明亮校园、图文协同”的品牌。PPT以清晰为优先，不把网页整页截图缩成看不清的小图。页面截图证明产品，原生文字解释结论，代码截图证明实现。</p>
+<p>建议画布为16:9，1920×1080；这是待制作的建议，并非已经确认锁定的成品规格。后续正式制作沿用PPT Master默认流程，保留版式与制作方案确认，不将本稿冒充已经批准的 <code>design_spec.md</code> 或 <code>spec_lock.md</code>。</p>
+<h3>2. 视觉参数建议</h3>
+<div class="table-wrap"><table><thead><tr><th>项目</th><th>建议</th></tr></thead><tbody><tr><td>基础底色</td><td>#F0F6FF；大部分内容区为白色</td></tr><tr><td>品牌主色</td><td>#216FEE，深蓝标题#10366B</td></tr><tr><td>AI强调色</td><td>#6E56CF；仅用于模型、外发、校验相关标记</td></tr><tr><td>辅助色</td><td>青色#0E9F92；橙色#F2A13A标记关键动作或边界</td></tr><tr><td>中文字体</td><td>微软雅黑/思源黑体，避免细体</td></tr><tr><td>标题</td><td>32–38pt；封面44–50pt</td></tr><tr><td>正文</td><td>22–26pt，每页最多3个短信息块</td></tr><tr><td>图注/引用</td><td>12–15pt；详细URL放附录，不挤占正文</td></tr><tr><td>代码</td><td>原图1800px宽；主讲代码页尽量占画布宽度80%以上，按比例放置，不横向压缩</td></tr><tr><td>动效</td><td>淡入/出现150–250ms；每页不超过3次；不做打字机、连续飞入和自动滚长页</td></tr><tr><td>图层</td><td>背景轻纹理→截图/代码→编号与箭头；箭头只能叠加在PPT上，不能改原截图内容</td></tr></tbody></table></div>
+<p>代码图建议使用深蓝底与青色重点行，和界面页形成节奏变化。代码不逐行朗读，按“问题—关键判断—实际作用”讲。图中文字小到无法辨认时，减信息或拆为附录，不能继续缩小。</p>
+<h3>3. 截图使用规范</h3>
+<p>当前准备了13张UI截图、14张源码截图。所有PNG可直接插入PowerPoint。UI图只作矩形裁切，没有改UI文字、状态或数据。原截图位置、裁切坐标、尺寸与SHA256在 <code>素材清单.json</code>；代码图同时附可复制的TXT原文和HTML来源页。</p>
+<p>统一图注：“当前实现运行截图｜隔离测试数据”；窄屏图另注“390px浏览器视口，非物理手机”。不要把长页全图直接铺满幻灯片。UI图的顶部状态与原始数据不应被覆盖为成功样式。</p>
+<h2>三、页序与时间预算</h2>
+<div class="table-wrap"><table><thead><tr><th>页码</th><th>题目</th><th>时长</th><th>累计</th><th>主要证据</th></tr></thead><tbody><tr><td>P01</td><td>路鸣职引：让下一步，更有方向</td><td>15秒</td><td>0:15</td><td>U01</td></tr><tr><td>P02</td><td>背景：把分散的就业环节接起来</td><td>30秒</td><td>0:45</td><td>需求与四角色功能</td></tr><tr><td>P03</td><td>概要设计：四角色，共同形成服务闭环</td><td>30秒</td><td>1:15</td><td>U02/U07/U09/U10</td></tr><tr><td>P04</td><td>总体架构：表现、业务、数据与AI分层</td><td>45秒</td><td>2:00</td><td>C01＋源码依赖</td></tr><tr><td>P05</td><td>关键代码①：一次操作，不重复、不越权</td><td>40秒</td><td>2:40</td><td>C02；C14附录</td></tr><tr><td>P06</td><td>关键代码②：岗位匹配，可解释且不卡界面</td><td>45秒</td><td>3:25</td><td>C03；C04附录、U13</td></tr><tr><td>P07</td><td>AI接入：服务端代理，不把模型当业务核心</td><td>60秒</td><td>4:25</td><td>C05；C06/C12附录</td></tr><tr><td>P08</td><td>AI应用①：优化表达，但保留事实和选择权</td><td>45秒</td><td>5:10</td><td>C07＋U04</td></tr><tr><td>P09</td><td>AI应用②：面试、语音与流式交互</td><td>50秒</td><td>6:00</td><td>C08；C09/C10附录</td></tr><tr><td>P10</td><td>界面工程：统一语言，不等于复制页面</td><td>30秒</td><td>6:30</td><td>U05/U11/U12；C11附录</td></tr><tr><td>P11</td><td>使用方法：沿一条真实任务链操作</td><td>45秒</td><td>7:15</td><td>U02→U03→U06/U08/U09</td></tr><tr><td>P12</td><td>验证与总结：有证据，也有明确边界</td><td>25秒</td><td>7:40</td><td>最新UI验收＋历史真实AI探测</td></tr></tbody></table></div>
+<p>关键代码及其业务应用占P05–P09共4分钟；其中P07–P09的AI重点为2分35秒。按计划7:40结束，20秒只用于停顿与意外，不增加新内容。全文演讲稿见 <code>02-报告演讲稿.md</code>。</p>
+<h2>四、逐页内容与制作细案</h2>
+<h3>P01｜路鸣职引：让下一步，更有方向</h3>
+<p><strong>本页目的：</strong> 用已实现的产品建立第一印象，不在封面解释全部功能。15秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>主标题：路鸣职引 CareerPilot</li><li>副标题：高校就业管理与AI求职服务Web应用</li><li>一句话：可追踪的业务流程 × 可核查的AI辅助</li><li>页脚：Web应用开发展示｜2026.11</li></ul>
+<p><strong>版式：</strong> 左侧45%为标题与一句定位，右侧55%为门户截图上部；保留原品牌与校园图。不得添加未经提供的姓名、学号、学院。后续正式封面再填真实字段，当前留空而非编造。</p>
+<p><strong>素材：</strong> <code>images/ui/U01.png</code>。如仅用截图中的校园区，应保留整张U01用于附录追溯，不能把虚构校园称为合作院校。</p>
+<figure><a href="images/ui/U01.png"><img loading="lazy" src="images/ui/U01.png" alt="U01 公共门户首屏"></a><figcaption>U01 公共门户首屏</figcaption></figure>
+<p><strong>讲述重点：</strong> 这是已经运行的Web应用，既有就业业务，也有AI辅助。转场：“先看它为什么要把这些环节放在一起。”</p>
+<h3>P02｜背景：把分散的就业环节接起来</h3>
+<p><strong>本页目的：</strong> 解释需求，而非宏观铺垫。30秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ol><li>学生：资料、岗位、面试准备分散，难以知道下一步。</li><li>企业：岗位发布与候选推进需要连续记录。</li><li>学校：去向审核、统计和帮扶需要同口径数据。</li></ol>
+<p><strong>底部结论：</strong> 从“展示信息”走向“完成任务”，AI负责辅助，人保留决定权。</p>
+<p><strong>版式：</strong> 三列“问题→对应设计”，避免三段长文字。用原生线条串起“准备—寻找—行动—反馈”。这是需求关系图，不是单个实体的状态枚举。</p>
+<p><strong>证据：</strong> <code>README.md</code>当前范围、基线需求说明及现有学生/企业/辅导员页面。不上行业统计图；不声称应用已经提高真实就业率。</p>
+<p><strong>讲述重点：</strong> 背景来自项目需求；目标不是自动替人做职业决策。转场：“因此，系统不是只有学生一个页面。”</p>
+<h3>P03｜概要设计：四角色，共同形成服务闭环</h3>
+<p><strong>本页目的：</strong> 在30秒内交代主要功能，不逐个菜单巡游。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<div class="table-wrap"><table><thead><tr><th>角色</th><th>主要任务</th></tr></thead><tbody><tr><td>学生</td><td>简历准备→岗位匹配→投递跟踪→面试练习→协议与去向</td></tr><tr><td>企业</td><td>岗位管理→候选人推进→面试日程→录用与协议</td></tr><tr><td>辅导员</td><td>辖区名册→去向审核→驾驶舱→帮扶跟进</td></tr><tr><td>管理员</td><td>账号/准入→公开机会源→运行与审计治理</td></tr></tbody></table></div>
+<p><strong>版式：</strong> 上半区四角色泳道，下半区两张大截图U02/U09。U07/U10可作小缩略图，但不要求观众读取其中细字。中央标注“角色＋数据归属”，不能暗示四角色权限相同。</p>
+<p><strong>素材：</strong> U02学生概览、U07企业候选、U09辅导员驾驶舱、U10管理员控制台。完整素材在阅读版中展示。</p>
+<figure><a href="images/ui/U02.png"><img loading="lazy" src="images/ui/U02.png" alt="U02 学生生涯概览"></a><figcaption>U02 学生生涯概览</figcaption></figure>
+<p><strong>讲述重点：</strong> 协议、去向、面试是不同实体，不把它们伪装成一条万能状态链；模拟面试不会直接推动真实招聘状态。</p>
+<h3>P04｜总体架构：表现、业务、数据与AI分层</h3>
+<p><strong>本页目的：</strong> 说明系统怎样组织以及技术选型的理由。45秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>展示层：Vue 3＋TypeScript＋Router＋Pinia；响应式界面与ECharts。</li><li>服务/领域层：作用域查询、命令、状态迁移、匹配、统计和AI守卫。</li><li>在线基础设施：Node/TypeScript＋同源HTTP/SSE＋SQLite；服务端调用DeepSeek。</li><li>独立教学路径：IndexedDB/Dexie；不和在线库混用。</li></ul>
+<p><strong>架构图制作内容：</strong></p>
+<pre><code>浏览器：Vue页面 / 组件 / Router / Pinia
+          │ 调用服务接口                │ Web Worker匹配
+          ▼                            ▼
+app-services / Repository边界     纯TS匹配算法
+          │
+   ┌──────┴───────────┐
+在线HTTP适配       显式离线适配
+   │                 │
+Node服务           Dexie / IndexedDB
+会话与权限         教学数据（独立）
+   │
+业务事务 / 状态机 ──→ SQLite
+   │
+AI代理 / 上下文 / 校验 ──→ DeepSeek API</code></pre>
+<p>图用PowerPoint原生矩形和连接线重绘，最多三层，不用微服务、分布式集群或RAG图标，因为没有这类已实现架构。FastAPI只在附录解释历史本机网关。</p>
+<p><strong>关键代码：</strong> C01说明在线/离线在统一仓储边界选择；主讲仅指出 <code>isOnline</code> 和 <code>createHttpRepository</code>。如需要投影放大，C01放附录A1，主页面以架构图为主。</p>
+<figure><a href="images/code/C01.png"><img loading="lazy" src="images/code/C01.png" alt="C01 在线离线适配边界"></a><figcaption>C01 在线离线适配边界</figcaption></figure>
+<p><strong>来源：</strong> <code>src/services/app-services.ts</code>；<code>server/app.ts</code>第92–111行；<code>server/database.ts</code>第112–128行。</p>
+<p><strong>讲述重点：</strong> 选Vue组织复杂页面，纯TS领域便于独立测试，同源服务统一管理会话、数据和上游密钥。转场：“分层的价值，首先体现在数据不会被随意修改。”</p>
+<h3>P05｜关键代码①：一次操作，不重复、不越权</h3>
+<p><strong>本页目的：</strong> 证明业务可靠性，不把安全仅说成“有登录”。40秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li><code>commandId</code>＋内容指纹：同一请求重放返回原结果；不同内容复用ID则拒绝。</li><li><code>expectedRevision</code>：旧页面不能静默覆盖新版本。</li><li>角色/归属校验＋事务：只办理合法业务动作。</li></ul>
+<p><strong>版式：</strong> C02占画面约84%宽，上方一句结论，下方三个短标注分别连接到287、290–294、300–308行。此图25行，投影不清时仅显示重点区域放大，完整图保留附录。不要再并排放第二张代码。</p>
+<figure><a href="images/code/C02.png"><img loading="lazy" src="images/code/C02.png" alt="C02 事务幂等与版本冲突"></a><figcaption>C02 事务幂等与版本冲突</figcaption></figure>
+<p><strong>真实代码：</strong> <code>src/services/repository.ts</code>第285–309行。该仓储同时被在线服务复用，在线事务通过SQLite适配执行；不是说当前账号数据仍只存浏览器。</p>
+<p><strong>配套细节：</strong> 状态机C14第75–88行；<code>server/app.ts</code>的HttpOnly会话和CSRF检查；<code>server/database.ts</code>的BEGIN IMMEDIATE/COMMIT/ROLLBACK。主讲不展开密码学细节。</p>
+<p><strong>讲述重点：</strong> “点两次”和“两个人修改同一版本”是不同问题，分别由幂等与revision处理。转场：“同样，岗位推荐里的数值也要可解释。”</p>
+<h3>P06｜关键代码②：岗位匹配，可解释且不卡界面</h3>
+<p><strong>本页目的：</strong> 展示算法与异步前端，而不是只展示一个100分圆圈。45秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>六维：技能、专业、学历、城市、薪资、经验。</li><li>规则分：<code>round1(100 × Σ维度得分 × 归一化权重)</code>。</li><li>Worker处理批量计算；取消旧任务，避免过期结果影响当前操作。</li><li>规则分与AI推荐顺序分开，均不等于录用概率。</li></ul>
+<p><strong>版式：</strong> C03大图占上半至中部；下方用原生六段条表示维度，不编造新结果。侧边仅放“Worker→结果→解释”短链。U13抽屉作附录证据，不将100条岗位长页缩进本页。</p>
+<figure><a href="images/code/C03.png"><img loading="lazy" src="images/code/C03.png" alt="C03 实际匹配函数中的六维计算"></a><figcaption>C03 实际匹配函数中的六维计算</figcaption></figure>
+<p><strong>代码：</strong> <code>src/domain/matching/scoring.ts</code>第250–266行，是当前 <code>match</code> 路径的实际计算片段，不只是未使用的工具函数。默认权重为0.35、0.20、0.10、0.15、0.10、0.10；允许调整并归一化，未知条件按程序的明确规则处理，不宣称科学预测就业结果。</p>
+<p><strong>Worker证据：</strong> C04，<code>src/services/matching-worker.ts</code>第26–43行。性能可在答辩时引用本机100岗30次样本的回归结果，不能说公网全量岗位都只需几毫秒。</p>
+<p><strong>讲述重点：</strong> 规则层提供稳定参照，AI层提供语言解释与建议排序。转场：“接下来才是AI如何安全地接入。”</p>
+<h3>P07｜AI接入：服务端代理，不把模型当业务核心</h3>
+<p><strong>本页目的：</strong> 全篇技术重点之一。60秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ol><li>页面显式触发→服务端校验会话、授权与数据归属。</li><li>服务端重建必要上下文→脱敏/最小化→调用DeepSeek。</li><li>解析＋结构/语义校验→记录来源凭据→展示建议。</li></ol>
+<p><strong>强调句：</strong> 密钥不进入浏览器；AI不直接投递、签约或审批；失败不伪造成功。</p>
+<p><strong>版式：</strong> 上方4节点调用链；中部C05大图；下方“凭据：模型/时间/traceId/实际上游ID与用量”。只对实际返回的ID和tokens做记录，不将平台traceId等同于供应商凭据。</p>
+<figure><a href="images/code/C05.png"><img loading="lazy" src="images/code/C05.png" alt="C05 DeepSeek服务端请求"></a><figcaption>C05 DeepSeek服务端请求</figcaption></figure>
+<p><strong>代码重点：</strong> <code>server/ai.ts</code>第134–137行：固定HTTPS上游、Bearer变量、system/user消息、<code>max_tokens</code>、<code>response_format: json_object</code>及状态码映射。截图不含任何真实密钥，不打开环境文件或开发者网络面板。</p>
+<p><strong>补充说明：</strong> C06第143–149行证明拿到JSON后仍执行 <code>guardPayload</code>；工作台另一条路径用 <code>provider.json</code>＋任务专用结构和语义检查，不能说所有请求都使用同一套Ajv schema。C12表明调用前有次数与并发限制，次数额度不等于金额预算。</p>
+<p><strong>官方参考：</strong> 已读取2026-11-18官方聊天API、JSON Output及四类工具说明，项目的 <code>deepseek-flash</code> 与Search/TTS/ASR/OCR端点均有对应。精确引用以 <code>deepseek_research.facts.json</code> 和来源说明为准。文档证明协议存在，不等于本轮已经真实调用或已验收供应商全部能力。</p>
+<p><strong>讲述重点：</strong> 模型是可失败的外部依赖，提示词不是唯一防线。默认授权开关当前按用户要求开启，但进入页面不自动付费；业务保存和投递仍需要人的明确动作。转场：“这个边界，在简历优化中最直观。”</p>
+<h3>P08｜AI应用①：优化表达，但保留事实和选择权</h3>
+<p><strong>本页目的：</strong> 展示提示词、数据约束、人工采纳如何合成可用功能。45秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>输入：已保存的项目/实习描述，必要字段最小化并脱敏。</li><li>输出：<code>before / after / reason / requiresUserInput</code>建议补丁。</li><li>校验：原文一致、目标有效、无重复、新增数字拦截。</li><li>操作：采纳到草稿→核对/撤销→明确保存新版本。</li></ul>
+<p><strong>版式：</strong> 上部C07占90%宽；下部U04以较小局部说明“生成/草稿/确认保存”的不同按钮。不要并排挤代码；必要时通过一次出现动画切换到U04，讲稿时间不增加。</p>
+<figure><a href="images/code/C07.png"><img loading="lazy" src="images/code/C07.png" alt="C07 简历补丁语义校验"></a><figcaption>C07 简历补丁语义校验</figcaption></figure>
+<figure><a href="images/ui/U04.png"><img loading="lazy" src="images/ui/U04.png" alt="U04 AI简历草稿与保存区"></a><figcaption>U04 AI简历草稿与保存区</figcaption></figure>
+<p><strong>代码：</strong> <code>server/workbench/business.ts</code>第18–25行。第15–17行和26–29行另有脱敏、提示词及可能新增事实的提示判断。不要声称正则能完全消除模型幻觉；合理表述是“多层检查拦截一部分风险，最终仍需人工核对”。</p>
+<p><strong>图注：</strong> U04是未生成状态的真实页面，隔离环境显示上游不可用；它证明草稿/保存机制和布局，不证明真实AI成功生成。模型调用成功与失败以历史独立探测记录作证，不P图伪造结果。</p>
+<p><strong>讲述重点：</strong> AI输出是建议，不是正式简历；事实不能被为了好看而创造。转场：“对面试，系统还必须处理等待与失败。”</p>
+<h3>P09｜AI应用②：面试、语音与流式交互</h3>
+<p><strong>本页目的：</strong> 展示异步流程与失败体验设计。50秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>文本面试：岗位＋历史回答→首题/追问→带引用的逐轮评价。</li><li>语音链：TTS播题→录音→整段ASR→核对转写→提交回答。</li><li>稳定性：回答先持久化；生成失败不丢回答、不虚构0分。</li><li>助手：SSE增量展示＋取消＋历史；不代办业务。</li></ul>
+<p><strong>版式：</strong> C08居中占90%宽；顶部仅放“先保存→再生成→可恢复”三个节点；语音链作为底部一行。C09、C10作为追问时的大图附录，不在50秒内展示三张代码。</p>
+<figure><a href="images/code/C08.png"><img loading="lazy" src="images/code/C08.png" alt="C08 面试先保存回答再生成"></a><figcaption>C08 面试先保存回答再生成</figcaption></figure>
+<p><strong>代码：</strong> <code>server/workbench/index.ts</code>第141–147、150–154行；中间148–149行明确标记省略，代码原行号保持。模型评价需引用回答中的片段，合法得分按有效维度汇总；综合报告平均有效评价，不把未完成轮次计0分。</p>
+<p><strong>语音边界：</strong> ASR为16kHz单声道16bit整段WAV，最长120秒/8MiB；TTS返回24kHz PCM。不是实时双工语音，也没有声纹或表情识别能力。文字模式不自动调用TTS/ASR，麦克风要浏览器授权。SSE是文本结果流，不等于ASR流式识别。</p>
+<p><strong>讲述重点：</strong> 对用户最重要的不是“有没有AI按钮”，而是网络慢或失败时，刚才的回答还在。转场：“技术边界也体现在界面如何引导操作。”</p>
+<h3>P10｜界面工程：统一语言，不等于复制页面</h3>
+<p><strong>本页目的：</strong> 说明前端完成度和AI辅助设计，但不将素材生成混同业务AI。30秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>统一：品牌、字阶、按钮、导航、弹窗、空/错/加载状态。</li><li>差异：概览、题库、编辑器、招聘流程和驾驶舱各有页面结构。</li><li>适配：明暗主题、窄屏重排、装饰图层与操作区分离。</li><li>开发辅助AI：Codex辅助实现与测试；gpt-image-2.6制作插画资源。</li></ul>
+<p><strong>版式：</strong> U05题库占左侧65%，U11窄屏占右侧22%；U12暗色局部可替换出现。避免同时塞三张长截图。配图来自现有应用资源，不在本轮重新生图。</p>
+<figure><a href="images/ui/U05.png"><img loading="lazy" src="images/ui/U05.png" alt="U05 题库练习实际界面"></a><figcaption>U05 题库练习实际界面</figcaption></figure>
+<figure><a href="images/ui/U11.png"><img loading="lazy" src="images/ui/U11.png" alt="U11 390px视口语音入口"></a><figcaption>U11 390px视口语音入口</figcaption></figure>
+<p><strong>实现依据：</strong> C11页头槽位分离标题、装饰图与动作入口；<code>src/styles/workbench-design.css</code>设置页面族、主题和布局；<code>src/styles/workbench-windows.css</code>处理窗口；图片为装饰时 <code>aria-hidden</code> 和空alt避免重复朗读。应用实时文字和按钮是Vue原生控件，不是整张效果图热点。</p>
+<p><strong>AI说明：</strong> 业务AI是DeepSeek接口；图片生产工具是Nebula/gpt-image-2.6；Codex是开发辅助。三者分别说明，不虚构“本项目训练了大模型”，也不声称已完成Figma Code Connect。</p>
+<h3>P11｜使用方法：沿一条真实任务链操作</h3>
+<p><strong>本页目的：</strong> 45秒内告诉用户如何使用，不现场从安装到注册。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<pre><code>登录已审核账号
+  → 学生：完善并保存简历
+  → 岗位：筛选 / 规则依据 / AI建议
+  → 求职：确认投递 / 查看时间轴
+  → 面试：选择文字或语音 / 核对 / 提交 / 查看反馈
+  → 企业与学校：候选推进 / 日程 / 去向审核 / 驾驶舱</code></pre>
+<p><strong>演示安排：</strong> 优先使用静态连续截图或排练后的短录屏，而非临时等待付费API。建议U02概览8秒→U03岗位12秒→U06面试10秒→U08企业日程/U09驾驶舱15秒。仅做说明，不在真实数据中创建投递、协议或审核记录。</p>
+<figure><a href="images/ui/U03.png"><img loading="lazy" src="images/ui/U03.png" alt="U03 岗位匹配列表首屏"></a><figcaption>U03 岗位匹配列表首屏</figcaption></figure>
+<figure><a href="images/ui/U06.png"><img loading="lazy" src="images/ui/U06.png" alt="U06 语音面试入口"></a><figcaption>U06 语音面试入口</figcaption></figure>
+<p><strong>具体使用说明（可转讲义，不全部放上屏）：</strong></p>
+<ol><li>已构建且已初始化的环境，在项目目录使用 <code>npm start</code> 或 <code>start-service.cmd</code>，访问4174；现有数据不要再次初始化。首次部署另按README安装依赖、构建和受控初始化，不在现场进行。</li><li>登录approved账号；学生/企业新注册需要审核，不冒充注册即获得全部权限。</li><li>简历工作台填写事实并保存；生成优化建议可能外发必要内容、产生费用；先核对草稿，再保存新版本。OCR会发送整份文件，不能宣称图片已经可靠脱敏。</li><li>岗位页先查看条件与规则依据。AI岗位匹配需要显式点击；外部公开机会在原站核验和办理，不等同站内企业岗位。</li><li>面试选题或指定岗位；文字可直接提交，语音先授权麦克风并核对转写。失败可保留回答继续，不伪造报告。</li><li>企业和辅导员使用自己的角色入口，不在正式库随意改状态。所有撤销/签约/审核保留原业务确认。</li></ol>
+<p><strong>现场预案：</strong> 页面事先打开；备好本素材包；不展示账号密码、环境文件、密钥管理窗口与完整网络请求头；若AI不可用，明确说不可用，切到代码与已有证据，不自动重试。</p>
+<h3>P12｜验证与总结：有证据，也有明确边界</h3>
+<p><strong>本页目的：</strong> 用有限而可靠的证据结束，25秒。</p>
+<p><strong>可直接上屏文案：</strong></p>
+<ul><li>已实现：四角色业务闭环、确定性匹配/统计、AI工作台、图文界面。</li><li>最新UI补验：Chromium/Edge主要页面与关键流程；窗口复验26/26、性能专项6/6。</li><li>历史真实AI：合成材料下有完整11环节成功探测，也保留失败记录。</li><li>边界：本机候选版；不宣称公网、真人语音、生产负载全部验收。</li></ul>
+<p><strong>收束句：</strong> 让业务可追踪，让建议可核查，让下一步可行动。</p>
+<p><strong>版式：</strong> 左侧“业务/技术/体验”三点总结，右侧一张验收卡；卡片必须标注验证日期和范围，不能只写大大的“100%”。底部保留一句边界。主讲无需朗读所有测试数字。</p>
+<p><strong>证据解释：</strong> 最新主要UI首轮114项中112通过，2项测试读取布局帧的问题修正后相关26项复验通过；不是“114项首次全部通过”。未重跑全量543单测/276E2E。既往严格AI整套516单测与158功能E2E属于11月15日阶段，不合并成这次最新测试数。性能是本机本地环境，非公网。</p>
+<p><strong>真实AI证据：</strong> <code>sources/evidence/strict-ai-pet-live.json</code>记录累计38次请求尝试、8次显式探测运行（历史记录、无自动重试），其中 <code>xdxr4b</code> 11环节全部成功；其他记录含语义拒绝等失败。它们是历史合成材料烟测，不是本轮现场真人全链路通过。外部API官方支持情况另按核验结果说明。</p>
+<h2>五、备用附录与答辩准备</h2>
+<h3>AI能力与实现边界速查（讲义/问答用）</h3>
+<div class="table-wrap"><table><thead><tr><th>能力</th><th>真实触发与程序机制</th><th>不应夸大的边界</th></tr></thead><tbody><tr><td>A1表达建议</td><td>保存版本/选定字段→prepare/confirm→JSON及引用守卫→待采纳建议</td><td>不自动改正式简历</td></tr><tr><td>简历优化</td><td>项目/实习必要文本→建议补丁→人工草稿/撤销/保存新版本</td><td>不自动补造教育、技能、日期或业绩</td></tr><tr><td>规则匹配＋AI推荐</td><td>六维规则独立计算；模型对最多30个真实候选给出最多15项排序与理由</td><td>不编造候选；未知条件不是已满足；非录用概率</td></tr><tr><td>A3岗位解释</td><td>当前岗位与规则事实→结构/语义守卫→解释</td><td>模型文本不能重算事实分</td></tr><tr><td>动态文字/语音面试</td><td>首题/追问/评价；回答先保存；合法引用与数值；有效评价汇总</td><td>练习评分非能力认证；文本模式不自动发语音请求</td></tr><tr><td>A7问数/帮扶</td><td>权限内确定性指标与匿名上下文→模型语言解释/建议</td><td>不让模型制造统计事实，不直接执行帮扶/审核</td></tr><tr><td>全局助手</td><td>当前页面/角色/权限内必要摘要→SSE→历史与取消</td><td>不假装读取未提供的全文，不执行投递/审批/保存</td></tr><tr><td>Search</td><td>用户明确触发的公开发现，结果引用来源</td><td>搜索结果不自动变成已审核站内岗位</td></tr><tr><td>OCR</td><td>单次PDF/PNG/JPEG≤2MiB、PDF≤20页，整份文件外发并逐页展示</td><td>不认证证书，不保证图片自动脱敏，不自动写简历</td></tr><tr><td>ASR/TTS</td><td>音频授权、整段WAV转写、PCM播题，允许改用文字</td><td>非流式ASR、非实时双工；真人听感/设备另验</td></tr></tbody></table></div>
+<p>这张表可拆为附录，但不加入主讲12页，不因列出更多能力而压缩关键代码讲解时间。</p>
+<p>附录不作为第13页起的必讲内容。建议制作3–4页，提问时跳转；本设计包提供更完整素材，正式制作时按问题选择。</p>
+<div class="table-wrap"><table><thead><tr><th>附录</th><th>内容</th><th>素材</th></tr></thead><tbody><tr><td>A1 架构与数据</td><td>在线/离线边界、状态机、事务和版本</td><td>C01/C14；数据库事务源码</td></tr><tr><td>A2 算法与交互</td><td>实际六维计算、Worker取消与规则抽屉</td><td>C03/C04/U13</td></tr><tr><td>A3 AI可信度</td><td>JSON解析和守卫、次数限制、脱敏范围</td><td>C06/C12/C13</td></tr><tr><td>A4 AI面试/体验</td><td>评价引用、有效维度均值、SSE完整结束</td><td>C09/C10</td></tr><tr><td>A5 界面与引用</td><td>组件页头、暗色/窄屏、官方文档和许可</td><td>C11/U11/U12；来源说明</td></tr></tbody></table></div>
+<p>推荐追问与回答：</p>
+<p><strong>“AI是自己训练的吗？”</strong> 不是。项目调用外部DeepSeek服务；自行实现的是任务编排、上下文、权限、校验、结果采纳和业务集成，没有自训练模型或RAG训练成果。</p>
+<p><strong>“为什么不能把AI结果直接保存？”</strong> 内容可能错误或过时，因此生成绑定来源版本，人工核对后再以业务命令保存；事务、revision和角色归属是正式数据的最后边界。</p>
+<p><strong>“匹配100分是否一定能录用？”</strong> 不是。它是六维规则下的参考结果；AI排序同样只是建议，不是录用概率或专业能力认证。</p>
+<p><strong>“AI对话是不是实时语音？”</strong> 文本助手为SSE增量；语音面试是整段ASR/TTS与串行提问评价，不是实时双工，也不分析口音或声纹。</p>
+<p><strong>“为什么截图中AI不可用？”</strong> 这些是隔离后端、不带真实密钥的UI验收截图；不会为了截图让真实用户资料外发。真实上游探测在历史安全元数据中单列，失败同样保留。</p>
+<p><strong>“这个已经能公网运行了吗？”</strong> 当前已验证本机HTTP账号版与持久化，不等于TLS、生产容量、备份运营、真人身份和公网安全全部放行。</p>
+<p><strong>“开发中使用AI是否等于没有技术工作？”</strong> AI辅助了候选代码、排错与素材设计；项目的工程价值在于把需求变成可测的边界、可追踪的数据和可恢复的交互。展示真实源码、守卫和失败证据，而非把工具生成物包装成自主模型研发。</p>
+<h2>六、开发阶段如何在展示中体现</h2>
+<p>无需为每个阶段单独做一页；在P04下方用5个短节点表示演进，详细放讲义：</p>
+<ol><li>基础阶段：需求/契约、Vue工程、组件与领域模型。</li><li>业务阶段：确定性算法、学生主链、四角色和治理端。</li><li>在线阶段：Node/SQLite、账号会话、审核准入、持久化和公开机会源。</li><li>AI阶段：同源AI工作台、严格LIVE、简历建议、推荐、动态面试、语音/OCR及来源记录。</li><li>收官阶段：全站图文组件升级、窗口/状态与主要界面补验。</li></ol>
+<p>来源是开发记录、README顶部现状、各阶段evidence与当前源码。不可变baseline描述“计划”，旧报告描述“当时完成”，不把它们混成今天的架构；文档冲突处理见来源说明。</p>
+<h2>七、制作与排练验收清单</h2>
+<ul><li>页面含背景、概要、技术、使用方法四类要求；重点代码至少C02/C03/C05/C07/C08清晰上屏。</li><li>不用概念图冒充运行截图，不用AI生图重画代码，不修改代码含义；截图中的行号、source SHA256可核对。</li><li>主讲12页，时间460秒；附录不朗读。讲稿计量仅是估计，不能冒充真人排练结果。</li><li>代码只讲蓝色重点行，不逐字符念长URL/正则/类型声明。</li><li>屏幕截图不得展示真实密码、Cookie、Token、环境文件和私人材料。</li><li>所有模型、API、性能与测试范围注明来源；官方文档未证实之处不写成确定官方能力。</li><li>静态截图预案可用；不依赖现场注册、安装、初始化、联网和余额。</li><li>成品制作时再走PPT Master正式确认与导出流程；本轮不越过确认门禁生成PPTX。</li></ul>
+<p>配套文件：<code>02-报告演讲稿.md</code>、<code>03-事实来源与素材说明.md</code>、<code>素材清单.json</code>、<code>images/</code>、<code>sources/code/</code>、<code>阅读版.html</code>。</p></article><article id="doc2"><h1>路鸣职引 CareerPilot · 8分钟内报告演讲稿</h1>
+<p>计划12页、7分40秒，保留20秒缓冲。只朗读各页“正文”之间的段落，不朗读括号中的操作提示、页码、代码行号和本说明。按自然语速排练；具体真人时长尚未测量。</p>
+<h2>P01｜0:00–0:15｜路鸣职引：让下一步，更有方向</h2>
+<p>【操作】显示门户首屏与项目标题。</p>
+<p>【正文】</p>
+<p>各位老师好，我展示的是路鸣职引，一款连接求职准备、招聘协作和学校管理的Web应用，并引入了可核查的AI辅助。</p>
+<p>【正文结束】</p>
+<h2>P02｜0:15–0:45｜开发背景</h2>
+<p>【操作】依次显示学生、企业、学校三个需求。</p>
+<p>【正文】</p>
+<p>项目从三个需求出发：学生需要整理简历、理解岗位并准备面试；企业需要跟踪候选进度；学校需要审核去向、统计和帮扶。目标是把准备、行动与反馈组织成任务链。AI提供建议，但不替用户决定或办理业务。</p>
+<p>【正文结束】</p>
+<h2>P03｜0:45–1:15｜功能与角色</h2>
+<p>【操作】指向四角色泳道，停留学生概览和驾驶舱。</p>
+<p>【正文】</p>
+<p>系统分为四个角色。学生使用简历、岗位、投递和面试功能；企业管理岗位、候选人、日程和协议；辅导员负责辖区审核、统计与帮扶；管理员负责账号和来源治理。不同角色不仅菜单不同，能够读取的数据和执行的动作也不同。模拟面试用于练习，不会改变真实招聘状态。</p>
+<p>【正文结束】</p>
+<h2>P04｜1:15–2:00｜总体架构</h2>
+<p>【操作】按浏览器→服务→数据库→AI顺序指示架构图。</p>
+<p>【正文】</p>
+<p>架构上，前端使用Vue三、TypeScript、Router和Pinia组织页面与交互，ECharts展示统计。页面通过服务层访问业务，不直接修改数据库。当前账号版由同源Node服务处理会话和权限，数据保存在SQLite；离线教学版使用独立的IndexedDB，两种数据不混用。领域算法保持纯TypeScript，便于单独测试。AI位于服务端代理之后，而不是让浏览器直接拿着密钥调用。这样的分层，也让后续界面升级能够保持业务边界。</p>
+<p>【正文结束】</p>
+<h2>P05｜2:00–2:40｜关键代码：业务可靠性</h2>
+<p>【操作】依次指向C02回执、归属和revision三处，避免逐行念代码。</p>
+<p>【正文】</p>
+<p>这里展示真实仓储代码。首先，操作带有命令编号和内容指纹，重复提交同一命令时返回原结果；如果编号相同但内容不同，就拒绝。其次，保存前检查账号归属和预期版本，防止旧页面覆盖新修改。最后，这些写入在事务内完成，相关记录共同提交或回滚。状态机还会校验角色和合法动作，因此不是任意选择一个状态就能推进业务。</p>
+<p>【正文结束】</p>
+<h2>P06｜2:40–3:25｜关键代码：可解释匹配</h2>
+<p>【操作】指向C03六维数组、总分和contribution。</p>
+<p>【正文】</p>
+<p>岗位匹配包含技能、专业、学历、城市、薪资和经验六个维度。这段实际计算代码使用归一化权重求总分，同时保留各维度的贡献，用户能看到分数依据，而不只看到一个数字。批量计算交给Web Worker，并支持取消旧任务，减少对界面响应的影响。这里要区分两件事：规则分是确定性参照，AI可以提供推荐顺序和解释，但不能改写规则分；两者都不是录用概率。</p>
+<p>【正文结束】</p>
+<h2>P07｜3:25–4:25｜关键技术：DeepSeek接入</h2>
+<p>【操作】展示调用链和C05，指出URL、Bearer变量、消息和JSON输出，不打开密钥配置。</p>
+<p>【正文】</p>
+<p>AI部分采用服务端代理。用户点击生成后，服务器重新检查会话、授权和数据归属，再构造必要上下文。代码中可以看到DeepSeek的聊天接口、服务端鉴权、系统与用户消息，以及JSON输出要求。密钥不会发送给网页。拿到JSON也不代表结果可信，程序还要检查结构、引用和业务约束；工作台有任务专用校验。调用前还有限额与并发控制，结果记录模型、时间和追踪信息。当前业务失败会明确提示，不用预设答案伪装成功。这里展示的是接口集成，不是自行训练的大模型。</p>
+<p>【正文结束】</p>
+<h2>P08｜4:25–5:10｜AI应用：简历优化</h2>
+<p>【操作】先指C07原文一致与新增数字判断，再显示U04草稿/保存区。</p>
+<p>【正文】</p>
+<p>以简历优化为例，系统发送必要的项目和实习描述，要求模型返回原文、改写和理由。这段代码检查原文是否对应、目标是否重复，以及是否出现原文没有的数字。它能拦截部分风险，但不能保证模型永不编造，所以建议先进入草稿，用户可以采纳、修改或撤销，最后明确保存新版本。正式简历不会因为一次生成就被覆盖，事实与选择权始终留给用户。</p>
+<p>【正文结束】</p>
+<h2>P09｜5:10–6:00｜AI应用：动态面试与语音</h2>
+<p>【操作】指C08提前保存与失败提示；底部显示语音流程。</p>
+<p>【正文】</p>
+<p>动态面试根据岗位和历史回答生成问题、追问与带证据的评价。这里最重要的是顺序：先保存用户回答，再等待模型。即使评分或下一题失败，回答仍保留，也不会为了补齐报告而生成虚构的零分。语音模式增加播题、录音、整段转写和人工核对，不是实时双工通话。全局助手则使用文本流式展示，支持停止和历史记录，但不代替用户投递或审批。评价只作练习参考，不是招聘测评认证。</p>
+<p>【正文结束】</p>
+<h2>P10｜6:00–6:30｜界面与设计辅助</h2>
+<p>【操作】展示题库、390px视口和暗色界面，不滚动长页。</p>
+<p>【正文】</p>
+<p>界面统一品牌、字体、控件和窗口规范，编辑、题库、招聘与统计保持不同结构。装饰图片和操作区分离，提供明暗主题与窄屏重排。Codex辅助实现和排错，图像模型制作插画；它们与平台的业务AI分开。截图是真实渲染，不是效果图热点。</p>
+<p>【正文结束】</p>
+<h2>P11｜6:30–7:15｜使用方法</h2>
+<p>【操作】按U02→U03→U06→U08/U09顺序展示，约15秒用于切换与指示。</p>
+<p>【正文】</p>
+<p>使用时，先登录已审核账号，完善并保存简历，再到岗位页查看条件和匹配依据；需要时主动生成AI建议。确认投递后，通过时间轴跟踪进度。面试可选择文字或语音，语音先核对转写，再提交和查看反馈。企业处理候选人与日程，辅导员完成审核并查看驾驶舱。现场不重新初始化，也不展示密钥；若上游不可用，就明确说明并使用已有截图，不假装调用成功。</p>
+<p>【正文结束】</p>
+<h2>P12｜7:15–7:40｜验收与总结</h2>
+<p>【操作】停留结论页，不再打开附录。</p>
+<p>【正文】</p>
+<p>项目已形成四角色闭环、可解释算法和AI工作台。验证区分真实探测与模拟测试，不冒充公网或真人语音验收。核心是让业务可追踪、建议可核查、下一步可行动。谢谢各位老师。</p>
+<p>【正文结束】</p>
+<h2>排练方法与超时删减</h2>
+<p>第一次逐页计时并记录，不只看全文阅读时间。代码指示、点击、停顿也计入8分钟。讲稿的中英文/数字混合字数及估计语速见 <code>validation/材料检查.json</code>，它是文本估计，不是真人计时。</p>
+<p>如果排练超过7:40，依次删去P10工具介绍的后半句、P06维度的逐项展开、P04离线实现细节，各节省约5–10秒；保留P05的可靠性、P07的调用链、P08的人工采纳和P09的先保存机制。不要靠全程加速或删除边界来赶时间。</p>
+<p>需要现场互动时，把P11的15秒截图切换替换为已排练的只读页面演示，不在原预算外另加现场环节。8分钟通常不含老师追问，但应服从现场规则；追问需时则用附录，不把附录当必讲页。</p></article><article id="doc3"><h1>事实来源、关键代码和素材说明</h1>
+<h2>1. 证据优先级</h2>
+<p>本次按“当前实现源码→最新运行/验收记录→相应阶段文档→冻结基线”的顺序整理；外部API协议采用2026-11-18实际读取的DeepSeek官方文档。旧文档保留历史意义，不覆盖现状。没有新修改应用、重置数据、重新初始化或付费AI调用。</p>
+<p>当前工作区基准提交为 <code>5295f53ea4d1d433d933738156422e8c43c23717</code>，其后仍有UI未提交改动；材料反映当前工作区及最新截图，不声称它们已经Git提交、推送或公网发布。每张代码图以源文件哈希进一步固定，不能只用HEAD替代工作区版本。</p>
+<h2>2. 项目事实与证据对应</h2>
+<div class="table-wrap"><table><thead><tr><th>事实</th><th>实现/文档来源</th><th>用于页面</th></tr></thead><tbody><tr><td>当前账号在线模式、四角色、启动入口及范围</td><td><code>README.md</code>顶部现状；<code>package.json</code>；<code>src/router/</code></td><td>P01–04、P11</td></tr><tr><td>Vue/TS/Pinia/Router/ECharts/Dexie依赖</td><td><code>package.json</code>锁定依赖；<code>src/services/app-services.ts</code></td><td>P04</td></tr><tr><td>在线Node＋SQLite，共用业务仓储</td><td><code>server/app.ts</code>92–111；<code>server/database.ts</code>112–128</td><td>P04–05</td></tr><tr><td>HttpOnly/SameSite会话、CSRF与approved门禁</td><td><code>server/app.ts</code>106、222及238–243；<code>server/auth.ts</code></td><td>P04–07</td></tr><tr><td>幂等回执、内容指纹、归属与版本校验</td><td><code>src/services/repository.ts</code>260–309</td><td>P05</td></tr><tr><td>合法状态迁移、学生/企业不同动作</td><td><code>src/domain/lifecycle/transition.ts</code>54–88及各分支</td><td>P03/P05</td></tr><tr><td>六维规则匹配与贡献分解</td><td><code>src/domain/matching/scoring.ts</code>15–24、250–266</td><td>P06</td></tr><tr><td>Worker与取消</td><td><code>src/services/matching-worker.ts</code>；<code>src/workers/matching.worker.ts</code></td><td>P06</td></tr><tr><td>指标由权限内数据确定性计算</td><td><code>src/domain/metrics/calculate.ts</code>及驾驶舱视图</td><td>P03/P12</td></tr><tr><td>真实同源DeepSeek聊天接口及guardPayload</td><td><code>server/ai.ts</code>130–177</td><td>P07</td></tr><tr><td>工作台上游固定、额度与流式校验</td><td><code>server/workbench/provider.ts</code>21–91</td><td>P07/P09</td></tr><tr><td>严格LIVE，失败不代答</td><td><code>docs/evidence/strict-ai-pet.md</code>；<code>src/adapters/ai/orchestrator.ts</code>；<code>src/composables/useBusinessAi.ts</code></td><td>P07/P12</td></tr><tr><td>简历仅项目/实习描述优化，原文与数字检查</td><td><code>server/workbench/business.ts</code>11–31；优化草稿领域与视图</td><td>P08</td></tr><tr><td>文本面试、回答提前保存、评分失败处理</td><td><code>server/workbench/index.ts</code>118–157；<code>business.ts</code>34–49</td><td>P09</td></tr><tr><td>ASR/TTS/OCR/Search实现路径与限制</td><td><code>server/workbench/index.ts</code>71–116；<code>ocr.ts</code>；工作台运行说明</td><td>P09/P11</td></tr><tr><td>最小元数据来源记录</td><td><code>server/workbench/provenance.ts</code></td><td>P07</td></tr><tr><td>组件化标题/图片/操作区</td><td><code>src/components/presentation/WorkbenchHeader.vue</code>；<code>src/presentation/workbench-design.ts</code></td><td>P10</td></tr><tr><td>背景、主题、窗口与响应式</td><td><code>src/styles/workbench-design.css</code>、<code>workbench-windows.css</code></td><td>P10</td></tr><tr><td>既往真实AI探测，含失败记录</td><td><code>docs/evidence/strict-ai-pet-live.json</code>、<code>strict-ai-pet.md</code>，本包sources/evidence有副本</td><td>P12</td></tr><tr><td>2026-11-18主要UI补验收</td><td><code>sources/evidence/main-ui-acceptance-20261118.md</code></td><td>P12</td></tr></tbody></table></div>
+<p>相对路径均相对原应用项目根目录。素材清单同时记录真实绝对截图来源。答辩前若应用代码变化，应重新提取代码截图与哈希，不把旧截图当作新版本。</p>
+<h2>3. 旧材料中的重要差异</h2>
+<div class="table-wrap"><table><thead><tr><th>旧说法</th><th>当前正确表达</th></tr></thead><tbody><tr><td>默认REPLAY，可LIVE失败后回放/规则兜底</td><td>当前业务严格LIVE；生成失败显式提示，历史底层模式不用于代答</td></tr><tr><td>只有IndexedDB，无真实账号/后端</td><td>当前账号版Node/SQLite；IndexedDB是独立教学路径</td></tr><tr><td>DeepSeek真实调用全部not_run</td><td>这是早期阶段边界；11月15日已有单独记录的合成材料真实探测</td></tr><tr><td>所有分数都来自本地规则</td><td>规则匹配/统计为程序计算；动态面试评分由模型提供，程序校验与汇总</td></tr><tr><td>OCR未接入</td><td>后续严格AI阶段已接入，保留文件、页数与外发边界</td></tr><tr><td>310/516/543项测试都是最新完整验收</td><td>不同阶段、不同范围，不叠加、不互换；最新UI补验未重新运行全部单测/E2E</td></tr><tr><td>在线就等于公网</td><td>当前仅本机HTTP在线账号模式，不作公网生产放行声明</td></tr></tbody></table></div>
+<p>因此不直接复用旧 <code>docs/report-draft.md</code> 和 <code>docs/demo-script.md</code> 的摘要、末页数字及AI描述。本次只新建展示材料，未改写这些历史文件。</p>
+<h2>4. DeepSeek官方技术资料</h2>
+<p>以下均在2026-11-18读取正文并得到HTTP200；与项目源码进行对应，没有仅凭搜索摘要引用。完整外部事实清单见 <code>deepseek_research.facts.json</code>，研究补充见 <code>deepseek_research.md</code>。</p>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>官方资料</th><th>对应本项目</th></tr></thead><tbody><tr><td>F001</td><td><a href="https://api-docs.deepseek.com/zh-cn/">首次调用API</a></td><td>base URL、Bearer鉴权、deepseek-flash模型名</td></tr><tr><td>F002</td><td><a href="https://api-docs.deepseek.com/zh-cn/api/create-chat-completion">Chat Completions API</a></td><td>messages/model、thinking、safety_check、stream与SSE结束</td></tr><tr><td>F003</td><td><a href="https://api-docs.deepseek.com/zh-cn/guides/json_mode">JSON Output</a></td><td>json_object、提示JSON、空白与截断边界</td></tr><tr><td>F004</td><td><a href="https://api-docs.deepseek.com/zh-cn/api/search">网页搜索API</a></td><td><code>/v1/tools/search</code>、结构化公开结果</td></tr><tr><td>F005</td><td><a href="https://api-docs.deepseek.com/zh-cn/api/tts">语音合成API</a></td><td><code>/v1/tools/tts</code>、24kHz PCM</td></tr><tr><td>F006</td><td><a href="https://api-docs.deepseek.com/zh-cn/api/asr">语音识别API</a></td><td><code>/v1/tools/asr</code>、整段上传与完整转写</td></tr><tr><td>F007</td><td><a href="https://api-docs.deepseek.com/zh-cn/api/ocr">OCR API</a></td><td><code>/v1/tools/ocr</code>、逐页结果与length标记</td></tr></tbody></table></div>
+<p>核验结果：项目的deepseek-flash、Search/TTS/ASR/OCR端点均有当前官方说明对应。既不凭旧知识否认它们，也不把官方全部新能力算作本项目实现。例如官方TTS有WebSocket，但本平台当前不是WebSocket双工语音；官方OCR接受更多文档格式，本平台只开放PDF/PNG/JPEG。</p>
+<p>PPT页脚建议写“DeepSeek API Docs，查阅2026-11-18，F002/F003”，完整URL放引用附录。不要截控制台密钥页作技术证据。若需要官方文档截图，另截无账号的公开说明页；现包已提供链接和内容事实，不伪造官方网页截图。</p>
+<h2>5. 已制作的14张关键代码截图</h2>
+<div class="table-wrap"><table><thead><tr><th>编号</th><th>源文件与原始行号</th><th>证明什么</th></tr></thead><tbody><tr><td>C01</td><td><code>src/services/app-services.ts</code>18–28</td><td>在线/离线仓储选择</td></tr><tr><td>C02</td><td><code>src/services/repository.ts</code>285–309</td><td>事务、幂等、权限与revision</td></tr><tr><td>C03</td><td><code>src/domain/matching/scoring.ts</code>250–266</td><td>实际匹配函数的六维与贡献计算</td></tr><tr><td>C04</td><td><code>src/services/matching-worker.ts</code>26–43</td><td>Worker初始化、取消与清理</td></tr><tr><td>C05</td><td><code>server/ai.ts</code>134–137</td><td>DeepSeek真实服务端请求形状</td></tr><tr><td>C06</td><td><code>server/ai.ts</code>143–149</td><td>内容解析、有效结束、guardPayload和实际用量</td></tr><tr><td>C07</td><td><code>server/workbench/business.ts</code>18–25</td><td>简历补丁结构和语义守卫</td></tr><tr><td>C08</td><td><code>server/workbench/index.ts</code>141–147、150–154</td><td>回答先保存，失败不造分；148–149明确省略</td></tr><tr><td>C09</td><td><code>server/workbench/business.ts</code>40–48</td><td>分数范围、引用校验与均值</td></tr><tr><td>C10</td><td><code>server/workbench/provider.ts</code>73–87、90–91</td><td>SSE分块、结束和完整性；88–89明确省略</td></tr><tr><td>C11</td><td><code>src/components/presentation/WorkbenchHeader.vue</code>11–19</td><td>标题、装饰图、动作槽位分区</td></tr><tr><td>C12</td><td><code>server/workbench/provider.ts</code>21–30</td><td>持久次数与并发限制</td></tr><tr><td>C13</td><td><code>src/domain/ai-guard/privacy.ts</code>2–16</td><td>姓名/邮箱/手机号/证件文本替换</td></tr><tr><td>C14</td><td><code>src/domain/lifecycle/transition.ts</code>75–88</td><td>角色归属与合法动作门禁</td></tr></tbody></table></div>
+<p>文件位于 <code>images/code/C01.png</code> 等；每张宽1800px、等比例高度。蓝色只突出讲解行，不表示其他行无需理解。原文长行视觉换行，没有更改字符串或格式含义；不是AI重写的伪代码。对应 <code>sources/code/C01.txt</code> 可检索，HTML是截图的排版来源，不是另一套业务实现。</p>
+<p>截图展示的 <code>options!.apiKey</code> 只是变量引用；没有实际值。所有截图均不读取.env、DPAPI文件、cookie、密码或数据库私人正文。普通正则脱敏并不等于完整匿名化；OCR原文件/音频的外发说明仍必须保留。</p>
+<h2>6. 已制作的13张运行截图</h2>
+<div class="table-wrap"><table><thead><tr><th>编号</th><th>页面</th><th>用途</th></tr></thead><tbody><tr><td>U01</td><td>公共门户</td><td>封面/产品定位</td></tr><tr><td>U02</td><td>学生生涯概览</td><td>任务组织与使用入口</td></tr><tr><td>U03</td><td>岗位匹配首屏</td><td>图文岗位、筛选与规则依据入口</td></tr><tr><td>U04</td><td>AI简历草稿/保存区局部</td><td>人工采纳、确认保存边界</td></tr><tr><td>U05</td><td>模拟面试题库</td><td>前端页面族与图文组织</td></tr><tr><td>U06</td><td>语音面试入口</td><td>使用方法/语音模式</td></tr><tr><td>U07</td><td>企业候选流程</td><td>四角色闭环</td></tr><tr><td>U08</td><td>企业面试日程</td><td>企业实际工作台</td></tr><tr><td>U09</td><td>辅导员就业驾驶舱</td><td>图表与辖区统计</td></tr><tr><td>U10</td><td>管理员控制台</td><td>治理与运行概览</td></tr><tr><td>U11</td><td>390px视口语音入口</td><td>响应式，不等于真机</td></tr><tr><td>U12</td><td>企业候选工作台暗色</td><td>双主题</td></tr><tr><td>U13</td><td>岗位解释抽屉</td><td>六维与窗口细节</td></tr></tbody></table></div>
+<p>这些截图来源于 <code>tests/e2e/ui-refresh-all-pages.spec.ts</code> 及窗口相关用例，使用 <code>seed:true</code> 的临时SQLite、合成账号和实际dist，浏览器为Chromium。在线服务真实渲染不代表数据来自实际用户；U09的100%只是该夹具数据，不能当项目提高就业率的证据。日期沿用的Temp目录不代表截图捕获于该目录名当天；最新补验报告说明文件已更新。</p>
+<p>原始Temp路径只用于溯源，交付阅读不依赖Temp。裁切后的图片已复制进本包，不会因临时目录清理而丢失主要素材；若需要原始长页，可按清单回查或重新生成，不在PPT中缩小展示25245px长列表。</p>
+<h2>7. AI辅助与许可说明</h2>
+<p>产品内语言、推荐与面试等调用DeepSeek；视觉素材生产使用用户配置的Nebula/gpt-image-2.6；Codex辅助代码、测试和文档。这些是不同职责，不混称为自研模型，也不将设计效果图当作产品证据。</p>
+<p>截图包含dsh-pet形象时需保留项目第三方声明：代码MIT，素材CC BY-NC-SA4.0，署名上善无形/ZipZipPipe，源项目PC2005-cloud/dsh-pet。属于社区二创，不是DeepSeek官方品牌形象。本包主要裁切尽量聚焦功能区；公开传播或商业使用前须复核全部资源许可。应用自有AI校园图为虚构场景，不表示院校或企业背书。</p>
+<p>本轮没有新调用生图服务，没有新付款、API测试或账号数据写入。材料仅汇总现有成果。</p></article><section id="assets"><h2>全部关键代码截图（点击可打开原图）</h2><section class="gallery"><h3>C01 · 同一服务边界，分离在线与离线数据</h3><p>src/services/app-services.ts · L18–28</p><a href="images/code/C01.png"><img loading="lazy" src="images/code/C01.png" alt="C01 同一服务边界，分离在线与离线数据"></a></section><section class="gallery"><h3>C02 · 事务、幂等回执与版本冲突</h3><p>src/services/repository.ts · L285–309</p><a href="images/code/C02.png"><img loading="lazy" src="images/code/C02.png" alt="C02 事务、幂等回执与版本冲突"></a></section><section class="gallery"><h3>C03 · 六维匹配分是确定性计算，不是模型概率</h3><p>src/domain/matching/scoring.ts · L250–266</p><a href="images/code/C03.png"><img loading="lazy" src="images/code/C03.png" alt="C03 六维匹配分是确定性计算，不是模型概率"></a></section><section class="gallery"><h3>C04 · Worker与取消：计算不阻塞主线程</h3><p>src/services/matching-worker.ts · L26–43</p><a href="images/code/C04.png"><img loading="lazy" src="images/code/C04.png" alt="C04 Worker与取消：计算不阻塞主线程"></a></section><section class="gallery"><h3>C05 · 真实服务端请求：鉴权、消息与JSON输出</h3><p>server/ai.ts · L134–137</p><a href="images/code/C05.png"><img loading="lazy" src="images/code/C05.png" alt="C05 真实服务端请求：鉴权、消息与JSON输出"></a></section><section class="gallery"><h3>C06 · JSON可解析之后，仍要校验结构与业务语义</h3><p>server/ai.ts · L143–149</p><a href="images/code/C06.png"><img loading="lazy" src="images/code/C06.png" alt="C06 JSON可解析之后，仍要校验结构与业务语义"></a></section><section class="gallery"><h3>C07 · 简历改写：原文锚定、去重与新增数字拦截</h3><p>server/workbench/business.ts · L18–25</p><a href="images/code/C07.png"><img loading="lazy" src="images/code/C07.png" alt="C07 简历改写：原文锚定、去重与新增数字拦截"></a></section><section class="gallery"><h3>C08 · 先保存回答，再等待模型：失败不丢回答、不造分</h3><p>server/workbench/index.ts · L141–147 / L150–154</p><a href="images/code/C08.png"><img loading="lazy" src="images/code/C08.png" alt="C08 先保存回答，再等待模型：失败不丢回答、不造分"></a></section><section class="gallery"><h3>C09 · 面试评价：数值范围、引用证据与有效维度均值</h3><p>server/workbench/business.ts · L40–48</p><a href="images/code/C09.png"><img loading="lazy" src="images/code/C09.png" alt="C09 面试评价：数值范围、引用证据与有效维度均值"></a></section><section class="gallery"><h3>C10 · SSE分块解析与完整结束校验</h3><p>server/workbench/provider.ts · L73–87 / L90–91</p><a href="images/code/C10.png"><img loading="lazy" src="images/code/C10.png" alt="C10 SSE分块解析与完整结束校验"></a></section><section class="gallery"><h3>C11 · 组件化页头：装饰图层与可操作入口分区</h3><p>src/components/presentation/WorkbenchHeader.vue · L11–19</p><a href="images/code/C11.png"><img loading="lazy" src="images/code/C11.png" alt="C11 组件化页头：装饰图层与可操作入口分区"></a></section><section class="gallery"><h3>C12 · 调用前预留额度与并发限制</h3><p>server/workbench/provider.ts · L21–30</p><a href="images/code/C12.png"><img loading="lazy" src="images/code/C12.png" alt="C12 调用前预留额度与并发限制"></a></section><section class="gallery"><h3>C13 · 文本脱敏的实际范围，不等于完整匿名化</h3><p>src/domain/ai-guard/privacy.ts · L2–16</p><a href="images/code/C13.png"><img loading="lazy" src="images/code/C13.png" alt="C13 文本脱敏的实际范围，不等于完整匿名化"></a></section><section class="gallery"><h3>C14 · 状态迁移同时校验角色归属与合法动作</h3><p>src/domain/lifecycle/transition.ts · L75–88</p><a href="images/code/C14.png"><img loading="lazy" src="images/code/C14.png" alt="C14 状态迁移同时校验角色归属与合法动作"></a></section><h2>全部运行界面截图</h2><section class="gallery"><h3>U01 · 公共门户首屏</h3><p>/ · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U01.png"><img loading="lazy" src="images/ui/U01.png" alt="U01 公共门户首屏"></a></section><section class="gallery"><h3>U02 · 学生生涯概览</h3><p>/student · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U02.png"><img loading="lazy" src="images/ui/U02.png" alt="U02 学生生涯概览"></a></section><section class="gallery"><h3>U03 · 岗位匹配与筛选</h3><p>/student/jobs · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U03.png"><img loading="lazy" src="images/ui/U03.png" alt="U03 岗位匹配与筛选"></a></section><section class="gallery"><h3>U04 · AI简历草稿与人工保存（局部）</h3><p>/student/resume/optimize · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U04.png"><img loading="lazy" src="images/ui/U04.png" alt="U04 AI简历草稿与人工保存（局部）"></a></section><section class="gallery"><h3>U05 · 题库练习</h3><p>/student/mock/practice · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U05.png"><img loading="lazy" src="images/ui/U05.png" alt="U05 题库练习"></a></section><section class="gallery"><h3>U06 · 仿真语音面试入口</h3><p>/student/mock/voice · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U06.png"><img loading="lazy" src="images/ui/U06.png" alt="U06 仿真语音面试入口"></a></section><section class="gallery"><h3>U07 · 企业候选人流程</h3><p>/company/candidates · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U07.png"><img loading="lazy" src="images/ui/U07.png" alt="U07 企业候选人流程"></a></section><section class="gallery"><h3>U08 · 企业面试日程</h3><p>/company/schedule · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U08.png"><img loading="lazy" src="images/ui/U08.png" alt="U08 企业面试日程"></a></section><section class="gallery"><h3>U09 · 辅导员就业驾驶舱</h3><p>/counselor/dashboard · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U09.png"><img loading="lazy" src="images/ui/U09.png" alt="U09 辅导员就业驾驶舱"></a></section><section class="gallery"><h3>U10 · 管理员控制台</h3><p>/admin · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U10.png"><img loading="lazy" src="images/ui/U10.png" alt="U10 管理员控制台"></a></section><section class="gallery"><h3>U11 · 390px视口下语音入口，非物理手机</h3><p>/student/mock/voice · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U11.png"><img loading="lazy" src="images/ui/U11.png" alt="U11 390px视口下语音入口，非物理手机"></a></section><section class="gallery"><h3>U12 · 企业工作台暗色主题</h3><p>/company/candidates · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U12.png"><img loading="lazy" src="images/ui/U12.png" alt="U12 企业工作台暗色主题"></a></section><section class="gallery"><h3>U13 · 岗位规则解释抽屉</h3><p>/student/jobs · 真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图</p><a href="images/ui/U13.png"><img loading="lazy" src="images/ui/U13.png" alt="U13 岗位规则解释抽屉"></a></section></section></main></html>

@@ -1,0 +1,636 @@
+{
+  "schema": "careerpilot.ppt-materials.v1",
+  "preparedDate": "2026-11-18",
+  "purpose": "设计文档及素材，非成品PPT",
+  "screenshots": [
+    {
+      "id": "U01",
+      "route": "/",
+      "dir": "public_",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "title": "公共门户首屏",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\public_\\light-1440.png",
+      "originalSha256": "a4fc89b254cc250f5294c888c051d4b1f9e3a1cd12e6ca7691af0f011404b1db",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1366
+      },
+      "image": "images/ui/U01.png",
+      "pngSha256": "8e9e940f2884c8ce49f1890b766880e7b216fb7125dee031fa42520d80b0352c",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U02",
+      "route": "/student",
+      "dir": "online-学生_student",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "学生生涯概览",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student\\light-1440.png",
+      "originalSha256": "aa453e932ec848c1639e4e028c1a0130eb7cb4b020e708ef591c279de00d6a67",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 2442
+      },
+      "image": "images/ui/U02.png",
+      "pngSha256": "5da5eee8b2c082118dd7213610e8df96854c2e9b83bd373b5ad6c201960ade08",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U03",
+      "route": "/student/jobs",
+      "dir": "online-学生_student_jobs",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "岗位匹配与筛选",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student_jobs\\light-1440.png",
+      "originalSha256": "725a1f2612798b181ec21997bf984fb2587808a8d5535391b9670ccdd64f8469",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 25245
+      },
+      "image": "images/ui/U03.png",
+      "pngSha256": "7a0bcf64197874d4318de88a321a138e5a5ca4a3ea11706b1c3b135afe2bd9bf",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U04",
+      "route": "/student/resume/optimize",
+      "dir": "online-学生_student_resume_optimize",
+      "crop": {
+        "left": 218,
+        "top": 300,
+        "width": 1222,
+        "height": 970
+      },
+      "title": "AI简历草稿与人工保存（局部）",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student_resume_optimize\\light-1440.png",
+      "originalSha256": "1e1ea032a2bf49f5a06424fe0c5e7164cbc50eda65008c96ab1a08e53f42bca0",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1539
+      },
+      "image": "images/ui/U04.png",
+      "pngSha256": "7757b7d309edac241d8d362b5f78957b4cd1bc7728950721e85329e994b1e1b9",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U05",
+      "route": "/student/mock/practice",
+      "dir": "online-学生_student_mock_practice",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "题库练习",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student_mock_practice\\light-1440.png",
+      "originalSha256": "43a3326ef1acc1f64dc5840a750a05fa79f105aecf251912dced290a59c3bc9e",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1603
+      },
+      "image": "images/ui/U05.png",
+      "pngSha256": "deadc4fc8ffad25395cb35410b53551bcd44aa527e7bb3ccf7086072a6b3de92",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U06",
+      "route": "/student/mock/voice",
+      "dir": "online-学生_student_mock_voice",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "仿真语音面试入口",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student_mock_voice\\light-1440.png",
+      "originalSha256": "e8e67f9054910431c6d09ec92e8001ea3cc37e30960a4e5fa1f9f68fc9fb8f50",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1480
+      },
+      "image": "images/ui/U06.png",
+      "pngSha256": "a1cdd8d95fa89d83cfec6d32c205ef240b831f1675d8a54da2af43e9b0c3be26",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U07",
+      "route": "/company/candidates",
+      "dir": "online-企业_company_candidates",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "企业候选人流程",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-企业_company_candidates\\light-1440.png",
+      "originalSha256": "620a623aa2566589b61c529952c0ab702ab47e4d991129d18585672991c4f69e",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 2043
+      },
+      "image": "images/ui/U07.png",
+      "pngSha256": "dc7e58cb6433e5942e9227033d0314b0485712ac8269a240499ac3dc15e125b0",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U08",
+      "route": "/company/schedule",
+      "dir": "online-企业_company_schedule",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "企业面试日程",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-企业_company_schedule\\light-1440.png",
+      "originalSha256": "2ac9d19b2fc489527be5f8423801bcaacafe5f3f2537c33903d7a4b7d6a0a9ff",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1579
+      },
+      "image": "images/ui/U08.png",
+      "pngSha256": "1114acfd7f2ec8946338ad2c9195d0ef3607f1a13c32122e94f2206f9ab4d4ea",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U09",
+      "route": "/counselor/dashboard",
+      "dir": "online-辅导员_counselor_dashboard",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1100
+      },
+      "title": "辅导员就业驾驶舱",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-辅导员_counselor_dashboard\\light-1440.png",
+      "originalSha256": "82b9802b2783242f53fb0f4d35c6e29390fd53faddc61e0b247f2a5b0b543a52",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 2601
+      },
+      "image": "images/ui/U09.png",
+      "pngSha256": "84e6edf7e098078ddae18330478b99b5e1dabb1a02304adfa9b6465aa2dbdae6",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U10",
+      "route": "/admin",
+      "dir": "online-管理员_admin",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1050
+      },
+      "title": "管理员控制台",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-管理员_admin\\light-1440.png",
+      "originalSha256": "89df4cc0aa12a608131d0371424ee626cf4eb655c89e1f3c3b500eae16a4ddf9",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 2453
+      },
+      "image": "images/ui/U10.png",
+      "pngSha256": "02070371696c3b0a8c62183215e502362c437753b3b3efa1a46ebb66313c3b51",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U11",
+      "route": "/student/mock/voice",
+      "dir": "online-学生_student_mock_voice",
+      "sourceName": "light-390.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 390,
+        "height": 844
+      },
+      "title": "390px视口下语音入口，非物理手机",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-学生_student_mock_voice\\light-390.png",
+      "originalSha256": "2fc24f8dbdb6accd75827580087ae74a2654852d26328f423e97736672e0f4ab",
+      "originalDimensions": {
+        "width": 390,
+        "height": 2332
+      },
+      "image": "images/ui/U11.png",
+      "pngSha256": "3a771d77269d13ba998a8dfc1b2857df690821fb6f9e1540cf7c3366b419ef76",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U12",
+      "route": "/company/candidates",
+      "dir": "online-企业_company_candidates",
+      "sourceName": "dark-1440.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "企业工作台暗色主题",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\online-企业_company_candidates\\dark-1440.png",
+      "originalSha256": "05200ea1610a2709bc8e57539f0c89f1698d8397e85b7a96f035ccaa996cbb35",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 2043
+      },
+      "image": "images/ui/U12.png",
+      "pngSha256": "1a16eaa2bee3de08d0ffe5205d306eacc6028a8ed70a3b63fe41917f7b28c0d9",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    },
+    {
+      "id": "U13",
+      "route": "/student/jobs",
+      "dir": "windows/W12",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1440,
+        "height": 1000
+      },
+      "title": "岗位规则解释抽屉",
+      "originalSource": "D:\\Temp\\careerpilot-ui-final-20261117\\chromium\\windows\\W12\\light-1440.png",
+      "originalSha256": "a10e618a03d3ba3d56985b6f21f92391d67492e83bff63df56f9f377fca108f5",
+      "originalDimensions": {
+        "width": 1440,
+        "height": 1000
+      },
+      "image": "images/ui/U13.png",
+      "pngSha256": "61c7ea21897c8e4abba2e55beb4888893da5bb74e508cb9cc1823bf5d6282e1a",
+      "dataLabel": "真实应用渲染；隔离SQLite＋合成测试账号／数据；非公网与真人业务截图",
+      "alterations": "仅矩形裁切；未更改任何UI、文本、状态或数据"
+    }
+  ],
+  "code": [
+    {
+      "id": "C01",
+      "file": "src/services/app-services.ts",
+      "ranges": [
+        [
+          18,
+          28
+        ]
+      ],
+      "focus": [
+        18,
+        19,
+        28
+      ],
+      "title": "同一服务边界，分离在线与离线数据",
+      "use": "P04／附录A1",
+      "sourceSha256": "2bbfdd015bf34fa4d6f5d935ae7362ea4ef9822b4bd66c8046295f0a808427fb",
+      "pngSha256": "7115495caa8dc423927ebbeeda8585385f9b0eb443c0819fc20dd9c269db2615",
+      "image": "images/code/C01.png",
+      "width": 1800,
+      "height": 632
+    },
+    {
+      "id": "C02",
+      "file": "src/services/repository.ts",
+      "ranges": [
+        [
+          285,
+          309
+        ]
+      ],
+      "focus": [
+        285,
+        287,
+        290,
+        291,
+        294,
+        307,
+        308
+      ],
+      "title": "事务、幂等回执与版本冲突",
+      "use": "P05",
+      "sourceSha256": "23a13c7b7c6aaf94d0c8d0588f979f240868f594e83a4e57a875bf6e7348448e",
+      "pngSha256": "e00f95c7f1b0a569f00c4220193d0bd7a8d88813fb57bbcc85a5c56d77114953",
+      "image": "images/code/C02.png",
+      "width": 1800,
+      "height": 1171
+    },
+    {
+      "id": "C03",
+      "file": "src/domain/matching/scoring.ts",
+      "ranges": [
+        [
+          250,
+          266
+        ]
+      ],
+      "focus": [
+        250,
+        258,
+        260,
+        261,
+        266
+      ],
+      "title": "六维匹配分是确定性计算，不是模型概率",
+      "use": "P06",
+      "sourceSha256": "c7f023acaf420629b600c7ad586e68e61fafd936060d708596632ea7090dff6d",
+      "pngSha256": "e9d672e2a800c5382ceb0dcc2b2746273512acd08e90a185b206141200c125e8",
+      "image": "images/code/C03.png",
+      "width": 1800,
+      "height": 863
+    },
+    {
+      "id": "C04",
+      "file": "src/services/matching-worker.ts",
+      "ranges": [
+        [
+          26,
+          43
+        ]
+      ],
+      "focus": [
+        26,
+        27,
+        28,
+        29,
+        38,
+        42
+      ],
+      "title": "Worker与取消：计算不阻塞主线程",
+      "use": "P06／附录A2",
+      "sourceSha256": "841bd9711375ef78512f12f0615df9c73324477429b44ce19a9d12f8a9bad014",
+      "pngSha256": "c4509beb5681704ebe946c484bd722b42f80fbc485d2fcf4115eb5e6f2f8e239",
+      "image": "images/code/C04.png",
+      "width": 1800,
+      "height": 902
+    },
+    {
+      "id": "C05",
+      "file": "server/ai.ts",
+      "ranges": [
+        [
+          134,
+          137
+        ]
+      ],
+      "focus": [
+        134,
+        135,
+        136
+      ],
+      "title": "真实服务端请求：鉴权、消息与JSON输出",
+      "use": "P07",
+      "sourceSha256": "b4007981d46876bec8e19a3038d9ba7243d5ee095988e60bfd5adc979edc4306",
+      "pngSha256": "5c5fc2a77f83b326c97bf983e441a3ba6e050f32fbccf1919555247dd715cedb",
+      "image": "images/code/C05.png",
+      "width": 1800,
+      "height": 501
+    },
+    {
+      "id": "C06",
+      "file": "server/ai.ts",
+      "ranges": [
+        [
+          143,
+          149
+        ]
+      ],
+      "focus": [
+        144,
+        145,
+        148,
+        149
+      ],
+      "title": "JSON可解析之后，仍要校验结构与业务语义",
+      "use": "附录A3；P07讲解依据",
+      "sourceSha256": "b4007981d46876bec8e19a3038d9ba7243d5ee095988e60bfd5adc979edc4306",
+      "pngSha256": "e2b78af85b9ec4e7b35169bc55045c543b4e8f1cf3a890043fb6419dd784ffbc",
+      "image": "images/code/C06.png",
+      "width": 1800,
+      "height": 616
+    },
+    {
+      "id": "C07",
+      "file": "server/workbench/business.ts",
+      "ranges": [
+        [
+          18,
+          25
+        ]
+      ],
+      "focus": [
+        18,
+        22,
+        24,
+        25
+      ],
+      "title": "简历改写：原文锚定、去重与新增数字拦截",
+      "use": "P08",
+      "sourceSha256": "30ef1f12f4bfed268336d7b5bb35331faabdc8d713bba0480108124320e41e42",
+      "pngSha256": "3d4e70983e18a621b62cb22e45649900ade38ffc37696da78b658f0466438a3f",
+      "image": "images/code/C07.png",
+      "width": 1800,
+      "height": 620
+    },
+    {
+      "id": "C08",
+      "file": "server/workbench/index.ts",
+      "ranges": [
+        [
+          141,
+          147
+        ],
+        [
+          150,
+          154
+        ]
+      ],
+      "focus": [
+        143,
+        144,
+        147,
+        151,
+        154
+      ],
+      "title": "先保存回答，再等待模型：失败不丢回答、不造分",
+      "use": "P09",
+      "sourceSha256": "c2e1500309391a7ad35745604ffd659fc44211e64d5bdeaf357b2d2dd6f07f36",
+      "pngSha256": "1f91730f66a434e8c9edff185235c55a48f5ff076a28466e3d2c5d7960cf15cb",
+      "image": "images/code/C08.png",
+      "width": 1800,
+      "height": 916
+    },
+    {
+      "id": "C09",
+      "file": "server/workbench/business.ts",
+      "ranges": [
+        [
+          40,
+          48
+        ]
+      ],
+      "focus": [
+        40,
+        44,
+        48
+      ],
+      "title": "面试评价：数值范围、引用证据与有效维度均值",
+      "use": "附录A4",
+      "sourceSha256": "30ef1f12f4bfed268336d7b5bb35331faabdc8d713bba0480108124320e41e42",
+      "pngSha256": "72f309516f6f04eb8ad3f945b841ae44d20b2f816d64ab8ef036b1765dfe2984",
+      "image": "images/code/C09.png",
+      "width": 1800,
+      "height": 659
+    },
+    {
+      "id": "C10",
+      "file": "server/workbench/provider.ts",
+      "ranges": [
+        [
+          73,
+          87
+        ],
+        [
+          90,
+          91
+        ]
+      ],
+      "focus": [
+        74,
+        75,
+        79,
+        86,
+        87,
+        90
+      ],
+      "title": "SSE分块解析与完整结束校验",
+      "use": "附录A5；P09机制说明",
+      "sourceSha256": "88f31c972bab82359c81805a4ddd534364b5894c50889173fa0bdaa5a29ba520",
+      "pngSha256": "5395150ac4c6e49835493ea5e2aad2bd9229f527f60f180fb36fc63b7daa8f5d",
+      "image": "images/code/C10.png",
+      "width": 1800,
+      "height": 971
+    },
+    {
+      "id": "C11",
+      "file": "src/components/presentation/WorkbenchHeader.vue",
+      "ranges": [
+        [
+          11,
+          19
+        ]
+      ],
+      "focus": [
+        13,
+        14,
+        15,
+        18
+      ],
+      "title": "组件化页头：装饰图层与可操作入口分区",
+      "use": "附录A6；P10机制说明",
+      "sourceSha256": "8da5d5fe2e3b4a5143f98d7ffc0bba42c011bcd6e74c28f90d4b316344c82dc0",
+      "pngSha256": "0da526120429437458294e2e138b7c48a66ab450f040e174513d1b4e3e080df8",
+      "image": "images/code/C11.png",
+      "width": 1800,
+      "height": 624
+    },
+    {
+      "id": "C12",
+      "file": "server/workbench/provider.ts",
+      "ranges": [
+        [
+          21,
+          30
+        ]
+      ],
+      "focus": [
+        22,
+        23,
+        29
+      ],
+      "title": "调用前预留额度与并发限制",
+      "use": "附录A7；P07边界说明",
+      "sourceSha256": "88f31c972bab82359c81805a4ddd534364b5894c50889173fa0bdaa5a29ba520",
+      "pngSha256": "91f60edd9926579becdc80d6a0436372d85d09e1eb22b60e2714d269fcb1cab3",
+      "image": "images/code/C12.png",
+      "width": 1800,
+      "height": 663
+    },
+    {
+      "id": "C13",
+      "file": "src/domain/ai-guard/privacy.ts",
+      "ranges": [
+        [
+          2,
+          16
+        ]
+      ],
+      "focus": [
+        5,
+        12,
+        13,
+        14,
+        15
+      ],
+      "title": "文本脱敏的实际范围，不等于完整匿名化",
+      "use": "附录A8",
+      "sourceSha256": "f49f619eead5fb3fc893152d32b4f8c74870a17134bf3c9c6b581ebe1f1a7910",
+      "pngSha256": "461a59d2a0cdbc49f9a06eb057726fb50873512314cffe6f65259e7160414ee0",
+      "image": "images/code/C13.png",
+      "width": 1800,
+      "height": 786
+    },
+    {
+      "id": "C14",
+      "file": "src/domain/lifecycle/transition.ts",
+      "ranges": [
+        [
+          75,
+          88
+        ]
+      ],
+      "focus": [
+        75,
+        78,
+        79,
+        81,
+        85,
+        86,
+        87
+      ],
+      "title": "状态迁移同时校验角色归属与合法动作",
+      "use": "附录A9；P05机制说明",
+      "sourceSha256": "36d3ec839ba02cfb7d9ae4e53fa87c1c0f1b7a54dfdfcb08c18819af412c7cef",
+      "pngSha256": "ad93615545be51adc1b766597a48c944a40d4243cdb03075945656c9304485a6",
+      "image": "images/code/C14.png",
+      "width": 1800,
+      "height": 782
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+26	  cancelCurrent?.();
+27	  worker ??= new Worker(
+28	    new URL("../workers/matching.worker.ts", import.meta.url),
+29	    { type: "module" },
+30	  );
+31	  const instance = worker,
+32	    id = crypto.randomUUID(),
+33	    start = performance.now();
+34	  return new Promise((resolve, reject) => {
+35	    const cleanup = () => {
+36	      instance.removeEventListener("message", onMessage);
+37	      instance.removeEventListener("error", onError);
+38	      signal?.removeEventListener("abort", cancel);
+39	      if (cancelCurrent === cancel) cancelCurrent = null;
+40	    };
+41	    const cancel = () => {
+42	      instance.postMessage({ id, type: "cancel" });
+43	      cleanup();

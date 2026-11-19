@@ -1,0 +1,15 @@
+<Slide style={{ padding: 0, background: '#F0F6FF', width: '1280px', height: '720px' }}>
+  <Box style={{ position: 'absolute', left: 0, top: 0, width: 488, height: 720, background: '#10366B', flexDirection: 'column', justifyContent: 'center', padding: '0 64px' }}>
+    <Text style={{ fontSize: 14, color: '#8FB0E8', letterSpacing: 3, fontWeight: 'bold' }}>WEB 应用开发展示 · 2026.11</Text>
+    <Text style={{ fontSize: 58, fontWeight: 'bold', color: '#FFFFFF', marginTop: 28, lineHeight: 1.15 }}>路鸣职引</Text>
+    <Text style={{ fontSize: 26, color: '#8FB0E8', letterSpacing: 6, marginTop: 6 }}>CareerPilot</Text>
+    <Box style={{ width: 56, height: 5, background: '#F2A13A', marginTop: 28, borderRadius: 2 }} />
+    <Text style={{ fontSize: 21, color: '#FFFFFF', marginTop: 28, lineHeight: 1.5 }}>高校就业管理与 AI 求职服务 Web 应用</Text>
+    <Text style={{ fontSize: 16, color: '#B9CDEF', marginTop: 14, lineHeight: 1.6 }}>可追踪的业务流程 × 可核查的 AI 辅助</Text>
+    <Text style={{ fontSize: 13, color: '#6E87B8', marginTop: 64 }}>让下一步，更有方向。</Text>
+  </Box>
+  <Box style={{ marginLeft: 488, height: 720, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '0 44px' }}>
+    <Image src="assets/U01.png" style={{ width: 688, height: 430, borderRadius: 12, border: '1px solid #D9E3F2' }} />
+    <Text style={{ fontSize: 13, color: '#7A8BA8', marginTop: 16 }}>公共门户首屏｜当前实现运行截图 · 隔离测试数据</Text>
+  </Box>
+</Slide>

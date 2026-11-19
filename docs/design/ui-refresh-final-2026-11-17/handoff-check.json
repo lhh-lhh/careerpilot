@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-11-17T11:12:47.092Z",
+  "kind": "design file/dimension/mapping/selected-color validation only; not app tests",
+  "artifactCount": 16,
+  "pageRows": 54,
+  "windowGroups": 43,
+  "contrastPairs": 120,
+  "contrastWarnings": 0,
+  "failures": [],
+  "passed": true,
+  "limitations": [
+    "No runtime/browser layout, interaction, accessibility or performance claim",
+    "Coverage mapping is not implementation completeness",
+    "Figma result unverified",
+    "Source hash verification is a separate report"
+  ]
+}

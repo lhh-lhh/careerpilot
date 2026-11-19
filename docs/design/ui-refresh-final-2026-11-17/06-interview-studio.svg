@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1100" viewBox="0 0 1440 1100"><title>路鸣职引最终设计候选 v1.0 · 静态设计非产品截图</title><style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif}.num{font-variant-numeric:tabular-nums}</style><defs><filter id="lift" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#16233a" flood-opacity=".10"/></filter></defs>
+<rect x="0" y="0" width="1440" height="1100" fill="#0e1421" rx="0"  />
+<defs><linearGradient id="bg-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24395c"/><stop offset="1" stop-color="#194449"/></linearGradient><pattern id="bg-2-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#718bbb" stroke-opacity=".20"/></pattern><clipPath id="bg-2-clip"><rect x="236" y="80" width="1188" height="972" rx="20"/></clipPath></defs>
+<rect x="236" y="80" width="1188" height="972" fill="url(#bg-2)" rx="20"  />
+<g clip-path="url(#bg-2-clip)" aria-hidden="true">
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="166.32000000000002" ry="136.08" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="243.54000000000002" ry="213.84000000000003" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="320.76000000000005" ry="291.6" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="397.98" ry="369.36" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="475.20000000000005" ry="447.12" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+<ellipse cx="1043.8400000000001" cy="517.4000000000001" rx="552.4200000000001" ry="524.88" fill="none" stroke="#9b87f5" stroke-width="1.5" opacity=".28"/>
+</g>
+<rect x="0" y="0" width="224" height="1100" fill="#16233a" rx="0"  />
+<rect x="12" y="20" width="44" height="44" fill="#2b3f69" rx="11.88" stroke="#657ab4" />
+<svg x="16" y="24" width="36" height="36" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="none" stroke="#91a9ff" opacity=".25"/><path d="M8 31 C13 27 13 22 18 19 S27 13 31 9" fill="none" stroke="#91a9ff" stroke-width="1.5" stroke-dasharray="2.5 3" stroke-linecap="round"/><path d="M10 15 Q13 11 16 15 M12 19 Q16 14 20 19" fill="none" stroke="#91a9ff" stroke-width="1.3" stroke-linecap="round" opacity=".75"/><circle cx="31" cy="9" r="2.6" fill="#9b87f5"/><path d="M28 6 L28 3 M33 12 L36 12" stroke="#91a9ff" stroke-width="1.2" stroke-linecap="round" opacity=".6"/></svg>
+<text x="72" y="44" fill="#91a9ff" font-size="24" font-weight="700" letter-spacing="1.2">路鸣职引</text>
+<text x="74" y="68" fill="#a7b4cc" font-size="14" font-weight="600" letter-spacing="1.5">CareerPilot</text>
+<text x="24" y="112" fill="#a7b4cc" font-size="12" font-weight="400" >学生工作空间</text>
+<text x="50" y="164" fill="#a7b4cc" font-size="14" font-weight="400" >生涯概览</text>
+<svg x="22" y="149" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg>
+<text x="50" y="213" fill="#a7b4cc" font-size="14" font-weight="400" >简历工作台</text>
+<svg x="22" y="198" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6V3Zm9 0v5h4M9 12h7M9 16h5"/></svg>
+<text x="50" y="262" fill="#a7b4cc" font-size="14" font-weight="400" >岗位匹配</text>
+<svg x="22" y="247" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3V7Zm5 0V4h8v3M3 12c6 3 12 3 18 0M10 12h4v4h-4v-4Z"/></svg>
+<rect x="12" y="284" width="200" height="42" fill="#2f55c8" rx="10"  />
+<text x="50" y="311" fill="#fff" font-size="14" font-weight="600" >模拟面试</text>
+<svg x="22" y="296" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11a8 8 0 0 1-8 8H7l-5 3 2-6a8 8 0 1 1 17-5ZM8 11h.01M12 11h.01M16 11h.01"/></svg>
+<text x="50" y="360" fill="#a7b4cc" font-size="14" font-weight="400" >我的投递</text>
+<svg x="22" y="345" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16M8 5h12M8 12h9M8 19h12M3 5h.01M3 12h.01M3 19h.01"/></svg>
+<text x="50" y="409" fill="#a7b4cc" font-size="14" font-weight="400" >协议与去向</text>
+<svg x="22" y="394" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18H6V3Zm3 5h6M9 12h6M9 16h3M15 16l1 1 2-3"/></svg>
+<text x="50" y="458" fill="#a7b4cc" font-size="14" font-weight="400" >我的求职记录</text>
+<svg x="22" y="443" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21S4 14 4 8a8 8 0 1 1 16 0c0 6-8 13-8 13ZM15 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+<text x="50" y="507" fill="#a7b4cc" font-size="14" font-weight="400" >站内服务</text>
+<svg x="22" y="492" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.5 8.5a2.5 2.5 0 1 1 4 2L12 12v2M12 17h.01"/></svg>
+<text x="50" y="556" fill="#a7b4cc" font-size="14" font-weight="400" >我的账号</text>
+<svg x="22" y="541" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a7b4cc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+<rect x="240" y="0" width="1200" height="64" fill="#161f31" rx="0"  />
+<text x="256" y="39" fill="#a7b4cc" font-size="14" font-weight="400" >学生工作空间  /  模拟面试</text>
+<text x="980" y="39" fill="#b7a4ff" font-size="13" font-weight="400" >授权：已允许  ·  服务：不可用</text>
+<svg x="1252" y="23" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#91a9ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>
+<text x="1290" y="39" fill="#a7b4cc" font-size="13" font-weight="400" >示例账号</text>
+<text x="268" y="127" fill="#eef3fc" font-size="28" font-weight="600" >模拟面试</text>
+<text x="268" y="157" fill="#a7b4cc" font-size="14" font-weight="400" >保留全部原有操作、状态、权限、数据及调用条件</text>
+<rect x="18" y="940" width="188" height="92" fill="#161f31" rx="14" stroke="#2a3650" />
+<text x="32" y="974" fill="#eef3fc" font-size="14" font-weight="600" >原有宠物与动作保留</text>
+<text x="32" y="999" fill="#a7b4cc" font-size="12" font-weight="400" >不强改位置 / 漫游设置</text>
+<rect x="268" y="192" width="736" height="570" fill="#161f31" rx="14" stroke="#2a3650" />
+<text x="292" y="227" fill="#eef3fc" font-size="19" font-weight="600" >当前问题</text>
+<text x="292" y="252" fill="#a7b4cc" font-size="13" font-weight="400" >AI 问题与回答内容仅为合成排版样例</text>
+<text x="292" y="310" fill="#eef3fc" font-size="25" font-weight="600" >请说明一次解决复杂问题的经历。</text>
+<rect x="292" y="354" width="688" height="258" fill="#0e1421" rx="14" stroke="#8799b8" />
+<text x="316" y="392" fill="#a7b4cc" font-size="16" font-weight="400" >回答与转写在这里核对；保留 IME 输入。</text>
+<text x="316" y="440" fill="#a7b4cc" font-size="14" font-weight="400" >仅真实录音电平驱动波形，不用背景装饰冒充。</text>
+<rect x="292" y="650" width="184" height="44" fill="#2f55c8" rx="10"  />
+<text x="384" y="677" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">确认并提交回答</text>
+<rect x="492" y="650" width="116" height="44" fill="#161f31" rx="10" stroke="#8799b8" />
+<text x="550" y="677" fill="#eef3fc" font-size="14" font-weight="600" text-anchor="middle">暂停</text>
+<rect x="624" y="650" width="180" height="44" fill="#161f31" rx="10" stroke="#8799b8" />
+<text x="714" y="677" fill="#eef3fc" font-size="14" font-weight="600" text-anchor="middle">结束并查看反馈</text>
+<rect x="1028" y="192" width="356" height="570" fill="#161f31" rx="14" stroke="#2a3650" />
+<text x="1052" y="227" fill="#eef3fc" font-size="19" font-weight="600" >会话与语音设置</text>
+<text x="1052" y="252" fill="#a7b4cc" font-size="13" font-weight="400" >文字 / 语音语义保持独立</text>
+<text x="1052" y="306" fill="#a7b4cc" font-size="14" font-weight="400" >授权、连接、任务状态分离</text>
+<text x="1052" y="376" fill="#a7b4cc" font-size="14" font-weight="400" >自动播放 / 收音原条件不变</text>
+<text x="1052" y="446" fill="#a7b4cc" font-size="14" font-weight="400" >自然轮换与转写核对保留</text>
+<text x="1052" y="516" fill="#a7b4cc" font-size="14" font-weight="400" >来源与历史记录完整保留</text>
+<rect x="268" y="786" width="1116" height="204" fill="#161f31" rx="14" stroke="#2a3650" />
+<text x="292" y="821" fill="#eef3fc" font-size="19" font-weight="600" >历史与报告入口</text>
+<text x="292" y="846" fill="#a7b4cc" font-size="13" font-weight="400" >滚动不自动提交，不重建任务，不产生额外生成</text>
+<rect x="292" y="898" width="160" height="44" fill="#161f31" rx="10" stroke="#8799b8" />
+<text x="372" y="925" fill="#eef3fc" font-size="14" font-weight="600" text-anchor="middle">查看历史</text>
+<rect x="468" y="898" width="160" height="44" fill="#161f31" rx="10" stroke="#8799b8" />
+<text x="548" y="925" fill="#eef3fc" font-size="14" font-weight="600" text-anchor="middle">报告与反馈</text>
+<text x="32" y="1088" fill="#a7b4cc" font-size="12" font-weight="400" >最终设计候选 v1.0 · 静态设计 / 合成排版内容 / 非运行截图 / 业务与 AI 不变</text>
+</svg>

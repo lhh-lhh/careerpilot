@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "target": "D:\\web程序设计作业（合）\\期末大作业\\careerpilot\\projects\\careerpilot-ppt-brief-20261118\\02-报告演讲稿.html",
+  "source": "D:\\web程序设计作业（合）\\期末大作业\\careerpilot\\projects\\careerpilot-ppt-brief-20261118\\02-报告演讲稿.md",
+  "sourceSha256": "48e27db738815e02dc492ceeadbe3a9ce24654f6fd856a7e065f31a21a310c6d",
+  "generatedDate": "2026-11-19",
+  "sections": 12,
+  "narrationUnchanged": true,
+  "operationNotes": 12,
+  "controlsChecked": [
+    "提示显隐",
+    "字号调整",
+    "目录跳转",
+    "打印样式"
+  ],
+  "viewportWidths": [
+    1440,
+    390
+  ],
+  "externalRequests": [],
+  "errors": []
+}

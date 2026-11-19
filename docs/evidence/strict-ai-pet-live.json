@@ -1,0 +1,605 @@
+{
+  "syntheticOnly": true,
+  "automaticRetries": 0,
+  "totalExternalCalls": 38,
+  "runs": [
+    {
+      "folder": "cp-strict-live-P1MCtB",
+      "at": "2026-11-15T13:40:49.484Z",
+      "externalCalls": 13,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": false,
+          "ms": 2205,
+          "detail": "HTTP_502"
+        },
+        {
+          "stage": "A3-job-explanation",
+          "ok": true,
+          "status": 200,
+          "traceId": "3220aae8-dab2-453b-a962-d2274ede81cb",
+          "ms": 2229
+        },
+        {
+          "stage": "A7-counselor-query",
+          "ok": false,
+          "ms": 706,
+          "detail": "HTTP_502"
+        },
+        {
+          "stage": "resume-optimization",
+          "ok": true,
+          "status": 200,
+          "traceId": "fc873f9c-bbf4-4743-8090-5b2dca5e471d",
+          "ms": 2034
+        },
+        {
+          "stage": "Search-and-model-matches",
+          "ok": true,
+          "status": 200,
+          "traceId": "14535371-cd48-4034-a2fe-b64ac523c614",
+          "ms": 7378
+        },
+        {
+          "stage": "OCR-synthetic-image",
+          "ok": true,
+          "status": 200,
+          "traceId": "bdfe98f8-c92c-4a2b-bbc4-be81bdb41f59",
+          "ms": 4835
+        },
+        {
+          "stage": "dynamic-interview-question",
+          "ok": true,
+          "status": 201,
+          "traceId": "367af03d-74b0-43c7-9768-17f3929143e0",
+          "ms": 916
+        },
+        {
+          "stage": "interview-next-and-evaluation",
+          "ok": true,
+          "status": 200,
+          "traceId": "8558d2f6-4117-49e2-bd95-e5c5ecda94b8",
+          "ms": 3807
+        },
+        {
+          "stage": "chat-stream-and-provenance",
+          "ok": true,
+          "status": 200,
+          "traceId": "cd50ca37-9db9-4e5c-9555-db9a3e2a60dd",
+          "ms": 604
+        },
+        {
+          "stage": "TTS-PCM",
+          "ok": true,
+          "status": 200,
+          "traceId": "75d674df-63c8-493b-938d-6b40038dc036",
+          "ms": 1971
+        },
+        {
+          "stage": "ASR-synthetic-speech",
+          "ok": true,
+          "status": 200,
+          "traceId": "634f2af3-04c3-45d4-b56b-e83a6e629923",
+          "ms": 699
+        }
+      ],
+      "receipts": [
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "fc873f9c-bbf4-4743-8090-5b2dca5e471d",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:27.257Z",
+          "upstreamRequestId": "60196e5e-d66e-4d69-96da-0360f2052f6e",
+          "usage": {
+            "prompt": 201,
+            "completion": 257
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "14535371-cd48-4034-a2fe-b64ac523c614",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:29.629Z",
+          "upstreamRequestId": "74281f19-1275-43b4-b3d9-6011715f4e51",
+          "usage": {
+            "prompt": 4765,
+            "completion": 1520
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "bdfe98f8-c92c-4a2b-bbc4-be81bdb41f59",
+          "provider": "deepseek",
+          "model": "ocr",
+          "createdAt": "2026-11-15T13:40:39.297Z",
+          "upstreamRequestId": "ocr-ecd45c7c-dcc6-427c-b0a0-5d5d57f6802d",
+          "usage": {
+            "prompt": 110,
+            "completion": 8
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "367af03d-74b0-43c7-9768-17f3929143e0",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:41.505Z",
+          "upstreamRequestId": "950c33fd-a801-462e-a9f7-727c88ce77ad",
+          "usage": {
+            "prompt": 125,
+            "completion": 28
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "973fbfd9-55eb-462f-a892-71721e51f947",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:42.411Z",
+          "upstreamRequestId": "34a330ea-c462-4858-9580-e98d49618094",
+          "usage": {
+            "prompt": 329,
+            "completion": 28
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "8558d2f6-4117-49e2-bd95-e5c5ecda94b8",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:43.503Z",
+          "upstreamRequestId": "f73b3db9-437e-4f7a-a7d2-4822018d7da8",
+          "usage": {
+            "prompt": 228,
+            "completion": 391
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "cd50ca37-9db9-4e5c-9555-db9a3e2a60dd",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T13:40:46.256Z",
+          "upstreamRequestId": "cc810031-1b67-419f-9450-002f66de91d2",
+          "usage": {
+            "prompt": 89,
+            "completion": 25
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "75d674df-63c8-493b-938d-6b40038dc036",
+          "provider": "deepseek",
+          "model": "tts",
+          "createdAt": "2026-11-15T13:40:46.847Z"
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "634f2af3-04c3-45d4-b56b-e83a6e629923",
+          "provider": "deepseek",
+          "model": "asr",
+          "createdAt": "2026-11-15T13:40:48.781Z",
+          "upstreamRequestId": "a08baa7a-c6f8-43e0-9356-c477f184e699"
+        }
+      ],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-InT0WB",
+      "at": "2026-11-15T14:12:02.091Z",
+      "externalCalls": 2,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": false,
+          "ms": 2121,
+          "detail": "HTTP_502"
+        },
+        {
+          "stage": "A7-counselor-query",
+          "ok": false,
+          "ms": 1233,
+          "detail": "HTTP_502"
+        }
+      ],
+      "receipts": [],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-jAZ6s6",
+      "at": "2026-11-15T14:12:44.106Z",
+      "externalCalls": 1,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": true,
+          "status": 200,
+          "traceId": "9ff1db78-bfaf-4072-a016-20bd51f8dd38",
+          "ms": 1509
+        }
+      ],
+      "receipts": [],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-2N4D1f",
+      "at": "2026-11-15T14:14:33.803Z",
+      "externalCalls": 1,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": false,
+          "ms": 2346,
+          "detail": "HTTP_502"
+        }
+      ],
+      "receipts": [],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-CMKdwS",
+      "at": "2026-11-15T14:15:55.543Z",
+      "externalCalls": 2,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": true,
+          "status": 200,
+          "traceId": "955605f0-ba4d-4351-990b-e93704c715e4",
+          "ms": 2377
+        },
+        {
+          "stage": "A7-counselor-query",
+          "ok": true,
+          "status": 200,
+          "traceId": "5e31b13f-5924-4b9b-beb1-e2e455463fcb",
+          "ms": 1159
+        }
+      ],
+      "receipts": [],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-xdxr4b",
+      "at": "2026-11-15T14:28:27.458Z",
+      "externalCalls": 13,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": true,
+          "status": 200,
+          "traceId": "72fa0c7c-dbb4-4295-b835-f69dc8fe65a1",
+          "ms": 1330
+        },
+        {
+          "stage": "A3-job-explanation",
+          "ok": true,
+          "status": 200,
+          "traceId": "f61659bb-1997-4b1f-b3ae-8c8e09667234",
+          "ms": 1458
+        },
+        {
+          "stage": "A7-counselor-query",
+          "ok": true,
+          "status": 200,
+          "traceId": "3d13189c-9403-42a8-bf43-6c27e22074ed",
+          "ms": 1284
+        },
+        {
+          "stage": "resume-optimization",
+          "ok": true,
+          "status": 200,
+          "traceId": "aeb61600-a510-4bfa-8a81-dd33b6fb2c94",
+          "ms": 1989
+        },
+        {
+          "stage": "Search-and-model-matches",
+          "ok": true,
+          "status": 200,
+          "traceId": "bb9350ab-a2ff-4b02-b4c9-9e4b9bcad9c4",
+          "ms": 6669
+        },
+        {
+          "stage": "OCR-synthetic-image",
+          "ok": true,
+          "status": 200,
+          "traceId": "c20aa2c7-bfdd-4abe-8e2e-b20788bccdef",
+          "ms": 2255
+        },
+        {
+          "stage": "dynamic-interview-question",
+          "ok": true,
+          "status": 201,
+          "traceId": "632d5508-a6d2-4898-a90a-401875c1b9d1",
+          "ms": 947
+        },
+        {
+          "stage": "interview-next-and-evaluation",
+          "ok": true,
+          "status": 200,
+          "traceId": "d479b368-e97c-425e-84cd-609dde2c4476",
+          "ms": 4378
+        },
+        {
+          "stage": "chat-stream-and-provenance",
+          "ok": true,
+          "status": 200,
+          "traceId": "50c90361-10d8-4f14-ba26-63da506da915",
+          "ms": 1064
+        },
+        {
+          "stage": "TTS-PCM",
+          "ok": true,
+          "status": 200,
+          "traceId": "f5d454f2-dcaa-4f6c-819d-f37fe5575fe0",
+          "ms": 1323
+        },
+        {
+          "stage": "ASR-synthetic-speech",
+          "ok": true,
+          "status": 200,
+          "traceId": "d88ea4fc-4075-4491-aa8b-4f40ec16e954",
+          "ms": 739
+        }
+      ],
+      "receipts": [
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "aeb61600-a510-4bfa-8a81-dd33b6fb2c94",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:08.100Z",
+          "upstreamRequestId": "84d64bd2-ed67-4acb-9fb8-242ed42609c2",
+          "usage": {
+            "prompt": 201,
+            "completion": 259
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "768bb6ad-dfd1-4e03-997d-4fd5496ec3fc",
+          "provider": "deepseek",
+          "model": "search",
+          "createdAt": "2026-11-15T14:28:10.101Z"
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "bb9350ab-a2ff-4b02-b4c9-9e4b9bcad9c4",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:10.423Z",
+          "upstreamRequestId": "5463ddc2-5f03-44a1-9751-dbb7cf373a6b",
+          "usage": {
+            "prompt": 4765,
+            "completion": 1701
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "c20aa2c7-bfdd-4abe-8e2e-b20788bccdef",
+          "provider": "deepseek",
+          "model": "ocr",
+          "createdAt": "2026-11-15T14:28:16.808Z",
+          "upstreamRequestId": "ocr-104dc461-f6cd-4116-959d-d002047c03fa",
+          "usage": {
+            "prompt": 110,
+            "completion": 8
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "632d5508-a6d2-4898-a90a-401875c1b9d1",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:19.042Z",
+          "upstreamRequestId": "d428c7d3-59fb-4796-a936-00c925777106",
+          "usage": {
+            "prompt": 125,
+            "completion": 30
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "ba518946-e145-414d-8973-e94f649a7222",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:19.983Z",
+          "upstreamRequestId": "057b752c-9a04-49c2-b174-3bb396039e4c",
+          "usage": {
+            "prompt": 332,
+            "completion": 26
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "d479b368-e97c-425e-84cd-609dde2c4476",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:20.964Z",
+          "upstreamRequestId": "957866cd-93f1-48b0-a10a-684275bdf413",
+          "usage": {
+            "prompt": 230,
+            "completion": 434
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "50c90361-10d8-4f14-ba26-63da506da915",
+          "provider": "deepseek",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T14:28:24.365Z",
+          "upstreamRequestId": "f447f8a1-8f33-45e2-bf1f-d7a2124e654c",
+          "usage": {
+            "prompt": 89,
+            "completion": 26
+          }
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "f5d454f2-dcaa-4f6c-819d-f37fe5575fe0",
+          "provider": "deepseek",
+          "model": "tts",
+          "createdAt": "2026-11-15T14:28:25.415Z"
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "d88ea4fc-4075-4491-aa8b-4f40ec16e954",
+          "provider": "deepseek",
+          "model": "asr",
+          "createdAt": "2026-11-15T14:28:26.724Z",
+          "upstreamRequestId": "855ac6ab-ce04-47b0-ac33-0420cf7ed2a1"
+        }
+      ],
+      "legacyReceipts": []
+    },
+    {
+      "folder": "cp-strict-live-R0T4hh",
+      "at": "2026-11-15T15:06:24.740Z",
+      "externalCalls": 5,
+      "results": [
+        {
+          "stage": "A1-resume-expression",
+          "ok": true,
+          "status": 200,
+          "traceId": "7653f044-c15d-436d-ac0a-51a203bd7247",
+          "ms": 937
+        },
+        {
+          "stage": "A3-job-explanation",
+          "ok": false,
+          "ms": 1286,
+          "detail": "HTTP_502"
+        },
+        {
+          "stage": "A7-counselor-query",
+          "ok": true,
+          "status": 200,
+          "traceId": "16d04f3c-c91f-4571-9030-9e117b7503ff",
+          "ms": 1044
+        },
+        {
+          "stage": "TTS-PCM",
+          "ok": true,
+          "status": 200,
+          "traceId": "833ae5dc-21d8-4350-a05d-162513f7a174",
+          "ms": 1445
+        },
+        {
+          "stage": "ASR-synthetic-speech",
+          "ok": true,
+          "status": 200,
+          "traceId": "e7ead138-29a7-4399-82ae-d057a1ce6433",
+          "ms": 869
+        }
+      ],
+      "receipts": [
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "833ae5dc-21d8-4350-a05d-162513f7a174",
+          "provider": "deepseek",
+          "model": "tts",
+          "createdAt": "2026-11-15T15:06:22.429Z"
+        },
+        {
+          "status": "success",
+          "errorCode": null,
+          "traceId": "e7ead138-29a7-4399-82ae-d057a1ce6433",
+          "provider": "deepseek",
+          "model": "asr",
+          "createdAt": "2026-11-15T15:06:23.879Z",
+          "upstreamRequestId": "88704c1a-d17a-4f56-b608-0290b56e426a"
+        }
+      ],
+      "legacyReceipts": [
+        {
+          "module": "A1",
+          "status": "success",
+          "errorCode": null,
+          "traceId": "7653f044-c15d-436d-ac0a-51a203bd7247",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T15:06:19.185Z",
+          "upstreamRequestId": "b1a35169-ea40-442d-b580-8d779f18bc17",
+          "usage": {
+            "prompt": 2620,
+            "completion": 55
+          }
+        },
+        {
+          "module": "A3",
+          "status": "failed",
+          "errorCode": "SEMANTIC_INVALID",
+          "traceId": "a2639652-133d-4a00-a3e2-e1123302d00e",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T15:06:20.113Z",
+          "usage": null
+        },
+        {
+          "module": "A7",
+          "status": "success",
+          "errorCode": null,
+          "traceId": "16d04f3c-c91f-4571-9030-9e117b7503ff",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T15:06:21.425Z",
+          "upstreamRequestId": "cda03a3e-0139-4e10-b81c-841eda5fa788",
+          "usage": {
+            "prompt": 2488,
+            "completion": 52
+          }
+        }
+      ]
+    },
+    {
+      "folder": "cp-strict-live-IQ6TFe",
+      "at": "2026-11-15T15:08:01.051Z",
+      "externalCalls": 1,
+      "results": [
+        {
+          "stage": "A3-job-explanation",
+          "ok": true,
+          "status": 200,
+          "traceId": "66e47826-e60a-46f4-bec5-1ebb97083edc",
+          "ms": 1702
+        }
+      ],
+      "receipts": [],
+      "legacyReceipts": [
+        {
+          "module": "A3",
+          "status": "success",
+          "errorCode": null,
+          "traceId": "66e47826-e60a-46f4-bec5-1ebb97083edc",
+          "model": "deepseek-flash",
+          "createdAt": "2026-11-15T15:07:59.375Z",
+          "upstreamRequestId": "4d4e3839-634e-4348-b400-b65775109428",
+          "usage": {
+            "prompt": 2689,
+            "completion": 103
+          }
+        }
+      ]
+    }
+  ]
+}

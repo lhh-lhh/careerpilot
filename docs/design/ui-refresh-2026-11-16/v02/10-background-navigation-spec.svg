@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1050" viewBox="0 0 1440 1050">
+<title>路鸣职引 UI 设计首稿 · 静态设计，非运行截图</title>
+<defs><filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#16233a" flood-opacity=".1"/></filter></defs>
+<style>text{font-family:'Microsoft YaHei','Noto Sans SC',sans-serif} .num{font-family:'Consolas','Microsoft YaHei',monospace;font-variant-numeric:tabular-nums}</style>
+<rect x="0" y="0" width="1440" height="1050" rx="0" fill="#f6f8fc" />
+<text x="48" y="62" font-size="30" font-weight="600" fill="#16233a" >内容之下，有方向的背景。</text>
+<text x="48" y="97" font-size="14" font-weight="400" fill="#5a6782" >v0.2 / 全站背景层与入口状态细化 · 非运行截图</text>
+<rect x="48" y="133" width="652" height="350" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="72" y="168" font-size="18" font-weight="600" fill="#16233a" >L0–L3：背景与内容分层</text>
+<text x="72" y="192" font-size="13" font-weight="400" fill="#5a6782" >装饰不改变业务结构，不接收事件，不进入朗读顺序</text>
+<rect x="72" y="206" width="46" height="28" rx="7" fill="#edf2ff" />
+<text x="84" y="225" font-size="12" font-weight="400" fill="#2f55c8" >L3</text>
+<text x="136" y="224" font-size="15" font-weight="600" fill="#16233a" >浮层 / Toast / 宠物</text>
+<text x="136" y="246" font-size="13" font-weight="400" fill="#5a6782" >沿用已有层级，避免新增遮挡</text>
+<rect x="72" y="266" width="46" height="28" rx="7" fill="#edf2ff" />
+<text x="84" y="285" font-size="12" font-weight="400" fill="#2f55c8" >L2</text>
+<text x="136" y="284" font-size="15" font-weight="600" fill="#16233a" >内容 / 表单 / 图表</text>
+<text x="136" y="306" font-size="13" font-weight="400" fill="#5a6782" >实底表面，文字与数据清晰</text>
+<rect x="72" y="326" width="46" height="28" rx="7" fill="#edf2ff" />
+<text x="84" y="345" font-size="12" font-weight="400" fill="#2f55c8" >L1</text>
+<text x="136" y="344" font-size="15" font-weight="600" fill="#16233a" >渐变 / 路径 / 航点</text>
+<text x="136" y="366" font-size="13" font-weight="400" fill="#5a6782" >pointer-events:none · aria-hidden</text>
+<rect x="72" y="386" width="46" height="28" rx="7" fill="#edf2ff" />
+<text x="84" y="405" font-size="12" font-weight="400" fill="#2f55c8" >L0</text>
+<text x="136" y="404" font-size="15" font-weight="600" fill="#16233a" >主题基底</text>
+<text x="136" y="426" font-size="13" font-weight="400" fill="#5a6782" >深浅主题分别配置，支持打印回退</text>
+<rect x="724" y="133" width="668" height="350" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="748" y="168" font-size="18" font-weight="600" fill="#16233a" >同一主题，按页面任务调整强度</text>
+<text x="748" y="192" font-size="13" font-weight="400" fill="#5a6782" >不把所有页面都铺成相同的大背景图</text>
+<text x="748" y="226" font-size="15" font-weight="600" fill="#16233a" >公共门户 / 登录</text>
+<text x="748" y="251" font-size="13" font-weight="400" fill="#5a6782" >轻渐变 + 边缘路径；原校园图单独保留</text>
+<text x="748" y="290" font-size="15" font-weight="600" fill="#16233a" >学生/企业/辅导员/管理员概览</text>
+<text x="748" y="315" font-size="13" font-weight="400" fill="#5a6782" >标题周围轻染色；卡片、表格保持实底</text>
+<text x="748" y="354" font-size="15" font-weight="600" fill="#16233a" >简历 / 审核 / 录音 / 文书</text>
+<text x="748" y="379" font-size="13" font-weight="400" fill="#5a6782" >最低装饰强度；不穿过输入和证据区</text>
+<text x="748" y="418" font-size="15" font-weight="600" fill="#16233a" >图表 / 数据 / 打印</text>
+<text x="748" y="443" font-size="13" font-weight="400" fill="#5a6782" >绘图区纯色；打印移除装饰背景</text>
+<rect x="48" y="507" width="652" height="272" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="72" y="542" font-size="18" font-weight="600" fill="#16233a" >导航入口：同一语义，多种状态</text>
+<text x="72" y="566" font-size="13" font-weight="400" fill="#5a6782" >悬停、焦点和按下仅改变呈现，不改href、权限或事件</text>
+<rect x="72" y="598" width="170" height="44" rx="10" fill="#ffffff" stroke="#e3e9f2" />
+<text x="88" y="626" font-size="14" font-weight="600" fill="#16233a" >岗位机会</text>
+<svg x="208" y="612" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3V7Zm5 0V4h8v3M3 12c6 3 12 3 18 0M10 12h4v4h-4v-4Z"/></svg>
+<rect x="260" y="598" width="170" height="44" rx="10" fill="#edf2ff" stroke="#edf2ff" />
+<text x="276" y="626" font-size="14" font-weight="600" fill="#2f55c8" >岗位机会</text>
+<svg x="396" y="612" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3V7Zm5 0V4h8v3M3 12c6 3 12 3 18 0M10 12h4v4h-4v-4Z"/></svg>
+<rect x="448" y="598" width="170" height="44" rx="10" fill="#edf2ff" stroke="#edf2ff" />
+<text x="464" y="626" font-size="14" font-weight="600" fill="#2f55c8" >岗位机会</text>
+<svg x="584" y="612" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2f55c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v13H3V7Zm5 0V4h8v3M3 12c6 3 12 3 18 0M10 12h4v4h-4v-4Z"/></svg>
+<rect x="444" y="594" width="178" height="52" rx="13" fill="none" stroke="#2f55c8" stroke-width="2"/>
+<text x="72" y="679" font-size="13" font-weight="400" fill="#5a6782" >默认 · 可发现</text>
+<text x="260" y="679" font-size="13" font-weight="400" fill="#5a6782" >悬停 / 当前项</text>
+<text x="448" y="679" font-size="13" font-weight="400" fill="#5a6782" >键盘焦点</text>
+<text x="72" y="743" font-size="13" font-weight="400" fill="#5a6782" >44px触点 · 文字不只靠颜色 · 外链来源/跳转说明保留</text>
+<rect x="724" y="507" width="668" height="272" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="748" y="542" font-size="18" font-weight="600" fill="#16233a" >动效与安全约束</text>
+<text x="748" y="566" font-size="13" font-weight="400" fill="#5a6782" >动态的用途是表达层级与反馈，不是制造忙碌感</text>
+<text x="748" y="607" font-size="14" font-weight="400" fill="#5a6782" >hover 120ms；面板/状态 200ms；位移 ≤ 4–8px。</text>
+<text x="748" y="637" font-size="14" font-weight="400" fill="#5a6782" >prefers-reduced-motion 下关闭位移与持续装饰。</text>
+<text x="748" y="667" font-size="14" font-weight="400" fill="#5a6782" >不启用滚动劫持、自动滚动业务表、假AI进度。</text>
+<text x="748" y="697" font-size="14" font-weight="400" fill="#5a6782" >不改 RouterView key，不重复挂载，不增加请求。</text>
+<text x="748" y="727" font-size="14" font-weight="400" fill="#5a6782" >不替代现有自选工作区图片及其保存/回退语义。</text>
+<rect x="48" y="803" width="1344" height="166" rx="14" fill="#ffffff" stroke="#e3e9f2" />
+<text x="72" y="838" font-size="18" font-weight="600" fill="#16233a" >实施前核验</text>
+<text x="72" y="862" font-size="13" font-weight="400" fill="#5a6782" >这是设计规范，不是已通过的性能或业务回归结果</text>
+<text x="72" y="903" font-size="14" font-weight="400" fill="#5a6782" >主题 × 页面族 × 390/1440 × 键盘/缩放 × 减少动态 × 打印；同时检查原入口、AI调用次数与生命周期。</text>
+<text x="48" y="1010" font-size="13" font-weight="400" fill="#5a6782" >Figma Make 独立样稿与本地细化稿分别记录；云端静态预览不能验证本机在线权限、数据或AI。</text>
+</svg>

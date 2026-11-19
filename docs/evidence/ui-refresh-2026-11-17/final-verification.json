@@ -1,0 +1,307 @@
+{
+  "recordedAt": "2026-11-18T06:03:50.546Z",
+  "revision": "reference-fidelity-local-online-validated-not-physical-release",
+  "baselineCommit": "f67b5404c4417ed1e82fcd444e6dc04b863352e9",
+  "branch": "ui-refresh-20261117",
+  "implementationCommit": "Commit containing this record; use git log -- docs/evidence/ui-refresh-2026-11-17/final-verification.json",
+  "online": {
+    "url": "http://127.0.0.1:4174/",
+    "runtimeFlag": true,
+    "scope": "Existing local online application serving current dist; NOT public Internet deployment",
+    "liveReadOnlyValidation": "media-online-final.json",
+    "authenticatedValidation": "Isolated temporary SQLite and synthetic identities; current dist; no production login/AI requests"
+  },
+  "checks": {
+    "typecheck": {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    "lint": {
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    "unit": {
+      "command": "npm run test:unit -- --maxWorkers=2",
+      "exitCode": 0,
+      "files": 71,
+      "passed": 535,
+      "durationSeconds": 49.39
+    },
+    "contracts": {
+      "command": "npm run verify:contracts",
+      "exitCode": 0,
+      "files": 13,
+      "passed": 55
+    },
+    "seed": {
+      "command": "npm run verify:seed",
+      "exitCode": 0,
+      "files": 2,
+      "passed": 17
+    },
+    "build": {
+      "command": "npm run build",
+      "exitCode": 0,
+      "modules": 910,
+      "durationSeconds": 1.06,
+      "missingAssetWarnings": 0
+    },
+    "e2e": {
+      "command": "npm run test:e2e -- --workers=2",
+      "exitCode": 0,
+      "path": "D:/Temp/careerpilot-reference-final/reports/e2e-272-final.json",
+      "stats": {
+        "startTime": "2026-11-18T05:45:43.549Z",
+        "duration": 400035.92,
+        "expected": 272,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "6f810ddd3edfc8f7ab67d7d22b2d6090a48aba4ae2cf037a6e24f82056b25938",
+      "attachments": [],
+      "retriesConfigured": 0,
+      "projects": [
+        "chromium",
+        "msedge"
+      ],
+      "meaning": "272 test executions, not 272 unique pages or exhaustive business states"
+    },
+    "performance": {
+      "command": "npm run test:perf",
+      "exitCode": 0,
+      "path": "D:/Temp/careerpilot-reference-final/reports/performance-6-final.json",
+      "stats": {
+        "startTime": "2026-11-18T05:53:55.712Z",
+        "duration": 26792.719999999998,
+        "expected": 6,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "da43dc811239f02f22bc0fe30684bf9948606693963b54d9ba998bd86cfcb3f8",
+      "attachments": [
+        {
+          "project": "chromium",
+          "name": "matching-performance.json",
+          "result": {
+            "p95Ms": 1.9,
+            "browser": "chromium",
+            "samples": 30,
+            "warmup": 5,
+            "boundary": "main-thread dispatch through structured clone and worker response",
+            "details": " 30次 / p95 1.90 ms · 初次本体预处理 0.40 ms · 真实简历未修改"
+          }
+        },
+        {
+          "project": "msedge",
+          "name": "matching-performance.json",
+          "result": {
+            "p95Ms": 2.5,
+            "browser": "msedge",
+            "samples": 30,
+            "warmup": 5,
+            "boundary": "main-thread dispatch through structured clone and worker response",
+            "details": " 30次 / p95 2.50 ms · 初次本体预处理 0.50 ms · 真实简历未修改"
+          }
+        },
+        {
+          "project": "chromium",
+          "name": "filter-route-performance.json",
+          "result": {
+            "samples": 30,
+            "boundary": {
+              "filter": "Playwright fill through Vue computed filtering and first rendered result",
+              "route": "hash navigation request through target page heading visible"
+            },
+            "filterP95Ms": 48.23479999999972,
+            "routeP95Ms": 21.90769999999975,
+            "environment": {
+              "platform": "win32 10.0.26200 x64",
+              "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+              "logicalCpus": 16,
+              "memoryGiB": 15.7
+            },
+            "browser": "chromium"
+          }
+        },
+        {
+          "project": "msedge",
+          "name": "filter-route-performance.json",
+          "result": {
+            "samples": 30,
+            "boundary": {
+              "filter": "Playwright fill through Vue computed filtering and first rendered result",
+              "route": "hash navigation request through target page heading visible"
+            },
+            "filterP95Ms": 50.597899999999754,
+            "routeP95Ms": 81.7489999999998,
+            "environment": {
+              "platform": "win32 10.0.26200 x64",
+              "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+              "logicalCpus": 16,
+              "memoryGiB": 15.7
+            },
+            "browser": "msedge"
+          }
+        },
+        {
+          "project": "chromium",
+          "name": "cold-open-performance.json",
+          "result": {
+            "samples": 30,
+            "p95Ms": 106.89999999999964,
+            "boundary": "fresh browser context navigation start through login heading visible",
+            "cache": "fresh context per sample",
+            "network": "local production static server; application has no external requests",
+            "environment": {
+              "platform": "win32 10.0.26200 x64",
+              "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+              "logicalCpus": 16,
+              "memoryGiB": 15.7
+            },
+            "browser": "chromium"
+          }
+        },
+        {
+          "project": "msedge",
+          "name": "cold-open-performance.json",
+          "result": {
+            "samples": 30,
+            "p95Ms": 143.20390000000043,
+            "boundary": "fresh browser context navigation start through login heading visible",
+            "cache": "fresh context per sample",
+            "network": "local production static server; application has no external requests",
+            "environment": {
+              "platform": "win32 10.0.26200 x64",
+              "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+              "logicalCpus": 16,
+              "memoryGiB": 15.7
+            },
+            "browser": "msedge"
+          }
+        }
+      ],
+      "thresholdsMs": {
+        "workerRoundTrip": 300,
+        "filterAndRoute": 200,
+        "coldLogin": 1500
+      },
+      "scope": "30 samples each in local production demo/data-check conditions, not WAN load/production AI latency"
+    },
+    "sourceAudit": {
+      "command": "node docs/evidence/ui-refresh-2026-11-17/audit-ui.mjs",
+      "exitCode": 0,
+      "record": "source-audit-final.json",
+      "scripts": 71,
+      "originalAttributeContracts": 3208,
+      "originalBusinessScriptDifferences": 0,
+      "protectedAreaDifferences": 0,
+      "presentationImportExceptions": 2,
+      "interviewRouteKeyUnchanged": true
+    },
+    "media": {
+      "command": "node docs/evidence/ui-refresh-2026-11-17/verify-media-online.mjs",
+      "exitCode": 0,
+      "record": "media-online-final.json",
+      "newAssets": 63,
+      "retainedEditorialAssets": 13,
+      "total": 76,
+      "totalBytes": 1607080,
+      "onlineStatuses": "all 200 with matching byte content / SHA-256 / dimensions"
+    },
+    "diffCheck": {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  },
+  "coverage": {
+    "activePageIds": 53,
+    "historicalExcluded": [
+      "H01"
+    ],
+    "trackedWindowGroups": 43,
+    "routeLayoutWidthsCssPx": [
+      320,
+      375,
+      390,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "pageScreenshotsWidths": [
+      1440,
+      390
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "windowViewports": [
+      "1440×1000",
+      "320×480"
+    ],
+    "mapping": "coverage-results.json",
+    "notExhaustiveEveryPossibleState": true
+  },
+  "imagery": {
+    "provider": "Nebula",
+    "model": "gpt-image-2.6",
+    "thisRound": {
+      "attempts": 11,
+      "successes": 9,
+      "connectionErrors": 2,
+      "automaticRetries": 0,
+      "productionWebPAssets": 63
+    },
+    "manifest": "career-media-manifest.json",
+    "priorRoundManifest": "media-manifest.json",
+    "practiceCovers": "3 illustration-only user reference crops; titles/descriptions/buttons are native HTML",
+    "failureHandling": "job-atlas-b and features-atlas-c were not retried; existing semantically appropriate local art is used where needed",
+    "uniqueness": "Prefer unused within same/related occupational family. Repeat after finite semantic pool exhausted, never promise globally unique imagery."
+  },
+  "visual": {
+    "references": "User supplied first three 1536×1024 images",
+    "review": "Implementer contact-sheet review of 60 captured route/states, not 60 unique pages; representative original-size portal/jobs/practice and dark states",
+    "ledger": "visual-comparison.md",
+    "livePortal": "D:/Temp/careerpilot-reference-final/live/portal-1536.png",
+    "jobsFixture": "D:/Temp/careerpilot-reference-final/jobs-viewport-1536.png",
+    "practiceFixture": "D:/Temp/careerpilot-reference-final/practice-viewport-1536.png",
+    "pixelPerfect": false,
+    "reason": "Preserve true data, all original controls/disclosures and random topic choice; uniform brand; no fake score/count/identity/menu"
+  },
+  "observedAndResolvedFailures": {
+    "initialFullRun": {
+      "workers": 6,
+      "passed": 256,
+      "failed": 16,
+      "report": "D:/Temp/careerpilot-reference-final/reports/initial-272-with-16-failures.json"
+    },
+    "fixes": [
+      "Update old heading/font assertions only for approved design changes",
+      "Print negative margins removed",
+      "Company compact heading contrast corrected",
+      "Wait for visible controls / stable card layout before geometry assertions"
+    ],
+    "concurrency": "Unchanged business timing cases passed with 2 workers; final fresh complete run 272 passed, 0 retries/flaky/unexpected/skipped"
+  },
+  "review": {
+    "kind": "single-session implementer self-review, not independent review",
+    "branchDisposition": "Keep existing named local branch; no merge/push/PR",
+    "protectedBusinessDataChanged": false,
+    "credentialsIncluded": false,
+    "productionAIInvoked": false
+  },
+  "remaining": [
+    "Physical Android/iOS, soft keyboard, rotation, microphone/ASR/TTS playback",
+    "Safari / Firefox and actual browser-toolbar 200% zoom",
+    "Independent human code/aesthetic acceptance",
+    "Native browser dialogs/file pickers and external linked websites are host-controlled, not re-skinned",
+    "Figma native design library not produced; callable Figma tools absent",
+    "Public host/domain/TLS deployment not provided",
+    "Existing draggable pet may overlap user-selected content positions"
+  ],
+  "finalReleaseAccepted": false
+}

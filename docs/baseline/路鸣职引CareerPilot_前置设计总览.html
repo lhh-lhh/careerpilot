@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>路鸣职引 CareerPilot · 开发前置设计总览</title>
+<style>
+:root{
+  --bg:#F6F8FC; --surface:#FFFFFF; --surface2:#EEF2F9;
+  --brand:#2F55C8; --brand7:#23409B; --teal:#0E9F92; --amber:#E9A23B;
+  --ai:#6E56CF; --ai2:#3B82F6; --grad:linear-gradient(120deg,#6E56CF,#3B82F6);
+  --t1:#16233A; --t2:#5A6782; --t3:#606D85; --border:#E3E9F2;
+  --ok:#146B49; --warn:#80520C; --danger:#B52C36;
+  --sh1:0 1px 2px rgba(22,35,58,.06); --sh2:0 6px 20px rgba(22,35,58,.08);
+  --sh3:0 16px 40px rgba(22,35,58,.12);
+  --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  --sans:Inter,"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--t1);font-family:var(--sans);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:700}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav .wrap{height:60px;display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;letter-spacing:.2px;white-space:nowrap}
+.logo-mark{width:26px;height:26px;border-radius:8px;background:var(--grad);position:relative;flex:none}
+.logo-mark:after{content:"";position:absolute;inset:7px 7px 6px;border-radius:50%;background:#fff;opacity:.92}
+.navlinks{display:flex;gap:18px;flex:1;overflow-x:auto;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{font-size:13px;color:var(--t2);white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent}
+.navlinks a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+.btn{cursor:pointer;border:1px solid var(--border);background:var(--surface);color:var(--t1);border-radius:10px;padding:8px 14px;font-size:13px;font-family:inherit;font-weight:600;transition:.12s}
+.btn:hover{box-shadow:var(--sh2);transform:translateY(-1px)}
+.btn-primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn-ai{background:var(--grad);border:none;color:#fff}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--grad);width:0;z-index:60;transition:width .1s linear}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 420px at 78% -10%,rgba(110,86,207,.14),transparent 62%),
+  radial-gradient(700px 380px at 8% 10%,rgba(47,85,200,.10),transparent 60%),
+  linear-gradient(180deg,#fff, #F6F8FC);
+  border-bottom:1px solid var(--border)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(47,85,200,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(47,85,200,.045) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero .wrap{position:relative;padding:64px 28px 52px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--ai);box-shadow:var(--sh1)}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--ai);display:block}
+h1{font-size:44px;line-height:1.2;margin:20px 0 12px;letter-spacing:-.5px;font-weight:800}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:17px;color:var(--t2);max-width:820px;margin:0 0 26px}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.tag{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--surface2);color:var(--t2);border:1px solid var(--border)}
+.tag.ai{background:rgba(110,86,207,.09);color:var(--ai);border-color:rgba(110,86,207,.2)}
+.tag.ok{background:rgba(31,157,107,.09);color:var(--ok);border-color:rgba(31,157,107,.2)}
+.herostats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hstat{background:rgba(255,255,255,.85);border:1px solid var(--border);border-radius:14px;padding:16px 18px;box-shadow:var(--sh1)}
+.hstat b{display:block;font-family:var(--mono);font-size:26px;line-height:1.2;color:var(--brand)}
+.hstat small{color:var(--t2);font-size:12px}
+
+/* ---------- sections ---------- */
+section{padding:52px 0 8px}
+.sec-head{margin-bottom:22px}
+.kicker{font-size:12px;font-weight:800;letter-spacing:1.4px;color:var(--ai);text-transform:uppercase;margin-bottom:6px}
+h2{font-size:27px;letter-spacing:-.3px;margin:0 0 8px;font-weight:800}
+h3{font-size:17px;margin:0 0 10px;font-weight:700}
+.lead{color:var(--t2);max-width:900px;margin:0;font-size:15px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--sh1);padding:22px;break-inside:avoid}
+.card+.card{margin-top:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.muted{color:var(--t2)}
+.small{font-size:13px}
+.tiny{font-size:12px;color:var(--t3)}
+.divider{height:1px;background:var(--border);margin:18px 0}
+
+/* ---------- callout ---------- */
+.callout{border-left:3px solid var(--ai);background:linear-gradient(90deg,rgba(110,86,207,.055),transparent 70%);border-radius:0 12px 12px 0;padding:16px 20px;margin:16px 0;font-size:14px}
+.callout.brand{border-left-color:var(--brand);background:linear-gradient(90deg,rgba(47,85,200,.055),transparent 70%)}
+.callout.warn{border-left-color:var(--amber);background:linear-gradient(90deg,rgba(233,162,59,.08),transparent 70%)}
+.callout strong{color:var(--t1)}
+
+/* ---------- table ---------- */
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface);border-radius:12px;overflow:hidden}
+.tbl th{background:var(--surface2);text-align:left;padding:11px 14px;font-weight:700;color:var(--t2);font-size:12.5px;border-bottom:1px solid var(--border)}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(47,85,200,.025)}
+.tbl .hi{background:rgba(110,86,207,.055)}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.p-p0{background:rgba(217,72,72,.1);color:var(--danger)}
+.p-p1{background:rgba(217,150,42,.13);color:var(--warn)}
+.p-p2{background:var(--surface2);color:var(--t2)}
+.p-mvp{background:rgba(110,86,207,.11);color:var(--ai)}
+.p-ok{background:rgba(31,157,107,.11);color:var(--ok)}
+
+/* ---------- bars ---------- */
+.barrow{display:grid;grid-template-columns:150px 1fr 42px;align-items:center;gap:12px;margin:9px 0;font-size:13px}
+.bartrack{height:9px;background:var(--surface2);border-radius:999px;overflow:hidden}
+.barfill{height:100%;border-radius:999px;background:var(--brand)}
+.barfill.low{background:var(--danger)}
+.barfill.mid{background:var(--amber)}
+.barfill.goal{background:var(--grad)}
+.barval{font-family:var(--mono);font-weight:700;text-align:right;color:var(--t2)}
+
+/* ---------- layers ---------- */
+.layer{display:grid;grid-template-columns:118px 1fr;gap:14px;align-items:start;border:1px solid var(--border);border-radius:12px;padding:13px 16px;margin-bottom:9px;background:var(--surface)}
+.layer .lname{font-family:var(--mono);font-weight:800;color:var(--ai);font-size:13px;padding-top:2px}
+.layer .lbody{font-size:13.5px;color:var(--t2)}
+.layer .lbody b{color:var(--t1)}
+.layer.opt{border-style:dashed;background:linear-gradient(90deg,rgba(110,86,207,.04),#fff)}
+
+/* ---------- ai grid ---------- */
+.ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ai-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;position:relative;overflow:hidden}
+.ai-card.mvp{border-color:rgba(110,86,207,.35);box-shadow:0 0 0 1px rgba(110,86,207,.06)}
+.ai-card.mvp:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.ai-card .aid{font-family:var(--mono);font-size:12px;font-weight:800;color:var(--ai)}
+.ai-card h4{margin:4px 0 6px;font-size:15px}
+.ai-card p{margin:0;font-size:12.8px;color:var(--t2);line-height:1.6}
+.ai-card .meta{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+
+/* ---------- mode flow ---------- */
+.flow{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:center;gap:6px}
+.fnode{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--surface);text-align:center}
+.fnode.live{border-color:rgba(47,85,200,.35)}
+.fnode.replay{border-color:rgba(110,86,207,.45);background:linear-gradient(180deg,rgba(110,86,207,.07),#fff)}
+.fnode.rule{border-color:rgba(14,159,146,.35)}
+.fnode b{display:block;font-family:var(--mono);font-size:14px;margin-bottom:4px}
+.fnode small{color:var(--t2);font-size:11.5px;line-height:1.5;display:block}
+.arrow{text-align:center;color:var(--t3);font-size:20px}
+
+/* ---------- tokens / components ---------- */
+.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.sw{border-radius:10px;border:1px solid var(--border);overflow:hidden;background:#fff}
+.sw .chip{height:56px}
+.sw .lb{padding:7px 9px;font-size:11px;color:var(--t2);font-family:var(--mono);line-height:1.45}
+.demo-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}
+.chipdemo{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(31,157,107,.1);color:var(--ok)}
+.aiblock{position:relative;border:1px solid var(--border);border-radius:0 10px 10px 0;padding:14px 16px 14px 18px;background:#fff;margin-top:12px}
+.aiblock:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad)}
+.aiblock .aibadge{position:absolute;right:12px;top:10px;font-size:10px;font-weight:800;color:#fff;background:var(--grad);padding:2px 8px;border-radius:999px}
+.aiblock .src{font-size:11.5px;color:var(--t3);margin-top:8px}
+
+/* ---------- mockups ---------- */
+.mockbar{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.mockbar .dot{width:9px;height:9px;border-radius:50%;background:#DFE5EF}
+.mock{background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--sh2);overflow:hidden;break-inside:avoid}
+.mock-top{height:34px;background:var(--surface2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 12px;gap:8px;font-size:11px;color:var(--t2)}
+.mock-top .brandmini{width:14px;height:14px;border-radius:4px;background:var(--brand)}
+.mock-body{display:grid;min-height:250px;font-size:11px;color:var(--t2)}
+.m-side{border-right:1px solid var(--border);padding:12px;background:#FBFCFE}
+.m-main{padding:14px}
+.m-drawer{border-left:1px solid var(--border);padding:14px;background:#FBFCFE}
+.m-title{font-weight:800;color:var(--t1);font-size:12px;margin-bottom:8px}
+.m-line{height:7px;border-radius:4px;background:var(--surface2);margin:7px 0}
+.m-line.w60{width:60%}.m-line.w80{width:80%}.m-line.w40{width:40%}
+.m-nav{display:flex;align-items:center;gap:6px;padding:5px 7px;border-radius:6px;margin-bottom:3px}
+.m-nav.on{background:rgba(47,85,200,.09);color:var(--brand);font-weight:700}
+.m-nav i{width:9px;height:9px;border-radius:3px;background:#CBD5E6;display:block}
+.m-nav.on i{background:var(--brand)}
+.m-box{border:1px solid var(--border);border-radius:8px;padding:10px;margin-bottom:9px;background:#fff}
+.m-box.diff{border-left:3px solid var(--ai)}
+.m-chip{display:inline-block;font-size:9.5px;padding:2px 7px;border-radius:999px;background:var(--surface2);margin:2px 3px 2px 0}
+.m-chip.ai{background:rgba(110,86,207,.11);color:var(--ai);font-weight:700}
+.m-chip.ok{background:rgba(31,157,107,.11);color:var(--ok)}
+.m-btn{display:inline-block;font-size:9.5px;font-weight:700;padding:4px 9px;border-radius:6px;background:var(--brand);color:#fff;margin-right:5px}
+.m-btn.ghost{background:var(--surface2);color:var(--t2)}
+.m-mini{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:10px}
+.m-track{flex:1;height:6px;border-radius:999px;background:var(--surface2);overflow:hidden}
+.m-track i{display:block;height:100%;background:var(--brand);border-radius:999px}
+.m-track i.ai{background:var(--grad)}
+.m-note{font-size:10px;color:var(--t3);margin-top:8px}
+.m-kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.m-kpi div{border:1px solid var(--border);border-radius:8px;padding:8px}
+.m-kpi b{display:block;font-family:var(--mono);font-size:14px;color:var(--brand)}
+.m-chart{height:74px;border:1px solid var(--border);border-radius:8px;padding:9px;display:flex;align-items:flex-end;gap:6px}
+.m-chart i{flex:1;background:var(--brand);border-radius:3px 3px 0 0;opacity:.85}
+.m-chart i:nth-child(2n){background:var(--teal)}
+.m-chart i:nth-child(3n){background:var(--ai)}
+
+/* ---------- misc ---------- */
+.timeline{position:relative;padding-left:26px}
+.timeline:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.titem{position:relative;margin-bottom:16px}
+.titem:before{content:"";position:absolute;left:-23px;top:6px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.titem.done:before{background:var(--ok);border-color:var(--ok)}
+.titem b{font-family:var(--mono);font-size:13px;color:var(--brand)}
+.titem p{margin:3px 0 0;font-size:13px;color:var(--t2)}
+.doclist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.docitem{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--border);border-radius:10px;padding:12px 14px;background:#fff}
+.docitem .no{font-family:var(--mono);font-weight:800;color:var(--ai);font-size:12px;background:rgba(110,86,207,.08);border-radius:6px;padding:3px 7px;flex:none}
+.docitem b{font-size:13px;display:block}
+.docitem small{font-size:11.5px;color:var(--t2)}
+.footer{margin-top:56px;border-top:1px solid var(--border);background:#fff;padding:26px 0 34px}
+.footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--t3);font-size:12px}
+
+@media(max-width:900px){
+  .grid2,.grid3,.grid4,.ai-grid,.doclist{grid-template-columns:1fr}
+  .herostats{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr;gap:6px}.arrow{transform:rotate(90deg)}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  h1{font-size:32px}
+  .navlinks{display:none}
+  .mock-body{grid-template-columns:1fr!important}
+  .m-side,.m-drawer{border:none;border-bottom:1px solid var(--border)}
+}
+@media print{
+  .nav,.progress,.no-print,.hero .btn{display:none!important}
+  body{background:#fff;font-size:11.5pt}
+  .hero{background:#fff;border-bottom:2px solid var(--t1)}
+  .hero:before{display:none}
+  .hero .wrap{padding:22px 0}
+  h1{font-size:28pt}
+  section{padding:20px 0 0;page-break-inside:auto}
+  .card,.ai-card,.mock,.tbl,.callout,.layer{break-inside:avoid;page-break-inside:avoid;box-shadow:none}
+  h2{font-size:17pt}
+  .grid2,.grid3,.grid4,.ai-grid{break-inside:avoid}
+  a{color:var(--t1)}
+  @page{size:A4;margin:14mm}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav no-print">
+  <div class="wrap">
+    <div class="logo"><span class="logo-mark"></span>路鸣职引 <span style="color:var(--t3);font-weight:600">CareerPilot</span></div>
+    <div class="navlinks">
+      <a href="#s0">结论</a><a href="#s1">评估</a><a href="#s2">决策</a><a href="#s3">需求</a>
+      <a href="#s4">架构</a><a href="#s5">AI 能力</a><a href="#s6">界面设计</a><a href="#s7">指标与计划</a><a href="#s8">文档</a>
+    </div>
+    <button class="btn btn-primary" onclick="window.print()">打印 / 导出 PDF</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><i></i> Web 程序设计 · 期末大作业 · 开发前置基线 v1.5</div>
+    <h1>路鸣职引 CareerPilot<br><span>AI 驱动的毕业生就业管理与智能服务平台</span></h1>
+    <p class="sub"><b style="color:var(--t1)">闻鸣知路，循引赴职</b>　·　全面评估 → 需求分析 → 概要设计 → AI 能力规格 → 界面设计规范 → 指标与实施规划。<br>本阶段只奠基，不写一行应用代码；实现层推倒重来，需求层完整继承，AI 作为贯穿全链路的设计主轴。</p>
+    <div class="tagrow">
+      <span class="tag ok">✓ 课程技术组合：Vue 3 + HTML + CSS + TypeScript</span>
+      <span class="tag ai">AI 能力 A1–A10</span>
+      <span class="tag">页面 P01–P18</span>
+      <span class="tag">核心T1/T3/T4/T5/T6 · T2可选</span>
+      <span class="tag">2026-11-12 · 最终文档基线 · 未开始开发</span>
+    </div>
+    <div class="herostats">
+      <div class="hstat"><b>88</b><small>原项目去重后 HTTP 路由（实测修正）</small></div>
+      <div class="hstat"><b>32</b><small>业务表，其中 13 张为空；0 张图表</small></div>
+      <div class="hstat"><b>2.30<span style="font-size:14px;color:var(--t3)">/5</span></b><small>原项目八维加权自评 → 目标 4.80</small></div>
+      <div class="hstat"><b>4.67</b><small>方案 C 加权得分（三案最高）</small></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ 0 结论 ============ -->
+<section id="s0">
+  <div class="sec-head"><div class="kicker">Executive Summary</div><h2>一页结论</h2><p class="lead">七条判断构成全部前置工作的地基；后续所有文档编号、页面与模块均由此展开。</p></div>
+  <div class="grid2">
+    <div class="card">
+      <h3>① 问题不在"功能少"，在三层错配</h3>
+      <p class="small muted">原生MPA合规但前端工程表达不足 · 信息录入与决策价值错配 · 演示级工程与"应用价值"定位错配。原项目有 88 条 CRUD、32 张业务表，却无一个可讲原理的算法、无一张图表、无一处 SPA 路由。继续堆CRUD难以改善机制、视觉与演示证据。</p>
+      <div class="divider"></div>
+      <h3>② 推倒要精确定义边界</h3>
+      <p class="small muted"><b>推倒实现层</b>（C++ Winsock、编译链、SQLite 物理库、6 个 MPA 巨型页、4 套 fetch 封装、硬编码 Token、Bootstrap CDN）；<b>保留需求层</b>（四角色、就业主链、实体与状态语义、演示数据）。这是"大方向不变"的实质。</p>
+    </div>
+    <div class="card">
+      <h3>③ AI 是能力层，不是外挂聊天框</h3>
+      <p class="small muted">以原系统「简历—投递—面试—去向」主链为骨架，把 AI 分布到 A1–A10；每个能力必须挂在具体业务页面上，否则会同时丢掉"基于原项目"的命题与界面层次。</p>
+      <div class="divider"></div>
+      <h3>④ 最大的风险不是技术，是答辩现场</h3>
+      <p class="small muted">断网、密钥、限流、延迟、模型输出抖动。因此设 <b>LIVE / REPLAY / RULE 三态 Provider</b>：答辩默认 REPLAY（录制回放、结果确定），REPLAY精确失配才转RULE（断外网仍可回放），真实调用仅 LIVE 启用。</p>
+    </div>
+  </div>
+  <div class="callout"><strong>⑤ 技术难度 ≠ 调大模型 API。</strong> 所有分数、指标、预警数值一律由本地确定性内核计算，模型只负责生成与解释；T1/T3/T4/T5/T6及A7机制（T2可选）可写伪代码、复杂度与消融实验。<strong>⑥ 界面美观度按设计系统做</strong>，不按单页堆效果。<strong>⑦ Python/FastAPI只做受限AI网关（接入必做、离线不运行）</strong>，默认纯静态 <span class="mono">dist/</span> 无需业务后端、外网或密钥；预装Node并启动本机静态HTTP才可运行。</div>
+  <div class="callout brand"><strong>命名释义：</strong>「路鸣」谐《诗经·小雅·鹿鸣》求贤之音，以「路」字一语三关 —— 求职之路 / 鹿鸣 / 俸禄与录用；「职引」谐「指引」，点明 AI 只引导、不替人决策。<b>闻鸣知路，循引赴职。</b>自绘 SVG 徽记与字标组合规范见《05 UI/UX 界面设计规范》§10。<br><strong>项目定位：</strong>不是"又一个 AI 聊天框"，而是<strong>把大模型能力嵌入毕业生就业全流程的可解释智能工作台</strong>。正式报告题目建议：《路鸣职引：面向高校毕业生的 AI 驱动就业管理与智能服务平台的设计与实现》。</div>
+</section>
+
+<!-- ============ 1 评估 ============ -->
+<section id="s1">
+  <div class="sec-head"><div class="kicker">01 · Assessment</div><h2>原项目全面评估：证据先于判断</h2><p class="lead">逐文件审计 + 数据库 SQL 实测 + 课程条款映射。所有数字可复现，并修正了上一轮方案中的两处记录。</p></div>
+
+  <div class="grid4" style="margin-bottom:14px">
+    <div class="card"><div class="num" style="font-size:26px;color:var(--brand)">88</div><div class="tiny">去重后路由（13 个 Handler）</div></div>
+    <div class="card"><div class="num" style="font-size:26px;color:var(--brand)">8463</div><div class="tiny">6 个 MPA 页面总行数，3 个 dashboard 占 7488</div></div>
+    <div class="card"><div class="num" style="font-size:26px;color:var(--danger)">0</div><div class="tiny">图表 / 测试 / README；显式用户索引0、自动唯一索引9</div></div>
+    <div class="card"><div class="num" style="font-size:26px;color:var(--warn)">3</div><div class="tiny">全部走 CDN 的外链，断网即裸页</div></div>
+  </div>
+
+  <div class="card">
+    <h3>八维评分（内部自评量表，权重自定、不是教师评分）</h3>
+    <div class="barrow"><span>技术组合符合度 <span class="tiny">.18</span></span><div class="bartrack"><div class="barfill" style="width:100%"></div></div><span class="barval">5</span></div>
+    <div class="barrow"><span>SPA / 前端工程化 <span class="tiny">.12</span></span><div class="bartrack"><div class="barfill low" style="width:0%"></div></div><span class="barval">0</span></div>
+    <div class="barrow"><span>HTML &amp; CSS 设计系统 <span class="tiny">.12</span></span><div class="bartrack"><div class="barfill mid" style="width:40%"></div></div><span class="barval">2</span></div>
+    <div class="barrow"><span>JS / DOM / 异步深度 <span class="tiny">.12</span></span><div class="bartrack"><div class="barfill mid" style="width:40%"></div></div><span class="barval">2</span></div>
+    <div class="barrow"><span>Web Server 理解 <span class="tiny">.08</span></span><div class="bartrack"><div class="barfill" style="width:80%"></div></div><span class="barval">4</span></div>
+    <div class="barrow"><span>技术难度（自研内核）<span class="tiny">.16</span></span><div class="bartrack"><div class="barfill low" style="width:20%"></div></div><span class="barval">1</span></div>
+    <div class="barrow"><span>界面美观度 <span class="tiny">.14</span></span><div class="bartrack"><div class="barfill mid" style="width:40%"></div></div><span class="barval">2</span></div>
+    <div class="barrow"><span>应用价值与演示稳定 <span class="tiny">.08</span></span><div class="bartrack"><div class="barfill mid" style="width:40%"></div></div><span class="barval">2</span></div>
+    <div class="divider"></div>
+    <div class="barrow"><span><b>加权总分 → 目标</b></span><div class="bartrack"><div class="barfill goal" style="width:96%"></div></div><span class="barval">4.80</span></div>
+    <p class="tiny" style="margin-top:10px">原项目逐项复算 = 0.90+0+0.24+0.24+0.32+0.16+0.28+0.16 = <b>2.30 / 5</b>。原生JS满足课程组合①；V5（手写 HTTP 服务器，663 行）恰好是课程大纲第 5 章的活教材，将作为报告原理素材保留，但不进入新系统运行链路。量表是"证据充分程度"的等级判断，用于让取舍可讨论，不伪装客观测量。</p>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <h3>P0 缺陷（安全与演示风险）</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><td><span class="pill p-p0">P0-2</span></td><td>注册接口允许匿名创建 admin<br><span class="tiny mono">AuthHandler.cpp:57,106</span></td></tr>
+        <tr><td><span class="pill p-p0">P0-3</span></td><td>Token 密钥硬编码、缺撤销（已有24小时过期检查）<br><span class="tiny mono">Utils.cpp:239,255-266</span></td></tr>
+        <tr><td><span class="pill p-p0">P0-4</span></td><td>企业可用 <span class="mono">?student_id=</span> 遍历任意学生简历<br><span class="tiny mono">ResumeHandler.cpp:266-286</span></td></tr>
+        <tr><td><span class="pill p-p0">P0-5</span></td><td>协议插入 'pending' 与 CHECK 冲突；企业端调用未注册接口 → 点了就 404<br><span class="tiny mono">EmploymentHandler.cpp:105</span></td></tr>
+        <tr><td><span class="pill p-p0">P0-6</span></td><td>依赖 9.3MB 预编译 exe + 3 个 CDN 外链</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>对上一版方案的两处复核更正</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><th>项</th><th>上一版</th><th>本次实测</th></tr>
+        <tr><td>路由数</td><td>108 条</td><td><b>88 条</b>（未去重亦为 88，无重复注册）</td></tr>
+        <tr><td>技术路线</td><td>保留 C++ REST + Repository 双模</td><td><b>推翻</b>：AI 主线下改为全量重构，双模不再进入运行链路</td></tr>
+      </table>
+      <div class="callout warn" style="margin-bottom:0"><strong>推翻的不是"C++ 不好"，是目标函数变了。</strong>上一版最大化"继承原项目资产"；本轮用户把目标改为"以 AI 奠定总设计，把工期投向技术难度与界面美观度"。维护一套与 AI 无关的编译链与适配层，在新目标下是纯成本。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 决策 ============ -->
+<section id="s2">
+  <div class="sec-head"><div class="kicker">02 · Decision</div><h2>重构决策：三案加权与敏感性检验</h2><p class="lead">权重：继承性 .10 / 合规 .20 / 技术难度 .22 / 界面上限 .20 / 工期 .13 / 演示稳定 .15。</p></div>
+  <div class="card">
+    <table class="tbl" style="box-shadow:none">
+      <tr><th>方案</th><th>形态</th><th>继承</th><th>合规</th><th>难度</th><th>界面</th><th>工期</th><th>稳定</th><th>加权分</th></tr>
+      <tr><td>A 渐进改造</td><td>保留 C++ + MPA，修 bug 加 AI 页</td><td>5</td><td>5</td><td>2</td><td>2</td><td>4</td><td>2</td><td><b>3.16</b></td></tr>
+      <tr><td>B 上一版</td><td>Vue SPA + Repository 双模，重构 C++ REST</td><td>5</td><td>5</td><td>3</td><td>5</td><td>2</td><td>4</td><td><b>4.02</b></td></tr>
+      <tr class="hi"><td><b>C 全量重构 · AI 优先</b><br><span class="pill p-mvp">推荐</span></td><td>需求层继承、实现层重做；Vue 3 SPA + IndexedDB + 三态 Provider；DeepSeek网关接入必做、运行按需</td><td>3</td><td>5</td><td>5</td><td>5</td><td>4</td><td>5</td><td><b style="color:var(--ai)">4.67</b></td></tr>
+    </table>
+    <div class="divider"></div>
+    <h3>敏感性检验（如实报告，未做有利裁剪）</h3>
+    <p class="small muted">只提高"继承性"权重 k、其余按原比例压缩：k=.20 → C 4.48 / B 4.13；k=.30 → C 4.30 / B 4.24；<b>临界点约 k=.32</b>；k=.35 → B 4.29 / C 4.21。权重为内部项目判断，三案均合规，结论依赖资产继承偏好而非教师给定权重。当前方向保持C；若新增必须复用原代码的约束，须重新评审，不能自动恢复双模。</p>
+  </div>
+
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><h3 style="color:var(--ok)">保留 · 需求层</h3><p class="small muted">四角色与权限边界 · 就业业务主链（发职位→建简历→投递→面试→协议→去向→统计）· 辅助链（政策/规则/指导/招聘会/问卷/评价/帮扶/反馈/配置）· 实体与状态语义 · 演示数据。BL-01..07保留方向，辅助域按02/13分期，非全量必做。</p></div>
+    <div class="card"><h3 style="color:var(--danger)">丢弃 · 实现层</h3><p class="small muted">C++ Winsock 与编译链 · 33 张物理表 · 6 个 MPA 与 7488 行内联 JS · 4 套 fetch 封装 · 硬编码 Token 与单次 SHA-256 · Bootstrap CDN · build 副本 · 图片 base64 入库 · 无锁单连接并发。</p></div>
+    <div class="card"><h3 style="color:var(--ai)">升级 · 能力层</h3><p class="small muted">管理 → 服务+智能 · CRUD → 生成/诊断/解释/预测 · 被动查询 → 主动推送与预警 · 黑盒 → 可解释 · 单角色 → 四角色协同 · 必须联网 → 离线优先 · Bootstrap 皮肤 → 灯塔设计系统。</p></div>
+  </div>
+  <div class="callout"><strong>C++ 自研服务器的特殊处置：</strong>不进入运行链路，但作为报告素材。用一张对照表说明「原系统手写请求解析/路由匹配/CORS 预检 → 新系统由 Vue Router + Fetch中间件 + 受限FastAPI AI Gateway 承担」，并讲清 HTTP 状态码、REST 语义、SSE 与缓存 —— 甩掉编译依赖，同时接住大纲第 5 章。</div>
+</section>
+
+<!-- ============ 3 需求 ============ -->
+<section id="s3">
+  <div class="sec-head"><div class="kicker">03 · Requirements</div><h2>需求分析：可复核依据、角色与优先级</h2><p class="lead">需求不是凭空设想，每一条追溯到原工程审计、用户方向或课程条款；未核实新闻撤出正式论据。</p></div>
+  <div class="grid2">
+    <div class="card">
+      <h3>本地可复核背景</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><td><b>88 / 32</b></td><td>原工程88路由、32业务表；13业务表无数据，存在协议/接口不一致</td></tr>
+        <tr><td><b>6 / 8463</b></td><td>6个MPA，ReadAllLines口径8463行；重复封装、无图表、依赖CDN</td></tr>
+        <tr><td><b>四角色</b></td><td>学生、企业、辅导员、管理员，保留就业主链与治理方向</td></tr>
+        <tr><td><b>来源边界</b></td><td>旧稿未核实的规模/政策/新闻/院校案例撤出事实依据，08登记为线索，正式报告不引用</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>四角色 · 痛点 → 成功标准</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><th>角色</th><th>核心痛点</th><th>成功标准</th></tr>
+        <tr><td><b>学生</b></td><td>不知简历差在哪、推荐无理由、缺练习、状态不透明</td><td>可解释、可采纳、可驳回的具体改进</td></tr>
+        <tr><td><b>企业</b></td><td>JD 写不清、简历难比较</td><td>结构化 JD + 按匹配维度排序的候选人摘要</td></tr>
+        <tr><td><b>辅导员</b></td><td>只能看表格、帮扶靠经验、政策重复答</td><td>预警名单 + 建议动作 + 帮扶闭环</td></tr>
+        <tr><td><b>管理员</b></td><td>越权风险、无审计</td><td>权限边界清晰、AI 调用可审计</td></tr>
+      </table>
+      <div class="divider"></div>
+      <p class="small muted"><b>需求基线 BL-01..07</b> 保证"大方向不变"；<b>FR-S / FR-C / FR-T / FR-A / FR-AI</b> 五域功能需求 + <b>NFR-01..15</b> 非功能需求，全部带可观察验收判据。</p>
+    </div>
+  </div>
+  <div class="callout brand"><strong>MVP：</strong>A1/A2/A3/A7、FR-AI11真实AI接入，四角色基本招聘—协议—去向—审核—帮扶链、审计、全部15条NFR。独立升学/创业等不要求内部投递。完整44 FR/15 NFR拆分见13；A7不能用静态图冒充，P1/P2明确未启用。</div>
+</section>
+
+<!-- ============ 4 架构 ============ -->
+<section id="s4">
+  <div class="sec-head"><div class="kicker">04 · Architecture</div><h2>概要设计：分层、选型与三态 AI</h2><p class="lead">关键隔离点：领域层 L3 与数据访问层 L2 用接口隔离 —— "断网可演示"是架构的自然结果，不是临时补丁。</p></div>
+  <div class="card">
+    <div class="layer"><div class="lname">L5 交付层</div><div class="lbody"><b>静态 dist / 一键脚本 / 种子复位 / PDF 报告 / 8 分钟分镜 / 设计系统展示页 P18</b></div></div>
+    <div class="layer"><div class="lname">L4 视图层</div><div class="lbody"><b>Vue 3 + TypeScript SPA</b> · Vue Router 守卫 · Pinia · 设计令牌与组件库 · P01–P18视图族 · ECharts/SVG · 本地分块/可选SSE · Web Speech（可选）</div></div>
+    <div class="layer" style="border-color:rgba(110,86,207,.4);background:linear-gradient(90deg,rgba(110,86,207,.045),#fff)"><div class="lname">L3 领域层</div><div class="lbody"><b>纯 TS，零框架依赖，可单测</b> · T1 可解释匹配 · T2 本地检索增强（P1）· T3 AI 输出守卫 · T4 面试评分状态机 · T5 就业生命周期状态机 · T6 简历双轨消融 · 技能本体 / 指标口径 / 权限矩阵 / 脱敏规则</div></div>
+    <div class="layer"><div class="lname">L2 访问层</div><div class="lbody"><b>DataRepository</b> → Dexie (IndexedDB + 种子 JSON) ｜ 只供scope services访问；不保留业务HttpAdapter；<b>AIProvider</b> → Live / Replay / Rule</div></div>
+    <div class="layer opt"><div class="lname">L1 AI网关</div><div class="lbody"><b>Python 3 + FastAPI（必做接入，离线不启动）</b> · <span class="mono">/api/ai/chat</span> SSE 转发 · 密钥托管 · 限流 · 脱敏 · 审计 · 首适配DeepSeek官方API；独立配置、无前端Key</div></div>
+    <div class="layer"><div class="lname">L0 运行环境</div><div class="lbody">预装Node + 127.0.0.1:4173静态HTTP；现代浏览器：IndexedDB · Web Worker · Fetch/AbortController · CSS 变量 · <span class="mono">@media print</span></div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <h3>技术选型结论</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><td>前端</td><td><b>Vue 3 + TypeScript + Vite</b>（明确命中组合与 SPA 章节；本轮不更换框架）</td></tr>
+        <tr><td>样式</td><td><b>不用 UI 库</b>：原生 CSS 变量 + 自研组件，保证界面辨识度</td></tr>
+        <tr><td>数据</td><td>IndexedDB + 种子 JSON；不沿用 SQLite 二进制库</td></tr>
+        <tr><td>图表</td><td>ECharts 本地打包 + 手写 SVG，<b>零 CDN</b></td></tr>
+        <tr><td>后端</td><td>Python/FastAPI仅作AI网关，真实接入必做；默认离线纯静态</td></tr>
+        <tr><td>AI</td><td>OpenAI Chat Completions 兼容协议 + 三态 Provider，不绑定厂商</td></tr>
+      </table>
+      <p class="tiny" style="margin-top:10px">明确不引入：Bootstrap / CDN 外链 / C++ 编译链 / 原 SQLite / 重量级组件库 / 需账号的云 BaaS。</p>
+    </div>
+    <div class="card">
+      <h3>三态 AI Provider —— 本项目最重要的机制</h3>
+      <div class="flow">
+        <div class="fnode live"><b>LIVE</b><small>经 Gateway 调真实模型<br>DeepSeek真实文本增强 · 正式验收</small></div>
+        <div class="arrow">→</div>
+        <div class="fnode replay"><b>REPLAY</b><small>录制结果按变量哈希回放<br>结果确定 · <b>答辩默认</b></small></div>
+        <div class="arrow">→</div>
+        <div class="fnode rule"><b>RULE</b><small>本地确定性内核兜底<br><b>断网仍完整可用</b></small></div>
+      </div>
+      <p class="small muted" style="margin-top:12px">降级链：LIVE →（超时 / 限流 / Schema 校验失败）→ REPLAY →（无录制）→ RULE，每步写 <span class="mono">AiRun.fallbackReason</span>，UI 角标实时显示。<b>任何模块若无 RULE 替身，不得立项。</b></p>
+      <div class="callout" style="margin-bottom:0"><strong>为什么这比"直接调 API"更有技术含量：</strong>Provider 抽象、降级链、结构化输出守卫、脱敏与审计、可回放的确定性演示 —— 都是能画架构图、写状态转移、给失败率数据的系统机制，同时覆盖大纲第 5、6 章。</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>核心机制与可选T2（不得冒称六核均已完成）</h3>
+    <table class="tbl" style="box-shadow:none">
+      <tr><th>编号</th><th>机制</th><th>可写进报告的内容</th></tr>
+      <tr><td class="mono"><b>T1</b></td><td>可解释人岗匹配引擎</td><td>技能本体归一 → 6 维加权 → 贡献分解 → 缺失技能排序 → What-if 反事实；复杂度 <span class="mono">O(n·m·r+n log n)</span>；Worker异步分批；消融对比</td></tr>
+      <tr><td class="mono"><b>T2</b></td><td>本地检索增强问答</td><td>中文二元切分 + BM25 + 置信度阈值 + 强制引用 + 拒答；10 题召回率小评测</td></tr>
+      <tr><td class="mono"><b>T3</b></td><td>AI 输出守卫</td><td>Schema+语义守卫、8秒总限、取消不fallback、无自动付费重试、脱敏审计</td></tr>
+      <tr><td class="mono"><b>T4</b></td><td>面试评分状态机</td><td>题本覆盖矩阵、STAR 驱动的多轮追问、rubric 6 维证据评分</td></tr>
+      <tr><td class="mono"><b>T5</b></td><td>就业生命周期状态机</td><td>多实体独立迁移、事务与幂等、独立预警，不覆盖业务状态；修复原项目协议状态冲突</td></tr>
+      <tr><td class="mono"><b>T6</b></td><td>简历诊断双轨消融</td><td>原稿/RULE建议稿/生成建议稿均用同规则重评，禁止AI分/融合分</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 5 AI 能力 ============ -->
+<section id="s5">
+  <div class="sec-head"><div class="kicker">05 · AI Capability Map</div><h2>AI 能力矩阵 A1–A10</h2><p class="lead">用户点名的三项（简历完善、模拟面试、岗位匹配）全部为 MVP 且难度最高；其余七项依据原项目业务域与产品定位假设补全，覆盖学生求职前中后与企业、治理两端。</p></div>
+  <div class="ai-grid">
+    <div class="ai-card mvp"><span class="aid">A1 · MVP · ★★★★</span><h4>AI 简历诊断与完善</h4><p>6 维体检分 + ATS 关键词覆盖 + STAR 检测；每条建议含「问题·依据·改写前后 diff·来源」；可逐条采纳/驳回；双轨消融与多版本反同质化。<b>模型只写改写，不打分。</b></p><div class="meta"><span class="pill p-mvp">P04</span><span class="pill p-p2">T6</span></div></div>
+    <div class="ai-card mvp"><span class="aid">A2 · MVP · ★★★★★</span><h4>AI 模拟面试</h4><p>岗位驱动题本覆盖矩阵、STAR 要素触发的多轮追问、rubric 6 维证据评分、成长曲线。评分数值由 rubric 计算，模型只给定性评语。文字必做，语音可选。</p><div class="meta"><span class="pill p-mvp">P05 / P05b</span><span class="pill p-p2">T4</span></div></div>
+    <div class="ai-card mvp"><span class="aid">A3 · MVP · 头号招牌 · ★★★★★</span><h4>可解释人岗匹配</h4><p>技能本体归一 → 6 维贡献分解 → 每一分可展开到命中的具体技能 → 缺失技能补齐排序 → What-if 调权重/假设技能即时重排。<b>分数完全由本地内核计算</b>，断网功能完整可用。</p><div class="meta"><span class="pill p-mvp">P06</span><span class="pill p-p2">T1</span></div></div>
+    <div class="ai-card mvp"><span class="aid">A7 · MVP · ★★★★</span><h4>就业质量驾驶舱与慢就业预警</h4><p>4 类图表、指标口径唯一真相源、预警规则给全部触发原因、自然语言问数（数值由本地聚合算）、预警→建议→帮扶→复查闭环。</p><div class="meta"><span class="pill p-mvp">P15</span><span class="pill p-ok">治理端</span></div></div>
+    <div class="ai-card"><span class="aid">A4 · P1 · ★★★</span><h4>生涯数字画像与成长路径</h4><p>8 维能力向量、目标岗位差距、按「预期收益 / 时间成本」排序的提升动作；随一次模拟面试自动更新。</p><div class="meta"><span class="pill p-p2">P08</span></div></div>
+    <div class="ai-card"><span class="aid">A5 · P1 · ★★★★</span><h4>政策 / 规则智能问答</h4><p>本地知识块 + BM25 + 强制引用 + 置信度拒答；RULE 态直接返回原文段落，完全离线。问库外问题明确拒答而非编造。</p><div class="meta"><span class="pill p-p2">P09</span><span class="pill p-p2">T2</span></div></div>
+    <div class="ai-card"><span class="aid">A6 · P2 · ★★</span><h4>智能 JD 生成与候选人摘要</h4><p>企业侧输入要点生成结构化 JD 与技能标签；候选人摘要复用 A3 的匹配解释，不展示未授权隐私字段。</p><div class="meta"><span class="pill p-p2">P13</span></div></div>
+    <div class="ai-card"><span class="aid">A8 · P2 · ★★</span><h4>协议 / 去向材料合规检查</h4><p>基础字段/状态校验必做，A8只增强解释；修复原项目 <span class="mono">pending</span> 与 CHECK 冲突。</p><div class="meta"><span class="pill p-p2">P11</span></div></div>
+    <div class="ai-card"><span class="aid">A9 · P2 · ★★</span><h4>问卷与反馈智能归纳</h4><p>开放文本主题归类与情感倾向，摘要必须附原句引用，可点开核对。</p><div class="meta"><span class="pill p-p2">P15 子面板</span></div></div>
+    <div class="ai-card"><span class="aid">A10 · P1 · ★★★</span><h4>统一智能入口（能力编排）</h4><p>意图分类路由到 A1–A9，支持两步编排（如「能不能投这个岗」→ 体检 → 匹配 → 建议），结果以业务卡片呈现；<b>明确不做通用闲聊</b>。</p><div class="meta"><span class="pill p-p2">P03 / 全局</span></div></div>
+  </div>
+  <div class="callout warn"><strong>伦理与可信治理：</strong>匹配维度不含性别、年龄、院校层次、籍贯；权重对用户可见可调；调用前脱敏并可见发送预览；按12如实标注模型/规则/人工示例来源、实际Provider态、请核实与可驳回；低置信度拒答；不自动覆盖用户原文；报告中如实记录 AI 辅助编码与人工复核。</div>
+</section>
+
+<!-- ============ 6 界面 ============ -->
+<section id="s6">
+  <div class="sec-head"><div class="kicker">06 · Interface Design</div><h2>界面设计规范：灯塔 Lighthouse Design</h2><p class="lead">用户特别关注"页面设计影响评分"，因此本阶段直接给出设计令牌、组件体系、18 页逐页布局与三张关键页静态设计稿。<b>以下均为设计稿，不是功能实现。</b></p></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>设计令牌（A · 浅色学院感，推荐）</h3>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#F6F8FC"></div><div class="lb">bg<br>#F6F8FC</div></div>
+        <div class="sw"><div class="chip" style="background:#2F55C8"></div><div class="lb">brand<br>#2F55C8</div></div>
+        <div class="sw"><div class="chip" style="background:#0E9F92"></div><div class="lb">teal<br>#0E9F92</div></div>
+        <div class="sw"><div class="chip" style="background:#6E56CF"></div><div class="lb">ai<br>#6E56CF</div></div>
+        <div class="sw"><div class="chip" style="background:#E9A23B"></div><div class="lb">amber<br>#E9A23B</div></div>
+        <div class="sw"><div class="chip" style="background:#16233A"></div><div class="lb">text<br>#16233A</div></div>
+      </div>
+      <p class="small muted" style="margin-top:12px">字阶 12/13/14/16/20/24/32/40 · 间距 4 基数 · 圆角 6/10/14/20 · 阴影 3 级 · 动效 120/200/320ms · 栅格 12 栏、三栏比 <span class="mono">240:1fr:340</span> · 深色主题 B 用于驾驶舱。图表 6 维固定色序，色盲友好。</p>
+      <div class="divider"></div>
+      <h3>组件与 AI 标记语言</h3>
+      <div class="demo-row">
+        <button class="btn btn-primary">主按钮</button>
+        <button class="btn">次按钮</button>
+        <button class="btn btn-ai">AI 体检</button>
+        <span class="chipdemo">✓ 已签署</span>
+        <span class="pill p-p1">待审核</span>
+        <span class="pill p-mvp">MVP</span>
+      </div>
+      <div class="aiblock"><span class="aibadge">AI · REPLAY</span><b style="font-size:13px">改写建议</b><p class="small muted" style="margin:6px 0 0">「负责页面开发」→「负责页面开发并参与功能迭代」</p><div class="src">依据：仅重排已有表达，不补造数字或职责 · CURATED人工审校示例 · 请核实 · 可驳回</div></div>
+    </div>
+    <div class="card">
+      <h3>页面体系 P01–P18</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><th>分组</th><th>页面</th><th>核心界面</th></tr>
+        <tr><td>入口</td><td class="mono">P01–P02</td><td>品牌登录 / 四角色演示切换；应用外壳与守卫</td></tr>
+        <tr class="hi"><td>学生 · MVP</td><td class="mono">P03–P07</td><td>生涯首页 / <b>简历工作台</b> / <b>面试间</b> + 报告 / <b>匹配广场</b> / 投递时间轴</td></tr>
+        <tr><td>学生 · 扩展</td><td class="mono">P08–P12</td><td>生涯画像 / 政策问答 / 指导预约 / 去向协议 / 问卷反馈</td></tr>
+        <tr><td>企业 / 辅导员</td><td class="mono">P13–P15</td><td>企业台 / 学生管理 / <b>就业质量驾驶舱</b></td></tr>
+        <tr><td>管理 / 证据</td><td class="mono">P16–P18</td><td>管理台与 AI 审计 / 通知帮助 / <b>设计系统展示页</b></td></tr>
+      </table>
+      <div class="divider"></div>
+      <h3>美观度自检（14 项，节选）</h3>
+      <p class="small muted">全站无硬编码色值 · 组件 18 页形态一致 · 3 秒能指出主操作 · 留白节奏统一 · ≥5 类图表且带口径 · 数字等宽 · 所有 AI 内容带四要素标记 · 加载/空/错误/成功态齐备 · 深浅主题对比度达标 · 1280×720 投影无截断 · 键盘可完成主流程 · 打印样式 · P18 可独立展示。</p>
+      <div class="callout warn" style="margin-bottom:0"><strong>反模式：</strong>满屏白卡片+表格 · 彩虹多主色 · 用发光/粒子表达 AI · 图表无标题无口径 · AI 输出不带依据 · CDN 断网裸页 · 为炫技牺牲可读性。</div>
+    </div>
+  </div>
+
+  <h3 style="margin:26px 0 4px">关键页面静态设计稿</h3>
+  <p class="small muted" style="margin:0 0 16px">三张高信息密度页面代表三种界面范式：编辑器 + 诊断抽屉、列表 + 解释抽屉、KPI + 图表矩阵 + 预警侧栏。</p>
+
+  <!-- mock P04 -->
+  <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="tiny" style="margin-left:6px">P04 · AI 简历工作台（A1）· 设计稿</span></div>
+  <div class="mock" style="margin-bottom:20px">
+    <div class="mock-top"><span class="brandmini"></span><span>路鸣职引 CareerPilot</span><span style="margin-left:auto">简历工作台 · 版本对比 · 导出 PDF · AI 体检 ↻</span></div>
+    <div class="mock-body" style="grid-template-columns:150px 1fr 270px">
+      <div class="m-side">
+        <div class="m-title">段落导航</div>
+        <div class="m-nav"><i></i>基本信息</div><div class="m-nav"><i></i>教育背景</div><div class="m-nav"><i></i>实习经历</div>
+        <div class="m-nav on"><i></i>项目经历</div><div class="m-nav"><i></i>技能证书</div>
+        <div class="m-line w60" style="margin-top:16px"></div><div class="m-line w40"></div>
+      </div>
+      <div class="m-main">
+        <div class="m-title">项目经历</div>
+        <div class="m-box"><b style="color:var(--t1)">校园二手交易平台 · 前端开发</b><div class="m-line w80"></div><div class="m-line w60"></div><div style="margin-top:8px"><span class="m-chip ai">AI 改写建议 ①</span></div></div>
+        <div class="m-box diff"><span class="m-chip ai">AI · REPLAY</span><div style="margin-top:6px"><span style="color:var(--t3);text-decoration:line-through">负责页面开发，参与迭代…</span><br><span style="color:var(--t1);font-weight:600">负责页面开发并参与功能迭代</span></div><div style="margin-top:9px"><span class="m-btn">采纳</span><span class="m-btn ghost">驳回</span><span class="m-btn ghost">换一版</span></div><div class="m-note">依据：STAR 缺「结果」与量化数字 · 可驳回</div></div>
+      </div>
+      <div class="m-drawer">
+        <div class="m-title">简历体检</div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+          <svg width="58" height="58" viewBox="0 0 58 58"><circle cx="29" cy="29" r="23" fill="none" stroke="#EEF2F9" stroke-width="7"/><circle cx="29" cy="29" r="23" fill="none" stroke="#6E56CF" stroke-width="7" stroke-dasharray="112 145" stroke-linecap="round" transform="rotate(-90 29 29)"/><text x="29" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#16233A" font-family="monospace">78</text></svg>
+          <div><div style="font-size:10px;color:var(--ok);font-weight:700">↗ +12</div><div class="m-line w60" style="margin:4px 0"></div><div class="m-line w40"></div></div>
+        </div>
+        <div class="m-mini"><span style="width:52px">ATS 覆盖</span><div class="m-track"><i class="ai" style="width:90%"></i></div><span class="mono">9/10</span></div>
+        <div class="m-mini"><span style="width:52px">项目质量</span><div class="m-track"><i style="width:70%"></i></div><span class="mono">70%</span></div>
+        <div class="m-mini"><span style="width:52px">技能对齐</span><div class="m-track"><i style="width:82%"></i></div><span class="mono">82%</span></div>
+        <div class="m-box" style="margin-top:12px;padding:8px"><span class="m-chip ai">规则</span> 技能标签未对齐<div class="m-note">共 5 条待处理建议</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mock P06 -->
+  <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="tiny" style="margin-left:6px">P06 · 可解释岗位匹配广场（A3）· 设计稿</span></div>
+  <div class="mock" style="margin-bottom:20px">
+    <div class="mock-top"><span class="brandmini"></span><span>岗位匹配</span><span style="margin-left:auto">按匹配度 ↓ · Provider: REPLAY</span></div>
+    <div class="mock-body" style="grid-template-columns:150px 1fr 270px">
+      <div class="m-side">
+        <div class="m-title">筛选与权重</div>
+        <div class="m-line w80"></div><div class="m-line w60"></div><div class="m-line w40"></div>
+        <div style="margin-top:14px" class="m-title">权重滑杆</div>
+        <div class="m-mini"><span style="width:32px">技能</span><div class="m-track"><i class="ai" style="width:88%"></i></div></div>
+        <div class="m-mini"><span style="width:32px">城市</span><div class="m-track"><i style="width:50%"></i></div></div>
+        <div class="m-mini"><span style="width:32px">薪资</span><div class="m-track"><i style="width:30%"></i></div></div>
+        <div class="m-note">拖动后列表即时重排（Worker ≤300ms）</div>
+      </div>
+      <div class="m-main">
+        <div class="m-box"><div style="display:flex;justify-content:space-between"><b style="color:var(--t1)">产品助理 · 某科技 · 上海</b><span class="mono" style="color:var(--ai);font-weight:800">85</span></div><div style="margin:7px 0"><span class="m-chip ok">命中 Axure</span><span class="m-chip ok">命中 SQL</span><span class="m-chip">缺 Python</span></div><span class="m-btn">一键投递</span><span class="m-btn ghost">查看解释 →</span></div>
+        <div class="m-box"><div style="display:flex;justify-content:space-between"><b style="color:var(--t1)">数据分析 · 某咨询 · 北京</b><span class="mono" style="font-weight:800">81</span></div><div class="m-line w60" style="margin-top:8px"></div></div>
+        <div class="m-box"><div style="display:flex;justify-content:space-between"><b style="color:var(--t1)">运营管培 · 某集团 · 武汉</b><span class="mono" style="font-weight:800">77</span></div><div class="m-line w40" style="margin-top:8px"></div></div>
+      </div>
+      <div class="m-drawer">
+        <div class="m-title">为什么是 85 分？</div>
+        <div class="m-mini"><span style="width:38px">技能 .35</span><div class="m-track"><i class="ai" style="width:86%"></i></div><span class="mono">+35.0</span></div>
+        <div class="m-mini"><span style="width:38px">专业 .20</span><div class="m-track"><i style="width:72%"></i></div><span class="mono">+20.0</span></div>
+        <div class="m-mini"><span style="width:38px">城市 .15</span><div class="m-track"><i style="width:65%"></i></div><span class="mono">+0.0</span></div>
+        <div class="m-mini"><span style="width:38px">经验 .10</span><div class="m-track"><i style="width:30%"></i></div><span class="mono">+10.0</span></div>
+        <div class="m-mini"><span style="width:38px">薪资 .10</span><div class="m-track"><i style="width:42%"></i></div><span class="mono">+10.0</span></div>
+        <div class="m-mini"><span style="width:38px">学历 .10</span><div class="m-track"><i style="width:36%"></i></div><span class="mono">+10.0</span></div>
+        <div class="m-box" style="margin-top:12px;padding:8px"><b style="color:var(--ai);font-size:10px">What-if 反事实</b><div style="margin-top:5px">改城市偏好→ <span class="mono">85 → 100 ▲15</span></div><div class="m-note">排名 1 → 1（巩固）· 可展开到命中技能</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mock P15 -->
+  <div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="tiny" style="margin-left:6px">P15 · 就业质量驾驶舱（A7）· 设计稿</span></div>
+  <div class="mock">
+    <div class="mock-top"><span class="brandmini"></span><span>就业质量驾驶舱 · 2026 届</span><span style="margin-left:auto">深色主题 / 导出</span></div>
+    <div class="mock-body" style="grid-template-columns:1fr 210px">
+      <div class="m-main">
+        <div class="m-kpi"><div><b>50.0%</b><span style="font-size:9px">去向落实率（种子锚点）</span></div><div><b>40</b><span style="font-size:9px">本届学生</span></div><div><b>规则计算</b><span style="font-size:9px">预警人数</span></div><div><b>3.0</b><span style="font-size:9px">平均投递</span></div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px">
+          <div class="m-box" style="margin:0"><div class="m-title" style="font-size:10px">投递转化漏斗</div><div class="m-chart"><i style="height:90%"></i><i style="height:66%"></i><i style="height:42%"></i><i style="height:20%"></i></div></div>
+          <div class="m-box" style="margin:0"><div class="m-title" style="font-size:10px">周趋势</div><div class="m-chart"><i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:70%"></i><i style="height:84%"></i><i style="height:76%"></i></div></div>
+        </div>
+        <div class="m-box" style="margin-top:9px"><div class="m-title" style="font-size:10px">自然语言问数</div><div style="font-size:10px">「哪个专业去向落实率最低？」→ <b style="color:var(--t1)">专业数据按本地scope计算，不把学院当专业</b> <span class="m-chip ok">数据来自本地聚合 · 可核对</span></div></div>
+      </div>
+      <div class="m-drawer">
+        <div class="m-title">慢就业预警 Top3</div>
+        <div class="m-box" style="padding:8px"><span class="m-chip" style="background:rgba(217,72,72,.1);color:var(--danger)">高风险</span><b style="color:var(--t1)"> 张某</b><div class="m-note">触发：14 天无进展 / 投递 12 次面试 0 次 / 去向未登记</div><div style="margin-top:7px"><span class="m-btn">生成帮扶建议</span></div></div>
+        <div class="m-box" style="padding:8px"><span class="m-chip" style="background:rgba(233,162,59,.13);color:var(--warn)">中风险</span><b style="color:var(--t1)"> 李某</b><div class="m-note">触发：简历50% + 临近截止（45分）</div></div>
+        <div class="m-box" style="padding:8px"><span class="m-chip" style="background:rgba(233,162,59,.13);color:var(--warn)">低风险</span><b style="color:var(--t1)"> 王某</b><div class="m-note">触发：临近截止未登记去向</div></div>
+        <div class="m-note">帮扶闭环：建议 → 记录 → 复查；不覆盖投递状态</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 指标与计划 ============ -->
+<section id="s7">
+  <div class="sec-head"><div class="kicker">07 · Scoring &amp; Plan</div><h2>指标对齐、里程碑与风险</h2><p class="lead">每个评分指标都对应"8 分钟里能看到 / PDF 里能翻到"的实体证据，不接受报告里自称。</p></div>
+  <div class="grid3">
+    <div class="card"><h3>技术难度</h3><p class="small muted">必做机制伪代码与复杂度（T2启用后另验） · 消融实验 · Worker异步分批计时 · 三态降级链状态图 · Vitest 单测 · 与原 C++ HTTP Server 的协议对照表。<br><b>关键话术：</b>分数由本地内核算，模型只生成与解释 → 可复现、可测、断网可用。</p></div>
+    <div class="card"><h3>界面美观度</h3><p class="small muted">P18 设计系统展示页 · 18 页统一语言 · ≥6 类图表 · 三栏栅格与留白节奏 · 深浅主题与对比度实测 · 打印样式。<br><b>关键话术：</b>界面不是逐页画出来的，是由一套设计系统生成的。</p></div>
+    <div class="card"><h3>报告演讲水平</h3><p class="small muted">8 分钟四段分镜：<b>背景0:50 · 概要1:00 · 技术1:30 · 使用/界面3:40 · 收尾0:30，合计7:30</b>。演示前 <span class="mono">reset-demo</span>，默认 REPLAY，全程不联网、不输密钥、不编译。</p></div>
+  </div>
+
+  <div class="grid2" style="margin-top:14px">
+    <div class="card">
+      <h3>里程碑（按课程周次，日期以教务周历为准）</h3>
+      <div class="timeline">
+        <div class="titem done"><b>M0 · 前置文档基线</b><p>评估 / 需求 / 概要设计 / AI规格 / 界面规范 / 指标计划 / 准入 / 合规 / 物料 / 真实AI接入 —— 15份编号文档 + README + HTML + Schema，共18份，<b>方案已确认、未开发应用</b>（开工判定见 07 §7）</p></div>
+        <div class="titem"><b>M1 · 骨架与设计系统</b><p>脚手架、tokens.css、基础组件、Router+守卫+Pinia、P01/P02/P18；dist 独立托管成功</p></div>
+        <div class="titem"><b>M2 · 数据层与领域内核</b><p>IndexedDB + 种子数据、D1–D7、T1/T5 + Worker + 单测；100 岗匹配 &lt;300ms</p></div>
+        <div class="titem"><b>M3 · 三大招牌 + AI 工程层</b><p>三态Provider、DeepSeek网关/统一启动、T3守卫与回放、A1/A2/A3页面；断外网继续REPLAY，miss转RULE不中断</p></div>
+        <div class="titem"><b>M4 · 全链路与治理端</b><p>学生其余页 / 企业台 / 驾驶舱 A7 / 管理审计、A7真实接入；A4/A5/A10为G4通过后可选</p></div>
+        <div class="titem"><b>M5 · 打磨与交付</b><p>主题、响应式、无障碍、打印、真实四模块联调、演示彩排、学号命名PDF（15 周前发 <span class="mono">ccnu_tuxinhui@163.com</span>）</p></div>
+      </div>
+      <div class="callout brand" style="margin-bottom:0"><strong>执行顺序铁律：</strong>tokens.css → 基础组件 → 领域内核 → AI 工程层 → 页面。遵循14依赖与13门禁，已具备内核的垂直切片可提前验证，不承诺跳过测试。</div>
+    </div>
+    <div class="card">
+      <h3>风险登记册（摘要 6 / 全 14 项见 06 号文档）</h3>
+      <table class="tbl" style="box-shadow:none">
+        <tr><th>ID</th><th>风险</th><th>对策</th></tr>
+        <tr><td class="mono">R01</td><td>答辩断网 / 模型不可用</td><td>三态 Provider + REPLAY 默认 + RULE 兜底，断网演练</td></tr>
+        <tr><td class="mono">R03</td><td>模型幻觉 / 格式漂移</td><td>数值本地算、Schema 守卫、引用溯源、拒答阈值</td></tr>
+        <tr><td class="mono">R04</td><td>10 个模块撑爆工期</td><td>MVP 锁 A1/A2/A3/A7，明确裁剪顺序</td></tr>
+        <tr><td class="mono">R08</td><td>被质疑"不是基于原项目"</td><td>报告专章 + BL 继承对照表 + 需求追溯矩阵</td></tr>
+        <tr><td class="mono">R09</td><td>被质疑技术组合（Python 后端）</td><td>Vue组合②；本机HTTP默认必需；Python是用户选择，不是课程原文</td></tr>
+        <tr><td class="mono">R11</td><td>简历隐私合规</td><td>脱敏、发送预览、虚构数据、一键清除、审计</td></tr>
+      </table>
+      <div class="divider"></div>
+      <h3>PDF 报告结构（学校封面模板）</h3>
+      <p class="small muted">摘要 → 1 开发背景 → 2 需求分析 → 3 概要设计 → 4 关键技术 → 5 系统实现与界面 → 6 使用方法 → 7 测试与评估 → 8 总结 → 附录（API 契约 / Prompt 版本 / 演示脚本 / <b>AI 辅助编码与人工复核记录</b>）。封面字段：论文题目、姓名、学号、专业、年级、课程名称、完成时间；<b>文件名 = 学号.pdf</b>。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 文档体系：README + 01..09 + 附 ============ -->
+<section id="s8">
+  <div class="sec-head"><div class="kicker">08 · Deliverables</div><h2>前置文档体系与下一步</h2><p class="lead">本总览是阅读入口；15册 Markdown 是后续开发的契约文件，07是G0准入记录（非开发授权），10–12为详细契约，13测试，14执行，15真实AI接入。若二者结论有分歧，以编号文档为准并同步修订总览。</p></div>
+  <div class="doclist">
+    <div class="docitem"><span class="no">—</span><div><b>README.md</b><small>一页结论、文档矩阵、统一术语与编号、评估依据、完成边界</small></div></div>
+    <div class="docitem"><span class="no">01</span><div><b>原项目全面评估与重构决策</b><small>实测盘点、八维评分、P0–P2 缺陷（带行号）、三案加权与敏感性、保留/丢弃/升级边界</small></div></div>
+    <div class="docitem"><span class="no">02</span><div><b>需求规格说明书 SRS</b><small>外部依据、角色用例、BL 继承基线、FR/NFR 编号、MVP、需求追溯矩阵</small></div></div>
+    <div class="docitem"><span class="no">03</span><div><b>概要设计说明书 HLD</b><small>L0–L5 架构、技术选型、目录结构、D1–D7 数据模型、接口契约、安全与隐私</small></div></div>
+    <div class="docitem"><span class="no">04</span><div><b>AI 能力矩阵与功能规格</b><small>A1–A10 逐模块规格、自研内核、降级策略、AI 工程层、伦理治理、裁剪顺序</small></div></div>
+    <div class="docitem"><span class="no">05</span><div><b>UI/UX 界面设计规范</b><small>设计令牌、组件库、P01–P18 逐页布局线框、动效/响应式/无障碍、美观度自检表</small></div></div>
+    <div class="docitem"><span class="no">06</span><div><b>评价指标对齐 · 实施计划 · 风险管理</b><small>三指标证据映射、M0–M5、8 分钟分镜、PDF 结构、R01–R14、交付自检清单</small></div></div>
+    <div class="docitem"><span class="no">07</span><div><b>开发准入检查清单 DoR</b><small>一致性审计、决策登记（已确认）、工程准入物料 E-01..E-08、开工判定表与执行顺序</small></div></div>
+    <div class="docitem"><span class="no">08</span><div><b>课程合规论证与验收对照</b><small>技术组合二选一逐字判定、编译产物物证、来源分层、课程C-01..05、诚实答辩边界</small></div></div>
+    <div class="docitem"><span class="no">09</span><div><b>演示物料规格与验收模板</b><small>种子数据集规格、REPLAY 语料 schema、封面字段模板、分关验收表、物料归属与工期边界</small></div></div>
+    <div class="docitem"><span class="no">10</span><div><b>领域数据字典与状态迁移契约</b><small>唯一字段/索引、作用域、事务/幂等、独立状态、审计统计投影</small></div></div>
+    <div class="docitem"><span class="no">11</span><div><b>算法评分与统计指标契约</b><small>六维匹配/体检/rubric、统计/预警固定公式与样本</small></div></div>
+    <div class="docitem"><span class="no">12</span><div><b>AI输出与回放协议契约</b><small>文本payload、版本/指纹、来源、取消/预算、Schema</small></div></div>
+    <div class="docitem"><span class="no">13</span><div><b>测试验收与需求追溯矩阵</b><small>44FR/15NFR及GW01–GW12、固定测试、G0–G5运行门禁</small></div></div>
+    <div class="docitem"><span class="no">14</span><div><b>全面开发执行计划</b><small>具体任务/文件/接口/测试、M1–M5与125–188h规划估算</small></div></div>
+    <div class="docitem"><span class="no">15</span><div><b>真实AI接入与本机运行契约</b><small>DeepSeek、独立配置、统一启动、配对/费用/安全与四模块真实验收</small></div></div>
+    <div class="docitem"><span class="no">附</span><div><b>本 HTML 总览</b><small>可离线打开、可打印为 PDF；含评估图表、架构图、AI 能力地图与设计稿</small></div></div>
+  </div>
+
+  <div class="card" style="margin-top:16px;border-color:rgba(110,86,207,.35)">
+    <h3>v1.5最终文档基线 · 可按阶段进入全面开发</h3>
+    <p class="tiny">保留品牌/四角色/单机/四模块；本轮D-15取代旧D-07，将DeepSeek真实接入列为正式验收，补齐15并同步其他各册。G0核验在07；G1–G5均未运行，不能把文档准入当作应用已通过验收。当前不正式开发。</p>
+    <p class="small"><a href="README.md">总索引</a> · <a href="07_开发准入检查清单_DoR.md">准入与核验记录</a> · <a href="14_全面开发执行计划.md">开发执行计划</a> · <a href="contracts/ai-contracts.schema.json">AI Schema</a> · <a href="15_真实AI接入与本机运行契约.md">真实AI接入契约</a></p>
+    <div class="grid4">
+      <div class="small"><b>① MVP 范围</b><p class="muted">锁定 A1 简历 / A2 面试 / A3 匹配 / A7 驾驶舱</p></div>
+      <div class="small"><b>② 技术栈与演示态</b><p class="muted">Vue 3 + TS；答辩默认纯前端 REPLAY 态</p></div>
+      <div class="small"><b>③ 视觉方向</b><p class="muted">A 浅色学院感（驾驶舱保留深色 B）</p></div>
+      <div class="small"><b>④ 学术声明</b><p class="muted">报告如实声明 AI 辅助编码与人工复核</p></div>
+    </div>
+    <div class="callout brand" style="margin-bottom:10px"><strong>技术组合合规判定：</strong>本项目采用课程规定的第二种组合 <b>HTML + CSS + Vue.js</b>。Vue 3 是唯一运行时框架；TypeScript 编译后产出标准 JavaScript，Vite 仅在开发期工作，IndexedDB 是浏览器原生 API。构建产物 <span class="mono">dist/</span> 只含 HTML/CSS/JS 与本地静态资源，断网可运行。原生JS原项目同样合规，Python并非课程原文；来源与判定见08。</div>
+    <div class="callout" style="margin-bottom:0"><strong>下一步（待授权「开始开发」）</strong>：git 初始化与依赖锁定 → 项目脚手架 + <span class="mono">tokens.css</span> + 基础组件库 + 路由与守卫 + P18 设计系统页 → <span class="mono">dist/</span> 断网验证（M1）。在此之前不写业务页面 —— 按14任务与13门禁执行。<br><span class="tiny">真实Key未来仅填本机网关配置，不进源码/前端；统一启动、配对/测试后显式启用LIVE，缺Key不阻离线开发，但G5必须有真实四模块成功证据。本阶段刻意未做：应用源码、组件实现、数据库迁移、真实 AI 接口联调、可运行原型、正式 PDF 报告、答辩 PPT。</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div><b style="color:var(--t1)">路鸣职引 CareerPilot · 开发前置设计总览 v1.5</b><br>华中师范大学《Web 程序设计》期末大作业 · 2026-11-12 · 最终开发文档基线</div>
+    <div style="text-align:right">依据：课程验收条款 · 原项目源码与数据库实测 · 已登记的用户方向；未核实新闻不引用<br>状态：仅完成前置设计，未改动任何原项目文件</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var p=document.getElementById('progress');
+  function upd(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var y=window.scrollY||document.documentElement.scrollTop;
+    p.style.width=(h>0?Math.min(100,(y/h)*100):0)+'%';
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  window.addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>

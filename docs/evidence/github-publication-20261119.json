@@ -1,0 +1,44 @@
+{
+  "purpose": "Sanitized source publication verification, not a new full application acceptance",
+  "verifiedDate": "2026-11-19",
+  "repository": "https://github.com/lhh-lhh/careerpilot",
+  "visibility": "private",
+  "environment": { "platform": "Windows", "node": "v24.19.0", "npm": "11.17.0" },
+  "commands": [
+    { "command": "npm ci --no-audit --no-fund", "exitCode": 0, "result": "243 packages installed from lockfile" },
+    { "command": "npm run typecheck", "exitCode": 0 },
+    { "command": "npm run lint", "exitCode": 0 },
+    { "command": "npm run build", "exitCode": 0, "result": "Vite build: 924 modules transformed" },
+    { "command": "npm run test:unit", "exitCode": 0, "testFilesPassed": 73, "testsPassed": 543, "testsFailed": 0 },
+    { "command": "npm run verify:contracts", "exitCode": 0, "testFilesPassed": 13, "testsPassed": 55, "testsFailed": 0, "note": "Overlaps the complete unit suite; do not add counts as independent coverage." },
+    { "command": "npm run verify:seed", "exitCode": 0, "testFilesPassed": 2, "testsPassed": 17, "testsFailed": 0, "note": "Overlaps the complete unit suite." }
+  ],
+  "sourceIntegrity": {
+    "copiedOriginalFiles": 914,
+    "runtimeFilesCompared": 436,
+    "runtimeDirectories": ["src", "server", "public"],
+    "runtimeDifferences": 0,
+    "metadataChanges": [".gitignore extended for credential/cache exclusions", "eslint.config.js excludes archived presentation-generation helpers under projects/ and presentation/"],
+    "originalApplicationDirectoryModified": false,
+    "oldGitHistoryPublished": false
+  },
+  "scan": {
+    "textFilesChecked": 600,
+    "knownExistingPasswordLiteralsChecked": 6,
+    "actualSecretFindings": 0,
+    "reviewedTestFixture": "tests/unit/public-resources.test.ts includes an intentionally invalid user:secret URL to verify rejection; it is not an operational credential.",
+    "pptxArchivesChecked": 1,
+    "decompressedXmlEntriesChecked": 88,
+    "pptxSecretFindings": 0,
+    "brokenReadmeLocalLinks": 0,
+    "secretsPrinted": false,
+    "methodLimit": "Local forbidden-path, known-literal and common-secret-pattern checks; not a professional security or image-OCR audit."
+  },
+  "notRun": [
+    "Fresh full Playwright suite",
+    "Physical microphone, weak-network and human narration rehearsal",
+    "Paid live DeepSeek probes",
+    "Public production deployment or penetration test"
+  ],
+  "privacy": "Live databases, account password sheets, API credentials, local backups and uploads are excluded; a new installation generates its own accounts and passwords."
+}

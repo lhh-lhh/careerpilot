@@ -1,0 +1,35 @@
+<Slide style={{ padding: 0, background: '#FFFFFF', width: '1280px', height: '720px', flexDirection: 'row' }}>
+  <Box style={{ width: 380, height: 720, background: '#10366B', flexDirection: 'column', justifyContent: 'center', padding: '0 56px' }}>
+    <Text style={{ fontSize: 15, color: '#8FB0E8', letterSpacing: 5 }}>CONTENTS</Text>
+    <Text style={{ fontSize: 64, fontWeight: 'bold', color: '#FFFFFF', marginTop: 12 }}>目录</Text>
+    <Box style={{ width: 48, height: 4, background: '#F2A13A', marginTop: 24, borderRadius: 2 }} />
+    <Text style={{ fontSize: 15, color: '#B9CDEF', marginTop: 28, lineHeight: 1.7 }}>路鸣职引 CareerPilot<br />高校就业管理与 AI 求职服务</Text>
+  </Box>
+  <Box style={{ width: 900, height: 720, flexDirection: 'column', justifyContent: 'center', padding: '0 72px' }}>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 88, background: '#216FEE', borderRadius: 8, padding: '0 28px' }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#FFFFFF', width: 64 }}>01</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', flex: 1 }}>背景与需求</Text>
+      <Text style={{ fontSize: 14, color: '#C7D9FB' }}>P03</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 88, padding: '0 28px', borderBottom: '1px solid #D9E3F2' }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#216FEE', width: 64 }}>02</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#10366B', flex: 1 }}>概要设计</Text>
+      <Text style={{ fontSize: 14, color: '#7A8BA8' }}>P04–P05</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 88, padding: '0 28px', borderBottom: '1px solid #D9E3F2' }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#216FEE', width: 64 }}>03</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#10366B', flex: 1 }}>关键技术</Text>
+      <Text style={{ fontSize: 14, color: '#7A8BA8' }}>P06–P07</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 88, padding: '0 28px', borderBottom: '1px solid #D9E3F2' }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#6E56CF', width: 64 }}>04</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#10366B', flex: 1 }}>AI 接入与应用</Text>
+      <Text style={{ fontSize: 14, color: '#7A8BA8' }}>P08–P10</Text>
+    </Box>
+    <Box style={{ flexDirection: 'row', alignItems: 'center', height: 88, padding: '0 28px' }}>
+      <Text style={{ fontSize: 26, fontWeight: 'bold', color: '#216FEE', width: 64 }}>05</Text>
+      <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#10366B', flex: 1 }}>界面与使用</Text>
+      <Text style={{ fontSize: 14, color: '#7A8BA8' }}>P11–P13</Text>
+    </Box>
+  </Box>
+</Slide>
