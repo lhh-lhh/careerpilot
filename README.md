@@ -81,6 +81,7 @@ npm run build
 ### 3. 仅全新安装：初始化账号在线服务
 
 ```powershell
+New-Item -ItemType Directory -Path ./server-data -Force | Out-Null
 npm run init:online -- --credentials-file ./server-data/initial-credentials.json
 npm run start:online
 ```

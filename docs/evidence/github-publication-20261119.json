@@ -11,7 +11,8 @@
     { "command": "npm run build", "exitCode": 0, "result": "Vite build: 924 modules transformed" },
     { "command": "npm run test:unit", "exitCode": 0, "testFilesPassed": 73, "testsPassed": 543, "testsFailed": 0 },
     { "command": "npm run verify:contracts", "exitCode": 0, "testFilesPassed": 13, "testsPassed": 55, "testsFailed": 0, "note": "Overlaps the complete unit suite; do not add counts as independent coverage." },
-    { "command": "npm run verify:seed", "exitCode": 0, "testFilesPassed": 2, "testsPassed": 17, "testsFailed": 0, "note": "Overlaps the complete unit suite." }
+    { "command": "npm run verify:seed", "exitCode": 0, "testFilesPassed": 2, "testsPassed": 17, "testsFailed": 0, "note": "Overlaps the complete unit suite." },
+    { "command": "server/cli.ts init --credentials-file <isolated temporary directory>", "exitCode": 0, "result": "Fresh installation smoke check: five generated accounts, independent random passwords, isolated SQLite; no original data touched or secrets printed." }
   ],
   "sourceIntegrity": {
     "copiedOriginalFiles": 914,
@@ -23,7 +24,7 @@
     "oldGitHistoryPublished": false
   },
   "scan": {
-    "textFilesChecked": 600,
+    "textFilesChecked": 601,
     "knownExistingPasswordLiteralsChecked": 6,
     "actualSecretFindings": 0,
     "reviewedTestFixture": "tests/unit/public-resources.test.ts includes an intentionally invalid user:secret URL to verify rejection; it is not an operational credential.",
