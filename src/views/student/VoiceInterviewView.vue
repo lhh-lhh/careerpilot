@@ -242,24 +242,30 @@ async function finishRecording() {
   recording.value = false;
   busy.value = true;
   status.value = "正在识别你的回答";
+  notice.value = "";
   controller = new AbortController();
+  const signal = window.AbortSignal.any([
+    controller.signal,
+    window.AbortSignal.timeout(120_000),
+  ]);
   const current = operation;
   try {
     const res = await aiFetch("/speech/asr", {
       method: "POST",
       headers: { "Content-Type": "audio/wav", "X-AI-Consent": "true" },
       body: audio,
-      signal: controller.signal,
+      signal,
     });
     const data = await res.json();
     if (current !== operation) return;
-    transcript.value = data.text;
-    busy.value = false;
-    if (!transcript.value.trim()) {
+    if (typeof data?.text !== "string") throw Error("INVALID_TRANSCRIPT");
+    if (!data.text.trim()) {
       notice.value = "没有识别到有效回答，请重新录音。";
       paused.value = true;
+      status.value = "未识别到回答";
       return;
     }
+    transcript.value = data.text;
     review.value = true;
     status.value = "转写已完成";
     if (natural.value) {
@@ -270,8 +276,12 @@ async function finishRecording() {
     } else notice.value = "请核对转写后提交，可编辑或重新录音。";
   } catch {
     if (current === operation) {
-      notice.value = "转写失败，回答未提交。可重新录音或改用文字。";
+      const timedOut = signal.aborted && signal.reason?.name === "TimeoutError";
+      notice.value = timedOut
+        ? "识别超时，回答未提交。可重新录音或改用文字。"
+        : "转写失败，回答未提交。可重新录音或改用文字。";
       paused.value = true;
+      status.value = timedOut ? "识别已超时" : "识别未完成";
     }
   } finally {
     if (current === operation) busy.value = false;
